@@ -1,0 +1,374 @@
+@import '../../pages/_scss/_variables.scss';
+
+.music {
+	border: 0;
+	width: 100vw;
+	height: 100vh;
+	margin-top: 4vh;
+	position: relative;
+	z-index: 99;
+
+	.previousButton,
+	.nextButton {
+		border-bottom: 0;
+
+		polygon {
+			fill: $purple;
+		}
+
+		&.disabled polygon {
+			opacity: .1;
+		}
+	}
+
+	article {
+		display: flex;
+		padding: 1vh 1vw 1vh 10vw;
+		box-sizing: border-box;
+		pointer-events: none;
+
+		.cover-wrapper {
+			margin-top: 4vh;
+			width: 16vw;
+			height: 16vw;
+			max-width: 32vh;
+			max-height: 32vh;
+			transform-origin: bottom left;
+
+			.cover {
+				display: block;
+				width: 32vh;
+				height: 32vh;
+				transform: rotate(6deg);
+				box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.2), 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
+				transform-origin: bottom left;
+				transition: all 1s;
+				pointer-events: all;
+				border-radius: 50%;
+
+				&:hover {
+					transform: rotate(4deg);
+					transition: all 0.5s;
+				}
+			}
+		}
+
+		.tracklist {
+			margin-left: 16vw;
+			width: 46vw;
+			margin-top: 0;
+
+			h2 {
+				margin-top: 2vh;
+				color: $purple;
+			}
+
+			p:nth-of-type(3) {
+				display: none;
+			}
+			ul {
+				margin-top: 4vh;
+				width: 32vw;
+
+				li {
+					text-indent: 0;
+					line-height: 30px;
+					color: $purple;
+
+					button {
+						display: inline-block;
+						border: 0;
+						outline: 0;
+						cursor: pointer;
+						width: 20vw;
+						text-align: left;
+						background: none;
+						pointer-events: all;
+						text-decoration: underline;
+						text-decoration-color: #ffc917aa;
+						text-underline-offset: 4px;
+						text-decoration-style: dotted;
+					}
+
+					duration {
+						display: inline-block;
+						width: 8vw;
+						text-align: right;
+					}
+				}
+			}
+		}
+
+		&:first-of-type li {
+			list-style: none;
+			margin-left: -80px;
+
+			&::before {
+				display: inline-block;
+				width: 100px;
+				text-align: right;
+				margin-right: 20px;
+			}
+			&:nth-of-type(1):before {
+				content: "#1";
+			}
+			&:nth-of-type(2):before {
+				content: "#2";
+			}
+			&:nth-of-type(3):before {
+				content: "#3";
+			}
+			&:nth-of-type(4):before {
+				content: "#4";
+			}
+			&:nth-of-type(5):before {
+				content: "#5";
+			}
+			&:nth-of-type(6):before {
+				content: "Latest";
+			}
+			&:nth-of-type(7):before {
+				content: "Set";
+			}
+			&:nth-of-type(6),
+			&:nth-of-type(7) {
+				margin-top: 32px;
+			}
+			// 		"intro": "We organised a festival for a small group of people to be able to show our talents. I created a set of some of my favorite tracks, where it was a necessity to be able to control it while on stage. I plan to make more of them in the future, using more recent tracks or maybe more like some sort of soundscape. I hope you enjoy it! Click to the next page to view the tracklisting.",
+
+		}
+	}
+	#progress {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 0;
+		height: 2px;
+		pointer-events: none;
+		background-color: $purple;
+	}
+}
+
+.player {
+	position: fixed;
+	bottom: 1vh;
+	left: 1vw;
+	z-index: 99;
+	border: 0;
+	outline: 0;
+}
+
+.slider {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+
+	a.previousButton,
+	a.nextButton {
+		font-size: 22px;
+		line-height: 0;
+		display: block;
+		position: absolute;
+		top: 32%;
+		transform: translateY(-50%);
+		transition: all .3s linear;
+		z-index: 1;
+		color: $white;
+		padding: 10px;
+		text-decoration: none;
+		backface-visibility: hidden;
+
+		&:not(.disabled):hover {
+			transform: translateY(-50%) scale(1.25);
+			cursor: pointer;
+		}
+	}
+	a.previousButton {
+		left: 20px;
+	}
+	a.nextButton {
+		right: 20px;
+	}
+}
+
+.slide {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	overflow: hidden;
+	border: none;
+
+	&.hidden {
+		visibility: hidden;
+	}
+	&.previous {
+		left: -100%;
+	}
+	&.current {
+		left: 0;
+	}
+	&.next {
+		left: 100%;
+	}
+	&.animateIn {
+		transition: all 2s ease;
+
+		&.previous,
+		&.next {
+			left: 0;
+			visibility: visible;
+		}
+	}
+	&.animateOut {
+		transition: all 2s ease;
+
+		&.previous {
+			left: 100%;
+		}
+		&.next {
+			left: -100%;
+		}
+	}
+
+	h2,
+	p {
+		transition: all 0.3s ease;
+		transform: translateY(-20px);
+		opacity: 0;
+	}
+	ul {
+		transition: all 0.6s ease;
+		transform: translateY(40px);
+		opacity: 0;
+	}
+	.cover-wrapper {
+		transition: all 0.9s ease;
+		transform: rotate(20deg) scale(0.5);
+		opacity: 0;
+	}
+	&.animateIn.previous,
+	&.current,
+	&.animateIn.next {
+		h2,
+		p {
+			transform: translateX(0);
+			transition-delay: .9s;
+			opacity: 1;
+		}
+		ul {
+			transform: translateX(0);
+			transition-delay: 1.2s;
+			opacity: 1;
+		}
+		.cover-wrapper {
+			transform: rotate(0deg) scale(1);
+			transition-delay: 1.5s;
+			opacity: 1;
+		}
+	}
+	&.animateOut {
+		h2,
+		p,
+		ul,
+		.cover-wrapper {
+			transition-delay: .3s;
+		}
+	}
+}
+
+.rhap_volume-controls,
+.rhap_additional-controls {
+	display: none;
+}
+.rhap_progress-bar {
+	height: 2px;
+	background-color: $lighter;
+}
+.rhap_progress-indicator {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: $purple;
+	margin-top: -4px;
+}
+.rhap_progress-filled {
+	height: 2px;
+	background-color: $purple;
+}
+.rhap_main-controls button {
+	background-color: $darkest;
+	color: $purple;
+	border: none;
+}
+
+@media(max-width: $mobile-breakpoint) {
+	.music {
+		height: 100vh !important;
+		margin-top: 1vh;
+
+		a.previousButton,
+		a.nextButton {
+			top: 4vh;
+		}
+		.slider {
+			height: 100vh;
+		}
+		article {
+			padding: 0 1vw 1vh 1vw;
+
+			&:first-of-type li {
+				list-style: disc;
+				margin-left: 0;
+
+				&:before {
+					display: none;
+				}
+			}
+			.cover-wrapper {
+				position: absolute;
+				left: 24vw;
+				margin-top: 2vh;
+				width: 8vw;
+				height: 8vw;
+
+				.cover {
+					width: 8vw;
+					height: 8vw;
+				}
+			}
+			p {
+				font-size: 0.7rem;
+			}
+			.tracklist {
+				padding: 0 2vw 1vh 1vw;
+				margin-left: 1vw;
+				margin-top: 0;
+				width: 90vw;
+
+				h2 {
+					position: absolute;
+					left: 40vw;
+					margin-top: 1.5vh;
+				}
+				p {
+					display: none;
+				}
+				ul {
+					position: static;
+					left: 8vw;
+					margin-top: 12vh;
+					margin-left: 0;
+						
+					li {
+						width: 80vw;
+						
+						button {
+							width: 68vw !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}

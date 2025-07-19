@@ -1,0 +1,543 @@
+[
+    {
+        "title": "Spotlight",
+		"intro": "I'm phlegmatic and I'm a Scorpio, both of which relate to water. Above all I like to swim, floating far and away... in the water... in the music... and on many other journeys. With my music I like to create such journeys for others to join me, that's why I call myself Swimmer. My music is mostly ambient, dub and techno, but I'm trying to infuse some ethnic influences and even some psytrance tryouts. Enjoy my top 5 tracks below or use the arrows on the right and left side of the screen to browse through my other albums. Scroll down or click the icons below to get to know more about me!",
+        "tracks": [
+            {
+                "title": "Miracles",
+                "filename": "751757779-swimmer-zone-miracles",
+                "local": "the-beach/01_miracles",
+                "playtime":432,
+                "bpm": 0,
+                "genre": "Ambient",
+                "created_at": "2020-01-22"
+            },
+            {
+                "title": "Flam",
+                "filename": "737965993-swimmer-zone-flam",
+                "local": "set/05_flam",
+                "playtime": 254,
+                "bpm": 120,
+                "genre": "Techno",
+                "comment": "2019-10-10"
+            },
+            {
+                "title": "Swim",
+                "filename": "737965951-swimmer-zone-swim",
+                "local": "set/08_swim",
+                "playtime": 240,
+                "bpm": 120,
+                "genre": "Techno",
+                "comment": "2019-10-10"
+            },
+            {
+                "title": "Boom",
+                "filename": "740260633-swimmer-zone-boom",
+                "local": "the-pool/09_boom",
+                "playtime":400,
+                "bpm": 0,
+                "genre": "Psybient",
+                "created_at": "2016-09-05"
+            },
+            {
+                "title": "Space Has No Boundaries",
+                "filename": "733118227-swimmer-zone-space-has-no-boundaries",
+                "local": "the-pool/08_space_has_no_boundaries",
+                "playtime": 387,
+                "bpm": 0,
+                "genre": "Goa",
+                "created_at": "2019-01-26"
+            },
+            {
+                "title": "Halloween",
+                "filename": "1656725049-swimmer-zone-halloween",
+                "local": "the-dive/02_halloween",
+                "playtime": 258,
+                "bpm": 120,
+                "genre": "Techno",
+                "created_at": "2022-04-19"
+            },
+            {
+                "title": "Live @ Swimmer's Attic",
+                "filename": "707210269-swimmer-zone-live-swimmers-space-attic-collectifest-2019",
+                "local": "set/00_collectifest",
+                "playtime": 2178,
+                "bpm": 0,
+                "genre": "Techno",
+                "comment": "2019-10-10"
+            }
+        ]
+    },
+    {
+        "title": "The Dive",
+		"intro": "These new tracks are a bit different than the aesthetic of the previous tracks, but I quite like it!",
+        "tracks": [
+            {
+                "title": "Up And Down",
+                "filename": "1319514142-swimmer-zone-up-and-down",
+                "local": "the-dive/01_up_and_down",
+                "playtime": 258,
+                "bpm": 120,
+                "genre": "Ambient",
+                "created_at": "2022-04-19"
+            },
+            {
+                "title": "Halloween",
+                "filename": "1656725049-swimmer-zone-halloween",
+                "local": "the-dive/02_halloween",
+                "playtime": 258,
+                "bpm": 120,
+                "genre": "Techno",
+                "created_at": "2022-04-19"
+            },
+            {
+                "title": "Mind Your Head",
+                "filename": "1452192178-swimmer-zone-mind-your-head",
+                "local": "the-dive/03_mind_your_head",
+                "playtime": 196,
+                "bpm": 120,
+                "genre": "Techno",
+                "created_at": "2023-02-24"
+            },
+            {
+                "title": "Mortal Kombat",
+                "filename": "1452208507-swimmer-zone-mortal-kombat",
+                "local": "the-dive/04_mortal_kombat",
+                "playtime": 190,
+                "bpm": 120,
+                "genre": "Techno",
+                "created_at": "2023-03-10"
+            },
+            {
+                "title": "In The Club",
+                "filename": "1461275134-swimmer-zone-in-the-club",
+                "local": "the-dive/05_in_the_club",
+                "playtime": 140,
+                "bpm": 120,
+                "genre": "Techno",
+                "created_at": "2023-03-10"
+            },
+            {
+                "title": "Canon",
+                "filename": "1461275134-swimmer-zone-in-the-club2",
+                "local": "the-dive/06_canon",
+                "playtime": 291,
+                "bpm": 120,
+                "genre": "Techno",
+                "created_at": "2023-03-10"
+            },
+            {
+                "title": "Alone In Space (2023 Edit)",
+                "filename": "1461275134-swimmer-zone-in-the-club3",
+                "local": "the-dive/07_alone_in_space_2023",
+                "playtime": 460,
+                "bpm": 120,
+                "genre": "Techno",
+                "created_at": "2023-03-10"
+            },
+            {
+                "title": "Unknown",
+                "filename": "1461275134-swimmer-zone-in-the-club4",
+                "local": "the-dive/08_unknown",
+                "playtime": 324,
+                "bpm": 120,
+                "genre": "Techno",
+                "created_at": "2023-03-10"
+            }
+        ]
+    },
+    {
+        "title": "The Lake",
+		"intro": "It's been a while, so I decided to create a new album with my current creations. Keeping the water theme, the new album is called 'The Lake', some might recognize the picture.",
+        "tracks": [
+            {
+                "title": "Sun Dance",
+                "filename": "1032588730-swimmer-zone-sun-dance",
+                "local": "the-lake/01_sun_dance",
+                "playtime": 206,
+                "bpm": 0,
+                "genre": "Techno",
+                "created_at": "2021-04-10"
+            },
+            {
+                "title": "Growl",
+                "filename": "1099158403-swimmer-zone-growl",
+                "local": "the-lake/02_growl",
+                "playtime": 296,
+                "bpm": 0,
+                "genre": "Ambient",
+                "created_at": "2021-07-29"
+            },
+            {
+                "title": "Kick Some",
+                "filename": "1099217173-swimmer-zone-kick-some",
+                "local": "the-lake/03_kick_some",
+                "playtime": 192,
+                "bpm": 0,
+                "genre": "Techno",
+                "created_at": "2020-11-09"
+            },
+            {
+                "title": "Sobre El Mar (feat. Alicia)",
+                "filename": "1103388145-swimmer-zone-sobre-el-mar",
+                "local": "the-lake/04_sobre_el_mar",
+                "playtime": 240,
+                "bpm": 0,
+                "genre": "Techno",
+                "created_at": "2021-06-20"
+            },
+            {
+                "title": "Flow To Infinity",
+                "filename": "1099219606-swimmer-zone-flow-to-infinity",
+                "local": "the-lake/05_flow_to_infinity",
+                "playtime": 324,
+                "bpm": 0,
+                "genre": "Ambient",
+                "created_at": "2020-05-16"
+            },
+            {
+                "title": "Kill Bill",
+                "filename": "1319514319-swimmer-zone-kill-bill",
+                "local": "the-lake/06_kill_bill",
+                "playtime": 234,
+                "bpm": 120,
+                "genre": "Techno",
+                "created_at": "2022-05-22"
+            }
+        ]
+    },
+    {
+        "title": "The Beach",
+		"intro": "I started creating music when I was about 12 years old, somehow I came up with the name Yupsie and I kept using that name for quite a while. I started with FastTracker and later on I started using Propellerhead's Reason. Nowadays I use Ableton. Recently I decided to change my name to Swimmer and these are the tracks I actually created with my new alias. There are many more to come, so check back regularly!",
+        "tracks": [
+            {
+                "title": "Miracles",
+                "filename": "751757779-swimmer-zone-miracles",
+                "local": "the-beach/01_miracles",
+                "playtime": 432,
+                "bpm": 0,
+                "genre": "Ambient",
+                "created_at": "2020-01-22"
+            },
+            {
+                "title": "Tetris On Acid",
+                "filename": "764225809-swimmer-zone-tetris-on-acid",
+                "local": "the-beach/02_tetris_on_acid",
+                "playtime": 253,
+                "bpm": 0,
+                "genre": "Goa",
+                "created_at": "2020-02-14"
+            },
+            {
+                "title": "Skip-Di-Boop",
+                "filename": "842685901-swimmer-zone-skip-di-boop",
+                "local": "the-beach/03_skip_di_boop",
+                "playtime": 259,
+                "bpm": 0,
+                "genre": "Techno",
+                "created_at": "2019-08-31"
+            },
+            {
+                "title": "Summer Of '20",
+                "filename": "880591288-swimmer-zone-summer-of-20",
+                "local": "the-beach/04_summer_of_20",
+                "playtime": 242,
+                "bpm": 0,
+                "genre": "Ambient",
+                "created_at": "2020-08-07"
+            },
+            {
+                "title": "Parasyte",
+                "filename": "925517698-swimmer-zone-parasyte",
+                "local": "the-beach/05_parasyte",
+                "playtime": 300,
+                "bpm": 0,
+                "genre": "Techno",
+                "created_at": "2019-04-22"
+            },
+            {
+                "title": "Love",
+                "filename": "925537654-swimmer-zone-love",
+                "local": "the-beach/06_love",
+                "playtime": 317,
+                "bpm": 0,
+                "genre": "Techno",
+                "created_at": "2019-03-03"
+            },
+            {
+                "title": "Let's Warm Up",
+                "filename": "1027048036-swimmer-zone-lets-warm-up",
+                "local": "the-beach/07_lets_warm_up",
+                "playtime": 342,
+                "bpm": 0,
+                "genre": "Ambient",
+                "created_at": "2021-04-04"
+            }
+        ]
+    },
+    {
+        "title": "The Pool",
+		"intro": "These are the top 20 tracks I picked from the 80 tracks released under my previous alias.",
+        "tracks": [
+            {
+                "title": "Calm",
+                "filename": "712339522-swimmer-zone-calm",
+                "local": "the-pool/01_calm",
+                "playtime": 288,
+                "bpm": 0,
+                "genre": "Ambient",
+                "created_at": "2018-09-08"
+            },
+            {
+                "title": "Dent",
+                "filename": "712339996-swimmer-zone-dent",
+                "local": "the-pool/02_dent",
+                "playtime": 292,
+                "bpm": 0,
+                "genre": "Techno",
+                "created_at": "2016-01-21"
+            },
+            {
+                "title": "Whales",
+                "filename": "712340437-swimmer-zone-whales",
+                "local": "the-pool/03_whales",
+                "playtime": 290,
+                "bpm": 0,
+                "genre": "Techno",
+                "created_at": "2016-01-11"
+            },
+            {
+                "title": "Identity Of The Element",
+                "filename": "722731015-swimmer-zone-identity-of-the-element",
+                "local": "the-pool/04_identity_of_the_element",
+                "playtime": 250,
+                "bpm": 0,
+                "genre": "Techno",
+                "created_at": "2016-12-23"
+            },
+            {
+                "title": "On A Roll",
+                "filename": "722731672-swimmer-zone-on-a-roll",
+                "local": "the-pool/05_on_a_roll",
+                "playtime": 230,
+                "bpm": 0,
+                "genre": "Techno",
+                "created_at": "2016-01-15"
+            },
+            {
+                "title": "Ho Ho Ho",
+                "filename": "722732362-swimmer-zone-ho-ho-ho",
+                "local": "the-pool/06_ho_ho_ho",
+                "playtime": 224,
+                "bpm": 0,
+                "genre": "Techno",
+                "created_at": "2016-12-26"
+            },
+            {
+                "title": "Da Reckad",
+                "filename": "733117243-swimmer-zone-da-reckad",
+                "local": "the-pool/07_da_reckad",
+                "playtime": 234,
+                "bpm": 0,
+                "genre": "Drum & Bass",
+                "created_at": "2018-02-03"
+            },
+            {
+                "title": "Space Has No Boundaries",
+                "filename": "733118227-swimmer-zone-space-has-no-boundaries",
+                "local": "the-pool/08_space_has_no_boundaries",
+                "playtime": 387,
+                "bpm": 0,
+                "genre": "Goa",
+                "created_at": "2019-01-26"
+            },
+            {
+                "title": "Boom",
+                "filename": "740260633-swimmer-zone-boom",
+                "local": "the-pool/09_boom",
+                "playtime": 400,
+                "bpm": 0,
+                "genre": "Psybient",
+                "created_at": "2016-09-05"
+            },
+            {
+                "title": "Primeiro",
+                "filename": "740261191-swimmer-zone-primeiro",
+                "local": "the-pool/10_primeiro",
+                "playtime": 389,
+                "bpm": 0,
+                "genre": "Psybient",
+                "created_at": "2016-05-13"
+            },
+            {
+                "title": "Feira",
+                "filename": "747864541-swimmer-zone-feira",
+                "local": "the-pool/11_feira",
+                "playtime": 331,
+                "bpm": 0,
+                "genre": "Techno",
+                "created_at": "2016-08-04"
+            },
+            {
+                "title": "Sol",
+                "filename": "761243248-swimmer-zone-sol",
+                "local": "the-pool/12_sol",
+                "playtime": 260,
+                "bpm": 0,
+                "genre": "Techno",
+                "created_at": "2013-08-01"
+            },
+            {
+                "title": "Alone In Space",
+                "filename": "761243278-swimmer-zone-alone-in-space",
+                "local": "the-pool/13_alone_in_space",
+                "playtime": 482,
+                "bpm": 0,
+                "genre": "Techno",
+                "created_at": "2014-11-20"
+            },
+            {
+                "title": "Bells",
+                "filename": "766456909-swimmer-zone-bells",
+                "local": "the-pool/14_bells",
+                "playtime": 264,
+                "bpm": 0,
+                "genre": "Techno",
+                "created_at": "2014-12-12"
+            },
+            {
+                "title": "A Dream",
+                "filename": "766457305-swimmer-zone-a-dream",
+                "local": "the-pool/15_a_dream",
+                "playtime": 462,
+                "bpm": 0,
+                "genre": "Ambient",
+                "created_at": "2015-05-26"
+            },
+            {
+                "title": "Sail",
+                "filename": "766457578-swimmer-zone-sail",
+                "local": "the-pool/16_sail",
+                "playtime": 342,
+                "bpm": 0,
+                "genre": "Ambient",
+                "created_at": "2015-11-13"
+            },
+            {
+                "title": "Ocean",
+                "filename": "766460239-swimmer-zone-ocean",
+                "local": "the-pool/17_ocean",
+                "playtime": 417,
+                "bpm": 0,
+                "genre": "Ambient",
+                "created_at": "2015-12-02"
+            },
+            {
+                "title": "Glow",
+                "filename": "766460284-swimmer-zone-glow",
+                "local": "the-pool/18_glow",
+                "playtime": 342,
+                "bpm": 0,
+                "genre": "Techno",
+                "created_at": "2015-11-08"
+            },
+            {
+                "title": "Sunrise",
+                "filename": "766460317-swimmer-zone-sunrise",
+                "local": "the-pool/19_sunrise",
+                "playtime": 471,
+                "bpm": 0,
+                "genre": "Techno",
+                "created_at": "2015-06-23"
+            },
+            {
+                "title": "Mars",
+                "filename": "766460380-swimmer-zone-mars",
+                "local": "the-pool/20_mars",
+                "playtime": 182,
+                "bpm": 0,
+                "genre": "Drum & Bass",
+                "created_at": "2013-05-07"
+            }
+        ]
+    },    
+    {
+        "title": "Collectifest",
+		"intro": "This is the tracklisting of my set on the previous page.",
+        "tracks": [
+            {
+                "title": "The After",
+                "filename": "1471722346-swimmer-zone-the-after",
+                "local": "set/01_the_after",
+                "playtime":432,
+                "bpm": 120,
+                "genre": "Techno",
+                "comment": "2019-10-10"
+            },
+            {
+                "title": "Version",
+                "filename": "1471723009-swimmer-zone-version",
+                "local": "set/02_version",
+                "playtime": 240,
+                "bpm": 120,
+                "genre": "Techno",
+                "comment": "2019-10-10"
+            },
+            {
+                "title": "Dubplate",
+                "filename": "1471722553-swimmer-zone-dubplate",
+                "local": "set/03_dubplate",
+                "playtime": 288,
+                "bpm": 120,
+                "genre": "Techno",
+                "comment": "2019-10-10"
+            },
+            {
+                "title": "Merry Marimba",
+                "filename": "737966014-swimmer-zone-merry-marimba",
+                "local": "set/04_merry_marimba",
+                "playtime": 258,
+                "bpm": 120,
+                "genre": "Techno",
+                "comment": "2019-10-10"
+            },
+            {
+                "title": "Flam",
+                "filename": "737965993-swimmer-zone-flam",
+                "local": "set/05_flam",
+                "playtime": 254,
+                "bpm": 120,
+                "genre": "Techno",
+                "comment": "2019-10-10"
+            },
+            {
+                "title": "Whim",
+                "filename": "737965987-swimmer-zone-whim",
+                "local": "set/06_whim",
+                "playtime": 340,
+                "bpm": 120,
+                "genre": "Techno",
+                "comment": "2019-10-10"
+            },
+            {
+                "title": "Grim",
+                "filename": "1471722742-swimmer-zone-grim",
+                "local": "set/07_grim",
+                "playtime": 263,
+                "bpm": 120,
+                "genre": "Techno",
+                "comment": "2019-10-10"
+				
+            },
+            {
+                "title": "Swim",
+                "filename": "737965951-swimmer-zone-swim",
+                "local": "set/08_swim",
+                "playtime": 240,
+                "bpm": 120,
+                "genre": "Techno",
+                "comment": "2019-10-10"
+            }
+        ]
+    }
+]

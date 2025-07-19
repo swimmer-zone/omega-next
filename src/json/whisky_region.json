@@ -1,0 +1,8 @@
+[
+    { "id": "1", "value": "Highland", "label": "Highland", "country_id": "7"},
+    { "id": "2", "value": "Lowland", "label": "Lowland", "country_id": "7"},
+    { "id": "3", "value": "Speyside", "label": "Speyside", "country_id": "7"},
+    { "id": "4", "value": "Islay", "label": "Islay", "country_id": "7"},
+    { "id": "5", "value": "Islands", "label": "Islands", "country_id": "7"},
+    { "id": "6", "value": "Campbeltown", "label": "Campbeltown", "country_id": "7"}
+]

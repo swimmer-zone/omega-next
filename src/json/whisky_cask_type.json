@@ -1,0 +1,8 @@
+[
+    { "value": "Bourbon", "label": "Bourbon" },
+    { "value": "Sherry", "label": "Sherry" },
+    { "value": "Port", "label": "Port" },
+    { "value": "Wine", "label": "Wine" },
+    { "value": "American Oak", "label": "American Oak" },
+    { "value": "Canadian Oak", "label": "Canadian Oak" }
+]

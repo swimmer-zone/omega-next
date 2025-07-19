@@ -1,0 +1,30 @@
+@import '../../pages/_scss/_variables.scss';
+
+#logo {
+    width: 400px;
+    z-index: 999;
+    position: fixed;
+    left: 2vw;
+    bottom: 2vh;
+
+	path {
+		filter: drop-shadow(5px 5px 3px #6c6eec44);
+	}
+}
+#footer .copy {
+    position: fixed;
+    left: calc(4vw + 384px);
+    bottom: 60px;
+    font-size: 0.5rem;
+    z-index: 9999;
+    width: 160px;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+@media(max-width: $mobile-breakpoint) {
+    #logo {
+		width: 90vw !important;
+		left: 6vw;
+    }
+}

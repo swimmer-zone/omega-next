@@ -1,0 +1,24 @@
+@import '../../pages/_scss/_variables.scss';
+
+.intro {
+    width: 46vw;
+    margin: 16vh 12vw 40vh 42vw;
+    vertical-align: top;
+    z-index: 99;
+    position: relative;
+    
+    p {
+        margin: 40px 0
+    }
+
+    li {
+		color: $purple;
+    }
+}
+
+@media(max-width: $mobile-breakpoint) {
+    .intro {
+		margin-left: 2vw;
+		width: 90vw;
+	}
+}

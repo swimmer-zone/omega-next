@@ -1,0 +1,5 @@
+[
+    { "id": "1", "value": "Malt Whisky", "label": "Malt Whisky"},
+    { "id": "2", "value": "Grain Whisky", "label": "Grain Whisky"},
+    { "id": "3", "value": "Other", "label": "Other"}
+]

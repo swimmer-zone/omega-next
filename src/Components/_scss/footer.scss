@@ -1,0 +1,48 @@
+@import '../../pages/_scss/_variables.scss';
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 60vh;
+	z-index: 999;
+    background: linear-gradient(to bottom, #11111100, #11111144, #111111dd, $darkest);
+	pointer-events: none;
+
+	h2 {
+		font-family: 'Indie Flower', 'Afacad', sans-serif;
+		color: $black;
+		margin-top: -45px;
+		text-shadow: 2px 2px 2px #6c6eecff;
+	}
+	ul {
+		position: fixed;
+		left: 36vw;
+		bottom: 4vh;
+	}
+	a {
+		line-height: 16px;
+		display: inline-block;
+		pointer-events: all;
+	}
+}
+
+@media(max-width: $mobile-breakpoint) {
+	footer {
+		padding: 1vh 1vw;
+		height: 60vh;
+
+		h2 {
+			padding-left: 1vw;
+		}
+	    ul {
+			margin-left: 2vw;
+			font-size: 0.7rem;
+			width: 90vw;
+		}
+	    .copy {
+	    	display: none;
+	    }
+	}
+}

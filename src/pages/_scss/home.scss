@@ -1,0 +1,95 @@
+@import '_variables.scss';
+
+body,
+button {
+	font-family: 'Afacad', sans-serif;
+	overflow-x: hidden;
+	font-size: 1rem;
+	letter-spacing: 0.1rem;
+}
+
+html {
+	font-size: 20px;
+}
+
+body {
+    background-color: $darkest;
+    color: $light;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+	font-size: 4rem;
+	color: $white;
+	text-shadow: 2px 2px 2px #6c6eec44;
+	font-weight: 200;
+}
+
+h2 {
+	font-size: 2rem;
+	color: $white;
+	margin-bottom: 2vh;
+	text-shadow: 2px 2px 2px #6c6eec44;
+	font-weight: 300;
+}
+
+ul,
+ol {
+	margin-left: 2vw;
+}
+
+#root {
+	& > header,
+	& > section {
+		width: 100vw;
+	    box-sizing: border-box;
+		position: relative;
+		z-index: 999;
+	}
+	#bubbles {
+		pointer-events: none;
+	}
+
+	& > section {
+		height: 100vh;
+
+		a,
+		button,
+		.cover-wrapper {
+			pointer-events: all;
+		}
+	}
+}
+
+a,
+button {
+    color: $lighter;
+	transition: all 0.5s ease-in-out;
+	text-decoration: underline;
+	text-decoration-color: #ffc917aa;
+	text-underline-offset: 4px;
+	text-decoration-style: dotted;
+
+	&:hover {
+		color: $yellow;
+		transition: all 2s ease-in-out;
+	}
+}
+
+@media(max-width: $mobile-breakpoint) {
+	h1 {
+		font-size: 2rem;
+		max-width: 80vw;
+	}
+	h2 {
+		font-size: 1.5rem;
+		margin-bottom: 1vh;
+		margin-top: 0;
+		padding-top: 0;
+	}
+	.intro {
+		margin-top: 2vh !important;
+	}
+}

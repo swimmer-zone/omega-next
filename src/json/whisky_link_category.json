@@ -1,0 +1,5 @@
+[
+    { "id": "1", "value": "Shops", "label": "Shops"},
+    { "id": "2", "value": "Wiki Pages", "label": "Wiki Pages"},
+    { "id": "3", "value": "Other References", "label": "Other References"}
+]

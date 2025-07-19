@@ -1,0 +1,8 @@
+[
+    { "id": "1", "value": "Clean", "label": "Clean"},
+    { "id": "2", "value": "Sweet", "label": "Sweet"},
+    { "id": "3", "value": "Sour", "label": "Sour"},
+    { "id": "4", "value": "Salty", "label": "Salty"},
+    { "id": "5", "value": "Bitter", "label": "Bitter"},
+    { "id": "6", "value": "Spicy", "label": "Spicy"}
+]
