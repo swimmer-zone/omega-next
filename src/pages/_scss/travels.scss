@@ -1,0 +1,65 @@
+@import './_variables.scss';
+@import './common.scss';
+
+.travel-background {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+    background-size: auto 100vh;
+}
+.content {
+    background-attachment: fixed;
+}
+.article {
+    background-color: #00000088;
+    background: linear-gradient(to top, transparent 0, #00000088 80px);
+
+    * {
+        max-width: 32vw;
+    }
+}
+.travel-overview-background {
+    .banner {
+        display: flex;
+        justify-content: space-evenly;
+        text-decoration: none;
+        width: 70vw;
+        aspect-ratio: 32 / 9;
+        text-align: center;
+        margin: 40px auto;
+        background-size: auto 100%;
+        flex-direction: column;
+        box-shadow: 0 0 16px 4px rgba(0, 0, 0, 0.1);
+        transition: all 1s;
+
+        h2 {
+            font-size: 4rem;
+            font-weight: lighter;
+            margin-bottom: 0;
+            transition: all 0.5s;
+            color: #ffffff;
+        }
+        small {
+            font-size: 1rem;
+            margin-top: 0;
+            transition: all 0.5s;
+            color: #ffffff;
+        }
+        &:nth-of-type(5) {
+            background-size: auto 112%;
+        }
+        &:hover {
+            box-shadow: 0 0 16px 4px rgba(0, 0, 0, 0.4);
+
+            h2 {
+                margin-bottom: 10px;
+            }
+            small {
+                margin-top: 10px;
+            }
+        }
+    }
+}

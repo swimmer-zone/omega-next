@@ -2,8 +2,8 @@
 
 .social {
 	position: fixed;
-	bottom: calc(1vh - 10px);
-	left: calc(1vw + 200px);
+	bottom: 1vh;
+	left: calc(1vw + 120px);
 	display: flex;
 	justify-content: flex-end;
 	flex-wrap: wrap;
@@ -13,18 +13,17 @@
 
 	a {
 		position: relative;
-		width: 64px;
-		height: 64px;
+		width: 48px;
+		height: 48px;
 		border-bottom: 0;
 		background: none;
 
 		svg {
-			width: 40px;
-			height: 24px;
+			width: 30px;
+			height: 16px;
 			margin: 20px 10px;
 			fill: $purple;
 		}
-
 		&::after,
 		&::before {
 			content: "";
@@ -40,7 +39,6 @@
 			opacity: 0;
 			pointer-events: none;
 		}
-
 		&:hover::after {
 			animation-name: anim-3, anim-1;
 			animation-duration: 5s, 2s;
@@ -48,7 +46,6 @@
 			animation-timing-function: ease, linear;
 			animation-fill-mode: forwards;
 		}
-
 		&:hover::before {
 			animation-name: anim-3, anim-2;
 			animation-duration: 5s, 2s;
@@ -60,19 +57,19 @@
 }
 @keyframes anim-1 {
 	0% {
-		transform: perspective(1000px) rotate3d(1, 1, 1, 0deg);
+		transform: perspective(600px) rotate3d(1, 1, 1, 0deg);
 	}
 	100% {
-		transform: perspective(1000px) rotate3d(1, 1, 1, 360deg);
+		transform: perspective(600px) rotate3d(1, 1, 1, 360deg);
 	}
 }
 
 @keyframes anim-2 {
 	0% {
-		transform: perspective(1000px) rotate3d(1, -1, 1, 0deg);
+		transform: perspective(600px) rotate3d(1, -1, 1, 0deg);
 	}
 	100% {
-		transform: perspective(1000px) rotate3d(1, -1, 1, 360deg);
+		transform: perspective(600px) rotate3d(1, -1, 1, 360deg);
 	}
 }
 
@@ -82,27 +79,5 @@
 	}
 	25%, 75% {
 		opacity: 0.3;
-	}
-}
-
-
-@media(max-width: $mobile-breakpoint) {
-	.social {
-		&.header {
-			left: 4vw;
-			width: 90vw;
-			display: flex;
-			justify-content: space-between;
-			overflow: unset;
-		}
-		a {
-			width: 36px;
-			height: 36px;
-
-		    svg {
-				width: 6vw;
-				height: 6vw;
-			}
-		}
 	}
 }

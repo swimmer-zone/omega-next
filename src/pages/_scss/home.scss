@@ -3,7 +3,6 @@
 body,
 button {
 	font-family: 'Afacad', sans-serif;
-	overflow-x: hidden;
 	font-size: 1rem;
 	letter-spacing: 0.1rem;
 }
@@ -13,7 +12,6 @@ html {
 }
 
 body {
-    background-color: $darkest;
     color: $light;
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
@@ -75,6 +73,22 @@ button {
 	&:hover {
 		color: $yellow;
 		transition: all 2s ease-in-out;
+	}
+}
+
+.content-column {
+	position: absolute;
+	top: 1vh;
+	left: 400px;
+	width: calc(100vw - 500px);
+}
+.intro {
+	p {
+		margin: 40px 0;
+	}
+
+	li {
+		color: $purple;
 	}
 }
 

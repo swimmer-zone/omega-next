@@ -1,0 +1,210 @@
+@import './_variables.scss';
+@import './common.scss';
+
+* {
+	font-family: 'Afacad', sans-serif;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+body {
+    background-color: $darkest;
+    overflow-x: hidden;
+}
+h2 {
+    color: $purple;
+	font-family: 'Afacad', sans-serif;
+    font-weight: normal;
+    font-size: 32px;
+}
+.menu-button {
+    position: absolute;
+}
+
+button {
+    background-color: $purple;
+    color: $darker;
+    padding: 2vw 1vw;
+    border: none;
+    margin: 16px auto 80px;
+    width: 40vw;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 
+        4px 4px 4px 4px rgba(0, 0, 0, 0.05), 
+        2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+input[type=checkbox],
+label {
+    display: inline-block;
+}
+a {
+    color: $lighter;
+    cursor: pointer;
+}
+.range-slider {
+    width: 90vw;
+    height: 24px;
+    display: inline-block;
+    line-height: 40px;
+    margin: 16px 4vw 0 4vw;
+
+    .slider-thumb {
+        line-height: 20px;
+        text-align: center;
+        color: $white;
+        cursor: grab;
+
+        background-color: $purple !important;
+        border: none !important;
+        outline: none !important;
+        border-radius: 50%;
+        width: 20px !important;
+        height: 20px !important;
+        box-shadow: 
+            2px 2px 4px 4px rgba(0, 0, 0, 0.1),
+            1px 1px 2px 2px rgba(0, 0, 0, 0.3),
+            3px 3px 8px 4px #6c6eec44 inset;
+    }
+    .slider-track {
+        top: 8px;
+        bottom: 0;
+        height: 4px;
+        background-color: $white;
+        border-radius: 999px;
+    }
+}
+.color-slider {
+    .slider-track-0 {
+        background: linear-gradient(to right, 
+            #ffffff 10vw,
+            #EEEDC4 20vw,
+            #ECBF7A 30vw,
+            #EBA937 40vw,
+            #C09711 50vw,
+            #FFBF00 60vw,
+            #B87333 70vw,
+            #6C4324 80vw,
+            #8B6145 90vw
+        );
+    }
+    .slider-track-1 {
+        background: linear-gradient(to left,
+            #8B6145 10vw,
+            #6C4324 20vw,
+            #B87333 30vw,
+            #FFBF00 40vw,
+            #C09711 50vw,
+            #EBA937 60vw,
+            #ECBF7A 70vw,
+            #EEEDC4 80vw,
+            #ffffff 90vw
+        );
+    }
+}
+.slider-label {
+    margin: -8px 6vw 24px 6vw;
+    color: $purple;
+}
+#barrel {
+    width: 50vw;
+    margin: 2vh 10vw 2vh 40vw;
+    display: block;
+}
+ul {
+    width: 80vw;
+    margin: 10px auto;
+    color: $purple;
+}
+.json_output {
+    border-radius: 8px;
+    margin: 2vw 5vw 64vw 5vw;
+    padding: 2vw;
+    width: 90vw;
+    border: none;
+    background-color: $darker;
+    min-height: 200px;
+    font-family: monospace;
+    color: $purple;
+    white-space: pre;
+    box-shadow: 4px 4px 16px 4px #6c6eecaa, 2px 2px 4px 2px #6c6eec44;
+    overflow: hidden;
+    font-size: 16px;
+}
+
+.title {
+    margin: 100px 0 20px 0;
+
+    h2 {
+        color: $purple;
+        margin: 0;
+        padding: 0;
+        flex-grow: 2;
+    }
+    h3 {
+        color: $purple;
+        margin: 0;
+        padding: 0;
+        flex-grow: 2;
+        font-size: 1.2rem;
+    }
+    .stars {
+        padding-top: 10px;
+        margin-right: 20px;
+    }
+}
+.whisky-wrapper {
+    position: relative;
+    width: calc(32vw + 400px);
+
+    .whisky-map {
+        position: absolute;
+        left: 32vw;
+        top: 0;
+        display: inline-block;
+        width: 400px;
+    }
+    a.buy {
+        background-color: $purple;
+        color: $lighter;
+        border-radius: 4px;
+        width: 60px;
+        height: 30px;
+        text-align: center;
+        font-weight: bold;
+        transition: all .3s linear;
+        box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.2), 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+        align-self: flex-end;
+        padding: 2px 8px;
+
+        &:hover {
+            background-color: $purple-dark;
+            box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.2), 1px 1px 20px 1px rgba(0, 0, 0, 0.3);
+        }
+    }
+}
+
+@media(max-width: $mobile-breakpoint) {
+    .whisky-wrapper {
+        height: auto;
+        padding: 40px 1vw;
+
+        h2 {
+            margin-left: 1vw;
+        }
+        .whisky-map,
+        .whisky-origin,
+        .whisky-tasting {
+            width: 94vw;
+            margin: 20px 1vw;
+        }
+        .whisky-map {
+            margin-top: 0;
+
+            .map {
+                width: 80vw;
+                height: auto;
+            }
+        }
+    }
+}

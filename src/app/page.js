@@ -4,23 +4,19 @@ import '../pages/_scss/home.scss';
 import React from "react";
 
 const Home = () => {
-	const toggleMenu = () => {
-        document.body.classList.remove('show-menu');
-    };
-
   	return (<main className="home">
-		<div className="container">
-            <Menu active="home"/>
-			<div className="content-wrap" onClick={toggleMenu}>
-				<div className="content">
-					<Hexagons />
-                    {/*<Music />*/}
-                    {/*<Intro />*/}
-                    <Footer/>
-				</div>
-			</div>
+		<Menu active="home"/>
+		<Hexagons />
+		<div className="content-column">
+			<p>
+				Hey all, I'm Omega. Listen to my music below! Also make sure to try out the
+				yellow hexagon menu on the left to visit my blogs about travelling, DIY projects,
+				or tutorials.
+			</p>
+			<Music/>
 		</div>
-    </main>);
+		<Footer/>
+	</main>);
 }
 
 export default Home;

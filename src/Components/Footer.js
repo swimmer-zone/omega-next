@@ -1,5 +1,5 @@
 import React from 'react';
-import { Hexagons, Social, Logo } from '../Components';
+import { Social, Logo } from '../Components';
 import './_scss/footer.scss';
 import packageJson from '../../package.json';
 
@@ -10,8 +10,7 @@ const Footer = () => {
             <Social location="header" />
 
             <p className="copy">
-                v{packageJson.version}<br/>
-                &copy; 2005&thinsp;/&thinsp;{(new Date().getFullYear())}
+                v{packageJson.version}
             </p>
         </footer>
 	</>);
