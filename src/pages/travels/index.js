@@ -1,7 +1,9 @@
 'use client';
 import Head from 'next/head';
-import { Footer, Menu } from '../../Components';
+import {Footer, Hexagons, Menu} from '../../Components';
+import '../_scss/home.scss';
 import '../_scss/travels.scss';
+import React from "react";
 
 // 2024-01-08
 // 2023-02-20
@@ -12,10 +14,6 @@ import '../_scss/travels.scss';
 // 2008-05-19
 
 const Travels = () => {
-	const toggleMenu = () => {
-        document.body.classList.remove('show-menu');
-    };
-
     const travels = [
         {
             "title": "Italy",
@@ -97,34 +95,31 @@ const Travels = () => {
         totalImages += travel.images;
     })
 
-    return (<main className="travel-overview-background overview-background">
-		<div className="container">
-            <Menu active="travels"/>
-			<div className="content-wrap" onClick={toggleMenu}>
-				<div className="content">
-                    <Head>
-                        <title>Swimmer ♬ Travels</title>
-                    </Head>
-                    <h1>Travels</h1>
-                    <p>
-                        This is a list of all my travels in descending order. Cutting back on the amount of images wass quite a
-                        challenge. Especially Georgia, where we had a total of more than 2000 images. The total amount of images
-                        is currently {totalImages}.
-                    </p>
+    return (<main className="travel-overview-background">
+        <Head>
+            <title>Ω - Travels</title>
+        </Head>
+        <Menu active="travels"/>
+        <Hexagons />
+        <div className="content-column">
+            <h1>Travels</h1>
+            <p>
+                This is a list of all my travels in descending order. Cutting back on the amount of images wass
+                quite a challenge. Especially Georgia, where we had a total of more than 2000 images. The total
+                amount of images is currently {totalImages}.
+            </p>
 
-                    {Object.keys(travels).map(key => {
-                        let travel = travels[key];
+            {Object.keys(travels).map(key => {
+                let travel = travels[key];
 
-                        return (<a href={'travels/' + travel.destination} className="banner" style={{ 'backgroundImage': 'url(/images/' + travel.destination + '/panorama.jpeg)' }}>
-                            <h2>{travel['title']}</h2>
-                            <small>Posted: {travel.posted} {travel.description}<br />{travel.images} images</small>
-                        </a>);
-                    })}
-                
-                    <Footer/>
-				</div>
-			</div>
-		</div>
+                return (<a href={'travels/' + travel.destination} className="banner"
+                           style={{'backgroundImage': 'url(/images/travels/' + travel.destination + '/panorama.jpeg)'}}>
+                    <h2>{travel['title']}</h2>
+                    <small>Posted: {travel.posted} {travel.description}<br/>{travel.images} images</small>
+                </a>);
+            })}
+        </div>
+        <Footer/>
     </main>);
 }
 

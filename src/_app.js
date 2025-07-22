@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import './_scss/app.scss';
 import localFont from 'next/font/local';
 

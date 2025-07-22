@@ -1,17 +1,20 @@
 'use client';
-import { Footer, Hexagons, Menu, Music } from '../Components'; // Intro
+import { Footer, Hexagons, Menu, Music } from '../Components';
 import '../pages/_scss/home.scss';
 import React from "react";
+import Head from "next/head";
 
 const Home = () => {
   	return (<main className="home">
+		<Head>
+			<title>Ω - Resume</title>
+		</Head>
 		<Menu active="home"/>
 		<Hexagons />
 		<div className="content-column">
 			<p>
 				Hey all, I'm Omega. Listen to my music below! Also make sure to try out the
-				yellow hexagon menu on the left to visit my blogs about travelling, DIY projects,
-				or tutorials.
+				yellow hexagon menu on the left to visit my blogs about travelling or DIY projects.
 			</p>
 			<Music/>
 		</div>

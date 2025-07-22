@@ -116,12 +116,6 @@
     .icon-list a:nth-of-type(6) {
         transition-delay: 2.7s;
     }
-    .icon-list a:nth-of-type(7) {
-        transition-delay: 2.8s;
-    }
-    .icon-list a:nth-of-type(8) {
-        transition-delay: 2.9s;
-    }
 }
 
 .icon-list {
@@ -136,17 +130,15 @@
 .icon-list a {
     text-decoration: none;
     margin-left: -250px;
+    padding-block: 4px;
+    font-size: 1.1rem;
+
     &:hover,
     &:focus {
         color: $dark;
     }
-    &.active {
-        span {
-            fill: $yellow;
-        }
-        svg {
-            //opacity: 1;
-        }
+    &.active svg {
+        fill: $yellow;
     }
     svg {
         opacity: 1;

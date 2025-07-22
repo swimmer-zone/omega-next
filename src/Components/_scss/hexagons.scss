@@ -13,9 +13,11 @@
         $cone3 $hexagon-size 0, $cone3 0 calc(1.73 * $hexagon-size),
         $hexagon-background;
     background-size: calc(2 * $hexagon-size) calc(3.46 * $hexagon-size);
-    height: 500vh;
-    position: relative;
-    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
 
     &::after {
         content: '';

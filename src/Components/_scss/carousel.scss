@@ -1,0 +1,33 @@
+@import '../../pages/_scss/_variables.scss';
+
+.swiper {
+	width: 100%;
+	margin: 40px 0;
+	height: 440px;
+}
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	img {
+		display: block;
+		width: auto;
+		height: 400px;
+		object-fit: cover;
+	}
+}
+.swiper-pagination-bullet {
+	background: $white;
+	opacity: .5;
+	width: 6px;
+	height: 6px;
+}
+.swiper-pagination-bullet-active {
+	background: $purple;
+	opacity: 1;
+	width: 8px;
+	height: 8px;
+}
