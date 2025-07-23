@@ -8,7 +8,7 @@ import '../_scss/travels.scss';
 const Georgia = () => {
     return (<main>
         <Head>
-            <title>Ω - Travels to Georgia</title>
+            <title>Ω - Travel to Georgia</title>
         </Head>
         <Menu active="travels"/>
         <Hexagons/>
@@ -22,7 +22,7 @@ const Georgia = () => {
                 <li><a href="#tbilisi">Tbilisi</a></li>
             </ul>
             <h2 id="introduction">Introduction</h2>
-            <p><img src="/images/georgia/map.png" alt="Route"/></p>
+            <p><img src="/images/travels/georgia/map.png" alt="Route"/></p>
             <h3>Departure from Charleroi</h3>
             <p>
                 On December 19th we took the plane from Brussels to Kutaisi, a city in Georgia. I've never

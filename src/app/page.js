@@ -7,13 +7,14 @@ import Head from "next/head";
 const Home = () => {
   	return (<main className="home">
 		<Head>
-			<title>Ω - Resume</title>
+			<title>Ω</title>
 		</Head>
 		<Menu active="home"/>
 		<Hexagons />
 		<div className="content-column">
+			<h1>Hey all</h1>
 			<p>
-				Hey all, I'm Omega. Listen to my music below! Also make sure to try out the
+				Welcome to my website, I'm Omega. Listen to my music below! Also make sure to try out the
 				yellow hexagon menu on the left to visit my blogs about travelling or DIY projects.
 			</p>
 			<Music/>

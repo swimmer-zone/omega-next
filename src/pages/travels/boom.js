@@ -7,7 +7,7 @@ import '../_scss/travels.scss';
 const Boom = () => {
     return (<main>
         <Head>
-            <title>Ω - Travels to festivals</title>
+            <title>Ω - Travels to Festivals</title>
         </Head>
         <Menu active="travels"/>
         <Hexagons/>

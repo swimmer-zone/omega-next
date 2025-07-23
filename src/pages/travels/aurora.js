@@ -7,7 +7,7 @@ import '../_scss/travels.scss';
 const Aurora = () => {
     return (<main>
         <Head>
-            <title>Ω - Travels to find Aurora</title>
+            <title>Ω - Travel to find Aurora</title>
         </Head>
         <Menu active="travels"/>
         <Hexagons/>
@@ -21,7 +21,7 @@ const Aurora = () => {
                 <li><a href="#belfast">Belfast</a></li>
             </ul>
             <h2 id="introduction">Introduction</h2>
-            <p><img src="/images/aurora/map.png" alt="Route"/></p>
+            <p><img src="/images/travels/aurora/map.png" alt="Route"/></p>
             <p>
                 We went to Rovaniemi in Finland to chase the aurora. Unfortunately we didn't manage to see
                 it so I used

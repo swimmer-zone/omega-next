@@ -7,7 +7,7 @@ import '../_scss/travels.scss';
 const Iceland = () => {
     return (<main style={{'backgroundImage': 'url(/images/travels/italy/panorama.jpeg)'}}>
         <Head>
-            <title>Ω - Travels to Italy</title>
+            <title>Ω - Travel to Italy</title>
         </Head>
         <Menu active="travels"/>
         <Hexagons/>
@@ -31,7 +31,7 @@ const Iceland = () => {
                 <li><a href="#oleggio">Oleggio</a></li>
             </ul>
             <h2 id="introduction">Introduction</h2>
-            <p><img src="/images/italy/map.png" alt="Route"/></p>
+            <p><img src="/images/travels/italy/map.png" alt="Route"/></p>
             <p>
                 We went to Italy.
             </p>

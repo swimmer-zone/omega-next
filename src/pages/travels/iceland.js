@@ -7,7 +7,7 @@ import '../_scss/travels.scss';
 const Iceland = () => {
     return (<main>
         <Head>
-            <title>Ω - Travels to Iceland</title>
+            <title>Ω - Travel to Iceland</title>
         </Head>
         <Menu active="travels"/>
         <Hexagons/>
@@ -19,7 +19,7 @@ const Iceland = () => {
                 <li><a href="#reykjavik">Reykjavik</a></li>
             </ul>
             <h2 id="introduction">Introduction</h2>
-            <p><img src="/images/iceland/map.png" alt="Route"/></p>
+            <p><img src="/images/travels/iceland/map.png" alt="Route"/></p>
             <p>
                 We went to Iceland, this time it's not a very long holiday and getting there takes a lot of
                 time. The plane to Iceland left from London Stansted airport and I decided to take the Flix

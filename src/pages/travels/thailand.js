@@ -7,7 +7,7 @@ import '../_scss/travels.scss';
 const Thailand = () => {
     return (<main>
         <Head>
-            <title>Ω - Travels to Thailand</title>
+            <title>Ω - Travel to Thailand</title>
         </Head>
         <Menu active="travels"/>
         <Hexagons/>
@@ -24,7 +24,7 @@ const Thailand = () => {
             </ul>
             <h2 id="introduction">Introduction</h2>
             <p>
-                <img src="/images/thailand/map.png" alt="Route"/>
+                <img src="/images/travels/thailand/map.png" alt="Route"/>
             </p>
             <h2 id="phuket">Phuket</h2>
             <p>

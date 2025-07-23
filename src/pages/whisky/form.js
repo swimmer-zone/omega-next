@@ -4,7 +4,7 @@ import Select from 'react-select';
 import CreatableSelect from 'react-select/creatable';
 // import ReactSlider from 'react-slider';
 import Head from 'next/head';
-import {Barrel, Code, Footer, Hexagons, Menu} from '../../Components';
+import { Code, Footer, Hexagons, Menu } from '../../Components';
 import  {
     whisky_cask_type,
     whisky_country,
@@ -130,8 +130,7 @@ console.log(formatted)
         <Hexagons />
         <div className="content-column">
             <form onSubmit={submit}>
-                <Barrel/>
-
+                <h1>Add Tasting</h1>
                 <h2>The whisky</h2>
                 <input
                     type="text"

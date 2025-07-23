@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import './_scss/music.scss';
-import { albums } from '../json';
+import { albumsArchive } from '../json';
 
 function countDown(duration, time) {
     if (!isNaN(time)) {
@@ -11,7 +11,7 @@ function countDown(duration, time) {
     }
 }
 
-const Music = () => {
+const MusicArchive = () => {
     const player = useRef(null);
     const [ state, setState ] = useState({
         currentTrack: null,
@@ -36,9 +36,9 @@ const Music = () => {
     }, [state.currentTrack]);
 	
   	return (
-		<section className="music music-home" id="music">
-            {Object.keys(albums).map(key => {
-                let album = albums[key];
+		<section className="music" id="music">
+            {Object.keys(albumsArchive).map(key => {
+                let album = albumsArchive[key];
                 let timer;
 
                 return(
@@ -54,7 +54,7 @@ const Music = () => {
                             <ul key={"ul_" + key}>
                                 {Object.keys(album.tracks).map(trackKey => {
                                     let track = album.tracks[trackKey];
-                                    let scName = '/audio/' + track.local + '.mp3';
+                                    let scName = '/audio/old/' + track.local + '.mp3';
                                     let playTime = Math.floor(track.playtime / 60) + ":" + ("0" + Math.floor(track.playtime % 60)).slice(-2);
 
                                     if (state.currentTime && state.currentTrack === scName) {
@@ -102,4 +102,4 @@ const Music = () => {
   	);
 };
 
-export default Music;
+export default MusicArchive;

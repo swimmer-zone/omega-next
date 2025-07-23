@@ -1,4 +1,5 @@
 import albums from './albums.json';
+import albumsArchive from './albums-archive.json';
 import bookmarks from './bookmarks.json';
 import whisky_cask_type from './whisky_cask_type.json';
 import whisky_color from './whisky_color.json';
@@ -13,8 +14,9 @@ import whisky_type_group from './whisky_type_group.json';
 import whisky_tasting from './whisky_tasting.json';
 import whisky_type from './whisky_type.json';
 
-export { 
+export {
     albums,
+    albumsArchive,
     bookmarks,
     whisky_cask_type,
     whisky_color,

@@ -7,7 +7,7 @@ import '../_scss/travels.scss';
 const Europe = () => {
     return (<main>
         <Head>
-            <title>Ω - Travels through Europe</title>
+            <title>Ω - Travel through Europe</title>
         </Head>
         <Menu active="travels"/>
         <Hexagons/>
@@ -895,8 +895,8 @@ const Europe = () => {
                 <li>A car, this has all the same arguments.</li>
             </ul>
             <p>
-                <img src="/images/europe/map_before.jpeg" alt="Before"/>
-                <img src="/images/europe/map.jpeg" alt="After"/>
+                <img src="/images/travels/europe/map_before.jpeg" alt="Before"/>
+                <img src="/images/travels/europe/map.jpeg" alt="After"/>
             </p>
             <p>Below a list of places I spent the nights:</p>
             <ul>

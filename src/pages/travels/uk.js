@@ -7,7 +7,7 @@ import '../_scss/travels.scss';
 const Whisky = () => {
     return (<main>
         <Head>
-            <title>Ω - Travels to Edinburgh and discovers whisky</title>
+            <title>Ω - Travel to United Kingdom & Ireland</title>
         </Head>
         <Menu active="travels"/>
         <Hexagons/>
@@ -33,7 +33,7 @@ const Whisky = () => {
                 I've never tried before. Another common ground is always try a couple new whiskies and
                 update my <a href="/whisky">database with my tastings</a>.
             </p>
-            <p><img src="/images/uk/map.svg" alt="Regions" className="noshade"/></p>
+            <p><img src="/images/travels/uk/map.svg" alt="Regions" className="noshade"/></p>
             <h2 id="edinburgh">Edinburgh</h2>
             <p key="edinburgh">
                 The first exposure that I had with whiskies was in 2022 in the Whisky Museum in Edinburgh.

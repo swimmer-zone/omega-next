@@ -7,7 +7,7 @@ import '../_scss/travels.scss';
 const CapeVerde = () => {
     return (<main>
         <Head>
-            <title>Ω - Travels to Cape Verde</title>
+            <title>Ω - Travel to Cape Verde</title>
         </Head>
         <Menu active="travels"/>
         <Hexagons/>

@@ -7,7 +7,7 @@ import '../_scss/travels.scss';
 const Vietnam = () => {
     return (<main>
         <Head>
-            <title>Ω - Travels to Vietnam</title>
+            <title>Ω - Travel to Vietnam</title>
         </Head>
         <Menu active="travels"/>
         <Hexagons/>
@@ -30,7 +30,7 @@ const Vietnam = () => {
                 <li><a href="#back-in-hanoi-again">Back in Hanoi again</a></li>
             </ul>
             <h2 id="introduction">Introduction</h2>
-            <p><img src="/images/vietnam/map.png" alt="Route"/></p>
+            <p><img src="/images/travels/vietnam/map.png" alt="Route"/></p>
             <p>
                 At Saturday morning we arrived in Hanoi after making a quick stop in Taipei, I hoped to see
                 the 101 tower but no such luck. I thought

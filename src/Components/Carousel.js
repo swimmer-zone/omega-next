@@ -1,8 +1,9 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-// import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, EffectFade, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
+import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
 import './_scss/carousel.scss';
 // https://swiperjs.com/react
@@ -35,13 +36,18 @@ const Carousel = ({ directory, num }) => {
 			delay: 2500,
 			disableOnInteraction: true,
 		}}
+		effect={'fade'}
+		fadeEffect={{
+			crossFade: true
+		}}
+		mousewheel={true}
 		slidesPerView={1}
-		spaceBetween={80}
+		spaceBetween={0}
 		pagination={{
-			clickable: true,
+			type: 'fraction',
 		}}
         navigation={true}
-        // modules={[Autoplay, Pagination, Navigation]}
+        modules={[Autoplay, EffectFade, Pagination, Navigation]}
 		className="mySwiper">
 
 		{imagesHTML}
