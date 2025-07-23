@@ -85,7 +85,7 @@
 }
 
 .music-home {
-	.tracklist:first-of-type li {
+	article:first-of-type .tracklist li {
 		&:nth-of-type(1):before {
 			content: "#1";
 		}
