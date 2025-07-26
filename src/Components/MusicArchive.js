@@ -67,29 +67,27 @@ const MusicArchive = () => {
                                                 className="duration">{playTime}</span>
                                     }
 
-                                    return (<>
-                                        <li key={key + '_li_' + track.local}>
-                                            <span className="a" key={key + '_span_' + track.local}>
-                                                <button key={key + '_btn_' + track.local}
-                                                    data-permalink={track.title}
-                                                    onClick={() => {
-                                                        if (state.currentTrack === scName && !player.current.paused) {
-                                                            player.current.pause();
-                                                        } else if (state.currentTrack === scName && player.current.paused) {
-                                                            player.current.play();
-                                                        } else {
-                                                            setState({currentTrack: scName});
-                                                        }
-                                                    }}>
-                                                    {track.title}
+                                    return (<li key={key + '_li_' + track.local}>
+                                        <span className="a" key={key + '_span_' + track.local}>
+                                            <button key={key + '_btn_' + track.local}
+                                                data-permalink={track.title}
+                                                onClick={() => {
+                                                    if (state.currentTrack === scName && !player.current.paused) {
+                                                        player.current.pause();
+                                                    } else if (state.currentTrack === scName && player.current.paused) {
+                                                        player.current.play();
+                                                    } else {
+                                                        setState({currentTrack: scName});
+                                                    }
+                                                }}>
+                                                {track.title}
 
 
-                                                    {track.remark && <small key={"s_" + key}>({track.remark})</small>}
-                                                </button>
-                                            </span>
-                                            {timer}
-                                        </li>
-                                    </>);
+                                                {track.remark && <small key={"s_" + key}>({track.remark})</small>}
+                                            </button>
+                                        </span>
+                                        {timer}
+                                    </li>);
                                 })}
                             </ul>
                         </div>

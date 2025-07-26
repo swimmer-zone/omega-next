@@ -1,5 +1,4 @@
 @import './_variables.scss';
-@import './common.scss';
 
 * {
 	font-family: 'Afacad', sans-serif;
@@ -176,31 +175,6 @@ ul {
         &:hover {
             background-color: $purple-dark;
             box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.2), 1px 1px 20px 1px rgba(0, 0, 0, 0.3);
-        }
-    }
-}
-
-@media(max-width: $mobile-breakpoint) {
-    .whisky-wrapper {
-        height: auto;
-        padding: 40px 1vw;
-
-        h2 {
-            margin-left: 1vw;
-        }
-        .whisky-map,
-        .whisky-origin,
-        .whisky-tasting {
-            width: 94vw;
-            margin: 20px 1vw;
-        }
-        .whisky-map {
-            margin-top: 0;
-
-            .map {
-                width: 80vw;
-                height: auto;
-            }
         }
     }
 }

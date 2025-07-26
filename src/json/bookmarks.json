@@ -314,10 +314,7 @@
   {
     "title": "Travel & Cooking",
     "links": [
-      {"title": "Easy Mix Burger", "url": "https://www.greenforce.com/nl/products/easy-mix-burger"},
-      {"title": "Tomatensaus Recept", "url": "https://10xgezonder.nl/basis-tomatensaus/"},
       {"title": "Zoete Aardappel Stamppot", "url": "https://www.leukerecepten.nl/recepten/zoete-aardappel-stamppot/"},
-      {"title": "Vegan Heroes", "url": "https://deliveroo.nl/nl/menu/eindhoven/strijp/vegan-heroes-eindhoven?day=today&geohash=u15usxr747db&time=ASAP"},
       {"title": "Van het Land", "url": "http://vanhetland.nl/"},
       {"title": "Naanbrood Met Kerriehummus", "url": "http://www.degroenemeisjes.nl/homemade-naanbrood-met-kerriehummus-en-gekruide-wortelsalade/"},
       {"title": "Quesadilla Met Kip", "url": "https://www.leukerecepten.nl/recepten/quesadilla-met-kip/"},
@@ -415,20 +412,14 @@
       {"title": "Lava Flow Drink", "url": "https://therecipecritic.com/lava-flow-drink/"},
       {"title": "Creamy Tuscan Garlic Sauce", "url": "https://therecipecritic.com/creamy-tuscan-garlic-sauce/"},
       {"title": "Slow Cooker Swedish Meatballs", "url": "https://therecipecritic.com/slow-cooker-swedish-meatballs/"},
-      {"title": "Cashew Burger met Zeewiertapenade", "url": "https://www.ekoplaza.nl/nl/recepten/detail/cashew-bonenburger-met-zeewiertapenade"},
-      {"title": "Speculaas met Cheesecake", "url": "https://www.ekoplaza.nl/nl/recepten/detail/speculaas-cheese-cake"},
+
       {"title": "Waterkers met Doperwtensoep", "url": "https://www.ekoplaza.nl/nl/recepten/detail/waterkers-doperwtensoep"},
       {"title": "Noedels met Spruitjes en Kimchi", "url": "https://www.ekoplaza.nl/nl/recepten/detail/noedels-met-spruitjes-paprika-en-kimchi"},
-      {"title": "Pastinaakgratin met Brie", "url": "https://www.ekoplaza.nl/nl/recepten/detail/pastinaakgratin-met-brie"},
-      {"title": "Rode Linzen met Bloemkool en Pompoen", "url": "https://www.ekoplaza.nl/nl/recepten/detail/rode-linzen-met-bloemkool-en-pompoen"},
-      {"title": "Green Goddess Salad", "url": "https://www.ah.nl/allerhande/recept/R-R1197114/green-goddess-salad"},
       {"title": "Coconut Rice Recipe", "url": "https://www.vegrecipesofindia.com/coconut-rice-recipe/"},
-      {"title": "Mango Lassi Recipe (Easy and Homemade)", "url": "https://www.vegrecipesofindia.com/mango-lassi-recipe/"},
       {"title": "Lassi Recipe (3 Flavorful Variations)", "url": "https://www.vegrecipesofindia.com/sweet-lassi-punjabi-lassi/"},
       {"title": "Rajma Recipe | Rajma Masala | Rajma Chawal", "url": "https://www.vegrecipesofindia.com/rajma-masala-recipe-restaurant-style/"},
       {"title": "Green Coconut Chutney | Coriander Coconut Chutney", "url": "https://www.vegrecipesofindia.com/coriander-coconut-chutney/"},
       {"title": "Kala Chana Recipe | Punjabi Kala Chana Curry", "url": "https://www.vegrecipesofindia.com/kala-chana-curry-recipe/"},
-      {"title": "Butter Chicken Meatballs", "url": "https://pinchofyum.com/butter-chicken-meatballs"},
       {"title": "Pickled Strawberries", "url": "https://pinchofyum.com/pickled-strawberries"},
       {"title": "Ginger Peanut Chicken with Coconut Rice", "url": "https://pinchofyum.com/ginger-peanut-chicken-with-coconut-rice"},
       {"title": "Pearl Couscous Skillet with Tomatoes, Chickpeas, and Feta", "url": "https://pinchofyum.com/couscous-skillet-with-tomatoes-chickpeas-and-feta"},
@@ -436,14 +427,9 @@
       {"title": "Deze 4 cocktails zijn extra lekker met wat hot sauce erbij!", "url": "https://www.heatsupply.nl/deze-4-cocktails-zijn-extra-lekker-met-wat-hot-sauce-erbij"},
       {"title": "Recipes Blog & Recepten", "url": "https://www.heatsupply.nl/en/category/recipes/?_paged=2"},
       {"title": "Greek Lemon Chicken Soup Two Ways (Video)", "url": "https://feeds.feedblitz.com/~/620417472/0/kalynskitchen~Greek-Lemon-Chicken-Soup-Two-Ways-Video/"},
-      {"title": "Wah Nam Hong Saoto soep Wah Nam Hong", "url": "https://wahnamhong.nl/recepten/saoto_soep/"},
-      {"title": "Champignonroomsaus - Zelfgemaakte saus - Leuke Recepten", "url": "https://www.leukerecepten.nl/recepten/champignonroomsaus/"},
-      {"title": "Spaghetti met Boerenkool Cherrytomaten en Braadworst", "url": "https://www.ah.nl/allerhande/recept/R-R1187976/snelle-spaghetti-met-boerenkool-cherrytomaten-en-braadworst"},
       {"title": "Supercook: recipe search by ingredients you have at home", "url": "https://www.supercook.com/#/desktop"},
       {"title": "The Best Vegan Hot Chocolate", "url": "https://rainbowplantlife.com/vegan-hot-chocolate/"},
       {"title": "Thaise zoete aardappelstamppot met gember, kokosmelk en shiitake-spiesjes - Lidl", "url": "https://recepten.lidl.nl/recept/thaise-zoete-aardappelstamppot-met-gember-kokosmelk-en-shiitake-spiesjes"},
-      {"title": "Stamppot Recepten| Lidl recepten", "url": "https://recepten.lidl.nl/thema/stamppotten?filters[dislikedIngredients]=2005&filters[food_type]=13031"},
-      {"title": "StackPath", "url": "https://www.phopalace.menu/product-category/pho/"},
       {"title": "Garlic Soup | The Modern Proper", "url": "https://themodernproper.com/garlic-soup"},
       {"title": "26 Sandwich Wraps You'll Want for Lunch", "url": "https://www.tasteofhome.com/collection/sandwich-wrap-recipes/"},
       {"title": "The Ultimate Guide to Thai Curries", "url": "https://inquiringchef.com/the-ultimate-guide-to-thai-curries/"},
@@ -454,46 +440,31 @@
   {
     "title": "Web: Fonts & Typography",
     "links": [
-      {"title": "50 Examples Of Logo Design Process", "url": "http://www.1stwebdesigner.com/inspiration/50-concept-completion-logo/"},
       {"title": "Comic Sans Criminal", "url": "http://www.comicsanscriminal.com/"},
-      {"title": "20 typographic websites", "url": "http://www.webdesignerdepot.com/2013/02/20-typographic-websites/"},
       {"title": "The Process of Creating a Chinese Font", "url": "http://qz.com/522079/the-long-incredibly-tortuous-and-fascinating-process-of-creating-a-chinese-font/"},
-      {"title": "Font Squirrel", "url": "http://www.fontsquirrel.com/"},
-      {"title": "Glyphr Studio", "url": "http://glyphrstudio.com/"}
+      {"title": "Font Squirrel", "url": "http://www.fontsquirrel.com/"}
     ]
   },
   {
     "title": "Web: General",
     "links": [
-      {"title": "Chrome Experiment #500", "url": "http://500.chromeexperiments.com/"},
       {"title": "Boy-Coy", "url": "http://boy-coy.com/"},
-      {"title": "Marka - Icon Transformation", "url": "http://fian.my.id/marka/"},
       {"title": "Cinematography of The Incredibles I", "url": "http://floobynooby.blogspot.co.uk/2013/12/the-cinematography-of-incredibles-part-1.html"},
       {"title": "Cinematography of The Incredibles II", "url": "http://floobynooby.blogspot.co.uk/2013/12/the-cinematography-of-incredibles-part-2.html"},
-      {"title": "Element Index - HTML5 Doctor", "url": "http://html5doctor.com/element-index/"},
       {"title": "Never Use Black", "url": "http://ianstormtaylor.com/design-tip-never-use-black/"},
       {"title": "Why Japanese Web Design Is So Different", "url": "http://randomwire.com/why-japanese-web-design-is-so-different/"},
-      {"title": "Reveal App", "url": "http://revealapp.com/"},
-      {"title": "Wireframing Tool", "url": "http://wireframe.cc/"},
       {"title": "Google Doodle History", "url": "http://www.1stwebdesigner.com/inspiration/google-doodle-history-showcase/"},
-      {"title": "Statistical Formulas", "url": "http://www.evanmiller.org/statistical-formulas-for-programmers.html"},
       {"title": "KILFISH", "url": "http://www.kilfish.com/v6/#/home"},
       {"title": "16x16 Pixel Art Tutorial", "url": "http://www.photonstorm.com/archives/2291/16x16-pixel-art-tutorial"},
-      {"title": "Augmented Reality - Future of Digital Media", "url": "http://www.webdesignerdepot.com/2012/01/augmented-reality-the-future-of-digital-media/"},
       {"title": "Innovative Animated Gifs", "url": "http://www.webdesignerdepot.com/2013/04/innovative-animated-gifs/"},
-      {"title": "Hack Design Courses", "url": "http://hackdesign.org/courses/"},
       {"title": "Bezier Curves and Type Design", "url": "http://learn.scannerlicker.net/2014/04/16/bezier-curves-and-type-design-a-tutorial/"},
       {"title": "SQL Fiddle", "url": "http://sqlfiddle.com/"},
       {"title": "Fractal Lab", "url": "http://sub.blue/fractal-lab"},
       {"title": "Icon Font Generator", "url": "http://icomoon.io/app/"},
-      {"title": "Outdated Browser", "url": "http://outdatedbrowser.com/en"},
-      {"title": "RegExr", "url": "http://gskinner.com/RegExr/"},
-      {"title": "ASCII Flow Diagram Tool", "url": "http://www.asciiflow.com/"},
       {"title": "Robby Leonardi", "url": "http://www.rleonardi.com/interactive-resume/"},
       {"title": "Stop Pushing The Web Forward", "url": "http://www.quirksmode.org/blog/archives/2015/07/stop_pushing_th.html"},
       {"title": "Nomadic Tribe", "url": "https://2019.makemepulse.com/"},
       {"title": "Human Anatomy Fundamentals", "url": "http://design.tutsplus.com/tutorials/human-anatomy-fundamentals-basic-body-proportions--vector-18254"},
-      {"title": "Poly", "url": "https://poly.google.com/"},
       {"title": "99 Photoshop Tutorials", "url": "https://design.tutsplus.com/articles/99-best-advanced-photoshop-tutorials--cms-29734"},
       {"title": "Animated Logos for Your Inspiration", "url": "https://www.behance.net/gallery/68306231/20-Famous-Animated-Logos-for-Your-Inspiration"},
       {"title": "Reusable Simple Drawings", "url": "https://www.thedoodlelibrary.com/"},
@@ -509,41 +480,22 @@
   {
     "title": "Web: HTML & CSS",
     "links": [
-      {"title": "Flashless Animation", "url": "http://24ways.org/2012/flashless-animation/"},
       {"title": "Shading with CSS text-shadows", "url": "http://blog.typekit.com/2011/07/19/shading-with-css-text-shadows/"},
       {"title": "CSS4 Preview", "url": "http://davidwalsh.name/css4-preview"},
       {"title": "How to Create a CSS Cube", "url": "http://davidwalsh.name/demo/css-cube.php"},
-      {"title": "Style External Links", "url": "http://davidwalsh.name/external-links-css"},
-      {"title": "HTML5 Placeholder Styling", "url": "http://davidwalsh.name/html5-placeholder-css"},
-      {"title": "Spellcheck Attribute", "url": "http://davidwalsh.name/spellcheck"},
       {"title": "Redacted Font", "url": "http://davidwalsh.name/redacted-font"},
       {"title": "CSS3 Patterns Gallery", "url": "http://lea.verou.me/css3patterns/"},
       {"title": "Customizable SVG Backgrounds", "url": "https://www.svgbackgrounds.com/#large-triangles"},
       {"title": "CSS Puns", "url": "https://saijogeorge.com/css-puns/muscles/"},
-      {"title": "CSS3 Animation Cheat Sheet", "url": "http://www.justinaguilar.com/animations/#"},
       {"title": "Paletton - Color Scheme Designer", "url": "http://www.paletton.com/"},
       {"title": "Little-Known CSS Facts", "url": "http://www.sitepoint.com/12-little-known-css-facts/"},
       {"title": "Tree Menu", "url": "http://www.webappers.com/2011/10/14/how-to-create-collapsible-tree-menu-with-pure-css/"},
-      {"title": "`textillate.js` - CSS3 Text Animations", "url": "http://www.webappers.com/2013/02/13/textillate-js-a-simple-plugin-for-css3-text-animations/"},
-      {"title": "Amazing Parallax Scrolling Sites", "url": "http://www.webdesignerdepot.com/2012/11/28-amazing-parallax-scrolling-sites/"},
       {"title": "HTML5 - Showcase", "url": "http://html5gallery.com/"},
-      {"title": "ASCII Pronunciation Rules", "url": "http://www.codinghorror.com/blog/2008/06/ascii-pronunciation-rules-for-programmers.html"},
       {"title": "Color - Method of Action", "url": "http://color.method.ac/"},
-      {"title": "HTML5 Canvas Tutorials", "url": "http://www.html5canvastutorials.com/"},
-      {"title": "CSS Lint", "url": "http://csslint.net/#L538"},
       {"title": "CSS spinners", "url": "http://cssload.net/"},
       {"title": "Tridiv - CSS 3D Editor", "url": "http://tridiv.com/"},
-      {"title": "CSS Gradient Animator", "url": "http://www.gradient-animator.com/"},
-      {"title": "Map Interactions using Canvas", "url": "http://chairnerd.seatgeek.com/high-performance-map-interactions-using-html5-canvas/"},
-      {"title": "CSS 3D Clouds", "url": "http://www.clicktorelease.com/code/css3dclouds/"},
       {"title": "Responsive Logos", "url": "http://responsivelogos.co.uk/"},
-      {"title": "Animated Checkboxes and Radio Buttons with SVG", "url": "http://tympanus.net/Development/AnimatedCheckboxes/"},
-      {"title": "Slideshow with Parallax Effect", "url": "http://tympanus.net/Tutorials/CSS3FluidParallaxSlideshow/"},
-      {"title": "Animated Background Headers", "url": "http://tympanus.net/Development/AnimatedHeaderBackgrounds/index.html"},
-      {"title": "Item Transition Inspiration", "url": "http://tympanus.net/Development/ItemTransitions/"},
-      {"title": "`@supports` will change your life", "url": "http://www.lottejackson.com/learning/supports-will-change-your-life"},
       {"title": "Pseudo and Pseudon't", "url": "https://adactio.com/journal/10000"},
-      {"title": "Gradient Editor", "url": "https://gra.dient.art/"},
       {"title": "Free Vector Illustrations", "url": "https://www.pixeltrue.com/free-illustrations"},
       {"title": "Gradients", "url": "https://www.gradientmagic.com/"},
       {"title": "Happy Hues", "url": "https://www.happyhues.co/"},
@@ -553,10 +505,8 @@
   {
     "title": "Web: Javascript & jQuery",
     "links": [
-      {"title": "JS things I Never Knew Existed", "url": "https://air.ghost.io/js-things-i-never-knew-existed/"},
       {"title": "Breaking Down Amazon's Mega Dropdown", "url": "http://bjk5.com/post/44698559168/breaking-down-amazons-mega-dropdown"},
       {"title": "Multi-direction Hover", "url": "http://jsfiddle.net/kizu/zfUyN/"},
-      {"title": "Parallax Done Right", "url": "https://medium.com/@dhg/82ced812e61c"},
       {"title": "Getting The Closest String Match", "url": "http://stackoverflow.com/questions/5859561/getting-the-closest-string-match#answer-5859823"},
       {"title": "JS Nice", "url": "http://www.jsnice.org/"},
       {"title": "Visual Captcha", "url": "http://www.webappers.com/2014/06/24/visualcaptcha-configurable-captcha-solution/"},
@@ -567,25 +517,15 @@
     "title": "Web: Programming",
     "links": [
       {"title": "Getting The Closest String Match", "url": "http://stackoverflow.com/questions/5859561/getting-the-closest-string-match#answer-5859823"},
-      {"title": "Why MySQL's ENUM Data Type Is Evil", "url": "http://komlenic.com/244/8-reasons-why-mysqls-enum-data-type-is-evil/"},
-      {"title": "PostgreSQL Injection Cheat Sheet", "url": "http://pentestmonkey.net/blog/postgres-sql-injection-cheat-sheet/"},
       {"title": "How `foreach` Actually Works", "url": "http://stackoverflow.com/questions/10057671/how-foreach-actually-works/"},
-      {"title": "Floating Point", "url": "http://blog.reverberate.org/2014/09/what-every-computer-programmer-should.html"},
-      {"title": "Password Hashing", "url": "https://crackstation.net/hashing-security.htm"},
       {"title": "2D Gaming Using `processing.js`", "url": "http://processingjs.nihongoresources.com/test/PjsGameEngine/docs/tutorial/mario.html"},
-      {"title": "Names That Break Computers", "url": "http://www.bbc.com/future/story/20160325-the-names-that-break-computer-systems"},
-      {"title": "Cool Command Line Tricks", "url": "https://fieldguide.gizmodo.com/20-cool-command-line-tricks-for-windows-and-macos-1797222311"},
-      {"title": "PHP Sandbox", "url": "http://sandbox.onlinephpfunctions.com/"}
+      {"title": "Names That Break Computers", "url": "http://www.bbc.com/future/story/20160325-the-names-that-break-computer-systems"}
     ]
   },
   {
     "title": "Web: React",
     "links": [
-      {"title": "Headless CMS Comparison", "url": "https://cms-comparison.io/"},
-      {"title": "Audio Player", "url": "https://dev.to/ma5ly/lets-make-a-little-audio-player-in-react-p4p"},
       {"title": "Build Your Own", "url": "https://pomb.us/build-your-own-react/"},
-      {"title": "Cheatsheet", "url": "https://devhints.io/react"},
-      {"title": "Login with GitHub", "url": "https://levelup.gitconnected.com/how-to-implement-login-with-github-in-a-react-app-bd3d704c64fc"},
       {"title": "Subtle Click Feedback Effects", "url": "https://tympanus.net/Development/ClickEffects/"},
       {"title": "Command Line Tools for Productive Programmers", "url": "https://earthly.dev/blog/command-line-tools/"}
     ]
@@ -612,19 +552,13 @@
   {
     "title": "Sites: Core 77",
     "links": [
-      {"title": "How the Heck Does This Work? Julien Vidame's Convention-Defying Extendable Table", "url": "http://www.core77.com/blog/furniture_design/how_the_heck_does_this_work_julien_vidames_convention-defying_extendable_table_23834.asp"},
       {"title": "Igor Chak's Vintage-Videogame-Based Furniture Designs", "url": "http://www.core77.com/blog/furniture_design/igor_chaks_vintage-videogame-based_furniture_designs_23210.asp"},
-      {"title": "With New See-Through Display, Samsung Puts the Window in Windows", "url": "http://www.core77.com/blog/object_culture/with_new_see-through_display_samsung_puts_the_window_in_windows_21549.asp"},
-      {"title": "Black & Decker's Forthcoming Modular Power Tool", "url": "http://www.core77.com/blog/tools/black_deckers_forthcoming_modular_power_tool_23266.asp"},
-      {"title": "SJSU Students Working on Spherical Drive System for Omnidirectional Vehicles", "url": "http://www.core77.com/blog/transportation/sjsu_students_working_on_spherical_drive_system_for_omnidirectional_vehicles_23399.asp"},
-      {"title": "Microsoft's Wicked See-Through 3D Display", "url": "http://www.core77.com/blog/ux/microsofts_wicked_see-through_3d_display_22018.asp"}
+      {"title": "SJSU Students Working on Spherical Drive System for Omnidirectional Vehicles", "url": "http://www.core77.com/blog/transportation/sjsu_students_working_on_spherical_drive_system_for_omnidirectional_vehicles_23399.asp"}
     ]
   },
   {
     "title": "Sites: CSS Tricks",
     "links": [
-      {"title": "Non-Rectangular Headers", "url": "https://css-tricks.com/creating-non-rectangular-headers/"},
-      {"title": "Google Drive as a CMS", "url": "https://css-tricks.com/using-google-drive-as-a-cms/"},
       {"title": "Persistent Headers", "url": "https://css-tricks.com/persistent-headers/"},
       {"title": "Radio buttons with 2-way exclusivity", "url": "https://css-tricks.com/radio-buttons-with-2-way-exclusivity/"},
       {"title": "Star ratings", "url": "https://css-tricks.com/star-ratings/"},
@@ -634,16 +568,10 @@
   {
     "title": "Sites: Design Boom",
     "links": [
-      {"title": "W motors adds second carbon fiber hypercar to its performance-focused lineup", "url": "http://www.designboom.com/technology/w-motors-fender-supersport-hypercar-11-11-2015/"},
       {"title": "INSA layers street art paintings into animated graffiti gifs", "url": "http://www.designboom.com/art/insa-animated-grafitti-gifs-05-14-2014/"},
-      {"title": "bambi chair by takeshi sawada at tokyo designboom mart", "url": "http://www.designboom.com/design/bambi-chair-by-takeshi-sawada-at-tokyo-designboom-mart/"},
-      {"title": "airless bicycle tires  energy return wheel by britek", "url": "http://www.designboom.com/technology/airless-bicycle-tires-energy-return-wheel-by-britek/"},
-      {"title": "fujitsu's augmented reality touchscreen interface", "url": "http://www.designboom.com/technology/fujitsus-mindblowing-augmented-reality-touchscreen-interface/"},
-      {"title": "phone strap 2 is the world's lightest and smallest phone", "url": "http://www.designboom.com/technology/phone-strap-2-is-the-worlds-lightest-and-smallest-phone/"},
       {"title": "ubi camera takes photos from your finger framed view", "url": "http://www.designboom.com/technology/ubi-camera-takes-photos-from-your-finger-framed-view/"},
       {"title": "all you can feel: recreational drugs put under the microscope", "url": "http://www.designboom.com/art/all-you-can-feel-recreational-drugs-put-under-the-microscope-12-19-2013/"},
       {"title": "where the internet lives: behind the scenes at google's data centers", "url": "http://www.designboom.com/technology/where-the-internet-lives-behind-the-scenes-at-googles-data-centers/"},
-      {"title": "NIKE unveils the NIKE GO FlyEase, an easy-on, easy off no-lace sneaker", "url": "https://www.designboom.com/design/nike-go-flyease-hands-off-no-lace-02-02-2021/"},
       {"title": "davit and mary jilavyan envision tiny 'dolmen shelters' as hotels built into the stone", "url": "https://www.designboom.com/architecture/davit-mary-jilavyan-tiny-dolmen-shelters-hotel-stone-11-08-2020/"},
       {"title": "see UNESCO world heritage sites from above with these amazing aerial photographs", "url": "https://www.designboom.com/art/unesco-world-heritage-sites-aerial-photos-11-06-2020/"},
       {"title": "Honeycomb House", "url": "https://www.designboom.com/architecture/peter-haimerl-architektur-honeycomb-clusterwohnen-wabenhaus-germany-04-07-2024/"},
@@ -654,31 +582,10 @@
   {
     "title": "Sites: Design Milk",
     "links": [
-      {"title": "The Latest Collection from Dune", "url": "http://design-milk.com/latest-collection-dune/"},
       {"title": "Mental Disorder Posters", "url": "http://design-milk.com/mental-disorder-posters/"},
       {"title": "Happy Chopper Cutting Board by All Lovely Stuff", "url": "http://design-milk.com/happy-chopper-cutting-board-by-all-lovely-stuff/"},
-      {"title": "DATA Clip by Nendo", "url": "http://design-milk.com/data-clip-by-nendo/"},
       {"title": "Triangle Notebook by Tan Mavitan", "url": "http://design-milk.com/triangle-notebook-by-tan-mavitan/"},
-      {"title": "Two-Story Triangular Addition for Relaxation & Quiet", "url": "http://design-milk.com/koya-no-sumika-extension-by-ma-style-architects/"},
       {"title": "The Nebula Alpha's 3D-Knitted Seating Softens a Futuristic Ride", "url": "https://design-milk.com/nebula-alpha-3d-knitted-scooter/"}
-    ]
-  },
-  {
-    "title": "Sites: Earthporm",
-    "links": [
-      {"title": "Kaleidoscopic Mandala Art", "url": "http://www.earthporm.com/mandala-art/"},
-      {"title": "Bride Decides To Be Her Own Wedding Photographer", "url": "http://www.earthporm.com/wedding-photographer/"},
-      {"title": "This One Comic Explains Modern Art", "url": "http://www.earthporm.com/modern-art/"},
-      {"title": "Addiction To Technology", "url": "http://www.earthporm.com/addiction-to-technology/"},
-      {"title": "10 Largest Waterfalls", "url": "http://www.earthporm.com/most-incredible-waterfalls/"},
-      {"title": "Bridge Turns Into a Tunnel", "url": "http://www.earthporm.com/bridge-turns-into-a-tunnel/"},
-      {"title": "16 Mind-Bending Photos That Are 100% Real", "url": "http://www.earthporm.com/mind-bending-photos/"},
-      {"title": "7 Breathtaking National Parks", "url": "http://www.earthporm.com/breathtaking-national-parks-2/"},
-      {"title": "National Parks to Visit for Fall Colors", "url": "http://www.earthporm.com/breathtaking-national-parks/"},
-      {"title": "Poor College Students Proved They're The Smartest And Most Creative", "url": "http://www.earthporm.com/poor-college-students/"},
-      {"title": "Drone Captures Stunning Aerial Images of Iceland", "url": "http://www.earthporm.com/stunning-aerial-images-of-iceland/"},
-      {"title": "14 Comics Introverts Will Appreciate", "url": "http://www.earthporm.com/introverts/"},
-      {"title": "14 Cute Meals Inspired By Japanese Cuisine", "url": "http://www.earthporm.com/14-incredibly-cute-meals-inspired-japanese-cuisine/"}
     ]
   },
   {
@@ -687,7 +594,6 @@
       {"title": "On The Road Through China", "url": "http://www.ignant.de/2016/04/27/on-the-road-through-china/"},
       {"title": "Layered Glass Sculptures By Ben Young", "url": "http://www.ignant.de/2015/12/29/layered-glass-sculptures-by-ben-young/"},
       {"title": "A Cosmic Dinnerware Set By Diesel x Seletti", "url": "http://www.ignant.de/2016/01/21/cosmic-dinnerware-set-by-diesel-x-seletti/"},
-      {"title": "A Tipi-Shaped House In The Woods By NAP Architects", "url": "http://www.ignant.de/2015/11/02/a-tipi-shaped-house-in-the-woods-by-nap-architects/"},
       {"title": "Trippy GIF Art By Zolloc", "url": "http://www.ignant.de/2015/10/22/trippy-gif-art-by-zolloc/"},
       {"title": "Geometric GIFs By Erik Söderberg", "url": "http://www.ignant.de/2016/01/05/geometric-gifs-by-erik-soderberg/"},
       {"title": "I Photographed Women From 37 Countries To Show That Beauty Is Everywhere", "url": "http://www.boredpanda.com/women-portraits-atlas-of-beauty-mihaela-noroc/"},
@@ -697,25 +603,13 @@
   {
     "title": "Sites: Kickstarter",
     "links": [
-      {"title": "SUPERHOT", "url": "https://www.kickstarter.com/projects/375798653/superhot"},
-      {"title": "Espruino: JavaScript for Things", "url": "https://www.kickstarter.com/projects/48651611/espruino-javascript-for-things?ref=live"},
-      {"title": "Microduino: Arduino in your pocket, small, stackable, smart", "url": "https://www.kickstarter.com/projects/microduino/microduino-arduino-in-your-pocket-small-stackable"},
-      {"title": "Tripod whisky tasting glass", "url": "https://www.kickstarter.com/projects/ucubecreative/tripod-tasting-glass-the-perfect-glass-for-the-per"},
-      {"title": "Gletscher ice mountain shaped whisky ice cubes", "url": "https://www.kickstarter.com/projects/kayukadesigns/gletscher-ice-mountain-shaped-whiskey-ice-cubes"},
-      {"title": "Madison and oak whisky tumbler", "url": "https://www.kickstarter.com/projects/nisnas/madison-and-oak-whisky-tumbler"},
-      {"title": "7cm transparent ice mold", "url": "https://www.kickstarter.com/projects/600077614/7cm-transparent-ice-mold"},
-      {"title": "Higham whisky boards for exploring scotch whisky", "url": "https://www.kickstarter.com/projects/hwb/higham-whiskyboards-for-exploring-scotch-whisky"}
+      {"title": "SUPERHOT", "url": "https://www.kickstarter.com/projects/375798653/superhot"}
     ]
   },
   {
     "title": "Sites: Noupe",
     "links": [
-      {"title": "Hitting the Mark: A Collection of Creative Advertisements", "url": "http://www.noupe.com/inspiration/hitting-the-mark-a-collection-of-creative-advertisements.html"},
-      {"title": "Pixel Perfection: Showcase of Inspired Pixel Art", "url": "http://www.noupe.com/inspiration/pixel-perfection-showcase-of-inspired-pixel-art.html"},
       {"title": "45 Astonishing Examples of Long Exposure Photography | The Jotform Blog", "url": "http://www.noupe.com/photography/45-astonishing-long-exposure-photos.html"},
-      {"title": "A Vibrant World: Stunning HDR Photographs", "url": "http://www.noupe.com/photography/a-vibrant-world-stunning-hdr-photographs.html"},
-      {"title": "Jaw Dropping Light Paintings From the Masters", "url": "http://www.noupe.com/photography/jaw-dropping-light-paintings-from-the-masters.html"},
-      {"title": "That Distant Horizon: A Showcase of Landscape Photography", "url": "http://www.noupe.com/photography/that-distant-horizon-a-showcase-of-landscape-photography.html"},
       {"title": "The Awe Inspiring Fury of Mother Nature in Photographs", "url": "http://www.noupe.com/photography/the-awe-inspiring-fury-mother-nature-photography.html"},
       {"title": "50 funny icons", "url": "https://www.noupe.com/essentials/exclusive-freebie-on-noupe-50-funny-icons-out-of-the-ordinary-81883.html"}]
   },
@@ -723,37 +617,29 @@
     "title": "Sites: Smashing Magazine",
     "links": [
       {"title": "The Future Of CSS: Experimental CSS Properties", "url": "https://coding.smashingmagazine.com/2011/05/11/the-future-of-css-experimental-css-properties/"},
-      {"title": "How To Benefit From CSS Generated Content And Counters", "url": "https://coding.smashingmagazine.com/2013/04/12/css-generated-content-counters/"},
-      {"title": "An Introduction To Full Stack JavaScript", "url": "https://coding.smashingmagazine.com/2013/11/21/introduction-to-full-stack-javascript/"},
       {"title": "Space Yourself", "url": "https://www.smashingmagazine.com/2015/10/space-yourself/"},
       {"title": "The Art Of Hand Lettering", "url": "https://www.smashingmagazine.com/2016/09/the-art-of-hand-lettering/"},
       {"title": "Writing Systems And Calligraphy Of The World", "url": "https://www.smashingmagazine.com/2010/05/18/the-beauty-of-typography-writing-systems-and-calligraphy-of-the-world/"},
       {"title": "The Beauty Of Typography: Writing Systems And Calligraphy, Part 2", "url": "https://www.smashingmagazine.com/2010/06/22/the-beauty-of-typography-writing-systems-and-calligraphy-part-2/"},
-      {"title": "Understanding The Copyright License", "url": "https://www.smashingmagazine.com/2011/06/14/understanding-copyright-and-licenses/"},
-      {"title": "Useful Ideas And Guidelines For Good Web Form Design", "url": "https://www.smashingmagazine.com/2011/06/27/useful-ideas-and-guidelines-for-good-web-form-design/"},
-      {"title": "Best Practices For Mobile Form Design", "url": "https://www.smashingmagazine.com/2018/08/best-practices-for-mobile-form-design/"},
-      {"title": "Sneak Peek Into The Future: CSS Selectors, Level 4", "url": "https://www.smashingmagazine.com/2013/01/sneak-peek-future-selectors-level-4/"}
+      {"title": "Best Practices For Mobile Form Design", "url": "https://www.smashingmagazine.com/2018/08/best-practices-for-mobile-form-design/"}
     ]
   },
   {
     "title": "Sites: Wikipedia",
     "links": [
-      {"title": "Domain Name System", "url": "https://en.wikipedia.org/wiki/Domain_Name_System#Circular_dependencies_and_glue_records"},
-      {"title": "Luhn algorithm", "url": "https://en.wikipedia.org/wiki/Luhn_algorithm"},
       {"title": "Non-English-based Programming Languages", "url": "https://en.wikipedia.org/wiki/Non-English-based_programming_languages"},
       {"title": "Timeline of The Far Future", "url": "https://en.wikipedia.org/wiki/Timeline_of_the_far_future"},
       {"title": "Standard Model", "url": "https://en.wikipedia.org/wiki/Standard_Model"},
       {"title": "List of Common Misconceptions", "url": "https://en.wikipedia.org/wiki/List_of_common_misconceptions"},
       {"title": "Eight-circuit Model of Consciousness", "url": "https://en.wikipedia.org/wiki/Eight-circuit_model_of_consciousness"},
-      {"title": "Flying Spaghetti Monster", "url": "https://en.wikipedia.org/wiki/Flying_Spaghetti_Monster"},
       {"title": "One-electron Universe", "url": "https://en.wikipedia.org/wiki/One-electron_universe"},
       {"title": "Ship of Theseus", "url": "https://en.wikipedia.org/wiki/Ship_of_Theseus"},
       {"title": "String Theory", "url": "https://en.wikipedia.org/wiki/String_theory"},
       {"title": "Amen Break", "url": "https://en.wikipedia.org/wiki/Amen_break"},
       {"title": "Two Envelopes Problem", "url": "https://en.wikipedia.org/wiki/Two_envelope_problem"},
       {"title": "Interplanetary Transport Network", "url": "https://en.wikipedia.org/wiki/Interplanetary_Transport_Network"},
-      {"title": "Paris_Night", "url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Paris_Night.jpg"},
-      {"title": "Six Degrees of Wikipedia", "url": "https://www.sixdegreesofwikipedia.com/?source=Names%20of%20large%20numbers&target=Timeline%20of%20the%20far%20future"}
+      {"title": "Six Degrees of Wikipedia", "url": "https://www.sixdegreesofwikipedia.com/?source=Names%20of%20large%20numbers&target=Timeline%20of%20the%20far%20future"},
+      {"title": "Outline of Whisky", "url": "https://en.wikipedia.org/wiki/Outline_of_whisky"}
     ]
   },
   {
@@ -766,7 +652,6 @@
       {"title": "xkcd Phone 5", "url": "https://xkcd.com/1809/"},
       {"title": "xkcd Phone 6", "url": "https://xkcd.com/1889/"},
       {"title": "Tinder", "url": "https://xkcd.com/1927/"},
-      {"title": "Approximations", "url": "https://xkcd.com/1047/"},
       {"title": "Click and Drag", "url": "https://xkcd.com/1110/"},
       {"title": "Traffic Lights", "url": "https://xkcd.com/1116/"},
       {"title": "Electoral Precedent", "url": "https://xkcd.com/1122/"},
@@ -780,34 +665,14 @@
     "links": [
       {"title": "Honeycomb-inspired keyboard and mouse combo hits our wishlist", "url": "https://www.yankodesign.com/2022/02/26/honeycomb-inspired-keyboard-and-mouse-combo-hits-our-wishlist/"},
       {"title": "The Milano Vision GT might be the first ever sportscar designed keeping videogames in mind", "url": "https://www.yankodesign.com/2022/10/19/the-milano-vision-gt-might-be-the-first-ever-sportscar-designed-keeping-videogames-in-mind/"},
-      {"title": "Top 10 architectural picks of July 2022", "url": "https://www.yankodesign.com/2022/08/04/top-10-architectural-picks-of-july-2022/"},
       {"title": "Top 10 architectural structures that are the epitome of biophilic design", "url": "https://www.yankodesign.com/2022/08/15/top-10-architectural-structures-that-are-the-epitome-of-biophilic-design/"},
-      {"title": "Top 10 furniture picks of July 2022", "url": "https://www.yankodesign.com/2022/08/01/top-10-furniture-picks-of-july-2022/"},
-      {"title": "Top 10 prefab architectural designs for lovers of sustainability", "url": "https://www.yankodesign.com/2022/08/11/top-10-prefab-architectural-designs-for-lovers-of-sustainability/"},
-      {"title": "Top 32 Favorites From 2013 iF Design Award", "url": "http://www.yankodesign.com/2013/03/12/top-32-favorites-from-2013-if-design-award/"},
       {"title": "In a world filled with plus-sized phones, Palm’s new phone is perfectly petite!", "url": "http://www.yankodesign.com/2018/10/17/in-a-world-filled-with-plus-sized-phones-palms-new-phone-is-perfectly-petite/"},
-      {"title": "UNITED MONSTERS: They’ve evolved!", "url": "http://www.yankodesign.com/2016/01/29/united-monsters-theyve-evolved/"},
-      {"title": "Watch out for these!", "url": "http://www.yankodesign.com/2016/01/22/watch-out-for-these/"},
       {"title": "The sunken sink!", "url": "http://www.yankodesign.com/2016/01/20/the-sunken-sink/"},
-      {"title": "‘DRAS’tic Design", "url": "http://www.yankodesign.com/2015/11/03/drastic-design/"},
-      {"title": "A Pick-me-up for your phone", "url": "http://www.yankodesign.com/2016/01/14/a-pick-me-up-for-your-phone/"},
-      {"title": "If the top supercars had a baby…", "url": "http://www.yankodesign.com/2015/09/25/if-the-top-supercars-had-a-baby/"},
       {"title": "11 Reasons You Need a Lampster (or 2) in Your Life!", "url": "http://www.yankodesign.com/2015/11/16/10-reasons-you-need-a-lampster-or-2-in-your-life/"},
-      {"title": "A Chair to Sit With, Not On", "url": "http://www.yankodesign.com/2016/12/08/a-chair-to-sit-with-not-on/"},
       {"title": "An Eco-friendly Alternative to Boring Appliances", "url": "http://www.yankodesign.com/2015/11/19/an-eco-friendly-alternative-to-boring-appliances/"},
-      {"title": "The top 10 cabin designs of February are here to provide the perfect architectural escapism!", "url": "https://www.yankodesign.com/2021/03/12/the-top-10-cabin-designs-of-february-are-here-to-provide-the-perfect-architectural-escapism/"},
-      {"title": "Foldable and rollable screens of smart gadgets that are dictating the 2021 technology trends!", "url": "https://www.yankodesign.com/2021/01/13/foldable-and-rollable-screens-of-smart-gadgets-that-are-dictating-the-2021-technology-trends/"},
       {"title": "The Top 10 holiday homes that make for the perfect post-pandemic summer getaway!", "url": "https://www.yankodesign.com/2021/03/05/the-top-10-holiday-homes-that-make-for-the-perfect-post-pandemic-summer-getaway/"},
-      {"title": "This kinetic sculpture encompasses a mother and child’s bond – Watch the video!", "url": "https://www.yankodesign.com/2021/03/26/this-kinetic-sculpture-encompasses-a-mother-and-childs-bond-watch-the-video/"},
-      {"title": "Meet the first wearable mouse designed for regular as well as VR computing", "url": "https://www.yankodesign.com/2020/10/26/meet-the-first-wearable-mouse-designed-for-regular-as-well-as-vr-computing/"},
-      {"title": "This inflatable mattress turns your vehicle’s front seat into a cozy sleeping space when outdoor!", "url": "https://www.yankodesign.com/2021/10/22/this-inflatable-mattress-turns-your-vehicles-front-seat-into-a-cozy-sleeping-space-when-outdoor/"},
-      {"title": "Back at the office with noisy coworkers? This privacy hood keeps sounds and nosy people away", "url": "https://www.yankodesign.com/2021/10/21/back-at-the-office-with-noisy-coworkers-this-privacy-hood-keeps-sounds-and-nosy-people-away/"},
-      {"title": "This hilariously functional keyboard helps fix the terrible UI/UX of video-calling apps", "url": "https://www.yankodesign.com/2021/08/31/this-hilariously-functional-keyboard-helps-fix-the-terrible-ui-ux-of-video-calling-apps/"},
-      {"title": "Meet the A-Frame Club", "url": "https://www.yankodesign.com/2023/09/24/meet-the-a-frame-club-a-series-of-prefabricated-a-frame-cabins-in-a-snowflake-pattern/"},
       {"title": "Teenage Engineering Laptop", "url": "https://www.yankodesign.com/2024/03/16/this-teenage-engineering-inspired-laptop-is-a-creative-sound-engineers-dream-come-true/"},
-      {"title": "Tiny Rapid Deploy Pocket Knife", "url": "https://www.yankodesign.com/2024/04/12/this-tiny-rapid-deploy-tactical-pocket-knife-is-like-the-napoleon-of-edc/"},
       {"title": "Foldable Mouse", "url": "https://www.yankodesign.com/2024/08/06/foldable-mouse-concept-takes-inspiration-from-foldable-phones/"},
-      {"title": "Laceless Sports Shoes", "url": "https://www.yankodesign.com/2024/07/21/on-vs-adidas-a-deep-dive-into-laceless-sports-shoe-technologies/"},
       {"title": "Bathtope", "url": "https://www.yankodesign.com/2024/10/21/bathtope-lets-you-set-up-a-removable-bathtub-in-your-bathroom/"}
     ]
   },
@@ -816,32 +681,23 @@
     "links": [
       {"title": "LAN Party House", "url": "https://lanparty.house/#cat6"},
       {"title": "Als Mijn Tante Wieltjes Had", "url": "https://www.ensie.nl/spreekwoord/als-mijn-tante-wieltjes-had-dan-was-het-een-kinderwagen"},
-      {"title": "Noedels met Biefstuk", "url": "https://www.ekoplaza.nl/nl/recepten/detail/gewokte-noedels-met-biefstuk-en-groenten"},
-      {"title": "Dram List", "url": "https://whiskyshow.com/london/trade-press/show-price-list/"},
       {"title": "Hacks Lab", "url": "https://moohdev-lab.vercel.app/energy"},
       {"title": "Web Design Museum", "url": "https://www.webdesignmuseum.org/"},
-      {"title": "Whisky Spreadsheet", "url": "https://malt-musings.blogspot.com/p/whisky-spreadsheet.html"},
-      {"title": "Outline of Whisky", "url": "https://en.wikipedia.org/wiki/Outline_of_whisky"},
       {"title": "All of Earth's Water", "url": "https://www.usgs.gov/media/images/all-earths-water-a-single-sphere"},
       {"title": "IJslandse Taal", "url": "https://www.icelandair.com/nl-nl/blog/ijslandse-taal/"},
       {"title": "BrickLink", "url": "https://www.bricklink.com/v2/catalog/catalogitem.page?S=8880-1#T=S&O={%22iconly%22:0}"},
       {"title": "Technicopedia: 8880", "url": "http://www.technicopedia.com/8880.html"},
       {"title": "404s", "url": "https://www.404s.design/"},
       {"title": "Colorless beauty .:. Yupsie.nl .:.", "url": "https://web.archive.org/web/20041016005035/http://www.yupsie.nl/homesmall.php"},
-      {"title": "CSS - Selectors", "url": "https://fffuel.co/css-selectors/"},
-      {"title": "CSS - Position Rotated Text", "url": "https://dev.to/afif/how-to-correctly-position-rotated-text-using-css-1gjc"},
       {"title": "How to Add Music From SoundCloud to Your Website", "url": "https://help.tilda.cc/soundcloud#:~:text=Click%20the%20%22Share%22%20button%20below,search%20for%20the%20track%20ID."},
       {"title": "Operator Lookup", "url": "https://www.joshwcomeau.com/operator-lookup/"},
       {"title": "How Git Works", "url": "https://jvns.ca/blog/2024/04/25/new-zine--how-git-works-/"},
       {"title": "Scroll-driven Animations", "url": "https://scroll-driven-animations.style/"},
       {"title": "The Ultimate CSS Shapes Collection", "url": "https://css-shape.com/"},
       {"title": "Levels of Seniority - roadmap.sh", "url": "https://roadmap.sh/guides/levels-of-seniority"},
-      {"title": "How Many People Use YouTube", "url": "https://seo.ai/blog/how-many-people-use-youtube#:~:text=With%20over%202.49%20billion%20monthly%20active%20users%20as%20of%20March,available%20in%20over%20100%20countries."},
       {"title": "What tone to use in code review suggestions", "url": "https://news.ycombinator.com/item?id=31858604"},
       {"title": "Pure CSS Halftone Effect", "url": "https://frontendmasters.com/blog/pure-css-halftone-effect-in-3-declarations/"},
-      {"title": "ffmpeg - Batch .webm to .mp4", "url": "https://askubuntu.com/questions/1382502/converting-multiple-webms-to-mp4"},
-      {"title": "ffmpeg - Trim", "url": "https://shotstack.io/learn/use-ffmpeg-to-trim-video/"},
-      {"title": "Smolsite", "url": "https://smolsite.zip/UEsDBBQAAgAIAMYVIVfaTMb/VQIAANwDAAAKAAAAaW5kZXguaHRtbHVTUW+bMBB+Lr/ilq1i0wo4BGghJA/t9lBpk6Zpm6Y91cEOeAPMbCeEbv3vO0OjZdIK4mTuvvt8+vw5r0xTr5284pStc22Gmq+djWQD/HI2tPhRKrlrmVfIWqoMnm/HZ3laEg0teQY7Vb+cMWpoNiYCvS9fH5r64nxxg0voBTPVyp2HLlRclJXBdeLCXvD+Wh5WLgEC8xBsDrtavXIrY7osCPq+9/uFL1UZhIQQy+ueL94ibUdNBWzlvo/AT9MbjFEUQ4QxQrIYSOHHcWh5sRLbmKb7yCfhTQIxluIxJoB/kBTeBPbmHoJtTNMv+N03CVwVBKtRYpltHsbqE+QFAYv1LBhz3lj5H/mVZXdhK+p65Z6HC3bJYkanhCc7WggzoC5+9JhSu5qvXL7nrWTMDSYNrBy4mr1aOlvZGm9LG1EPGWjaak9zJfCsGqpK0WYo71V3WDoPTsFbwxUe8FlHGRNteVLrFLeFv+eLhx4S+y6ds6MLLol9lyf9IbHtZ4YfzNErU+rByYPJVXkweszJrbus4+brW+NqoKAbWWth+DOEzNeOk3frT5XQ0Fey5mArqIDRIFotGAdTcfj88R2iu0ewhEpqA4PcKY1O1BOmkE1D0aC1aNGf3c4AiqcGU+HEyIUbf7v9YLXlF3BNsSmJgLeFxC2EuQBsBYMy4A/QrRVsZi2p0ZPHgf170QWz7DiIwqvzAjAH3puv33+moGXDjzjckfGDb68bNEMtS+l3bYl4XlTyCeq7gpp/SX7DBifFQT2vV7QDcjdDgced82ASFhfTnXb+AFBLAQIe"},
+      {"title": "Smolsite", "url": "https://smolsite.zip/"},
       {"title": "three-shader-baker", "url": "https://farazzshaikh.github.io/three-shader-baker/"}
     ]
   }

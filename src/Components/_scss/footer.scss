@@ -27,22 +27,3 @@ footer {
 		pointer-events: all;
 	}
 }
-
-@media(max-width: $mobile-breakpoint) {
-	footer {
-		padding: 1vh 1vw;
-		height: 60vh;
-
-		h2 {
-			padding-left: 1vw;
-		}
-	    ul {
-			margin-left: 2vw;
-			font-size: 0.7rem;
-			width: 90vw;
-		}
-	    .copy {
-	    	display: none;
-	    }
-	}
-}

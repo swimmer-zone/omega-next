@@ -10,7 +10,7 @@ import {
 } from '../../Components/Maps';
 import { whisky_distillery } from '../../json';
 import Head from 'next/head';
-import '../_scss/home.scss';
+import '../_scss/_page.scss';
 import {Footer, Hexagons, Menu} from '../../Components';
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";

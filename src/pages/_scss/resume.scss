@@ -158,17 +158,23 @@
 		width: 24px;
 	}
 
+	.tags {
+		display: flex;
+		width: 20vw;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+	}
 	.tag {
-		font-size: 12px;
+		font-size: .8rem;
 		letter-spacing: 1px;
 		background-color: $purple;
 		color: white;
-		padding: 2px 4px;
+		padding: 4px 8px;
 		border-radius: 4px;
 		display: inline-block;
 		line-height: 1rem;
-		font-weight: bold;
 		margin-left: 8px;
+		margin-bottom: 8px;
 	}
 
 	.me {

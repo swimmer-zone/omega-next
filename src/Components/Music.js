@@ -11,7 +11,7 @@ function countDown(duration, time) {
     }
 }
 
-const Music = () => {
+const Music = ({archive}) => {
     const player = useRef(null);
     const [ state, setState ] = useState({
         currentTrack: null,
@@ -36,7 +36,7 @@ const Music = () => {
     }, [state.currentTrack]);
 	
   	return (
-		<section className="music music-home" id="music">
+		<section className="music" id="music">
             {Object.keys(albums).map(key => {
                 let album = albums[key];
                 let timer;
@@ -54,7 +54,8 @@ const Music = () => {
                             <ul key={"ul_" + key}>
                                 {Object.keys(album.tracks).map(trackKey => {
                                     let track = album.tracks[trackKey];
-                                    let scName = '/audio/' + track.local + '.mp3';
+                                    let scName = 'https://feeds.soundcloud.com/stream/' + track.filename + '.mp3';
+                                    scName = '/audio/' + track.local + '.mp3';
                                     let playTime = Math.floor(track.playtime / 60) + ":" + ("0" + Math.floor(track.playtime % 60)).slice(-2);
 
                                     if (state.currentTime && state.currentTrack === scName) {

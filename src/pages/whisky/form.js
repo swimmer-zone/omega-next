@@ -13,7 +13,7 @@ import  {
     whisky_region,
     whisky_type
 } from '../../json';
-import '../_scss/home.scss';
+import '../_scss/_page.scss';
 import '../_scss/whisky.scss';
 import '../_scss/whisky-form.scss';
 

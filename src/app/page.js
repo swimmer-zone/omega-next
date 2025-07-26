@@ -1,6 +1,6 @@
 'use client';
 import { Footer, Hexagons, Menu, Music } from '../Components';
-import '../pages/_scss/home.scss';
+import '../pages/_scss/_page.scss';
 import React from "react";
 import Head from "next/head";
 

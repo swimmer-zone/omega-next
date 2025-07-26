@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import {Footer, Portrait, Menu, Hexagons} from '../Components';
-import './_scss/home.scss';
+import './_scss/_page.scss';
 import './_scss/resume.scss';
 
 const Resume = () => {
@@ -354,27 +354,29 @@ const Resume = () => {
                 swimming certificates for a total of 18 years.
             </p>
             <h2>Skills</h2>
-            <span className="tag">Dutch (mother tongue)</span>
-            <span className="tag">English (fluent)</span>
-            <span className="tag">German (a bit)</span>
-            <span className="tag">Portuguese (studying)</span>
-            <span className="tag">Agile</span>
-            <span className="tag">CodeIgniter</span>
-            <span className="tag">Symfony</span>
-            <span className="tag">Laravel</span>
-            <span className="tag">Magento</span>
-            <span className="tag">jQuery</span>
-            <span className="tag">React</span>
-            <span className="tag">Next.js</span>
-            <span className="tag">Vue</span>
-            <span className="tag">Web Components</span>
-            <span className="tag">HTML</span>
-            <span className="tag">CSS</span>
-            <span className="tag">JavaScript</span>
-            <span className="tag">PHP</span>
-            <span className="tag">MySQL</span>
-            <span className="tag">PostgreSQL</span>
-            <span className="tag">Python</span>
+            <div className="tags">
+                <span className="tag">Dutch (mother tongue)</span>
+                <span className="tag">English (fluent)</span>
+                <span className="tag">German (a bit)</span>
+                <span className="tag">Portuguese (studying)</span>
+                <span className="tag">Agile</span>
+                <span className="tag">CodeIgniter</span>
+                <span className="tag">Symfony</span>
+                <span className="tag">Laravel</span>
+                <span className="tag">Magento</span>
+                <span className="tag">jQuery</span>
+                <span className="tag">React</span>
+                <span className="tag">Next.js</span>
+                <span className="tag">Vue</span>
+                <span className="tag">Web Components</span>
+                <span className="tag">HTML</span>
+                <span className="tag">CSS</span>
+                <span className="tag">JavaScript</span>
+                <span className="tag">PHP</span>
+                <span className="tag">MySQL</span>
+                <span className="tag">PostgreSQL</span>
+                <span className="tag">Python</span>
+            </div>
 		</div>
         <Footer/>
     </main>);

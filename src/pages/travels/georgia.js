@@ -2,7 +2,7 @@
 import React from 'react';
 import Head from 'next/head';
 import {Footer, Menu, Carousel, Hexagons} from '../../Components';
-import '../_scss/home.scss';
+import '../_scss/_page.scss';
 import '../_scss/travels.scss';
 
 const Georgia = () => {

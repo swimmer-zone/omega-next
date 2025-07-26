@@ -1,4 +1,5 @@
 import './_scss/menu.scss';
+import React from "react";
 
 const Menu = ({ active }) => {
 	let home = '',
@@ -85,6 +86,7 @@ const Menu = ({ active }) => {
 				<path d="m40,136 l 17.32,10 l0,20 l-17.32,10 l-17.32,-10 l0,-20 z"/>
 				<path d="m80,136 l 17.32,10 l0,20 l-17.32,10 l-17.32,-10 l0,-20 z"/>
 				<path d="m120,136 l 17.32,10 l0,20 l-17.32,10 l-17.32,-10 l0,-20 z"/>
+				<text x="34" y="35" fill="black" fontSize="8" transform="rotate(-30 20,40)">MENU</text>
 			</svg>
 		</div>
 	</>);

@@ -1,7 +1,7 @@
 'use client';
 import Head from 'next/head';
 import { Footer, Hexagons, Menu, Rating } from '../../Components';
-import '../_scss/home.scss';
+import '../_scss/_page.scss';
 import '../_scss/whisky.scss';
 import  {
     whisky_cask_type,
@@ -82,48 +82,6 @@ const Whisky = () => {
                     </div>
                 </>);
             })}
-
-            <h2 id="cask_types">Possible cask types</h2>
-            <ul className="tags">
-                {whisky_cask_type.map(cask_type => {
-                    return (<li key={cask_type.id}>{cask_type.label}</li>)
-                })}
-            </ul>
-
-            <h2 id="countries">Possible countries</h2>
-            <ul className="tags">
-                {whisky_country.map(country => {
-                    return (<li key={country.id}>{country.label}</li>)
-                })}
-            </ul>
-
-            <h2 id="cask_types">Possible finishes</h2>
-            <ul className="tags">
-                {whisky_finish.map(finish => {
-                    return (<li key={finish.id}>{finish.label}</li>)
-                })}
-            </ul>
-
-            <h2 id="flavours">Possible flavours</h2>
-            <ul className="tags">
-                {whisky_flavour.map(flavour => {
-                    return (<li key={flavour.id}>{flavour.label}</li>)
-                })}
-            </ul>
-
-            <h2 id="regions">Possible regions</h2>
-            <ul className="tags">
-                {whisky_region.map(region => {
-                    return (<li key={region.id}>{region.label}</li>)
-                })}
-            </ul>
-
-            <h2 id="types">Possible types</h2>
-            <ul className="tags">
-                {whisky_type.map(type => {
-                    return (<li key={type.id}>{type.label}</li>)
-                })}
-            </ul>
         </div>
         <Footer/>
     </main>);

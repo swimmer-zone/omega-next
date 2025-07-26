@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { Footer, Hexagons, Menu } from '../../Components';
-import '../_scss/home.scss';
+import '../_scss/_page.scss';
 import '../_scss/diy.scss';
 import React from "react";
 
