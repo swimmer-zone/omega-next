@@ -1,56 +1,154 @@
-Basel,Rovaniemi,Randers,Billund,Bruxelles,Strassbourg,Vienna,Salzburg,Thessaloniki,Athens
-"europe#dornach">Dornach
-"europe#zurich">Zürich
-"europe#rome">Rome
-"europe#firenze">Florence
-"europe#pisa">Pisa
-"europe#maranello">Maranello
-"europe#venice">Venice
-"europe#vatican-city">The Vatican
-"europe#istanbul">Istanbul
-"europe#bucharest">Bucharest
-"europe#budapest">Budapest
-"europe#bratislava">Bratislava
-"europe#praha">Praha
-"europe#frankfurt">Frankfurt
-"europe#cologne">Cologne
-"europe#luxembourg">Luxembourg
-"europe#warsaw">Warsaw
-"europe#krakow">Krakow
-"europe#auschwitz">Auschwitz
+# No link
+Andorra,Rila,Copenhagen,Paris,Berlin,Reykjavik,Amsterdam,Oslo,Lisbon,Belgrade,Bratislava,Madrid,Porto,Idanha-a-Nova,
+Guimaraes,San Sebastian,Praia,Assomada,Tarrafal,Cidade Velha,Maggia,Sintra,Cascais,Malaga,Koh Racha Yai,Taipei,Randers, Billund,Cesenatico
 
-"georgia#kutaisi">Kutaisi
-"georgia#batumi">Batumi
-"georgia#tbilisi">Tbilisi
 
-"italy#milan">Milan
-"italy#venice">Venice
-"italy#brindisi">Brindisi
-"italy#lecce">Lecce
-"italy#taranto">Taranto
-"italy#lamezia_terme">Lamezia Terme
-"italy#bologna">Bologna
-"italy#san_marino">San Marino
-"italy#rimini">Rimini
-"italy#bologna">Bologna
-"italy#parma">Parma
-"italy#modena">Modena
-"italy#oleggio">Oleggio
-
-"thailand#phuket">Phuket
-"thailand#chiang-mai">Chiang Mai
-"thailand#pai">Pai
-"thailand#bangkok">Bangkok
-"thailand#pattaya">Pattaya
-
-"uk#edinburgh">Edinburgh
-"uk#dublin">Dublin
-"uk#belfast">Belfast
-"uk#liverpool">Liverpool
-"uk#manchester">Manchester
-"uk#chester">Chester
-"uk#llandudno">LLandudno
-
-"vietnam#da-nang-and-hoi-an">Hoi An
-"vietnam#dong-hoi">Dong Hoi
-"vietnam#ninh-binh">Ninh Binh
+// Fiji
+// Tanzania
+// W. Sahara
+// Canada
+// United States of America
+// Kazakhstan
+// Uzbekistan
+// Papua New Guinea
+// Indonesia
+// Argentina
+// Chile
+// Dem. Rep. Congo
+// Somalia
+// Kenya
+// Sudan
+// Chad
+// Haiti
+// Dominican Rep.
+// Russia
+// Bahamas
+// Falkland Is.
+// Greenland
+// Fr. S. Antarctic Lands
+// Timor-Leste
+// South Africa
+// Lesotho
+// Mexico
+// Uruguay
+// Brazil
+// Bolivia
+// Peru
+// Colombia
+// Panama
+// Costa Rica
+// Nicaragua
+// Honduras
+// El Salvador
+// Guatemala
+// Belize
+// Venezuela
+// Guyana
+// Suriname
+// Ecuador
+// Puerto Rico
+// Jamaica
+// Cuba
+// Zimbabwe
+// Botswana
+// Namibia
+// Senegal
+// Mali
+// Mauritania
+// Benin
+// Niger
+// Nigeria
+// Cameroon
+// Togo
+// Ghana
+// Côte d'Ivoire
+// Guinea
+// Guinea-Bissau
+// Liberia
+// Sierra Leone
+// Burkina Faso
+// Central African Rep.
+// Congo
+// Gabon
+// Eq. Guinea
+// Zambia
+// Malawi
+// Mozambique
+// eSwatini
+// Angola
+// Burundi
+// Israel
+// Lebanon
+// Madagascar
+// Palestine
+// Gambia
+// Tunisia
+// Algeria
+// Jordan
+// United Arab Emirates
+// Qatar
+// Kuwait
+// Iraq
+// Oman
+// Vanuatu
+// Cambodia
+// Laos
+// Myanmar
+// North Korea
+// South Korea
+// Mongolia
+// India
+// Bangladesh
+// Bhutan
+// Nepal
+// Pakistan
+// Afghanistan
+// Tajikistan
+// Kyrgyzstan
+// Turkmenistan
+// Iran
+// Syria
+// Armenia
+// Sweden
+// Belarus
+// Ukraine
+// Moldova
+// Lithuania
+// Latvia
+// Estonia
+// Albania
+// Croatia
+// New Caledonia
+// Solomon Is.
+// New Zealand
+// Australia
+// Sri Lanka
+// China
+// Taiwan
+// Azerbaijan
+// Philippines
+// Malaysia
+// Brunei
+// Slovenia
+// Eritrea
+// Japan
+// Paraguay
+// Yemen
+// Saudi Arabia
+// Antarctica
+// N. Cyprus
+// Cyprus
+// Morocco
+// Egypt
+// Libya
+// Ethiopia
+// Djibouti
+// Somaliland
+// Uganda
+// Rwanda
+// Bosnia and Herz.
+// Macedonia
+// Montenegro
+// Kosovo
+// Trinidad and Tobago
+// S. Sudan

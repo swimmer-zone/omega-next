@@ -12,7 +12,20 @@ import {
 import Head from 'next/head';
 import '../_scss/_page.scss';
 import '../_scss/map.scss';
-import { city } from '../../json';
+import {
+    citiesAssorted,
+    citiesAurora,
+    citiesBoom,
+    citiesCapeVerde,
+    citiesEurope,
+    citiesGorgia,
+    citiesIceland,
+    citiesItaly,
+    citiesScandinavia,
+    citiesThailand,
+    citiesUk,
+    citiesVietnam
+} from '../../json';
 import {Footer, Menu} from '../../Components';
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
@@ -46,169 +59,37 @@ const Travels = () => {
         "Finland",
         "Serbia",
         "Slovakia",
-        "Czechia"
-// Fiji
-// Tanzania
-// W. Sahara
-// Canada
-// United States of America
-// Kazakhstan
-// Uzbekistan
-// Papua New Guinea
-// Indonesia
-// Argentina
-// Chile
-// Dem. Rep. Congo
-// Somalia
-// Kenya
-// Sudan
-// Chad
-// Haiti
-// Dominican Rep.
-// Russia
-// Bahamas
-// Falkland Is.
-// Greenland
-// Fr. S. Antarctic Lands
-// Timor-Leste
-// South Africa
-// Lesotho
-// Mexico
-// Uruguay
-// Brazil
-// Bolivia
-// Peru
-// Colombia
-// Panama
-// Costa Rica
-// Nicaragua
-// Honduras
-// El Salvador
-// Guatemala
-// Belize
-// Venezuela
-// Guyana
-// Suriname
-// Ecuador
-// Puerto Rico
-// Jamaica
-// Cuba
-// Zimbabwe
-// Botswana
-// Namibia
-// Senegal
-// Mali
-// Mauritania
-// Benin
-// Niger
-// Nigeria
-// Cameroon
-// Togo
-// Ghana
-// Côte d'Ivoire
-// Guinea
-// Guinea-Bissau
-// Liberia
-// Sierra Leone
-// Burkina Faso
-// Central African Rep.
-// Congo
-// Gabon
-// Eq. Guinea
-// Zambia
-// Malawi
-// Mozambique
-// eSwatini
-// Angola
-// Burundi
-// Israel
-// Lebanon
-// Madagascar
-// Palestine
-// Gambia
-// Tunisia
-// Algeria
-// Jordan
-// United Arab Emirates
-// Qatar
-// Kuwait
-// Iraq
-// Oman
-// Vanuatu
-// Cambodia
-// Laos
-// Myanmar
-// North Korea
-// South Korea
-// Mongolia
-// India
-// Bangladesh
-// Bhutan
-// Nepal
-// Pakistan
-// Afghanistan
-// Tajikistan
-// Kyrgyzstan
-// Turkmenistan
-// Iran
-// Syria
-// Armenia
-// Sweden
-// Belarus
-// Ukraine
-// Moldova
-// Lithuania
-// Latvia
-// Estonia
-// Albania
-// Croatia
-// New Caledonia
-// Solomon Is.
-// New Zealand
-// Australia
-// Sri Lanka
-// China
-// Taiwan
-// Azerbaijan
-// Philippines
-// Malaysia
-// Brunei
-// Slovenia
-// Eritrea
-// Japan
-// Paraguay
-// Yemen
-// Saudi Arabia
-// Antarctica
-// N. Cyprus
-// Cyprus
-// Morocco
-// Egypt
-// Libya
-// Ethiopia
-// Djibouti
-// Somaliland
-// Uganda
-// Rwanda
-// Bosnia and Herz.
-// Macedonia
-// Montenegro
-// Kosovo
-// Trinidad and Tobago
-// S. Sudan
+        "Czechia",
+        "Taiwan"
+    ];
+
+    const citiesAll = [
+        ...citiesAssorted,
+        ...citiesAurora,
+        // ...citiesBoom,
+        ...citiesCapeVerde,
+        // ...citiesEurope,
+        ...citiesGorgia,
+        ...citiesIceland,
+        // ...citiesItaly,
+        ...citiesScandinavia,
+        ...citiesThailand,
+        ...citiesUk,
+        ...citiesVietnam
     ];
 
     return (<main>
         <Head>
             <title>Ω -Travel Map</title>
         </Head>
-        <Menu active="whisky"/>
+        <Menu active="travels"/>
         <ComposableMap
             projectionConfig={{
                 rotate: [-45, -35, 0],
                 scale: 350
             }}
         >
+            <ZoomableGroup>
                 <Graticule stroke="#111111"/>
                 <Geographies geography={geoUrl}>
                     {({geographies}) =>
@@ -217,22 +98,22 @@ const Travels = () => {
                             return (<Geography
                                 style={{
                                     hover: {
-                                        fill: "#222222",
+                                        fill: "#2a2a2a",
                                     }
                                 }}
                                 key={geo.rsmKey}
                                 geography={geo}
                                 stroke="#000000"
-                                fill={isHighlighted ? "#6c6eec" : "#111111"}
+                                fill={isHighlighted ? "#6c6eec" : "#222222"}
                             />)
                         })
                     }
                 </Geographies>
-                {city.map(({name, coordinates, link}) => (<>
+                {citiesAll.map(({name, coordinates, link, annotation}) => (<>
                     <Marker key={name} coordinates={coordinates} style={{width: "4px", height: "4px"}}>
                         <circle r="2" fill="#ffc917"/>
                     </Marker>
-                    <Annotation key={name} subject={coordinates} dx={-90} dy={-30}
+                    <Annotation key={name} subject={coordinates} dx={annotation[0]} dy={annotation[1]}
                     connectorProps={{
                         stroke: "#888888",
                         strokeWidth: 1,
@@ -240,31 +121,31 @@ const Travels = () => {
                     }}
                 >
                     {link && <a href={link}>
-                        <text x="-8"
+                        <text x={annotation[2]}
                               textAnchor="end"
                               alignmentBaseline="middle"
                               style={{
                                   fontFamily: "Afacad",
-                                  fontSize: "12px",
+                                  fontSize: "8px",
                                   fill: "#dddddd",
                                   letterSpacing: 0
                               }}>
                             {name}
                         </text>
                     </a>}
-                    {!link && <text x="-8"
+                    {!link && <text x={annotation[2]}
                           textAnchor="end"
                           alignmentBaseline="middle"
                           style={{
                               fontFamily: "Afacad",
-                              fontSize: "12px",
-                              fill: "#dddddd",
+                              fontSize: "8px",
+                              fill: "#555555",
                               letterSpacing: 0
                           }}>
                         {name}
                     </text>}
                 </Annotation>
-                </>))}
+                </>))}</ZoomableGroup>
         </ComposableMap>
         <Footer/>
     </main>);

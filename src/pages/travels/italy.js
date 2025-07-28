@@ -21,9 +21,9 @@ const Iceland = () => {
                 <li><a href="#brindisi">Brindisi</a></li>
                 <li><a href="#lecce">Lecce</a></li>
                 <li><a href="#taranto">Taranto</a></li>
-                <li><a href="#lamezia_terme">Lamezia Terme</a></li>
+                <li><a href="#lamezia-terme">Lamezia Terme</a></li>
                 <li><a href="#bologna">Bologna</a></li>
-                <li><a href="#san_marino">San Marino</a></li>
+                <li><a href="#san-marino">San Marino</a></li>
                 <li><a href="#rimini">Rimini</a></li>
                 <li><a href="#bologna">Bologna</a></li>
                 <li><a href="#parma">Parma</a></li>
@@ -61,7 +61,7 @@ const Iceland = () => {
                 ...
             </p>
             <Carousel directory="italy/06_lamezia_terme" num="17"/>
-            <h2 id="lamezia_terme">Lamezia Terme</h2>
+            <h2 id="lamezia-terme">Lamezia Terme</h2>
             <p>
                 ...
             </p>
@@ -71,7 +71,7 @@ const Iceland = () => {
                 ...
             </p>
             <Carousel directory="italy/08_san_marino" num="99"/>
-            <h2 id="san_marino">San Marino</h2>
+            <h2 id="san-marino">San Marino</h2>
             <p>
                 ...
             </p>
