@@ -94,7 +94,7 @@ const Europe = () => {
                 decided to leave early
                 in the morning.
             </p>
-            <h3>Bruxelles</h3>
+            <h3 id="bruxelles">Bruxelles</h3>
             <Carousel directory="europe/00_bruxelles" num="4"/>
             <h2 id="france">France</h2>
             <p>
@@ -147,9 +147,9 @@ const Europe = () => {
                 so now I'm checking it out,
                 I never heard about it, but it has quite an interesting story.
             </p>
-            <h3>Paris</h3>
+            <h3 id="paris">Paris</h3>
             <Carousel directory="europe/01_paris" num="11"/>
-            <h3>Strassbourg</h3>
+            <h3 id="strassbourg">Strassbourg</h3>
             <Carousel directory="europe/02_strassbourg" num="6"/>
             <h2 id="switzerland">Switzerland</h2>
             <p>
@@ -209,9 +209,9 @@ const Europe = () => {
                 chance to see a lot of Rome that
                 day.
             </p>
-            <h3>Dornach</h3>
+            <h3 id="dornach">Dornach</h3>
             <Carousel directory="europe/03_dornach" num="4"/>
-            <h3>Zürich</h3>
+            <h3 id="zurich">Zürich</h3>
             <Carousel directory="europe/04_zurich" num="2"/>
             <h2 id="italy">Italy</h2>
             <p>Now arrived in Rome with the train, it's not even 11:00 yet and already I've seen quite a bit
@@ -402,17 +402,17 @@ const Europe = () => {
                 lantern. A nice little souvenir. This happened to me before in Paris, someone asked for my
                 pink and I was stuck before I knew it, he made me a bracelet, right on the spot. These
                 things are nicer than souvenirs you buy in some store.</p>
-            <h3>Rome</h3>
+            <h3 id="rome">Rome</h3>
             <Carousel directory="europe/05_rome" num="17"/>
-            <h3>Florence</h3>
+            <h3 id="firenze">Florence</h3>
             <Carousel directory="europe/06_florence" num="3"/>
-            <h3>Pisa</h3>
+            <h3 id="pisa">Pisa</h3>
             <Carousel directory="europe/07_pisa" num="2"/>
-            <h3>Maranello</h3>
+            <h3 id="maranello">Maranello</h3>
             <Carousel directory="europe/08_maranello" num="4"/>
-            <h3>Venice</h3>
+            <h3 id="venice">Venice</h3>
             <Carousel directory="europe/09_venice" num="11"/>
-            <h3>The Vatican</h3>
+            <h3 id="vatican-city">The Vatican</h3>
             <Carousel directory="europe/10_the-vatican" num="7"/>
             <h2 id="austria">Austria</h2>
             <p>Already in Innsbruck in the last train to Salzburg. I reserved a spot in the train between
@@ -447,9 +447,9 @@ const Europe = () => {
                 Eastern Europe. Especially former Yugoslavia, where there hasn't been a war for a very long
                 time of course, but I guess the ambiance is stil there. But it is all part of the experience
                 and I'm sure it will all be easy.</p>
-            <h3>Salzburg</h3>
+            <h3 id="salzburg">Salzburg</h3>
             <Carousel directory="europe/11_salzburg" num="9"/>
-            <h3>Vienna</h3>
+            <h3 id="vienna">Vienna</h3>
             <Carousel directory="europe/12_vienna" num="5"/>
             <h2 id="yugoslavia">Yugoslavia</h2>
             <p>Also Belgrade is a very impressive city. I haven't walked around here yet, first I'm getting
@@ -482,7 +482,7 @@ const Europe = () => {
                 have to stay around the station, with just one train that leaves to Sofia.</p>
             <p>I've lost my diary, but luckily I have an online backup which is updated regularly, so I'm
                 only missing one or two pages, which were easily rewritten.</p>
-            <h3>Belgrade</h3>
+            <h3 id="belgrade">Belgrade</h3>
             <Carousel directory="europe/13_belgrade" num="5"/>
             <h2 id="bulgaria">Bulgaria</h2>
             <p>At the very last minute, when I was waiting for the train to Sofia, I met a nice person.
@@ -505,7 +505,7 @@ const Europe = () => {
                 the Bulgarian border police needed to check passports and train tickets, and a little while
                 later again by the Greek border police. So I had a delay of two hours and had to find a
                 place to sleep at 1 o' clock at night.</p>
-            <h3>Rila</h3>
+            <h3 id="rila">Rila</h3>
             <Carousel directory="europe/14_rila" num="8"/>
             <h2 id="greece">Greece</h2>
             <p>Everywhere I go Dutch things are to be found, like Heineken of course, but also ABN Amro or
@@ -577,9 +577,9 @@ const Europe = () => {
                 spot in Istanbul. The train is very slow, but it's quite nice with all windows open and the
                 possibility to put my nose in the wind. I'll also need to get a visa, earlier it seemed like
                 fun to have my passport filled with stamps, but that fun is rapidly falling away.</p>
-            <h3>Thessaloniki</h3>
+            <h3 id="thessaloniki">Thessaloniki</h3>
             <Carousel directory="europe/15_thessaloniki" num="2"/>
-            <h3>Athens</h3>
+            <h3 id="athens">Athens</h3>
             <Carousel directory="europe/16_athens" num="14"/>
             <h2 id="turkey">Turkey</h2>
             <p>I've arrived in Istanbul and I've met Aaron and Christa, newly weds, on their honeymoon
@@ -641,7 +641,7 @@ const Europe = () => {
             <p>I thought of going to Luxembourg while I was waiting. If I get home, my ticket would be valid
                 for another week, so I guess it wouldn't be a problem to spend a day or two in
                 Luxembourg.</p>
-            <h3>Istanbul</h3>
+            <h3 id="istanbul">Istanbul</h3>
             <Carousel directory="europe/17_istanbul" num="5"/>
             <h2 id="romania">Romania</h2>
             <p>Günther also brought raki, a Turkish drink that looks a lot like ouzo from Greece. And he
@@ -654,7 +654,7 @@ const Europe = () => {
                 station. Nice to know we didn't miss anything here and we're back in the train to Budapest.
                 At first glance we had the same goal: get some coffee, an internet cafe and relaxing in a
                 bathhouse.</p>
-            <h3>Bucharest</h3>
+            <h3 id="bucharest">Bucharest</h3>
             <Carousel directory="europe/18_bucharest" num="4"/>
             <h2 id="hungary">Hungary</h2>
             <p>Even with the change in timezone, the train had a delay and it took a while to find a hostel.
@@ -734,9 +734,8 @@ const Europe = () => {
                 Damnit, can't they do anything right? <strong>If everything goes well</strong> the train
                 will now arrive at 12:30 in Bratislava. I'm used to a delay of a couple of hours now and
                 normally it wouldn't bother me, but a delay of sixteen hours seemed a bit overdone.</p>
-            <h3>Budapest</h3>
+            <h3 id="budapest">Budapest</h3>
             <Carousel directory="europe/19_budapest" num="5"/>
-            <p></p>
             <h2 id="slovakia">Slovakia</h2>
             <p>I always thought Bratislava was like a secondary city of Czechoslovakia, but it seemed to be
                 a prosperous and beautifil city with a presidential building that looked a lot like the
@@ -748,7 +747,7 @@ const Europe = () => {
                 started raining right at the moment I've arrived at the station. Prague is known about its
                 cheap food and drinks and the train will arrive at 23:40, so I think I'll get the chance to
                 see some of the nightlife in Prague.</p>
-            <h3>Bratislava</h3>
+            <h3 id="bratislava">Bratislava</h3>
             <Carousel directory="europe/20_bratislava" num="7"/>
             <h2 id="czech-republic">Czech Republic</h2>
             <p>I expected a lot more from Prague, exciting nightlife at every day of the week, cheep beer, a
@@ -770,7 +769,7 @@ const Europe = () => {
             <p>On my way back I saw some hotels, but there weren't any with less than four stars, so now
                 I'll try to avoid paying for another night outside of home. Now I'm in the train to
                 Frankfurt, which should arrive at 13:00 and I got some sleep in the train to Nürnberg.</p>
-            <h3>Praha</h3>
+            <h3 id="praha">Praha</h3>
             <h2 id="germany">Germany</h2>
             <p>The train to Frankfurt arrived on time and I took a short look around, but the reason I came
                 here was because I thought I could get some real Frankfurters here in Frankfurt, which
@@ -785,9 +784,9 @@ const Europe = () => {
                 at the moment I can't do anything with all the pictures. I think I'll post an update at
                 tuesday, when the rest of the photo's will be developed and I guess the new USB stick will
                 have arrived by then.</p>
-            <h3>Frankfurt</h3>
+            <h3 id="frankfurt">Frankfurt</h3>
             <Carousel directory="europe/21_frankfurt" num="2"/>
-            <h3>Cologne</h3>
+            <h3 id="cologne">Cologne</h3>
             <Carousel directory="europe/22_cologne" num="5"/>
             <h2 id="back-to-the-netherlands">Back to The Netherlands</h2>
             <p>I got my cardreader, so I could upload my pictures. These are the pictures I took before both
@@ -866,11 +865,11 @@ const Europe = () => {
             <p>The second camp "Auschwitz-Birkenau" was a lot bigger and a lot more "efficient", a camp for
                 men and a camp for women and children. The barracks seemed like horse stables, furbished
                 with triple bunks, each bed housing four prisoners.</p>
-            <h3>Warsaw</h3>
+            <h3 id="warsaw">Warsaw</h3>
             <Carousel directory="europe/24_warsaw" num="7"/>
-            <h3>Krakow</h3>
+            <h3 id="krakow">Krakow</h3>
             <Carousel directory="europe/25_krakow" num="4"/>
-            <h3>Auschwitz</h3>
+            <h3 id="auschwitz">Auschwitz</h3>
             <Carousel directory="europe/26_auschwitz" num="10"/>
             <h2 id="tldr">TL;DR</h2>
             <p>
