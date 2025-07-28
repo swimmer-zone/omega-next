@@ -13,5 +13,4 @@ Some resources that I use on a daily basis: [Codrops](https://tympanus.net/codro
 
 * [Travel Blogs](/travels)
 * [DIY Projects](/diy)
-* [Whisky](/whisky)
 * [Resume](/resume)

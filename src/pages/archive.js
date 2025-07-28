@@ -1,43 +1,39 @@
 'use client';
 import React from 'react';
-import Async from 'react-async';
-import ReactMarkdown from 'react-markdown';
 import Head from 'next/head';
-import {Footer, Hexagons, Menu} from '../Components';
+import {Footer, Hexagons, Menu, MusicArchive} from '../Components';
 import './_scss/_page.scss';
-import { bookmarks } from '../json';
 
-const Bookmarks = () => {
-    const loadIntro = () =>
-        fetch('../../README.md')
-            .then(res => (res.ok ? res : Promise.reject(res)))
-            .then(res => res.text());
+const Archive = () => {
 
     return (<main>
         <Head>
-            <title>Ω - Bookmarks</title>
+            <title>Ω - Archive</title>
         </Head>
-        <Menu active="bookmarks"/>
+        <Menu active="archive"/>
         <Hexagons />
         <div className="content-column">
-            <h1>Bookmarks</h1>
+            <h1>Archive</h1>
+            <h2>Music</h2>
+            <MusicArchive/>
+            <h2>Bookmarks</h2>
             <p>
-                Throughout the years I've collected a lot of bookmarks, which are too much to all keep them
+                I've collected a lot of bookmarks, which are too much to all keep them
                 stored in my browser and most of them are also for sharing, so there you go!
             </p>
             <p>
                 I'm a minimalist; throughout the years everything has shrunk, including my website. I'm
-                hosting my tracks myself again, after some issues with the SoundCloud API. You can still find my music 
-                there though. The other half are blog posts, my portfolio and a couple of my favorite resources. Please 
-                use the social media buttons to contact me about my music, blogs or any web-related topic. Of course 
+                hosting my tracks myself again, after some issues with the SoundCloud API. You can still find my music
+                there though. The other half are blog posts, my portfolio and a couple of my favorite resources. Please
+                use the social media buttons to contact me about my music, blogs or any web-related topic. Of course
                 you could also e-mail me on <a href="mailto:info@swimmer.zone">info@swimmer.zone</a>.
             </p>
             <p>
-                I've made a lot of websites throughout the years, a couple of which are still live 
-                today: <a href="https://blackhole.voyage/">Black Hole</a> being a music project that I've 
-                had with a couple of friends. A band website of a couple of friends, 
-                called <a  href="https://index.swimmer.zone/">Index</a>. And a
-                website that I made for a 
+                I've made a lot of websites in the past, a couple of which are still live
+                today: <a href="https://blackhole.voyage/">Black Hole</a> being a music project that I've
+                had with a couple of friends. A band website of a couple of friends,
+                called <a href="https://index.swimmer.zone/">Index</a>. And a
+                website that I made for a
                 friend: <a href="https://weerbaar.swimmer.zone/">Weerbaar Worden</a>.
             </p>
             <p>Some resources that I use on a daily basis: </p>
@@ -65,22 +61,9 @@ const Bookmarks = () => {
                 <li><a href="https://ektoplazm.com/section/free-music">Ektoplazm</a></li>
                 <li><a href="https://www.w3schools.com/colors/colors_converter.asp">Color Converter</a></li>
             </ul>
-
-            {Object.keys(bookmarks).map(key => {
-                let bookmark_list = bookmarks[key];
-                return (<>
-                    <h2>{bookmark_list.title}</h2>
-                    <ul>
-                        {Object.keys(bookmark_list.links).map(bookmarkKey => {
-                            let bookmark = bookmark_list.links[bookmarkKey];
-                            return (<li><a href={bookmark.url}>{bookmark.title}</a></li>)
-                        })}
-                    </ul>
-                </>)
-            })}
         </div>
         <Footer/>
     </main>);
 }
 
-export default Bookmarks;
+export default Archive;

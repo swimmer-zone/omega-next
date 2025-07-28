@@ -27,7 +27,10 @@
 				width: 80%;
 
 				li {
-					text-indent: 0;
+					display: grid;
+					grid-template-columns: 90px 400px 80px;
+
+					text-indent: 10px;
 					line-height: 30px;
 					color: $purple;
 					list-style: none;
@@ -38,7 +41,6 @@
 						border: 0;
 						outline: 0;
 						cursor: pointer;
-						width: 40vw;
 						text-align: left;
 						background: none;
 						pointer-events: all;
@@ -56,15 +58,12 @@
 						}
 					}
 
-					duration {
-						display: inline-block;
-						width: 8vw;
+					.duration {
 						text-align: right;
 					}
 
 					&::before {
 						display: inline-block;
-						width: 100px;
 						text-align: right;
 						margin-right: 20px;
 						content: "♬";
@@ -129,7 +128,6 @@
 }
 .rhap_progress-bar {
 	height: 2px;
-	//background-color: $lighter;
 }
 .rhap_progress-indicator {
 	width: 10px;

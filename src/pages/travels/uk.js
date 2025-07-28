@@ -4,7 +4,7 @@ import { Footer, Hexagons, Menu, Carousel } from '../../Components/index.js';
 import '../_scss/_page.scss';
 import '../_scss/travels.scss';
 
-const Whisky = () => {
+const UK = () => {
     return (<main>
         <Head>
             <title>Ω - Travel to United Kingdom & Ireland</title>
@@ -31,7 +31,7 @@ const Whisky = () => {
                 Nonetheless it always was a nice experience and a common ground between all the trips has
                 been paying a visit to a nice pub to at least drink a Guinness and one pint of beer that
                 I've never tried before. Another common ground is always try a couple new whiskies and
-                update my <a href="/whisky">database with my tastings</a>.
+                update my <a href="https://swimmer.zone/whisky">database with my tastings</a>.
             </p>
             <p><img src="/images/travels/uk/map.svg" alt="Regions" className="noshade"/></p>
             <h2 id="edinburgh">Edinburgh</h2>
@@ -124,4 +124,4 @@ const Whisky = () => {
     </main>);
 }
 
-export default Whisky;
+export default UK;
