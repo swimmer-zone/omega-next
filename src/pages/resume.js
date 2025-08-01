@@ -21,20 +21,24 @@ const Resume = () => {
         <div className="content-column">
             <svg display="none">
                 <symbol id="arrow">
-                    <polyline points="7 10,12 15,17 10" fill="none" stroke="currentcolor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+                    <polyline points="7 10,12 15,17 10" fill="none" stroke="currentcolor" strokeLinecap="round"
+                              strokeLinejoin="round" strokeWidth="2"/>
                 </symbol>
             </svg>
             <h1><span>Resume</span> <span>of</span> <span>Sander Hartman</span></h1>
-            <Portrait />
+            <Portrait/>
             <div id="timeline" className="timeline">
                 <div className="btn-group">
-                    <button className="btn timeline__collapse" type="button" onClick={handleSetExpanded}>Expand / Collapse</button>
+                    <button className="btn timeline__collapse" type="button" onClick={handleSetExpanded}>Expand /
+                        Collapse
+                    </button>
                 </div>
                 <div className="timeline__item">
                     <div className="timeline__item-header">
-                        <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'} type="button">
+                        <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'}
+                                type="button">
                             <svg className="timeline__arrow-icon" viewBox="0 0 24 24">
-                                <use href="#arrow" />
+                                <use href="#arrow"/>
                             </svg>
                         </button>
                         <span className="timeline__dot"></span>
@@ -47,7 +51,9 @@ const Resume = () => {
                             </strong>
                         </span>
                     </div>
-                    <div className={expanded ? 'timeline__item-body timeline__item-body--expanded' : 'timeline__item-body'} role="region">
+                    <div
+                        className={expanded ? 'timeline__item-body timeline__item-body--expanded' : 'timeline__item-body'}
+                        role="region">
                         <div className="timeline__item-body-content">
                             <p className="timeline__item-p">
                                 PHP Programmer, Development and maintenance Magento, Custom modules for clients
@@ -57,9 +63,10 @@ const Resume = () => {
                 </div>
                 <div className="timeline__item">
                     <div className="timeline__item-header">
-                        <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'} type="button">
+                        <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'}
+                                type="button">
                             <svg className="timeline__arrow-icon" viewBox="0 0 24 24" width="24">
-                                <use href="#arrow" />
+                                <use href="#arrow"/>
                             </svg>
                         </button>
                         <span className="timeline__dot"></span>
@@ -72,7 +79,9 @@ const Resume = () => {
                             </strong>
                         </span>
                     </div>
-                    <div className={expanded ? 'timeline__item-body timeline__item-body--expanded' : 'timeline__item-body'} role="region">
+                    <div
+                        className={expanded ? 'timeline__item-body timeline__item-body--expanded' : 'timeline__item-body'}
+                        role="region">
                         <div className="timeline__item-body-content">
                             <p className="timeline__item-p">
                                 Information Technology<br/>Bachelor's Degree
@@ -82,9 +91,10 @@ const Resume = () => {
                 </div>
                 <div className="timeline__item">
                     <div className="timeline__item-header">
-                        <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'} type="button">
+                        <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'}
+                                type="button">
                             <svg className="timeline__arrow-icon" viewBox="0 0 24 24">
-                                <use href="#arrow" />
+                                <use href="#arrow"/>
                             </svg>
                         </button>
                         <span className="timeline__dot"></span>
@@ -97,7 +107,9 @@ const Resume = () => {
                             </strong>
                         </span>
                     </div>
-                    <div className={expanded ? 'timeline__item-body timeline__item-body--expanded' : 'timeline__item-body'} role="region">
+                    <div
+                        className={expanded ? 'timeline__item-body timeline__item-body--expanded' : 'timeline__item-body'}
+                        role="region">
                         <div className="timeline__item-body-content">
                             <p className="timeline__item-p">
                                 PHP Programmer, Development and maintenance custom CMS, Custom applications for clients
@@ -107,9 +119,10 @@ const Resume = () => {
                 </div>
                 <div className="timeline__item">
                     <div className="timeline__item-header">
-                        <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'} type="button">
+                        <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'}
+                                type="button">
                             <svg className="timeline__arrow-icon" viewBox="0 0 24 24">
-                                <use href="#arrow" />
+                                <use href="#arrow"/>
                             </svg>
                         </button>
                         <span className="timeline__dot"></span>
@@ -120,7 +133,9 @@ const Resume = () => {
                             <strong className="timeline__title">BliXem Internet, Nijmegen</strong>
                         </span>
                     </div>
-                    <div className={expanded ? 'timeline__item-body timeline__item-body--expanded' : 'timeline__item-body'} role="region">
+                    <div
+                        className={expanded ? 'timeline__item-body timeline__item-body--expanded' : 'timeline__item-body'}
+                        role="region">
                         <div className="timeline__item-body-content">
                             <p className="timeline__item-p">
                                 PHP Programmer, Development and maintenance of WordPress
@@ -130,9 +145,10 @@ const Resume = () => {
                 </div>
                 <div className="timeline__item">
                     <div className="timeline__item-header">
-                        <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'} type="button">
+                        <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'}
+                                type="button">
                             <svg className="timeline__arrow-icon" viewBox="0 0 24 24">
-                                <use href="#arrow" />
+                                <use href="#arrow"/>
                             </svg>
                         </button>
                         <span className="timeline__dot"></span>
@@ -145,7 +161,9 @@ const Resume = () => {
                             </strong>
                         </span>
                     </div>
-                    <div className={expanded ? 'timeline__item-body timeline__item-body--expanded' : 'timeline__item-body'} role="region">
+                    <div
+                        className={expanded ? 'timeline__item-body timeline__item-body--expanded' : 'timeline__item-body'}
+                        role="region">
                         <div className="timeline__item-body-content">
                             <p className="timeline__item-p">
                                 Informatica, Elektronics, Mechanics<br/>
@@ -156,9 +174,10 @@ const Resume = () => {
                 </div>
                 <div className="timeline__item">
                     <div className="timeline__item-header">
-                        <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'} type="button">
+                        <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'}
+                                type="button">
                             <svg className="timeline__arrow-icon" viewBox="0 0 24 24">
-                                <use href="#arrow" />
+                                <use href="#arrow"/>
                             </svg>
                         </button>
                         <span className="timeline__dot"></span>
@@ -171,7 +190,9 @@ const Resume = () => {
                             </strong>
                         </span>
                     </div>
-                    <div className={expanded ? 'timeline__item-body timeline__item-body--expanded' : 'timeline__item-body'} role="region">
+                    <div
+                        className={expanded ? 'timeline__item-body timeline__item-body--expanded' : 'timeline__item-body'}
+                        role="region">
                         <div className="timeline__item-body-content">
                             <p className="timeline__item-p">
                                 Process Operator
@@ -181,9 +202,10 @@ const Resume = () => {
                 </div>
                 <div className="timeline__item">
                     <div className="timeline__item-header">
-                        <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'} type="button">
+                        <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'}
+                                type="button">
                             <svg className="timeline__arrow-icon" viewBox="0 0 24 24">
-                                <use href="#arrow" />
+                                <use href="#arrow"/>
                             </svg>
                         </button>
                         <span className="timeline__dot"></span>
@@ -196,7 +218,9 @@ const Resume = () => {
                             </strong>
                         </span>
                     </div>
-                    <div className={expanded ? 'timeline__item-body timeline__item-body--expanded' : 'timeline__item-body'} role="region">
+                    <div
+                        className={expanded ? 'timeline__item-body timeline__item-body--expanded' : 'timeline__item-body'}
+                        role="region">
                         <div className="timeline__item-body-content">
                             <p className="timeline__item-p">
                                 Research, Maintenance
@@ -206,9 +230,10 @@ const Resume = () => {
                 </div>
                 <div className="timeline__item">
                     <div className="timeline__item-header">
-                        <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'} type="button">
+                        <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'}
+                                type="button">
                             <svg className="timeline__arrow-icon" viewBox="0 0 24 24">
-                                <use href="#arrow" />
+                                <use href="#arrow"/>
                             </svg>
                         </button>
                         <span className="timeline__dot"></span>
@@ -219,7 +244,9 @@ const Resume = () => {
                             <strong className="timeline__title">Sportcentrum Kardinge, Groningen</strong>
                         </span>
                     </div>
-                    <div className={expanded ? 'timeline__item-body timeline__item-body--expanded' : 'timeline__item-body'} role="region">
+                    <div
+                        className={expanded ? 'timeline__item-body timeline__item-body--expanded' : 'timeline__item-body'}
+                        role="region">
                         <div className="timeline__item-body-content">
                             <p className="timeline__item-p">
                                 Technical Service, Maintenance
@@ -229,9 +256,10 @@ const Resume = () => {
                 </div>
                 <div className="timeline__item">
                     <div className="timeline__item-header">
-                        <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'} type="button">
+                        <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'}
+                                type="button">
                             <svg className="timeline__arrow-icon" viewBox="0 0 24 24">
-                                <use href="#arrow" />
+                                <use href="#arrow"/>
                             </svg>
                         </button>
                         <span className="timeline__dot"></span>
@@ -244,7 +272,9 @@ const Resume = () => {
                             </strong>
                         </span>
                     </div>
-                    <div className={expanded ? 'timeline__item-body timeline__item-body--expanded' : 'timeline__item-body'} role="region">
+                    <div
+                        className={expanded ? 'timeline__item-body timeline__item-body--expanded' : 'timeline__item-body'}
+                        role="region">
                         <div className="timeline__item-body-content">
                             <p className="timeline__item-p">
                                 Process Technology, Electronics, VAPRO B<br/>
@@ -255,9 +285,10 @@ const Resume = () => {
                 </div>
                 <div className="timeline__item">
                     <div className="timeline__item-header">
-                        <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'} type="button">
+                        <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'}
+                                type="button">
                             <svg className="timeline__arrow-icon" viewBox="0 0 24 24">
-                                <use href="#arrow" />
+                                <use href="#arrow"/>
                             </svg>
                         </button>
                         <span className="timeline__dot"></span>
@@ -270,7 +301,9 @@ const Resume = () => {
                             </strong>
                         </span>
                     </div>
-                    <div className={expanded ? 'timeline__item-body timeline__item-body--expanded' : 'timeline__item-body'} role="region">
+                    <div
+                        className={expanded ? 'timeline__item-body timeline__item-body--expanded' : 'timeline__item-body'}
+                        role="region">
                         <div className="timeline__item-body-content">
                             <p className="timeline__item-p">
                                 Nature & Technology<br/>
@@ -281,9 +314,10 @@ const Resume = () => {
                 </div>
                 <div className="timeline__item">
                     <div className="timeline__item-header">
-                        <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'} type="button">
+                        <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'}
+                                type="button">
                             <svg className="timeline__arrow-icon" viewBox="0 0 24 24">
-                                <use href="#arrow" />
+                                <use href="#arrow"/>
                             </svg>
                         </button>
                         <span className="timeline__dot"></span>
@@ -296,7 +330,9 @@ const Resume = () => {
                             </strong>
                         </span>
                     </div>
-                    <div className={expanded ? 'timeline__item-body timeline__item-body--expanded' : 'timeline__item-body'} role="region">
+                    <div
+                        className={expanded ? 'timeline__item-body timeline__item-body--expanded' : 'timeline__item-body'}
+                        role="region">
                         <div className="timeline__item-body-content">
                             <p className="timeline__item-p">...</p>
                         </div>
@@ -304,9 +340,10 @@ const Resume = () => {
                 </div>
                 <div className="timeline__item">
                     <div className="timeline__item-header">
-                        <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'} type="button">
+                        <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'}
+                                type="button">
                             <svg className="timeline__arrow-icon" viewBox="0 0 24 24">
-                                <use href="#arrow" />
+                                <use href="#arrow"/>
                             </svg>
                         </button>
                         <span className="timeline__dot"></span>
@@ -319,7 +356,9 @@ const Resume = () => {
                             </strong>
                         </span>
                     </div>
-                    <div className={expanded ? 'timeline__item-body timeline__item-body--expanded' : 'timeline__item-body'} role="region">
+                    <div
+                        className={expanded ? 'timeline__item-body timeline__item-body--expanded' : 'timeline__item-body'}
+                        role="region">
                         <div className="timeline__item-body-content">
                             <p className="timeline__item-p">
                                 This is the day the Unix clock began (or December 31, 1969 if you live behind UTC 😉).
@@ -331,28 +370,55 @@ const Resume = () => {
 
             <h2>About Me</h2>
             <p>
-                About 20 years ago I wrote my first HTML and later on also CSS came by, these became HTML5 and CSS3. But I wanted more than just
-                a static website and when PHP 4.0 was released, I enrolled into creating dynamic websites, some of which you can still find on
-                my <a href="/">homepage</a>.
+                About 20 years ago I wrote my first HTML and later on also CSS came by, these became HTML5 and CSS3.
+                But I wanted more than just a static website and when PHP 4.0 was released, I enrolled into creating
+                dynamic websites, some of which you can still find on my <a href="/">homepage</a>.
             </p>
             <p>
-                I started programming procedurally and while PHP grew up, I got more into object
-                oriented programming (OOP). As of version 7.0, my website was built onto a Model-View-Controller (MVC) architecture. After that,
-                I moved on to using CodeIgniter as a framework and later on Laravel, connecting to the SoundCloud API to show off my music
-                productions.
+                I started programming procedurally and while PHP grew up, I got more into object oriented programming
+                (OOP). As of version 7.0, my website was built onto a Model-View-Controller (MVC) architecture. After
+                that, I moved on to using CodeIgniter as a framework and later on Laravel, connecting to the SoundCloud
+                API to show off my music productions.
             </p>
             <p>
-                Currently I'm already on the 20th version of my website, this includes major design overhauls, migrating to other
-                frameworks or platforms, also migrating from shared hosting to a VPS. The previous version ran on React and currently it is
-                running on Next.js on serverless hosting at Vercel.
+                Currently I'm already on the 20th version of my website, this includes major design overhauls, migrating
+                to other frameworks or platforms, also migrating from shared hosting to a VPS. The previous version ran
+                on React and currently it is running on Next.js on serverless hosting at Vercel.
             </p>
             <h2>Hobbies</h2>
             <p>
-                My hobbies include web development, both front- and backend because I really like to deliver a complete product. I like to get to
-                know the latest technologies in development, including hardware, frameworks, the newest trends in PHP and CSS, Typography. Furthermore
-                I like woodworking, creating music and I am volunteering as a swimming instructor, which I started right after I got my
-                swimming certificates for a total of 18 years.
+                My hobbies include web development, both front- and backend because I really like to deliver a complete
+                product. I like to get to know the latest technologies in development, including hardware, frameworks,
+                the newest trends in PHP and CSS, Typography. Furthermore I like woodworking, creating music and I am
+                volunteering as a swimming instructor, which I started right after I got my swimming certificates for a
+                total of 18 years.
             </p>
+            <h2>Portfolio</h2>
+            <p>
+                I've made a lot of websites during my life, a couple of which are still live today:
+            </p>
+            <ul>
+                <li>
+                    <a href="https://swimmer.ome.gs">Swimmer</a> my previous website where my current site is
+                    heavily based on. Most of the sections have moved to my current website, but left a couple
+                    behind.
+                </li>
+                <li>
+                    <a href="https://blackhole.ome.gs">Black Hole</a> being a music project that I've had with a
+                    couple of friends.
+                </li>
+                <li>
+                    <a href="https://index.ome.gs">Index</a> is band website of a couple of friends.
+                </li>
+                <li>
+                    <a href="https://weerbaar.ome.gs">Weerbaar
+                        Worden</a> a website that I made for a friend, which was meant to be child friendly.
+                </li>
+                <li>
+                    <a href="https://jacuzzi.ome.gs">Jacuzzi Taxi</a> Jacuzzi rental company, unfortunately never
+                    made it past a wire frame.
+                </li>
+            </ul>
             <h2>Skills</h2>
             <div className="tags">
                 <span className="tag">Dutch (mother tongue)</span>
@@ -377,7 +443,7 @@ const Resume = () => {
                 <span className="tag">PostgreSQL</span>
                 <span className="tag">Python</span>
             </div>
-		</div>
+        </div>
         <Footer/>
     </main>);
 }

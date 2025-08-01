@@ -28,14 +28,6 @@ const Archive = () => {
                 use the social media buttons to contact me about my music, blogs or any web-related topic. Of course
                 you could also e-mail me on <a href="mailto:info@swimmer.zone">info@swimmer.zone</a>.
             </p>
-            <p>
-                I've made a lot of websites in the past, a couple of which are still live
-                today: <a href="https://blackhole.voyage/">Black Hole</a> being a music project that I've
-                had with a couple of friends. A band website of a couple of friends,
-                called <a href="https://index.swimmer.zone/">Index</a>. And a
-                website that I made for a
-                friend: <a href="https://weerbaar.swimmer.zone/">Weerbaar Worden</a>.
-            </p>
             <p>Some resources that I use on a daily basis: </p>
             <ul>
                 <li><a href="https://tympanus.net/codrops/">Codrops</a></li>
@@ -61,6 +53,11 @@ const Archive = () => {
                 <li><a href="https://ektoplazm.com/section/free-music">Ektoplazm</a></li>
                 <li><a href="https://www.w3schools.com/colors/colors_converter.asp">Color Converter</a></li>
             </ul>
+            <p>
+                I've collected a lot more bookmarks, which you can download as a file, ready to be imported in your
+                browser. Don't worry, everything will be in a subfolder which is easily deleted. All bookmarks are
+                categorized. <a href="bookmarks.html">Right click and 'Save Link As...' to download the file</a>.
+            </p>
         </div>
         <Footer/>
     </main>);
