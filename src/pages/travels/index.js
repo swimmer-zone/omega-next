@@ -120,7 +120,7 @@ const Travels = () => {
                         strokeLinecap: "round"
                     }}
                 >
-                    {link && <a href={link}>
+                    {link && <a href={"travels/" + link}>
                         <text x={annotation[2]}
                               textAnchor="end"
                               alignmentBaseline="middle"

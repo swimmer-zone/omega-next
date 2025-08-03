@@ -5,7 +5,8 @@
             -23.5133,
             14.9331
         ],
-        "annotation": [20, 20, 20]
+        "annotation": [20, 20, 20],
+        "link": "cape-verde#praia"
     },
     {
         "name": "Cidade Velha",
@@ -13,7 +14,8 @@
             -23.6167,
             14.9167
         ],
-        "annotation": [20, 10, 46]
+        "annotation": [20, 10, 46],
+        "link": "cape-verde#cidade-velha"
     },
     {
         "name": "Tarrafal",
@@ -21,7 +23,8 @@
             -23.7542,
             15.2781
         ],
-        "annotation": [20, -10, 27]
+        "annotation": [20, -10, 27],
+        "link": "cape-verde#tarrafal"
     },
     {
         "name": "Assomada",
@@ -29,7 +32,8 @@
             -23.6833,
             15.1
         ],
-        "annotation": [20, 0, 37]
+        "annotation": [20, 0, 37],
+        "link": "cape-verde#assomada"
     },
     {
         "name": "Lisbon",
@@ -37,7 +41,8 @@
             -9.1399,
             38.7169
         ],
-        "annotation": [-30, 30, -4]
+        "annotation": [-30, 30, -4],
+        "link": "cape-verde#lisbon"
     },
     {
         "name": "Sintra",
@@ -45,7 +50,8 @@
             -9.3817,
             38.8029
         ],
-        "annotation": [-30, 10, -4]
+        "annotation": [-30, 10, -4],
+        "link": "cape-verde#sintra"
     },
     {
         "name": "Cascais",
@@ -53,6 +59,7 @@
             -9.4215,
             38.6979
         ],
-        "annotation": [-30, 20, -4]
+        "annotation": [-30, 20, -4],
+        "link": "cape-verde#cascais"
     }
 ]

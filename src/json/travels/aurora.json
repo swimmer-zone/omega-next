@@ -6,7 +6,7 @@
             53.3498
         ],
         "annotation": [-20, -7, -4],
-        "link": "uk#dublin"
+        "link": "aurora#dublin"
     },
     {
         "name": "Rovaniemi",
@@ -24,6 +24,6 @@
             54.5973
         ],
         "annotation": [-20, -12, -4],
-        "link": "uk#belfast"
+        "link": "aurora#belfast"
     }
 ]
