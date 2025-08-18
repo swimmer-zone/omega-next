@@ -36,7 +36,7 @@ const Music = ({archive}) => {
     }, [state.currentTrack]);
 	
   	return (
-		<section className="music" id="music">
+		<section className="music music-home" id="music">
             {Object.keys(albums).map(key => {
                 let album = albums[key];
                 let timer;

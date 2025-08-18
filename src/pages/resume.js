@@ -411,8 +411,8 @@ const Resume = () => {
                     <a href="https://index.ome.gs">Index</a> is band website of a couple of friends.
                 </li>
                 <li>
-                    <a href="https://weerbaar.ome.gs">Weerbaar
-                        Worden</a> a website that I made for a friend, which was meant to be child friendly.
+                    <a href="https://weerbaar.ome.gs">Weerbaar Worden</a> a website that I made for a friend, which was
+                    meant to be child friendly.
                 </li>
                 <li>
                     <a href="https://jacuzzi.ome.gs">Jacuzzi Taxi</a> Jacuzzi rental company, unfortunately never
@@ -421,28 +421,74 @@ const Resume = () => {
             </ul>
             <h2>Skills</h2>
             <div className="tags">
-                <span className="tag">Dutch (mother tongue)</span>
-                <span className="tag">English (fluent)</span>
-                <span className="tag">German (a bit)</span>
-                <span className="tag">Portuguese (studying)</span>
-                <span className="tag">Agile</span>
-                <span className="tag">CodeIgniter</span>
-                <span className="tag">Symfony</span>
-                <span className="tag">Laravel</span>
-                <span className="tag">Magento</span>
-                <span className="tag">jQuery</span>
-                <span className="tag">React</span>
-                <span className="tag">Next.js</span>
-                <span className="tag">Vue</span>
-                <span className="tag">Web Components</span>
-                <span className="tag">HTML</span>
-                <span className="tag">CSS</span>
-                <span className="tag">JavaScript</span>
-                <span className="tag">PHP</span>
-                <span className="tag">MySQL</span>
-                <span className="tag">PostgreSQL</span>
-                <span className="tag">Python</span>
+                <img className="tag" src="/logos/alpine-js.svg" title="AlpineJS"/>
+                <img className="tag" src="/logos/apache.svg" title="Apache"/>
+                <img className="tag" src="/logos/arduino.svg" title="Arduino"/>
+                <img className="tag" src="/logos/bitbucket.svg" title="Bitbucket"/>
+                <img className="tag" src="/logos/c-plus-plus.svg" title="C++"/>
+                <img className="tag" src="/logos/c-sharp.svg" title="C#"/>
+                <img className="tag" src="/logos/codeigniter.svg" title="Codeigniter"/>
+                <img className="tag" src="/logos/composer.svg" title="Composer"/>
+                <img className="tag" src="/logos/confluence.svg" title="Confluence"/>
+                <img className="tag" src="/logos/css3.svg" title="CSS 3"/>
+                <img className="tag" src="/logos/cypress.svg" title="Cypress"/>
+                <img className="tag" src="/logos/debian.svg" title="Debian"/>
+                <img className="tag" src="/logos/docker.svg" title="Docker"/>
+                <img className="tag" src="/logos/drupal.svg" title="Drupal"/>
+                <img className="tag" src="/logos/filezilla.svg" title="Filezilla"/>
+                <img className="tag" src="/logos/git.svg" title="Git"/>
+                <img className="tag" src="/logos/github.svg" title="Github"/>
+                <img className="tag" src="/logos/github-actions.svg" title="Github Actions"/>
+                <img className="tag" src="/logos/gitlab.svg" title="GitLab"/>
+                <img className="tag" src="/logos/html5.svg" title="HTML 5"/>
+                <img className="tag" src="/logos/javascript.svg" title="JavaScript"/>
+                <img className="tag" src="/logos/jetbrains.svg" title="JetBrains"/>
+                <img className="tag" src="/logos/jira.svg" title="Jira"/>
+                <img className="tag" src="/logos/jquery.svg" title="jQuery"/>
+                <img className="tag" src="/logos/json.svg" title="JSON"/>
+                <img className="tag" src="/logos/knockout.svg" title="KnockoutJS"/>
+                <img className="tag" src="/logos/laravel.svg" title="Laravel"/>
+                <img className="tag" src="/logos/linux.svg" title="Linux"/>
+                <img className="tag" src="/logos/magento.svg" title="Magento / Adobe Commerce"/>
+                <img className="tag" src="/logos/markdown.svg" title="Markdown"/>
+                <img className="tag" src="/logos/ms-dos.svg" title="MS DOS"/>
+                <img className="tag" src="/logos/mysql.svg" title="MySQL"/>
+                <img className="tag" src="/logos/nano.svg" title="Nano"/>
+                <img className="tag" src="/logos/next-js.svg" title="Next JS"/>
+                <img className="tag" src="/logos/nginx.svg" title="Nginx"/>
+                <img className="tag" src="/logos/node-js.svg" title="Node JS"/>
+                <img className="tag" src="/logos/npm.svg" title="NPM"/>
+                <img className="tag" src="/logos/oh-my-zsh.svg" title="Oh My zsh"/>
+                <img className="tag" src="/logos/photoshop.svg" title="Photoshop"/>
+                <img className="tag" src="/logos/php.svg" title="PHP"/>
+                <img className="tag" src="/logos/phpstorm.svg" title="PHP Storm"/>
+                <img className="tag" src="/logos/postgressql.svg" title="PostgreSQL"/>
+                <img className="tag" src="/logos/powershell.svg" title="PowerShell"/>
+                <img className="tag" src="/logos/putty.svg" title="Putty"/>
+                <img className="tag" src="/logos/python.svg" title="Python"/>
+                <img className="tag" src="/logos/raspberry-pi.svg" title="Raspberry PI"/>
+                <img className="tag" src="/logos/react.svg" title="React"/>
+                <img className="tag" src="/logos/sass.svg" title="SASS"/>
+                <img className="tag" src="/logos/slack.svg" title="Slack"/>
+                <img className="tag" src="/logos/ssh.svg" title="SSH"/>
+                <img className="tag" src="/logos/stack-overflow.svg" title="Stack Overflow"/>
+                <img className="tag" src="/logos/swagger.svg" title="Swagger"/>
+                <img className="tag" src="/logos/symfony.svg" title="Symfony"/>
+                <img className="tag" src="/logos/tailwind-css.svg" title="Tailwind"/>
+                <img className="tag" src="/logos/ubuntu.svg" title="Ubuntu"/>
+                <img className="tag" src="/logos/vs-code.svg" title="VS Code"/>
+                <img className="tag" src="/logos/webstorm.svg" title="Web Storm"/>
+                <img className="tag" src="/logos/xml.svg" title="XML"/>
+                <img className="tag" src="/logos/yaml.svg" title="YAML"/>
+                <img className="tag" src="/logos/zend-framework.svg" title="Zend Framework"/>
             </div>
+            <h2>Languages</h2>
+            <ul>
+                <li>Dutch (mother tongue)</li>
+                <li>English (fluent)</li>
+                <li>German (a bit)</li>
+                <li>Portuguese (studying)</li>
+            </ul>
         </div>
         <Footer/>
     </main>);

@@ -160,11 +160,15 @@
 
 	.tags {
 		display: flex;
-		width: 20vw;
-		justify-content: space-evenly;
+		width: 60vw;
+		justify-content: left;
 		flex-wrap: wrap;
+		background: linear-gradient(30deg, #444444, #666666, #aaaaaa, #666666);
+		box-shadow: 0 0 12px 4px $purple, 0 0 12px 6px #ffffff04, 0 0 12px 8px #ffffff02, 0 0 12px 16px #ffffff01;
+		border-radius: 0.5em;
+		padding: 1em;
 	}
-	.tag {
+	span.tag {
 		font-size: .8rem;
 		letter-spacing: 1px;
 		background-color: $purple;
@@ -175,6 +179,19 @@
 		line-height: 1rem;
 		margin-left: 8px;
 		margin-bottom: 8px;
+	}
+	img.tag {
+		font-size: .8rem;
+		letter-spacing: 1px;
+		color: $purple;
+		padding: 4px 8px;
+		border-radius: 4px;
+		display: inline-block;
+		line-height: 1rem;
+		margin-left: 8px;
+		margin-bottom: 8px;
+		width: 48px;
+		height: 48px;
 	}
 
 	.me {
