@@ -2,7 +2,7 @@
 
 body,
 button {
-	font-family: 'Afacad', sans-serif;
+	font-family: 'Indie Flower', sans-serif;
 	font-size: 1rem;
 	letter-spacing: 0.1rem;
 }
@@ -38,29 +38,6 @@ ol {
 	margin-left: 2vw;
 }
 
-#root {
-	& > header,
-	& > section {
-		width: 100vw;
-	    box-sizing: border-box;
-		position: relative;
-		z-index: 999;
-	}
-	#bubbles {
-		pointer-events: none;
-	}
-
-	& > section {
-		height: 100vh;
-
-		a,
-		button,
-		.cover-wrapper {
-			pointer-events: all;
-		}
-	}
-}
-
 a,
 button {
     color: $lighter;
@@ -91,17 +68,6 @@ button {
 
 	li {
 		color: $purple;
-	}
-}
-
-ul.tags {
-	li {
-		display: inline-block;
-		padding: 4px 8px;
-		margin: 4px;
-		border-radius: 4px;
-		background-color: $purple;
-		color: $white;
 	}
 }
 blockquote {
@@ -147,41 +113,72 @@ table {
 	}
 }
 
-img {
-	max-width: 600px;
-	margin-bottom: 4vh;
-
-	&.shade {
-		box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.2), 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
+@media(max-width: $mobile-breakpoint) {
+	h1 {
+		font-size: 3rem;
+		color: $purple;
+		text-shadow: 2px 2px 2px #6c6eec44;
+		font-weight: 200;
 	}
 
-	&.small {
-		height: 180px;
-		margin: 10px;
+	h2 {
+		font-size: 2rem;
+		color: $white;
+		margin-bottom: 2vh;
+		text-shadow: 2px 2px 2px #6c6eec44;
+		font-weight: 300;
 	}
-}
-a img.small {
-	border: 2px solid $purple;
-}
-sup a,
-.sup {
-	color: $purple;
-	padding-left: 1px;
-	font-size: .83em;
-	vertical-align: super;
-	text-decoration: none;
-}
-hr {
-	box-shadow: -6px -6px 0 0 $purple;
-	border: 1px solid $purple;
-	margin: 60px auto 80px;
-	width: 60%;
-}
-nav select {
-	margin: 4px;
-	padding: 8px;
-	width: 160px;
-	background-color: $black;
-	color: $purple;
-	border: 0;
+
+	ul,
+	ol {
+		margin-left: 2vw;
+	}
+
+
+	.content-column {
+		position: absolute;
+		top: 12vh;
+		left: 2vw;
+		width: 96vw;
+		padding-bottom: 400px;
+	}
+	.intro {
+		p {
+			margin: 40px 0;
+		}
+
+		li {
+			color: $purple;
+		}
+	}
+
+	blockquote {
+		border-left: 4px solid $light;
+		margin-left: 20px;
+		padding-left: 20px;
+		position: relative;
+
+		&:before {
+			line-height: 1;
+			font-size: 56px;
+			left: 100%;
+			padding-left: 20px;
+			top: 0;
+			position: absolute;
+		}
+	}
+	table {
+		margin: 4vh 4vw;
+		table-layout: fixed;
+		width: 1200px;
+
+		& > * {
+			width: 1200px;
+
+			td {
+				width: 300px;
+				padding: 4px;
+			}
+		}
+	}
 }

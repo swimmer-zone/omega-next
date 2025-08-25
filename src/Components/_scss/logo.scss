@@ -19,6 +19,12 @@
         animation: draw 10s forwards;
     }
 }
+#logo-mobile {
+    display: none;
+    path {
+        stroke: $black !important;
+    }
+}
 @keyframes draw {
     to {
         stroke-dashoffset: 0;
@@ -34,4 +40,21 @@
     width: 60px;
     text-align: left;
     margin-bottom: 0;
+}
+
+@media(max-width: $mobile-breakpoint) {
+    #logo {
+        display: none;
+    }
+    #logo-mobile {
+        display: block;
+        width: 80px;
+        right: 2vw;
+        top: 64px;
+        position: fixed;
+    }
+
+    #footer .copy {
+        display: none;
+    }
 }

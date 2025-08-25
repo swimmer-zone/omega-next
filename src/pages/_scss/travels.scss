@@ -10,8 +10,7 @@
     background-size: auto 100vh;
 }
 .article {
-    background-color: #00000088;
-    background: linear-gradient(to top, transparent 0, #00000088 80px);
+    background: #00000088 linear-gradient(to top, transparent 0, #00000088 80px);
 
     * {
         max-width: 32vw;
@@ -56,5 +55,19 @@
                 margin-top: 10px;
             }
         }
+    }
+}
+
+img {
+    max-width: 600px;
+    margin-bottom: 4vh;
+
+    &.shade {
+        box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.2), 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
+    }
+
+    &.small {
+        height: 180px;
+        margin: 10px;
     }
 }

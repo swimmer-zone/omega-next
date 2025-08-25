@@ -80,3 +80,9 @@
 		opacity: 0.3;
 	}
 }
+
+@media(max-width: $mobile-breakpoint) {
+	.social {
+		left: unset;
+	}
+}
