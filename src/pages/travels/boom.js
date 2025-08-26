@@ -41,13 +41,13 @@ const Boom = () => {
                 was the festival! An amazing eight days and nights.
             </p>
             <h2>Boom 2012</h2>
-            <Carousel directory="boom/01_2012" num="69"/>
+            <Carousel directory="travels/boom/01_2012" num="69"/>
             <h2>Boom 2014</h2>
-            <Carousel directory="boom/02_2014" num="33"/>
+            <Carousel directory="travels/boom/02_2014" num="33"/>
             <h2>Boom 2016</h2>
-            <Carousel directory="boom/03_2016" num="59"/>
+            <Carousel directory="travels/boom/03_2016" num="59"/>
             <h2>Boom 2018</h2>
-            <Carousel directory="boom/04_2018" num="26"/>
+            <Carousel directory="travels/boom/04_2018" num="26"/>
             <p>
                 <a href="https://www.youtube.com/watch?v=UABFY1AHihw">
                     <img className="small" src="https://img.youtube.com/vi/UABFY1AHihw/0.jpg"
@@ -131,7 +131,7 @@ const Boom = () => {
                 actually means island in
                 Hungarian.
             </p>
-            <Carousel directory="boom/00_sziget" num="19"/>
+            <Carousel directory="travels/boom/00_sziget" num="19"/>
         </div>
         <Footer/>
     </main>);

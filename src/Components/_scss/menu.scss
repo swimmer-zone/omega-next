@@ -148,6 +148,9 @@
     span {
         margin-left: 16px;
     }
+    &#travels-item-mobile {
+        display: none;
+    }
 }
 
 @media(max-width: $mobile-breakpoint) {
@@ -192,6 +195,12 @@
         }
         span {
             display: none;
+        }
+        &#travels-item {
+            display: none;
+        }
+        &#travels-item-mobile {
+            display: block;
         }
     }
 }

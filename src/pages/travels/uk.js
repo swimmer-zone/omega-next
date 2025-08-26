@@ -45,7 +45,7 @@ const UK = () => {
                 view over the medieval structures and castles on top of the mountain. Partly climbed
                 Albert's seat and tried to visit Cramond island, but it is only accessible during low tide.
             </p>
-            <Carousel directory="uk/00_edinburgh" num="24"/>
+            <Carousel directory="travels/uk/00_edinburgh" num="24"/>
             <h2 id="belfast">Belfast</h2>
             <p key="belfast">
                 In 2022 I've also been in Belfast, because that's where our plane took off when we went to

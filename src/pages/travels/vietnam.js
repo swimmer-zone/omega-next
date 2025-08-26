@@ -45,7 +45,7 @@ const Vietnam = () => {
                 mountains you're glad that you can count
                 on people honking before they pass by.
             </p>
-            <Carousel directory="vietnam/00_hanoi" num="12"/>
+            <Carousel directory="travels/vietnam/00_hanoi" num="12"/>
             <h2 id="hanoi">Hanoi</h2>
             <p>
                 After one night in Hanoi we took the plane to Ho Chi Minh and then travel up north and visit
@@ -57,14 +57,14 @@ const Vietnam = () => {
                 would taste good. Next stop is Nhà Tráng, a city at the beach, an 8 hour train ride which is
                 an attraction in itself.
             </p>
-            <Carousel directory="vietnam/01_ho-chi-minh" num="12"/>
+            <Carousel directory="travels/vietnam/01_ho-chi-minh" num="12"/>
             <h2 id="hoi-chi-minh">Ho Chi Minh</h2>
             <p>
                 We stayed in Ho Chi Minh for 2 nights, got a hotel in District 1 which is more or less the
                 old town. We didn't do too much there, walking
                 around town for a bit.
             </p>
-            <Carousel directory="vietnam/02_nha-trang" num="25"/>
+            <Carousel directory="travels/vietnam/02_nha-trang" num="25"/>
             <h2 id="nha-trang">Nha Trang</h2>
             <p>
                 After the second night in Ho Chi Minh we had to wake up early to take the train to Nhà Tráng
@@ -100,7 +100,7 @@ const Vietnam = () => {
                 was to leave to Da Nang on the third day, the
                 evening after I went for a dive at the other side of that island.
             </p>
-            <Carousel directory="vietnam/03_da-nang" num="27"/>
+            <Carousel directory="travels/vietnam/03_da-nang" num="27"/>
             <h2 id="da-nang-and-hoi-an">Da Nang &amp; Hoi An</h2>
             <p>
                 Da Nang was similar to Nhà Tráng (although much less like a resort) so we combined it with a
@@ -117,8 +117,8 @@ const Vietnam = () => {
                 hand. All of the mountains have cave entrances and numerous tunnels. Several Buddhist
                 sanctuaries can be found there.
             </p>
-            <Carousel directory="vietnam/04_hoi-an" num="5"/>
-            <Carousel directory="vietnam/05_hue" num="16"/>
+            <Carousel directory="travels/vietnam/04_hoi-an" num="5"/>
+            <Carousel directory="travels/vietnam/05_hue" num="16"/>
             <h2 id="hue">Hue</h2>
             <p>
                 One thing we noticed throughout the journey is the outdoorsy lifestyle they have here, half
@@ -133,14 +133,14 @@ const Vietnam = () => {
                 through. I don't think I will ever get used
                 to the menu though.
             </p>
-            <Carousel directory="vietnam/06_dong-hoi" num="4"/>
+            <Carousel directory="travels/vietnam/06_dong-hoi" num="4"/>
             <h2 id="dong-hoi">Dong Hoi</h2>
             <p>
                 From Da Nang we took a sleeper train to Dong Hoi, it was during the day and took only 3
                 hours, but a sleeper is so much more
                 comfortable and it barely costs more.
             </p>
-            <Carousel directory="vietnam/07_phong-nha" num="48"/>
+            <Carousel directory="travels/vietnam/07_phong-nha" num="48"/>
             <h2 id="phong-nha">Phong Nha</h2>
             <p>
                 We didn't really had anything planned for Dong Hoi, but we needed to go there to be able to
@@ -155,7 +155,7 @@ const Vietnam = () => {
                 brother of the hostess brought us
                 back to Dong Hoi, where we could take the sleeper train to Ninh Binh.
             </p>
-            <Carousel directory="vietnam/08_ninh-binh" num="10"/>
+            <Carousel directory="travels/vietnam/08_ninh-binh" num="10"/>
             <h2 id="ninh-binh">Ninh Binh</h2>
             <p>
                 The sleeper train arrived at 3am, so we spent the rest of the night in a hotel. Ninh Binh
@@ -173,7 +173,7 @@ const Vietnam = () => {
                 it wouldn't stop raining, so at the end of the
                 day we took the bus to Ha Long Bay.
             </p>
-            <Carousel directory="vietnam/09_ha-long-bay" num="28"/>
+            <Carousel directory="travels/vietnam/09_ha-long-bay" num="28"/>
             <h2 id="ha-long-bay">Ha Long Bay</h2>
             <p>
                 In Ha Long Bay we booked a 5-star hotel which was on a hilltop, it had a lot of facilities
@@ -188,7 +188,7 @@ const Vietnam = () => {
                 it was more or less a private cruise. We walked through another cave and we also rented a
                 canoe to be able to see yet another cave.
             </p>
-            <Carousel directory="vietnam/10_hanoi" num="8"/>
+            <Carousel directory="travels/vietnam/10_hanoi" num="8"/>
             <h2 id="back-in-hanoi">Back in Hanoi</h2>
             <p>
                 The first time we were in Hanoi we missed the
@@ -207,7 +207,7 @@ const Vietnam = () => {
                 people that they have to move their stuff
                 inside. This left us with not a lot of sleep.
             </p>
-            <Carousel directory="vietnam/11_ha-giang" num="75"/>
+            <Carousel directory="travels/vietnam/11_ha-giang" num="75"/>
             <h2 id="ha-giang">Ha Giang</h2>
             <p>
                 We went to the far north of Vietnam to do the <a
@@ -231,7 +231,7 @@ const Vietnam = () => {
                 culture. I'm glad we started in the south and went
                 up north, because everything became increasingly beautiful.
             </p>
-            <Carousel directory="vietnam/12_hanoi" num="16"/>
+            <Carousel directory="travels/vietnam/12_hanoi" num="16"/>
             <h2 id="back-in-hanoi-again">Back in Hanoi again</h2>
             <p>
                 We had to go back to Hanoi again, because our plane left from Hanoi airport. This time we

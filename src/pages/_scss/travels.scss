@@ -9,13 +9,6 @@
     height: 100vw;
     background-size: auto 100vh;
 }
-.article {
-    background: #00000088 linear-gradient(to top, transparent 0, #00000088 80px);
-
-    * {
-        max-width: 32vw;
-    }
-}
 .travel-overview-background {
     .banner {
         display: flex;
@@ -69,5 +62,10 @@ img {
     &.small {
         height: 180px;
         margin: 10px;
+    }
+}
+
+@media(max-width: $mobile-breakpoint) {
+    table {
     }
 }

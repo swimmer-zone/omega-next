@@ -35,67 +35,67 @@ const Iceland = () => {
             <p>
                 We went to Italy.
             </p>
-            <Carousel directory="italy/01_milan" num="18"/>
+            <Carousel directory="travels/italy/01_milan" num="18"/>
             <h2 id="milan">Milan</h2>
             <p>
                 ...
             </p>
-            <Carousel directory="italy/02_venice" num="2"/>
+            <Carousel directory="travels/italy/02_venice" num="2"/>
             <h2 id="venice">Venice</h2>
             <p>
                 ...
             </p>
-            <Carousel directory="italy/03_brindisi" num="15"/>
+            <Carousel directory="travels/italy/03_brindisi" num="15"/>
             <h2 id="brindisi">Brindisi</h2>
             <p>
                 ...
             </p>
-            <Carousel directory="italy/04_lecce" num="23"/>
+            <Carousel directory="travels/italy/04_lecce" num="23"/>
             <h2 id="lecce">Lecce</h2>
             <p>
                 ...
             </p>
-            <Carousel directory="italy/05_taranto" num="1"/>
+            <Carousel directory="travels/italy/05_taranto" num="1"/>
             <h2 id="taranto">Taranto</h2>
             <p>
                 ...
             </p>
-            <Carousel directory="italy/06_lamezia_terme" num="17"/>
+            <Carousel directory="travels/italy/06_lamezia_terme" num="17"/>
             <h2 id="lamezia-terme">Lamezia Terme</h2>
             <p>
                 ...
             </p>
-            <Carousel directory="italy/07_bologna" num="24"/>
+            <Carousel directory="travels/italy/07_bologna" num="24"/>
             <h2 id="bologna">Bologna</h2>
             <p>
                 ...
             </p>
-            <Carousel directory="italy/08_san_marino" num="99"/>
+            <Carousel directory="travels/italy/08_san_marino" num="99"/>
             <h2 id="san-marino">San Marino</h2>
             <p>
                 ...
             </p>
-            <Carousel directory="italy/09_rimini" num="4"/>
+            <Carousel directory="travels/italy/09_rimini" num="4"/>
             <h2 id="rimini">Rimini</h2>
             <p>
                 ...
             </p>
-            <Carousel directory="italy/10_bologna" num="6"/>
+            <Carousel directory="travels/italy/10_bologna" num="6"/>
             <h2 id="bologna">Bologna</h2>
             <p>
                 ...
             </p>
-            <Carousel directory="italy/11_parma" num="14"/>
+            <Carousel directory="travels/italy/11_parma" num="14"/>
             <h2 id="parma">Parma</h2>
             <p>
                 ...
             </p>
-            <Carousel directory="italy/12_modena" num="27"/>
+            <Carousel directory="travels/italy/12_modena" num="27"/>
             <h2 id="modena">Modena</h2>
             <p>
                 ...
             </p>
-            <Carousel directory="italy/13_oleggio" num="16"/>
+            <Carousel directory="travels/italy/13_oleggio" num="16"/>
             <h2 id="oleggio">Oleggio</h2>
             <p>
                 ...

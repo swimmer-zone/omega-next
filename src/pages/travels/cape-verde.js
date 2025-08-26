@@ -41,7 +41,7 @@ const CapeVerde = () => {
                 croissant and a croquette, the croquette was cold and the croissant tasted like it sat there
                 for days) I went to the "elevador" to get a nice view of the river mounding into the ocean.
             </p>
-            <Carousel directory="cape-verde/05_lisbon" num="35"/>
+            <Carousel directory="travels/cape-verde/05_lisbon" num="35"/>
             <h2 id="praia">Praia</h2>
             <p>
                 Because of the two previous nights we were destroyed so we didn't do a lot on the first day,
@@ -51,7 +51,7 @@ const CapeVerde = () => {
                 Portugal to colonize Brazil and to ship slaves. So it shares a lot of the foods and also
                 because of the similar climate, they tend to grow the same fruits and vegetables.
             </p>
-            <Carousel directory="cape-verde/00_praia" num="6"/>
+            <Carousel directory="travels/cape-verde/00_praia" num="6"/>
             <h2 id="cidade-velha">Cidade Velha</h2>
             <p>
                 Our guide strongly recommended not to get off the beaten path, which meant to keep on the
@@ -62,7 +62,7 @@ const CapeVerde = () => {
                 a convent and a fort. Cidade Velha is Portuguese for 'old city' and it was the previous
                 capital of Cape Verde.
             </p>
-            <Carousel directory="cape-verde/01_cidade_velha" num="26"/>
+            <Carousel directory="travels/cape-verde/01_cidade_velha" num="26"/>
             <h2 id="tarrafal">Tarrafal</h2>
             <p>
                 We decided to go to Tarrafal for new year's eve. We heard it had white beaches with blue
@@ -76,7 +76,7 @@ const CapeVerde = () => {
                 local dishes and after that there was a party at the rooftop with unlimited drinks for a
                 fixed price. It was a bit of an old people's party, but it was fun nevertheless.
             </p>
-            <Carousel directory="cape-verde/02_tarrafal" num="37"/>
+            <Carousel directory="travels/cape-verde/02_tarrafal" num="37"/>
             <h2 id="assomada">Assomada</h2>
             <p>
                 After Tarrafal we went back to Praia and we had four days left, so we decided to visit
@@ -84,15 +84,15 @@ const CapeVerde = () => {
                 it was a historical town with its own market. So we left in the morning at 9am and it took
                 us to
             </p>
-            <Carousel directory="cape-verde/03_assomada" num="2"/>
+            <Carousel directory="travels/cape-verde/03_assomada" num="2"/>
             <h2 id="praia2">Praia</h2>
-            <Carousel directory="cape-verde/04_praia" num="52"/>
+            <Carousel directory="travels/cape-verde/04_praia" num="52"/>
             <h2 id="tarrafal">Lisbon</h2>
-            <Carousel directory="cape-verde/05_lisbon" num="35"/>
+            <Carousel directory="travels/cape-verde/05_lisbon" num="35"/>
             <h2 id="tarrafal">Sintra</h2>
-            <Carousel directory="cape-verde/06_sintra" num="56"/>
+            <Carousel directory="travels/cape-verde/06_sintra" num="56"/>
             <h2 id="tarrafal">Cascais</h2>
-            <Carousel directory="cape-verde/07_cascais" num="47"/>
+            <Carousel directory="travels/cape-verde/07_cascais" num="47"/>
         </div>
         <Footer/>
     </main>);

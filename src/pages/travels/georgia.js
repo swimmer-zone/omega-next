@@ -45,7 +45,7 @@ const Georgia = () => {
                 pick, to
                 make it as comfortable as possible.
             </p>
-            <Carousel directory="georgia/00_kutaisi" num="4"/>
+            <Carousel directory="travels/georgia/00_kutaisi" num="4"/>
             <p>
                 Because our return flight would depart from there so we would come back later. We
                 had our first Georgian meal there, they sure like their bread and cheese. I had Khinkali,
@@ -64,7 +64,7 @@ const Georgia = () => {
             <p>
                 Apart from some nice views, that was pretty much all we saw in Kutaisi.
             </p>
-            <Carousel directory="georgia/01_kutaisi" num="8"/>
+            <Carousel directory="travels/georgia/01_kutaisi" num="8"/>
             <h2 id="batumi">Batumi</h2>
             <p>
                 The next day, on December 21st, we took a ride to Batumi, it's a coastal city with pebble
@@ -95,7 +95,7 @@ const Georgia = () => {
                 nationality or belief.
             </blockquote>
             {/* <li>December 22th: Introduction of Batumi, sightseeing, Mary's Pub</li> */}
-            <Carousel directory="georgia/02_batumi" num="20"/>
+            <Carousel directory="travels/georgia/02_batumi" num="20"/>
             <p>
                 The second day we went to Sarpi, even closer to the Turkish border, we went to see a
                 waterfall, with a
@@ -103,7 +103,7 @@ const Georgia = () => {
                 path of
                 enlightenment. Also we saw Gonio Fortress and Sarpi Rock.
             </p>
-            <Carousel directory="georgia/03_batumi" num="18"/>
+            <Carousel directory="travels/georgia/03_batumi" num="18"/>
             <p>
                 Initially we booked 3 nights in Batumi, but because we didn't like Kutaisi that much, that
                 would mean
@@ -119,7 +119,7 @@ const Georgia = () => {
                 things and
                 pomegranates are used in a variety of recipes. Of course there had to be cheese.
             </p>
-            <Carousel directory="georgia/04_batumi" num="5"/>
+            <Carousel directory="travels/georgia/04_batumi" num="5"/>
             <p>
                 The second day of Christmas we wanted to go to the Botanical garden, we wanted to do that
                 before, but
@@ -128,7 +128,7 @@ const Georgia = () => {
                 the garden was closed. We were allowed to visit the beach, but there was trash literally
                 everywhere.
             </p>
-            <Carousel directory="georgia/05_batumi" num="18"/>
+            <Carousel directory="travels/georgia/05_batumi" num="18"/>
             <p>
                 After that we went to several pubs, they have a lot of artisan beers here, among which a
                 tomato beer.
@@ -147,7 +147,7 @@ const Georgia = () => {
                 ones that I found most interesting and also liked most were the chily one and the garlic
                 one.
             </p>
-            <Carousel directory="georgia/06_batumi" num="16"/>
+            <Carousel directory="travels/georgia/06_batumi" num="16"/>
             <p>
                 We stayed in Royal Orbi Hotel and for the second booking we needed to move from tower A to
                 tower C. It
@@ -172,7 +172,7 @@ const Georgia = () => {
                 on each next day to pickup a new one and these weren't the last bookings where this was a
                 thing.
             </p>
-            <Carousel directory="georgia/07_batumi" num="5"/>
+            <Carousel directory="travels/georgia/07_batumi" num="5"/>
             <h2 id="tbilisi">Tbilisi</h2>
             <p>
                 On December 27th we took the train to Tbilisi, where we arrived in the weirdest hostel ever,
@@ -187,7 +187,7 @@ const Georgia = () => {
                 his
                 friends.
             </p>
-            <Carousel directory="georgia/08_tbilisi" num="17"/>
+            <Carousel directory="travels/georgia/08_tbilisi" num="17"/>
             <p>
                 This didn't feel right at all, so we decided to pay for the night and leave right away. We
                 came across
@@ -197,7 +197,7 @@ const Georgia = () => {
                 pubcrawl
                 with them and other guests and people who live there.
             </p>
-            <Carousel directory="georgia/09_tbilisi" num="12"/>
+            <Carousel directory="travels/georgia/09_tbilisi" num="12"/>
             <p>
                 {/* 28-12 & 29-12 */}
                 The first full day we were in Tbilisi we booked a free tour through the city with David. He
@@ -212,7 +212,7 @@ const Georgia = () => {
                 bring fertility
                 if you rub his lap. If you sit on his lap you will be rewarded with all three.
             </p>
-            <Carousel directory="georgia/10_tbilisi" num="28"/>
+            <Carousel directory="travels/georgia/10_tbilisi" num="28"/>
             <p>
                 We planned a day trip to Armenia, the original plan was to visit both countries and spend an
                 equal
@@ -262,7 +262,7 @@ const Georgia = () => {
                 to wait twice as long. I feel sorry for the driver, because he only got back home the next
                 afternoon.
             </p>
-            <Carousel directory="georgia/11_tbilisi" num="52"/>
+            <Carousel directory="travels/georgia/11_tbilisi" num="52"/>
             <p>
                 An off day to get some rest before celebrating new year's eve. We decided to sleep late and
                 get some
@@ -276,7 +276,7 @@ const Georgia = () => {
                 with some of
                 the guys to play beer games. I really enjoyed although was really hung over afterwards.
             </p>
-            <Carousel directory="georgia/13_tbilisi" num="5"/>
+            <Carousel directory="travels/georgia/13_tbilisi" num="5"/>
             <p>
                 Next day we took it at our own pace and decided to take the metro to the end station and
                 slowly
@@ -286,7 +286,7 @@ const Georgia = () => {
                 mushroom, cheese,
                 minced meat, but I liked the mushroom one the most.
             </p>
-            <Carousel directory="georgia/12_tbilisi" num="14"/>
+            <Carousel directory="travels/georgia/12_tbilisi" num="14"/>
             <p>
                 On January 2nd we did a wine tour to Telavi and Kakheti, where we also visited the Bodbe
                 Monastery in
@@ -316,7 +316,7 @@ const Georgia = () => {
                 loads more
                 to try though.
             </p>
-            <Carousel directory="georgia/14_tbilisi" num="52"/>
+            <Carousel directory="travels/georgia/14_tbilisi" num="52"/>
             <p>
                 We wanted to see the Chronicles of Georgia, which were located on top of a hill, just
                 outside of the
@@ -332,7 +332,7 @@ const Georgia = () => {
                 it was
                 quite a waste of time, shame that it wasn't mentioned anywhere.
             </p>
-            <Carousel directory="georgia/15_tbilisi" num="26"/>
+            <Carousel directory="travels/georgia/15_tbilisi" num="26"/>
             <p>
                 We did another guided tour and went to the Highlights of Kaukasus Mountains, to the Jinvali
                 water
@@ -352,7 +352,7 @@ const Georgia = () => {
                 it was
                 very nice to enjoy another sulfur bath afterwards.
             </p>
-            <Carousel directory="georgia/16_tbilisi" num="30"/>
+            <Carousel directory="travels/georgia/16_tbilisi" num="30"/>
             <p>
                 Today we went on another free city tour, did some more wine and chacha tasting which
                 obviously
@@ -366,13 +366,13 @@ const Georgia = () => {
                 one. In the
                 afternoon we went to the museum of illusions.
             </p>
-            <Carousel directory="georgia/17_tbilisi" num="16"/>
+            <Carousel directory="travels/georgia/17_tbilisi" num="16"/>
             <p>
                 Last day, train back to Kutaisi, spent a night in Charleroi because of delays. Below are
                 some random
                 pictures. We arrived back home at January 7th.
             </p>
-            <Carousel directory="georgia/18_tbilisi" num="20"/>
+            <Carousel directory="travels/georgia/18_tbilisi" num="20"/>
         </div>
         <Footer/>
     </main>);

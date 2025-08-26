@@ -27,7 +27,7 @@ const Carousel = ({ directory, num }) => {
 		}
 		imagesHTML.push(
 			<SwiperSlide key={i}>
-				<img src={'/images/travels/' + directory + '/' + s + '.jpeg'} alt={'image-' + s} className="shade" />
+				<img src={'/images/' + directory + '/' + s + '.jpeg'} alt={'image-' + s} className="shade" />
 			</SwiperSlide>);
 	}
 	

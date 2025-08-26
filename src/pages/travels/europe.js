@@ -95,7 +95,7 @@ const Europe = () => {
                 in the morning.
             </p>
             <h3 id="bruxelles">Bruxelles</h3>
-            <Carousel directory="europe/00_bruxelles" num="4"/>
+            <Carousel directory="travels/europe/00_bruxelles" num="4"/>
             <h2 id="france">France</h2>
             <p>
                 I'm half way past the second day and I miraculously managed to get up on time and catch the
@@ -148,9 +148,9 @@ const Europe = () => {
                 I never heard about it, but it has quite an interesting story.
             </p>
             <h3 id="paris">Paris</h3>
-            <Carousel directory="europe/01_paris" num="11"/>
+            <Carousel directory="travels/europe/01_paris" num="11"/>
             <h3 id="strassbourg">Strassbourg</h3>
-            <Carousel directory="europe/02_strassbourg" num="6"/>
+            <Carousel directory="travels/europe/02_strassbourg" num="6"/>
             <h2 id="switzerland">Switzerland</h2>
             <p>
                 It's almost 14:00 on monday May 19th and I'm sitting in the train to Basel. I walked around
@@ -210,9 +210,9 @@ const Europe = () => {
                 day.
             </p>
             <h3 id="dornach">Dornach</h3>
-            <Carousel directory="europe/03_dornach" num="4"/>
+            <Carousel directory="travels/europe/03_dornach" num="4"/>
             <h3 id="zurich">Zürich</h3>
-            <Carousel directory="europe/04_zurich" num="2"/>
+            <Carousel directory="travels/europe/04_zurich" num="2"/>
             <h2 id="italy">Italy</h2>
             <p>Now arrived in Rome with the train, it's not even 11:00 yet and already I've seen quite a bit
                 of Rome. At this moment I've almost arrived at the Colosseum. At the reservations for the
@@ -403,17 +403,17 @@ const Europe = () => {
                 pink and I was stuck before I knew it, he made me a bracelet, right on the spot. These
                 things are nicer than souvenirs you buy in some store.</p>
             <h3 id="rome">Rome</h3>
-            <Carousel directory="europe/05_rome" num="17"/>
+            <Carousel directory="travels/europe/05_rome" num="17"/>
             <h3 id="firenze">Florence</h3>
-            <Carousel directory="europe/06_florence" num="3"/>
+            <Carousel directory="travels/europe/06_florence" num="3"/>
             <h3 id="pisa">Pisa</h3>
-            <Carousel directory="europe/07_pisa" num="2"/>
+            <Carousel directory="travels/europe/07_pisa" num="2"/>
             <h3 id="maranello">Maranello</h3>
-            <Carousel directory="europe/08_maranello" num="4"/>
+            <Carousel directory="travels/europe/08_maranello" num="4"/>
             <h3 id="venice">Venice</h3>
-            <Carousel directory="europe/09_venice" num="11"/>
+            <Carousel directory="travels/europe/09_venice" num="11"/>
             <h3 id="vatican-city">The Vatican</h3>
-            <Carousel directory="europe/10_the-vatican" num="7"/>
+            <Carousel directory="travels/europe/10_the-vatican" num="7"/>
             <h2 id="austria">Austria</h2>
             <p>Already in Innsbruck in the last train to Salzburg. I reserved a spot in the train between
                 Verona and Innsbruck, but they decided back in Venice to cancel that train and my
@@ -448,9 +448,9 @@ const Europe = () => {
                 time of course, but I guess the ambiance is stil there. But it is all part of the experience
                 and I'm sure it will all be easy.</p>
             <h3 id="salzburg">Salzburg</h3>
-            <Carousel directory="europe/11_salzburg" num="9"/>
+            <Carousel directory="travels/europe/11_salzburg" num="9"/>
             <h3 id="vienna">Vienna</h3>
-            <Carousel directory="europe/12_vienna" num="5"/>
+            <Carousel directory="travels/europe/12_vienna" num="5"/>
             <h2 id="yugoslavia">Yugoslavia</h2>
             <p>Also Belgrade is a very impressive city. I haven't walked around here yet, first I'm getting
                 a cup of coffee, just like every other morning. I've seen parts of the city from sitting in
@@ -483,7 +483,7 @@ const Europe = () => {
             <p>I've lost my diary, but luckily I have an online backup which is updated regularly, so I'm
                 only missing one or two pages, which were easily rewritten.</p>
             <h3 id="belgrade">Belgrade</h3>
-            <Carousel directory="europe/13_belgrade" num="5"/>
+            <Carousel directory="travels/europe/13_belgrade" num="5"/>
             <h2 id="bulgaria">Bulgaria</h2>
             <p>At the very last minute, when I was waiting for the train to Sofia, I met a nice person.
                 Someone I don't want to meet in the dark, but I guess he'll say the same thing about me. I
@@ -506,7 +506,7 @@ const Europe = () => {
                 later again by the Greek border police. So I had a delay of two hours and had to find a
                 place to sleep at 1 o' clock at night.</p>
             <h3 id="rila">Rila</h3>
-            <Carousel directory="europe/14_rila" num="8"/>
+            <Carousel directory="travels/europe/14_rila" num="8"/>
             <h2 id="greece">Greece</h2>
             <p>Everywhere I go Dutch things are to be found, like Heineken of course, but also ABN Amro or
                 Randstad Uitzendbureau. The concierge of the hotel in Thessaloniki seemed to have a
@@ -578,9 +578,9 @@ const Europe = () => {
                 possibility to put my nose in the wind. I'll also need to get a visa, earlier it seemed like
                 fun to have my passport filled with stamps, but that fun is rapidly falling away.</p>
             <h3 id="thessaloniki">Thessaloniki</h3>
-            <Carousel directory="europe/15_thessaloniki" num="2"/>
+            <Carousel directory="travels/europe/15_thessaloniki" num="2"/>
             <h3 id="athens">Athens</h3>
-            <Carousel directory="europe/16_athens" num="14"/>
+            <Carousel directory="travels/europe/16_athens" num="14"/>
             <h2 id="turkey">Turkey</h2>
             <p>I've arrived in Istanbul and I've met Aaron and Christa, newly weds, on their honeymoon
                 through Greece, Turkey and Uganda. They booked a room in a hostel in Istanbul, which also
@@ -642,7 +642,7 @@ const Europe = () => {
                 for another week, so I guess it wouldn't be a problem to spend a day or two in
                 Luxembourg.</p>
             <h3 id="istanbul">Istanbul</h3>
-            <Carousel directory="europe/17_istanbul" num="5"/>
+            <Carousel directory="travels/europe/17_istanbul" num="5"/>
             <h2 id="romania">Romania</h2>
             <p>Günther also brought raki, a Turkish drink that looks a lot like ouzo from Greece. And he
                 brought turkish bread and tomatoes, cucumbers and salads. So we invited three girls who
@@ -655,7 +655,7 @@ const Europe = () => {
                 At first glance we had the same goal: get some coffee, an internet cafe and relaxing in a
                 bathhouse.</p>
             <h3 id="bucharest">Bucharest</h3>
-            <Carousel directory="europe/18_bucharest" num="4"/>
+            <Carousel directory="travels/europe/18_bucharest" num="4"/>
             <h2 id="hungary">Hungary</h2>
             <p>Even with the change in timezone, the train had a delay and it took a while to find a hostel.
                 I coincidentally walked into three hostels that I got from the notes of Anna and Julia and
@@ -735,7 +735,7 @@ const Europe = () => {
                 will now arrive at 12:30 in Bratislava. I'm used to a delay of a couple of hours now and
                 normally it wouldn't bother me, but a delay of sixteen hours seemed a bit overdone.</p>
             <h3 id="budapest">Budapest</h3>
-            <Carousel directory="europe/19_budapest" num="5"/>
+            <Carousel directory="travels/europe/19_budapest" num="5"/>
             <h2 id="slovakia">Slovakia</h2>
             <p>I always thought Bratislava was like a secondary city of Czechoslovakia, but it seemed to be
                 a prosperous and beautifil city with a presidential building that looked a lot like the
@@ -748,7 +748,7 @@ const Europe = () => {
                 cheap food and drinks and the train will arrive at 23:40, so I think I'll get the chance to
                 see some of the nightlife in Prague.</p>
             <h3 id="bratislava">Bratislava</h3>
-            <Carousel directory="europe/20_bratislava" num="7"/>
+            <Carousel directory="travels/europe/20_bratislava" num="7"/>
             <h2 id="czech-republic">Czech Republic</h2>
             <p>I expected a lot more from Prague, exciting nightlife at every day of the week, cheep beer, a
                 lot of youth and a lot of hostels. At the time I got there everything was closed and you
@@ -785,9 +785,9 @@ const Europe = () => {
                 tuesday, when the rest of the photo's will be developed and I guess the new USB stick will
                 have arrived by then.</p>
             <h3 id="frankfurt">Frankfurt</h3>
-            <Carousel directory="europe/21_frankfurt" num="2"/>
+            <Carousel directory="travels/europe/21_frankfurt" num="2"/>
             <h3 id="cologne">Cologne</h3>
-            <Carousel directory="europe/22_cologne" num="5"/>
+            <Carousel directory="travels/europe/22_cologne" num="5"/>
             <h2 id="back-to-the-netherlands">Back to The Netherlands</h2>
             <p>I got my cardreader, so I could upload my pictures. These are the pictures I took before both
                 batteries went dead. Now I'll wait for the Hema, developing the pictures on the throwaway
@@ -830,7 +830,7 @@ const Europe = () => {
                 train and a ticket that's expired. I'll get home later than expected and I have to miss the
                 soccer game between The Netherlands and France, but I'm ready with a beer in the train by
                 tonight.</p>
-            <Carousel directory="europe/23_luxembourg" num="13"/>
+            <Carousel directory="travels/europe/23_luxembourg" num="13"/>
             <h2 id="poland">Poland</h2>
             <p>Warsaw also is a beautiful city and, against my expectations, a pretty modern city. A lot of
                 skyscrapers in between which you feel very small. I wonder how that would be in New York or
@@ -866,11 +866,11 @@ const Europe = () => {
                 men and a camp for women and children. The barracks seemed like horse stables, furbished
                 with triple bunks, each bed housing four prisoners.</p>
             <h3 id="warsaw">Warsaw</h3>
-            <Carousel directory="europe/24_warsaw" num="7"/>
+            <Carousel directory="travels/europe/24_warsaw" num="7"/>
             <h3 id="krakow">Krakow</h3>
-            <Carousel directory="europe/25_krakow" num="4"/>
+            <Carousel directory="travels/europe/25_krakow" num="4"/>
             <h3 id="auschwitz">Auschwitz</h3>
-            <Carousel directory="europe/26_auschwitz" num="10"/>
+            <Carousel directory="travels/europe/26_auschwitz" num="10"/>
             <h2 id="tldr">TL;DR</h2>
             <p>
                 Along my journey I came to some conclusions, but actually each of those conclusions has its

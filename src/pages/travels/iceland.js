@@ -28,7 +28,7 @@ const Iceland = () => {
                 delays are a common thing as well as missing the ferry because of it. Luckily all went well
                 and with a short stop in London I managed to get to Reykjavik within 24 hours.
             </p>
-            <Carousel directory="iceland/00_antwerp" num="99"/>
+            <Carousel directory="travels/iceland/00_antwerp" num="99"/>
             <h2 id="reykjavik">Reykjavik</h2>
             <p>
                 Finally in Reykjavik we found a nice hostel which was quite big. We had a lot of daylight,
@@ -42,7 +42,7 @@ const Iceland = () => {
                 sulfuric water is proven to be very healthy, the temperature of the pool was between 30 and
                 40 degrees, depending on where you were. It became hotter in the proximity of the geysers.
             </p>
-            <Carousel directory="iceland/01_reykjavik" num="99"/>
+            <Carousel directory="travels/iceland/01_reykjavik" num="99"/>
             <p>
                 On the second tour we went for a hike around the Eyjafjallajökull volcano and we could
                 actually say "the floor is lava". It was very black and very visible that the rock had been
@@ -55,7 +55,7 @@ const Iceland = () => {
                 has to pay only 10 euro's a month for energy, which is more like a service fee, because the
                 energy itself is free. Short story, loads of pictures.
             </p>
-            <Carousel directory="iceland/02_reykjavik" num="60"/>
+            <Carousel directory="travels/iceland/02_reykjavik" num="60"/>
         </div>
         <Footer/>
     </main>);

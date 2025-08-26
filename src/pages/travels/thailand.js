@@ -40,7 +40,7 @@ const Thailand = () => {
                 it was a great resort with a pool and
                 spa, so it was no punishment at all.
             </p>
-            <Carousel directory="thailand/00_phuket" num="29"/>
+            <Carousel directory="travels/thailand/00_phuket" num="29"/>
             <p>
                 The first day of diving was in a pool in the south of Phuket, but on the second and third
                 day we went to Koh Racha Yai, for 6
@@ -52,7 +52,7 @@ const Thailand = () => {
                 to Thailand and get the second PADI
                 certificate up until 30 metres in Koh Tao.
             </p>
-            <Carousel directory="thailand/01_koh-racha-yai" num="20"/>
+            <Carousel directory="travels/thailand/01_koh-racha-yai" num="20"/>
             <h2 id="chiang-mai">Chiang Mai</h2>
             <p>
                 From Phuket we took the plane to Chiang Mai, we went to a hostel which Robbert had visited
@@ -74,7 +74,7 @@ const Thailand = () => {
                 released in the air and in Bangkok little decorated boats with candles were released in the
                 Chao Phraya river.
             </p>
-            <Carousel directory="thailand/02_chiang-mai" num="9"/>
+            <Carousel directory="travels/thailand/02_chiang-mai" num="9"/>
             <h2 id="pai">Pai</h2>
             <p>
                 From Chiang Mai we took a bus to Pai. It took about 3 hours, at first I wanted to rent a
@@ -105,7 +105,7 @@ const Thailand = () => {
                 Mai, where we spent another night
                 and from where we took the night train to Bangkok the day after.
             </p>
-            <Carousel directory="thailand/03_pai" num="12"/>
+            <Carousel directory="travels/thailand/03_pai" num="12"/>
             <h2 id="bangkok">Bangkok</h2>
             <p>In Bangkok we booked a luxury hotel in the middle of Khao San Road, which was quite expensive
                 but was less luxury than the regular hotels we booked the nights before. It didn't even have
@@ -125,7 +125,7 @@ const Thailand = () => {
                 to a rooftop bar on top of a building with 50 floors.</p>
             <p>I forgot my sweater in a hotel in Pattaya, so in the last picture you see how I eventually
                 arrived home</p>
-            <Carousel directory="thailand/04_bangkok" num="10"/>
+            <Carousel directory="travels/thailand/04_bangkok" num="10"/>
             <h2>Pattaya</h2>
             <p>From Bangkok we went to Pattaya for one night, it was said to be beautiful and the night life
                 would be better than Bangkok. It was beautiful, but everything on the main road was closed,
@@ -134,7 +134,7 @@ const Thailand = () => {
                 interested, but asked him if he knew if there was any party going on. He took us to a food
                 court where everyone gathered that night to enjoy some social life. It was ok, but not
                 enough to keep us from going to bed eventually to get up early and go back to Bangkok.</p>
-            <Carousel directory="thailand/05_pattaya" num="7"/>
+            <Carousel directory="travels/thailand/05_pattaya" num="7"/>
         </div>
         <Footer/>
     </main>);

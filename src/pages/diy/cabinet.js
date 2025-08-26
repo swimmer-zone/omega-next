@@ -12,32 +12,6 @@ const Cabinet = () => {
         <Menu active="diy"/>
         <Hexagons/>
         <div className="content-column">
-            <section className="hexagon-gallery abs1">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </section>
-
-            <section className="hexagon-gallery abs2">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </section>
-
             <h1>Cabinet</h1>
             <p><strong>This is a first concept of this post, updates are pending</strong></p>
             <p>I started off with this <a href="https://www.youtube.com/watch?v=EvRxQbhDxCo">basic
@@ -47,7 +21,7 @@ const Cabinet = () => {
                 This cabinet consists of 16 hexagons with sides of 320mm and a depth of 320mm, made of 18mm plywood.
             </p>
             <h2>Arduino</h2>
-            <p><img src="/images/diy/cabinet/arduino.png" alt="Arduino board"/></p>
+            <p><img src="/images/diy/cabinet/arduino.png" alt="Arduino board" className="rectangle"/></p>
             <h3>Getting started</h3>
             <ul>
                 <li>Download the IDE from <a href="https://arduino.cc">the Arduino website</a> and install.</li>
@@ -72,7 +46,7 @@ const Cabinet = () => {
                 <li>
                     Avoid connecting NeoPixels on a live circuit. If you must, <strong>always</strong> connect
                     GROUND (-) first, then +, then data.
-                    <img src="/images/diy/cabinet/connect_strip.png" alt="Schema for connecting the strip"/>
+                    <img src="/images/diy/cabinet/connect_strip.png" className="rectangle" alt="Schema for connecting the strip"/>
                 </li>
             </ul>
             <p>

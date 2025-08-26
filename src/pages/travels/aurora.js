@@ -32,11 +32,11 @@ const Aurora = () => {
                 manage to see it. Of course the background will then be replaced with the real thing.
             </p>
             <h2 id="dublin">Dublin</h2>
-            <Carousel directory="aurora/00_dublin" num="6"/>
+            <Carousel directory="travels/aurora/00_dublin" num="6"/>
             <h2 id="rovaniemi">Rovaniemi</h2>
-            <Carousel directory="aurora/01_rovaniemi" num="23"/>
+            <Carousel directory="travels/aurora/01_rovaniemi" num="23"/>
             <h2 id="belfast">Belfast</h2>
-            <Carousel directory="aurora/02_belfast" num="23"/>
+            <Carousel directory="travels/aurora/02_belfast" num="23"/>
         </div>
         <Footer/>
     </main>);

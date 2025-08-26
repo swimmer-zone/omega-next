@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import {Footer, Hexagons, Menu} from '../../Components';
+import {Footer, Menu, Carousel, Hexagons} from '../../Components';
 import '../_scss/_page.scss';
 import '../_scss/diy.scss';
 import React from "react";
@@ -70,22 +70,10 @@ const Casemod = () => {
                 before, but after some searching it became clear that it all was because of a loose
                 memory strip.
             </p>
-            <img src="/images/diy/casemod/2009_pc_01.jpeg" alt="Casemod" className="rounded"/>
-            <img src="/images/diy/casemod/2009_pc_02.jpeg" alt="Casemod" className="rounded"/>
-            <img src="/images/diy/casemod/2009_pc_03.jpeg" alt="Casemod" className="rounded"/>
-            <img src="/images/diy/casemod/2009_pc_04.jpeg" alt="Casemod" className="rounded"/>
+            <Carousel directory="diy/casemod" num="4"/>
 
             <h2>Some other projects</h2>
-            <img src="/images/diy/casemod/2003_delfzijl_01.jpeg" alt="Kamer Delfzijl" className="rounded"/>
-            <img src="/images/diy/casemod/2006_tafeltje_01.jpeg" alt="Tafeltje" className="rounded"/>
-            <img src="/images/diy/casemod/2006_venlo_01.jpeg" alt="Kamer Venlo" className="rounded"/>
-            <img src="/images/diy/casemod/2009_kastje_01.jpeg" alt="Audiomeubel" className="rounded"/>
-            <img src="/images/diy/casemod/2009_kastje_02.jpeg" alt="Audiomeubel" className="rounded"/>
-            <img src="/images/diy/casemod/2009_plank_01.jpeg" alt="Plank" className="rounded"/>
-            <img src="/images/diy/casemod/2009_tafel_01.jpeg" alt="Tafel" className="rounded"/>
-            <img src="/images/diy/casemod/2012_pc_01.jpeg" alt="PC" className="rounded"/>
-            <img src="/images/diy/casemod/2017_bar_01.jpeg" alt="Bar" className="rounded"/>
-            <img src="/images/diy/casemod/2017_terras_01.jpeg" alt="Lounge" className="rounded"/>
+            <Carousel directory="diy/other" num="10"/>
         </div>
         <Footer/>
     </main>);

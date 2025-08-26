@@ -91,27 +91,6 @@ blockquote {
 		position: absolute;
 	}
 }
-table {
-	margin: 4vh 4vw;
-	table-layout: fixed;
-	width: 1200px;
-
-	& > * {
-		width: 1200px;
-
-		td {
-			width: 300px;
-			padding: 4px;
-
-			&:not(:first-of-type) {
-				background-color: $dark;
-			}
-			&.right {
-				text-align: right;
-			}
-		}
-	}
-}
 
 @media(max-width: $mobile-breakpoint) {
 	h1 {
@@ -133,7 +112,6 @@ table {
 	ol {
 		margin-left: 2vw;
 	}
-
 
 	.content-column {
 		position: absolute;
@@ -165,20 +143,6 @@ table {
 			padding-left: 20px;
 			top: 0;
 			position: absolute;
-		}
-	}
-	table {
-		margin: 4vh 4vw;
-		table-layout: fixed;
-		width: 1200px;
-
-		& > * {
-			width: 1200px;
-
-			td {
-				width: 300px;
-				padding: 4px;
-			}
 		}
 	}
 }
