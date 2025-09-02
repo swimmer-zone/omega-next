@@ -125,7 +125,7 @@ const Travels = () => {
                               textAnchor="end"
                               alignmentBaseline="middle"
                               style={{
-                                  fontFamily: "Indie Flower",
+                                  fontFamily: "Afacad",
                                   fontSize: "8px",
                                   fill: "#dddddd",
                                   letterSpacing: 0
@@ -137,7 +137,7 @@ const Travels = () => {
                           textAnchor="end"
                           alignmentBaseline="middle"
                           style={{
-                              fontFamily: "Indie Flower",
+                              fontFamily: "Afacad",
                               fontSize: "8px",
                               fill: "#555555",
                               letterSpacing: 0
