@@ -99,7 +99,7 @@ const Travels = () => {
                     let travel = travels[key];
 
                     return (
-                        <li><a href={'travels/' + travel.destination} title={travel.posted}>{travel.title}</a>
+                        <li><a href={travel.destination} title={travel.posted}>{travel.title}</a>
                             {travel.description}
                             {/*<small>{travel.images} images</small>*/}
                         </li>
