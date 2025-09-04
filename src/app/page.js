@@ -14,8 +14,8 @@ const Home = () => {
 		<div className="content-column">
 			<h1>Hey all</h1>
 			<p>
-				Welcome to my website, I'm Omega. Listen to my music below! Also make sure to try out the
-				yellow hexagon menu on the left to visit my blogs about travelling or DIY projects.
+				Welcome to my website, I'm Omega. Listen to my music below! Also make sure to <span className="mobile-hidden">try out the yellow
+				hexagon menu on the left to</span> visit my blogs about travelling or DIY projects.
 			</p>
 			<Music/>
 		</div>
