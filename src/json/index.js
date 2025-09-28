@@ -1,5 +1,4 @@
 import albums from './albums.json';
-import albumsArchive from './albums-archive.json';
 import citiesAssorted from './travels/assorted.json';
 import citiesAurora from './travels/aurora.json';
 import citiesBoom from './travels/boom.json';
@@ -15,7 +14,6 @@ import citiesVietnam from './travels/vietnam.json';
 
 export {
     albums,
-    albumsArchive,
     citiesAssorted,
     citiesAurora,
     citiesBoom,

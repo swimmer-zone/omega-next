@@ -5,7 +5,6 @@ import Hexagons from './Hexagons.js';
 import Logo from './Logo.js';
 import Menu from './Menu.js';
 import Music from './Music.js';
-import MusicArchive from './MusicArchive.js';
 import Portrait from './Portrait.js';
 import Rating from './Rating.js';
 import Social from './Social.js';
@@ -18,7 +17,6 @@ export {
     Logo,
     Menu,
     Music,
-    MusicArchive,
     Portrait,
     Rating,
     Social

@@ -1,5 +1,6 @@
 [
     {
+        "title": "Top 5",
         "intro": "Starting off with my personal top 5 as well as a live set I constructed using Ableton and my latest track.",
         "tracks": [
             {
@@ -353,6 +354,274 @@
                 "playtime": 182,
                 "bpm": 0,
                 "created_at": "2013-05-07"
+            }
+        ]
+    },
+    {
+        "title": "Archive",
+        "intro": "Below are tracks that I've made years ago, these tracks either don't really fit my current aesthetic or haven't been properly mastered. In the past I've worked with Fasttracker, Reason and Fruity Loops and for most of them I unfortunately lost the source files.",
+        "tracks": [
+            {
+                "title": "666th Symphony",
+                "local": "old/666th_symphony",
+                "playtime": 209,
+                "bpm": 0
+            },
+            {
+                "title": "Bla Bla Bla",
+                "local": "old/bla_bla_bla",
+                "playtime": 209,
+                "bpm": 0
+            },
+            {
+                "title": "Boot",
+                "local": "old/boot",
+                "playtime": 196,
+                "bpm": 0
+            },
+            {
+                "title": "Brass Ensemble",
+                "local": "old/brass_ensemble",
+                "playtime": 264,
+                "bpm": 0
+            },
+            {
+                "title": "C4l3b",
+                "remark": "feat. Way2Evil",
+                "local": "old/c4l3b",
+                "playtime": 659,
+                "bpm": 0
+            },
+            {
+                "title": "Canon in Z",
+                "remark": "feat. Way2Evil",
+                "local": "old/canon_in_z",
+                "playtime": 242,
+                "bpm": 0
+            },
+            {
+                "title": "Can't Stop The Vibes",
+                "local": "old/cant_stop_the_vibes",
+                "playtime": 375,
+                "bpm": 0
+            },
+            {
+                "title": "Children of the Universe",
+                "local": "old/children_of_the_universe",
+                "playtime": 276,
+                "bpm": 0
+            },
+            {
+                "title": "Day by Day",
+                "remark": "feat. Way2Evil",
+                "local": "old/day_by_day",
+                "playtime": 257,
+                "bpm": 0
+            },
+            {
+                "title": "Delicate Vibes",
+                "local": "old/delicate_vibes",
+                "playtime": 228,
+                "bpm": 0
+            },
+            {
+                "title": "Dream River",
+                "local": "old/dream_river",
+                "playtime": 322,
+                "bpm": 0
+            },
+            {
+                "title": "Drubbin'",
+                "local": "old/drubbin",
+                "playtime": 255,
+                "bpm": 0
+            },
+            {
+                "title": "Dub Snap",
+                "local": "old/dub_snap",
+                "playtime": 471,
+                "bpm": 0
+            },
+            {
+                "title": "Eclipse",
+                "local": "old/eclipse",
+                "playtime": 408,
+                "bpm": 0
+            },
+            {
+                "title": "Element #110",
+                "local": "old/element_110",
+                "playtime": 294,
+                "bpm": 0
+            },
+            {
+                "title": "Erochikk",
+                "local": "old/erochikk",
+                "playtime": 264,
+                "bpm": 0
+            },
+            {
+                "title": "Fire",
+                "local": "old/fire",
+                "playtime": 232,
+                "bpm": 0
+            },
+            {
+                "title": "Firm",
+                "local": "old/firm",
+                "playtime": 298,
+                "bpm": 0
+            },
+            {
+                "title": "Floating",
+                "local": "old/floating",
+                "playtime": 400,
+                "bpm": 0
+            },
+            {
+                "title": "Groovin' in the ...",
+                "local": "old/groovin_in_the",
+                "playtime": 173,
+                "bpm": 0
+            },
+            {
+                "title": "Hello",
+                "local": "old/hello",
+                "playtime": 293,
+                "bpm": 0
+            },
+            {
+                "title": "Infinity",
+                "local": "old/infinity",
+                "playtime": 355,
+                "bpm": 0
+            },
+            {
+                "title": "Kenny",
+                "local": "old/kenny",
+                "playtime": 112,
+                "bpm": 0
+            },
+            {
+                "title": "Loom",
+                "local": "old/loom",
+                "playtime": 355,
+                "bpm": 0
+            },
+            {
+                "title": "Pad",
+                "local": "old/pad",
+                "playtime": 342,
+                "bpm": 0
+            },
+            {
+                "title": "Pas d'Oiseau Chanteur",
+                "local": "old/pas_d'oiseau_chanteur",
+                "playtime": 276,
+                "bpm": 0
+            },
+            {
+                "title": "Phased & Flanged",
+                "local": "old/phased_and_flanged",
+                "playtime": 151,
+                "bpm": 0
+            },
+            {
+                "title": "Phlegmy",
+                "local": "old/phlegmy",
+                "playtime": 419,
+                "bpm": 0
+            },
+            {
+                "title": "Pushed",
+                "local": "old/pushed",
+                "playtime": 336,
+                "bpm": 0
+            },
+            {
+                "title": "Pushed a Little Further",
+                "local": "old/pushed_a_little_further",
+                "playtime": 232,
+                "bpm": 0
+            },
+            {
+                "title": "Quack",
+                "local": "old/quack",
+                "playtime": 270,
+                "bpm": 0
+            },
+            {
+                "title": "Random Romer",
+                "remark": "feat. Dub of the Record",
+                "local": "old/random_romer",
+                "playtime": 187,
+                "bpm": 0
+            },
+            {
+                "title": "Reboot Again",
+                "local": "old/reboot_again",
+                "playtime": 261,
+                "bpm": 0
+            },
+            {
+                "title": "Short & Dirty",
+                "local": "old/short_and_dirty",
+                "playtime": 283,
+                "bpm": 0
+            },
+            {
+                "title": "Special",
+                "local": "old/special_k",
+                "playtime": 187,
+                "bpm": 0
+            },
+            {
+                "title": "Stem",
+                "local": "old/stem",
+                "playtime": 204,
+                "bpm": 0
+            },
+            {
+                "title": "Struggle for Pleasure",
+                "local": "old/struggle_for_pleasure",
+                "playtime": 243,
+                "bpm": 0
+            },
+            {
+                "title": "Uncut",
+                "local": "old/uncut",
+                "playtime": 262,
+                "bpm": 0
+            },
+            {
+                "title": "Waves",
+                "local": "old/waves",
+                "playtime": 471,
+                "bpm": 0
+            },
+            {
+                "title": "What the Funk",
+                "local": "old/what_the_funk",
+                "playtime": 357,
+                "bpm": 0
+            },
+            {
+                "title": "Wow",
+                "local": "old/wow",
+                "playtime": 372,
+                "bpm": 0
+            },
+            {
+                "title": "Xmas Terror",
+                "local": "old/xmas_terror",
+                "playtime": 161,
+                "bpm": 0
+            },
+            {
+                "title": "Zoepertrack",
+                "local": "old/zoepertrack",
+                "playtime": 355,
+                "bpm": 0
             }
         ]
     }

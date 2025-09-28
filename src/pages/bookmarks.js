@@ -1,22 +1,19 @@
 'use client';
 import React from 'react';
 import Head from 'next/head';
-import {Footer, Hexagons, Menu, MusicArchive} from '../Components';
+import {Footer, Hexagons, Menu} from '../Components';
 import './_scss/_page.scss';
 
-const Archive = () => {
+const Bookmarks = () => {
 
     return (<main>
         <Head>
-            <title>Ω - Archive</title>
+            <title>Ω - Bookmarks</title>
         </Head>
         <Menu active="archive"/>
         <Hexagons />
         <div className="content-column">
-            <h1>Archive</h1>
-            <h2>Music</h2>
-            <MusicArchive/>
-            <h2>Bookmarks</h2>
+            <h1>Bookmarks</h1>
             <p>
                 I've collected a lot of bookmarks, which are too much to all keep them
                 stored in my browser and most of them are also for sharing, so there you go!
@@ -63,4 +60,4 @@ const Archive = () => {
     </main>);
 }
 
-export default Archive;
+export default Bookmarks;

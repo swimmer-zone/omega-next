@@ -15,8 +15,28 @@
 			margin-top: 0;
 
 			h2 {
-				margin-top: 6vh;
-				color: $purple;
+				margin-top: 0;
+
+				span {
+					font-size: 2rem;
+					color: $purple;
+					margin-bottom: 2vh;
+					text-shadow: 2px 2px 2px #6c6eec44;
+					font-weight: 300;
+				}
+				.accordion-toggle {
+					width: 100%;
+					text-align: left;
+					background: transparent;
+					border: none;
+					padding: 0.35rem 0;
+					cursor: pointer;
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					outline: none;
+					text-decoration: none;
+				}
 			}
 
 			p:nth-of-type(3) {
@@ -71,6 +91,10 @@
 				}
 			}
 		}
+
+		&:first-child h2 {
+			margin-top: 6vh;
+		}
 	}
 	#progress {
 		position: fixed;
@@ -81,6 +105,27 @@
 		pointer-events: none;
 		background-color: $purple;
 	}
+}
+
+/* sliding container */
+.collapsible {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 320ms ease;
+}
+/* track button inside each li */
+.track-button {
+	background: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+	font: inherit;
+	cursor: pointer;
+	text-align: left;
+}
+.tracklist,
+.tracklist * {
+	pointer-events: auto;
 }
 
 .music-home {

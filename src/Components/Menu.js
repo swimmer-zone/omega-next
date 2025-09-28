@@ -4,18 +4,16 @@ import React from "react";
 const Menu = ({ active }) => {
 	let home = '',
 		resume = '',
-		blog = '',
-		tutorials = '',
 		diy = '',
 		travels = '',
-		archive = '';
+		bookmarks = '';
 
 	switch (active) {
 		case 'home': home = 'active'; break;
 		case 'resume': resume = 'active'; break;
 		case 'diy': diy = 'active'; break;
 		case 'travels': travels = 'active'; break;
-		case 'archive': archive = 'active'; break;
+		case 'bookmarks': bookmarks = 'active'; break;
 	}
 
     return (<>
@@ -65,11 +63,11 @@ const Menu = ({ active }) => {
 						</svg>
 						<span>DIY</span>
 					</a>
-					<a href="/archive" className={archive}>
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-							<path d="M26 30l6-16h-26l-6 16zM4 12l-4 18v-26h9l4 4h13v4z"></path>
-						</svg>
-						<span>Archive</span>
+					<a href="/bookmarks" className={bookmarks}>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+						<path d="M6 0v32l10-10 10 10v-32z"></path>
+					</svg>
+						<span>Bookmarks</span>
 					</a>
 				</div>
 			</nav>
