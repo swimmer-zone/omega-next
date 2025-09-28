@@ -427,59 +427,59 @@ const Resume = () => {
             </ul>
             <h2>Skills</h2>
             <div className="tags">
-                {/*<span className="tag"><img src="/logos/alpine-js.svg" title="AlpineJS"/></span>*/}
                 <span className="tag"><img src="/logos/apache.svg" title="Apache"/></span>
+                <span className="tag"><img src="/logos/composer.svg" title="Composer"/></span>
+                <span className="tag"><img src="/logos/css3.svg" title="CSS 3"/></span>
+                <span className="tag"><img src="/logos/docker.svg" title="Docker"/></span>
+                <span className="tag"><img src="/logos/git.svg" title="Git"/></span>
+                <span className="tag"><img src="/logos/jetbrains.svg" title="JetBrains"/></span>
+                <span className="tag"><img src="/logos/jira.svg" title="Jira"/></span>
+                <span className="tag"><img src="/logos/laravel.svg" title="Laravel"/></span>
+                <span className="tag"><img src="/logos/linux.svg" title="Linux"/></span>
+                <span className="tag"><img src="/logos/magento.svg" title="Magento / Adobe Commerce"/></span>
+                <span className="tag"><img src="/logos/mysql.svg" title="MySQL"/></span>
+                <span className="tag"><img src="/logos/next-js.svg" title="Next JS"/></span>
+                <span className="tag"><img src="/logos/nginx.svg" title="Nginx"/></span>
+                <span className="tag"><img src="/logos/photoshop.svg" title="Photoshop"/></span>
+                <span className="tag"><img src="/logos/php.svg" title="PHP"/></span>
+                <span className="tag"><img src="/logos/phpstorm.svg" title="PHP Storm"/></span>
+                <span className="tag"><img src="/logos/postgressql.svg" title="PostgreSQL"/></span>
+                <span className="tag"><img src="/logos/react.svg" title="React"/></span>
+                <span className="tag"><img src="/logos/slack.svg" title="Slack"/></span>
+                <span className="tag"><img src="/logos/ssh.svg" title="SSH"/></span>
+                <span className="tag"><img src="/logos/symfony.svg" title="Symfony"/></span>
+                {/*<span className="tag"><img src="/logos/alpine-js.svg" title="AlpineJS"/></span>*/}
                 {/*<span className="tag"><img src="/logos/arduino.svg" title="Arduino"/></span>*/}
                 {/*<span className="tag"><img src="/logos/bitbucket.svg" title="Bitbucket"/></span>*/}
-                <span className="tag"><img src="/logos/c-plus-plus.svg" title="C++"/></span>
+                {/*<span className="tag"><img src="/logos/c-plus-plus.svg" title="C++"/></span>*/}
                 {/*<span className="tag"><img src="/logos/c-sharp.svg" title="C#"/></span>*/}
                 {/*<span className="tag"><img src="/logos/codeigniter.svg" title="Codeigniter"/></span>*/}
-                <span className="tag"><img src="/logos/composer.svg" title="Composer"/></span>
                 {/*<span className="tag"><img src="/logos/confluence.svg" title="Confluence"/></span>*/}
-                <span className="tag"><img src="/logos/css3.svg" title="CSS 3"/></span>
                 {/*<span className="tag"><img src="/logos/cypress.svg" title="Cypress"/></span>*/}
                 {/*<span className="tag"><img src="/logos/debian.svg" title="Debian"/></span>*/}
-                <span className="tag"><img src="/logos/docker.svg" title="Docker"/></span>
                 {/*<span className="tag"><img src="/logos/drupal.svg" title="Drupal"/></span>*/}
                 {/*<span className="tag"><img src="/logos/filezilla.svg" title="Filezilla"/></span>*/}
-                <span className="tag"><img src="/logos/git.svg" title="Git"/></span>
                 {/*<span className="tag"><img src="/logos/github.svg" title="Github"/></span>*/}
                 {/*<span className="tag"><img src="/logos/github-actions.svg" title="Github Actions"/></span>*/}
                 {/*<span className="tag"><img src="/logos/gitlab.svg" title="GitLab"/></span>*/}
                 {/*<span className="tag"><img src="/logos/html5.svg" title="HTML 5"/></span>*/}
                 {/*<span className="tag"><img src="/logos/javascript.svg" title="JavaScript"/></span>*/}
-                <span className="tag"><img src="/logos/jetbrains.svg" title="JetBrains"/></span>
-                <span className="tag"><img src="/logos/jira.svg" title="Jira"/></span>
                 {/*<span className="tag"><img src="/logos/jquery.svg" title="jQuery"/></span>*/}
                 {/*<span className="tag"><img src="/logos/json.svg" title="JSON"/></span>*/}
                 {/*<span className="tag"><img src="/logos/knockout.svg" title="KnockoutJS"/></span>*/}
-                <span className="tag"><img src="/logos/laravel.svg" title="Laravel"/></span>
-                <span className="tag"><img src="/logos/linux.svg" title="Linux"/></span>
-                <span className="tag"><img src="/logos/magento.svg" title="Magento / Adobe Commerce"/></span>
                 {/*<span className="tag"><img src="/logos/markdown.svg" title="Markdown"/></span>*/}
                 {/*<span className="tag"><img src="/logos/ms-dos.svg" title="MS DOS"/></span>*/}
-                <span className="tag"><img src="/logos/mysql.svg" title="MySQL"/></span>
                 {/*<span className="tag"><img src="/logos/nano.svg" title="Nano"/></span>*/}
-                <span className="tag"><img src="/logos/next-js.svg" title="Next JS"/></span>
-                <span className="tag"><img src="/logos/nginx.svg" title="Nginx"/></span>
                 {/*<span className="tag"><img src="/logos/node-js.svg" title="Node JS"/></span>*/}
                 {/*<span className="tag"><img src="/logos/npm.svg" title="NPM"/></span>*/}
                 {/*<span className="tag"><img src="/logos/oh-my-zsh.svg" title="Oh My zsh"/></span>*/}
-                <span className="tag"><img src="/logos/photoshop.svg" title="Photoshop"/></span>
-                <span className="tag"><img src="/logos/php.svg" title="PHP"/></span>
-                <span className="tag"><img src="/logos/phpstorm.svg" title="PHP Storm"/></span>
-                <span className="tag"><img src="/logos/postgressql.svg" title="PostgreSQL"/></span>
                 {/*<span className="tag"><img src="/logos/powershell.svg" title="PowerShell"/></span>*/}
                 {/*<span className="tag"><img src="/logos/putty.svg" title="Putty"/></span>*/}
-                <span className="tag"><img src="/logos/python.svg" title="Python"/></span>
-                <span className="tag"><img src="/logos/raspberry-pi.svg" title="Raspberry PI"/></span>
-                <span className="tag"><img src="/logos/react.svg" title="React"/></span>
+                {/*<span className="tag"><img src="/logos/python.svg" title="Python"/></span>*/}
+                {/*<span className="tag"><img src="/logos/raspberry-pi.svg" title="Raspberry PI"/></span>*/}
                 {/*<span className="tag"><img src="/logos/sass.svg" title="SASS"/></span>*/}
-                <span className="tag"><img src="/logos/slack.svg" title="Slack"/></span>
-                <span className="tag"><img src="/logos/ssh.svg" title="SSH"/></span>
                 {/*<span className="tag"><img src="/logos/stack-overflow.svg" title="Stack Overflow"/></span>*/}
                 {/*<span className="tag"><img src="/logos/swagger.svg" title="Swagger"/></span>*/}
-                <span className="tag"><img src="/logos/symfony.svg" title="Symfony"/></span>
                 {/*<span className="tag"><img src="/logos/tailwind-css.svg" title="Tailwind"/></span>*/}
                 {/*<span className="tag"><img src="/logos/ubuntu.svg" title="Ubuntu"/></span>*/}
                 {/*<span className="tag"><img src="/logos/vs-code.svg" title="VS Code"/></span>*/}
