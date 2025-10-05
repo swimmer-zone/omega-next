@@ -15,14 +15,16 @@ const Music = ({ archive }) => {
     const [state, setState] = useState({
         currentTrack: null,
         currentTime: null,
-        duration: null
+        duration: null,
+        currentAlbumKey: null,
+        currentTrackIndex: null
     });
 
     const albumKeys = Object.keys(albums || {});
-    const [openKey, setOpenKey] = useState(albumKeys[0] ?? null); // first open by default
-    const contentRefs = useRef({}); // map key -> DOM node
+    const [openKey, setOpenKey] = useState(albumKeys[0] ?? null);
+    const contentRefs = useRef({});
 
-    // single timeupdate listener (added once)
+    // --- TIME UPDATE ---
     useEffect(() => {
         const audio = player.current;
         if (!audio) return;
@@ -33,32 +35,55 @@ const Music = ({ archive }) => {
         return () => audio.removeEventListener('timeupdate', updateTime);
     }, []);
 
-    // load & play when currentTrack changes
+    // --- PLAY TRACK WHEN SELECTED ---
     useEffect(() => {
         const audio = player.current;
         if (!audio) return;
         if (state.currentTrack) {
             audio.src = state.currentTrack;
-            audio.play().catch(() => { /* ignore play promise rejection */ });
+            audio.play().catch(() => {});
         }
     }, [state.currentTrack]);
 
-    // adjust maxHeight to scrollHeight for open/close (synchronously before paint)
+    // --- AUTO NEXT TRACK ON END ---
+    useEffect(() => {
+        const audio = player.current;
+        if (!audio) return;
+
+        const handleEnded = () => {
+            if (state.currentAlbumKey && state.currentTrackIndex != null) {
+                const currentAlbum = albums[state.currentAlbumKey];
+                const trackKeys = Object.keys(currentAlbum.tracks);
+                const nextIndex = state.currentTrackIndex + 1;
+
+                if (nextIndex < trackKeys.length) {
+                    const nextTrack = currentAlbum.tracks[trackKeys[nextIndex]];
+                    const nextScName = '/audio/' + nextTrack.local + '.mp3';
+                    setState(prev => ({
+                        ...prev,
+                        currentTrack: nextScName,
+                        currentTrackIndex: nextIndex
+                    }));
+                } else {
+                    // Optionally auto-close album or loop
+                    // setState(prev => ({ ...prev, currentTrack: null }));
+                }
+            }
+        };
+
+        audio.addEventListener('ended', handleEnded);
+        return () => audio.removeEventListener('ended', handleEnded);
+    }, [state.currentAlbumKey, state.currentTrackIndex]);
+
+    // --- ACCORDION LOGIC ---
     useLayoutEffect(() => {
         albumKeys.forEach(key => {
             const el = contentRefs.current[key];
             if (!el) return;
-            if (openKey === key) {
-                // set to scrollHeight so the CSS transition animates
-                el.style.maxHeight = el.scrollHeight + 'px';
-            } else {
-                el.style.maxHeight = '0px';
-            }
+            el.style.maxHeight = openKey === key ? el.scrollHeight + 'px' : '0px';
         });
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [openKey, albumKeys.join('|')]); // albumKeys join used to silence exhaustive-deps in a simple way
+    }, [openKey, albumKeys.join('|')]);
 
-    // on window resize, recompute the open section height
     useEffect(() => {
         const handleResize = () => {
             if (!openKey) return;
@@ -71,19 +96,17 @@ const Music = ({ archive }) => {
 
     const toggleAccordion = (key) => setOpenKey(prev => (prev === key ? null : key));
 
-    const handleTrackClick = (scName) => {
+    const handleTrackClick = (albumKey, trackIndex, scName) => {
         const audio = player.current;
         setState(prev => {
             if (prev.currentTrack === scName) {
-                // same track: toggle play/pause
                 if (audio) {
                     if (audio.paused) audio.play().catch(() => {});
                     else audio.pause();
                 }
                 return prev;
             }
-            // different track: keep other state fields
-            return { ...prev, currentTrack: scName };
+            return { ...prev, currentTrack: scName, currentAlbumKey: albumKey, currentTrackIndex: trackIndex };
         });
     };
 
@@ -125,11 +148,9 @@ const Music = ({ archive }) => {
                                 ref={(el) => (contentRefs.current[key] = el)}
                                 className={`collapsible ${isOpen ? 'open' : ''}`}
                             >
-
                                 {album.intro && <p className="album-intro">{album.intro}</p>}
-
                                 <ul>
-                                    {Object.keys(album.tracks).map(trackKey => {
+                                    {Object.keys(album.tracks).map((trackKey, idx) => {
                                         const track = album.tracks[trackKey];
                                         const scName = '/audio/' + track.local + '.mp3';
                                         const playTime = Math.floor(track.playtime / 60) + ':' + ('0' + Math.floor(track.playtime % 60)).slice(-2);
@@ -139,7 +160,7 @@ const Music = ({ archive }) => {
                                                 <span className="a">
                                                     <button
                                                         type="button"
-                                                        onClick={() => handleTrackClick(scName)}
+                                                        onClick={() => handleTrackClick(key, idx, scName)}
                                                         data-permalink={track.title}
                                                         className="track-button"
                                                     >
