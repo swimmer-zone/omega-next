@@ -10,26 +10,39 @@
 		box-sizing: border-box;
 		pointer-events: none;
 
-		.tracklist {
+		.track-list {
 			width: 100%;
 			margin-top: 0;
 
 			h2 {
-				margin-top: 0;
+				margin-block: 0;
+				background-color: #111111dd;
 
-				span {
-					font-size: 2rem;
+				button {
+					gap: 20px;
+				}
+				span.title-text {
+					font-size: 1.5rem;
 					color: $purple;
-					margin-bottom: 2vh;
+					margin-bottom: 0;
 					text-shadow: 2px 2px 2px #6c6eec44;
 					font-weight: 300;
+					flex-grow: 4;
+				}
+				span.arrow {
+					margin: 8px 10px 0 38px;
+
+					svg {
+						height: 24px;
+						width: 24px;
+					}
 				}
 				.accordion-toggle {
 					width: 100%;
 					text-align: left;
 					background: transparent;
 					border: none;
-					padding: 0.35rem 0;
+					padding: .2rem 0;
 					cursor: pointer;
 					display: flex;
 					align-items: center;
@@ -43,12 +56,9 @@
 				display: none;
 			}
 			ul {
-				margin-top: 4vh;
-				width: 80%;
-
 				li {
 					display: grid;
-					grid-template-columns: 90px 400px 80px;
+					grid-template-columns: 100px auto 80px;
 
 					text-indent: 10px;
 					line-height: 30px;
@@ -91,10 +101,6 @@
 				}
 			}
 		}
-
-		&:first-child h2 {
-			margin-top: 6vh;
-		}
 	}
 	#progress {
 		position: fixed;
@@ -123,13 +129,13 @@
 	cursor: pointer;
 	text-align: left;
 }
-.tracklist,
-.tracklist * {
+.track-list,
+.track-list * {
 	pointer-events: auto;
 }
 
 .music-home {
-	article:first-of-type .tracklist li {
+	article:first-of-type .track-list li {
 		&:nth-of-type(1):before {
 			content: "#1";
 		}
@@ -146,14 +152,14 @@
 			content: "#5";
 		}
 		&:nth-of-type(6):before {
-			content: "Latest";
+			content: "Set";
 		}
 		&:nth-of-type(7):before {
-			content: "Set";
+			content: "Latest";
 		}
 		&:nth-of-type(6),
 		&:nth-of-type(7) {
-			margin-top: 32px;
+			margin-top: 16px;
 		}
 	}
 }
@@ -167,30 +173,6 @@
 	outline: 0;
 }
 
-.rhap_volume-controls,
-.rhap_additional-controls {
-	display: none;
-}
-.rhap_progress-bar {
-	height: 2px;
-}
-.rhap_progress-indicator {
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
-	background-color: $purple;
-	margin-top: -4px;
-}
-.rhap_progress-filled {
-	height: 2px;
-	background-color: $purple;
-}
-.rhap_main-controls button {
-	background-color: $darkest;
-	color: $purple;
-	border: none;
-}
-
 @media(max-width: $mobile-breakpoint) {
 	.music {
 		width: 96vw;
@@ -200,7 +182,7 @@
 			box-sizing: border-box;
 			pointer-events: none;
 
-			.tracklist {
+			.track-list {
 				width: 100%;
 				margin-top: 0;
 
@@ -214,7 +196,6 @@
 				}
 				ul {
 					margin-top: 4vh;
-					width: 80%;
 
 					li {
 						grid-template-columns: 100px 210px 70px;

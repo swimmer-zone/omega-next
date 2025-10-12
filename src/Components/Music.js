@@ -1,3 +1,4 @@
+import Head from "next/head";
 import React, { useState, useEffect, useLayoutEffect, useRef } from 'react';
 import './_scss/music.scss';
 import { albums } from '../json';
@@ -10,7 +11,7 @@ function countDown(duration, time) {
     return '';
 }
 
-const Music = ({ archive }) => {
+const Music = () => {
     const player = useRef(null);
     const [state, setState] = useState({
         currentTrack: null,
@@ -19,12 +20,13 @@ const Music = ({ archive }) => {
         currentAlbumKey: null,
         currentTrackIndex: null
     });
+    const [pageTitle, setPageTitle] = useState('Ω');
 
     const albumKeys = Object.keys(albums || {});
     const [openKey, setOpenKey] = useState(albumKeys[0] ?? null);
     const contentRefs = useRef({});
 
-    // --- TIME UPDATE ---
+    // Update the time
     useEffect(() => {
         const audio = player.current;
         if (!audio) return;
@@ -35,7 +37,7 @@ const Music = ({ archive }) => {
         return () => audio.removeEventListener('timeupdate', updateTime);
     }, []);
 
-    // --- PLAY TRACK WHEN SELECTED ---
+    // Play track
     useEffect(() => {
         const audio = player.current;
         if (!audio) return;
@@ -45,7 +47,28 @@ const Music = ({ archive }) => {
         }
     }, [state.currentTrack]);
 
-    // --- AUTO NEXT TRACK ON END ---
+    useEffect(() => {
+        if (typeof window === 'undefined') return;
+
+        if (!state.currentTrack) {
+            setPageTitle('Ω');
+            document.title = 'Ω';
+            return;
+        }
+
+        const album = albums[state.currentAlbumKey];
+        if (!album) return;
+
+        const trackKey = Object.keys(album.tracks)[state.currentTrackIndex];
+        const track = album.tracks[trackKey];
+        if (!track) return;
+
+        const titleText = `Ω - ${track.title}`;
+        setPageTitle(titleText);
+        document.title = titleText;
+    }, [state.currentTrack, state.currentAlbumKey, state.currentTrackIndex]);
+
+    // Automatically skip to next track
     useEffect(() => {
         const audio = player.current;
         if (!audio) return;
@@ -64,9 +87,6 @@ const Music = ({ archive }) => {
                         currentTrack: nextScName,
                         currentTrackIndex: nextIndex
                     }));
-                } else {
-                    // Optionally auto-close album or loop
-                    // setState(prev => ({ ...prev, currentTrack: null }));
                 }
             }
         };
@@ -75,7 +95,25 @@ const Music = ({ archive }) => {
         return () => audio.removeEventListener('ended', handleEnded);
     }, [state.currentAlbumKey, state.currentTrackIndex]);
 
-    // --- ACCORDION LOGIC ---
+    // Play track on click
+    const handleTrackClick = (albumKey, trackIndex, scName) => {
+        const audio = player.current;
+        setState(prev => {
+            if (prev.currentTrack === scName) {
+                if (audio) {
+                    if (audio.paused) audio.play().catch(() => {});
+                    else audio.pause();
+                }
+                return prev;
+            }
+            return { ...prev, currentTrack: scName, currentAlbumKey: albumKey, currentTrackIndex: trackIndex };
+        });
+    };
+
+    const timeLeft = countDown(state.duration, state.currentTime);
+    const progressWidth = state.duration ? (state.currentTime / state.duration) * 100 : 0;
+
+    // Accordion
     useLayoutEffect(() => {
         albumKeys.forEach(key => {
             const el = contentRefs.current[key];
@@ -96,31 +134,18 @@ const Music = ({ archive }) => {
 
     const toggleAccordion = (key) => setOpenKey(prev => (prev === key ? null : key));
 
-    const handleTrackClick = (albumKey, trackIndex, scName) => {
-        const audio = player.current;
-        setState(prev => {
-            if (prev.currentTrack === scName) {
-                if (audio) {
-                    if (audio.paused) audio.play().catch(() => {});
-                    else audio.pause();
-                }
-                return prev;
-            }
-            return { ...prev, currentTrack: scName, currentAlbumKey: albumKey, currentTrackIndex: trackIndex };
-        });
-    };
-
-    const timeLeft = countDown(state.duration, state.currentTime);
-    const progressWidth = state.duration ? (state.currentTime / state.duration) * 100 : 0;
-
     return (
         <section className="music music-home" id="music">
+            <Head>
+                <title>{pageTitle}</title>
+            </Head>
+
             {albumKeys.map(key => {
                 const album = albums[key];
-                const isOpen = openKey === key || key === "0";
+                const isOpen = openKey === key;
                 return (
                     <article key={key} id={`album_${key}`}>
-                        <div className="tracklist" data-set={key}>
+                        <div className="track-list" data-set={key}>
                             {album.title && (
                                 <h2>
                                     <button
@@ -130,16 +155,20 @@ const Music = ({ archive }) => {
                                         className="accordion-toggle"
                                         onClick={() => toggleAccordion(key)}
                                     >
-                                        <span className="title-text">{album.title}</span>
                                         <span className="arrow" aria-hidden>
-                                            {isOpen ? <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 20 20">
-                                                <path fill="#6c6eec" d="M0 10c0-5.523 4.477-10 10-10s10 4.477 10 10v0c0 5.523-4.477 10-10 10s-10-4.477-10-10v0zM10 18c4.418 0 8-3.582 8-8s-3.582-8-8-8v0c-4.418 0-8 3.582-8 8s3.582 8 8 8v0zM10.7 7.46l3.55 3.54-1.41 1.41-2.84-2.81-2.83 2.8-1.41-1.4 4.24-4.24 0.7 0.7z"></path>
-                                            </svg> :
-                                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 20 20">
-                                                <path fill="#6c6eec"
-                                                    d="M20 10c0 5.523-4.477 10-10 10s-10-4.477-10-10v0c0-5.523 4.477-10 10-10s10 4.477 10 10v0zM10 2c-4.418 0-8 3.582-8 8s3.582 8 8 8v0c4.418 0 8-3.582 8-8s-3.582-8-8-8v0zM9.3 12.54l-3.55-3.54 1.41-1.41 2.84 2.81 2.83-2.82 1.41 1.42-4.24 4.24-0.7-0.7z"></path>
-                                            </svg>}
+                                            {isOpen ? <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                           viewBox="0 0 20 20">
+                                                    <path fill="#6c6eec"
+                                                          d="M0 10c0-5.523 4.477-10 10-10s10 4.477 10 10v0c0 5.523-4.477 10-10 10s-10-4.477-10-10v0zM10 18c4.418 0 8-3.582 8-8s-3.582-8-8-8v0c-4.418 0-8 3.582-8 8s3.582 8 8 8v0zM10.7 7.46l3.55 3.54-1.41 1.41-2.84-2.81-2.83 2.8-1.41-1.4 4.24-4.24 0.7 0.7z"></path>
+                                                </svg> :
+                                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                                     viewBox="0 0 20 20">
+                                                    <path fill="#6c6eec"
+                                                          d="M20 10c0 5.523-4.477 10-10 10s-10-4.477-10-10v0c0-5.523 4.477-10 10-10s10 4.477 10 10v0zM10 2c-4.418 0-8 3.582-8 8s3.582 8 8 8v0c4.418 0 8-3.582 8-8s-3.582-8-8-8v0zM9.3 12.54l-3.55-3.54 1.41-1.41 2.84 2.81 2.83-2.82 1.41 1.42-4.24 4.24-0.7-0.7z"></path>
+                                                </svg>}
                                         </span>
+                                        <span className="title-text">{album.title}</span>
+                                        <span className="title-num">{album.tracks.length} tracks</span>
                                     </button>
                                 </h2>
                             )}
@@ -171,6 +200,10 @@ const Music = ({ archive }) => {
                                                 <span className="duration" data-seconds={track.playtime}>
                                                     {showingCountdown ? timeLeft : playTime}
                                                 </span>
+
+                                                {state.currentTrack && showingCountdown && (
+                                                    <div className="progress" style={{ width: `${progressWidth}%` }} />
+                                                )}
                                             </li>
                                         );
                                     })}
@@ -180,10 +213,6 @@ const Music = ({ archive }) => {
                     </article>
                 );
             })}
-
-            {state.currentTrack && (
-                <div id="progress" style={{ width: `${progressWidth}vw` }} />
-            )}
 
             <audio ref={player} />
         </section>

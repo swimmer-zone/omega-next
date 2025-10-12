@@ -1,7 +1,7 @@
 .hexagons {
     $hexagon-size: 37px;
     $hexagon-color: #000000;
-    $hexagon-background: #222222;
+    $hexagon-background: #111111;
 
     $gradient: #0000, $hexagon-color .5deg 119.5deg, #0000 120deg;
     $cone1: conic-gradient(from 60deg at 56.25% calc(425% / 6), $gradient);

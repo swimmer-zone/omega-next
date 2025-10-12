@@ -18,8 +18,10 @@ const RootLayout = ({ children }) => {
     return (<html lang="en">
         <body>
             {children}
-            <Analytics/>
-            <SpeedInsights/>
+            <div style={{minHeight: '50px'}}>
+                <Analytics/>
+                <SpeedInsights/>
+            </div>
         </body>
     </html>)
 }
