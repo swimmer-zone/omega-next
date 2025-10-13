@@ -1,5 +1,27 @@
 @import '../../pages/_scss/_variables.scss';
 
+
+.music h2 {
+	position: relative;
+	overflow: hidden;
+		background: linear-gradient(to right, #44444488 var(--progress), transparent var(--progress));
+}
+
+.music h2 button {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.75rem 1rem;
+	border: none;
+	background: linear-gradient(
+		to right,
+		rgba(108, 110, 236, 0.25) var(--progress, 0%),
+		transparent var(--progress, 0%)
+	);
+	transition: background 0.3s ease;
+}
+
 .music {
 	border: 0;
 	width: calc(100vw - 500px);
@@ -51,7 +73,6 @@
 					text-decoration: none;
 				}
 			}
-
 			p:nth-of-type(3) {
 				display: none;
 			}
@@ -101,6 +122,11 @@
 				}
 			}
 		}
+		&:first-of-type {
+			.title-num {
+				display: none;
+			}
+		}
 	}
 	#progress {
 		position: fixed;
@@ -128,6 +154,10 @@
 	font: inherit;
 	cursor: pointer;
 	text-align: left;
+
+	&.playing {
+		color: $yellow;
+	}
 }
 .track-list,
 .track-list * {

@@ -143,11 +143,20 @@ const Music = () => {
             {albumKeys.map(key => {
                 const album = albums[key];
                 const isOpen = openKey === key;
+
+                // NEW:
+                const isAlbumPlaying = state.currentAlbumKey === key && state.duration;
+                const albumProgress = isAlbumPlaying
+                    ? (state.currentTime / state.duration) * 100
+                    : 0;
+
                 return (
                     <article key={key} id={`album_${key}`}>
                         <div className="track-list" data-set={key}>
-                            {album.title && (
-                                <h2>
+                            {album.title && (<h2
+                                    style={{['--progress']: `${albumProgress}%`}}
+                                    className={isOpen ? 'open' : ''}
+                                >
                                     <button
                                         type="button"
                                         aria-expanded={isOpen}
@@ -184,6 +193,7 @@ const Music = () => {
                                         const scName = '/audio/' + track.local + '.mp3';
                                         const playTime = Math.floor(track.playtime / 60) + ':' + ('0' + Math.floor(track.playtime % 60)).slice(-2);
                                         const showingCountdown = state.currentTrack === scName && state.currentTime != null;
+                                        const buttonClass = showingCountdown ? "track-button playing" : "track-button";
                                         return (
                                             <li key={`${key}_${track.local}`}>
                                                 <span className="a">
@@ -191,7 +201,7 @@ const Music = () => {
                                                         type="button"
                                                         onClick={() => handleTrackClick(key, idx, scName)}
                                                         data-permalink={track.title}
-                                                        className="track-button"
+                                                        className={buttonClass}
                                                     >
                                                         {track.title}
                                                         {track.remark && <small className="remark">({track.remark})</small>}
@@ -200,10 +210,6 @@ const Music = () => {
                                                 <span className="duration" data-seconds={track.playtime}>
                                                     {showingCountdown ? timeLeft : playTime}
                                                 </span>
-
-                                                {state.currentTrack && showingCountdown && (
-                                                    <div className="progress" style={{ width: `${progressWidth}%` }} />
-                                                )}
                                             </li>
                                         );
                                     })}
