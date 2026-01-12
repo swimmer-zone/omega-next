@@ -178,7 +178,6 @@
 		padding: 4px 8px;
 		border-radius: 4px;
 		line-height: 1rem;
-		margin-left: 8px;
 		margin-bottom: 8px;
 	}
 	.tag:has(img) {
@@ -249,4 +248,106 @@
 			height: 32px;
 		}
 	}
+}
+
+@page {
+    size: A4;
+    margin: 12mm;
+}
+
+@media print {
+    html, body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        print-color-adjust: exact;
+    }
+
+    .hexagons,
+    #menu-hexagons,
+    .menu-wrap,
+    footer,
+    .me,
+    .btn-group,
+    .timeline__arrow,
+    .timeline__dot {
+        display: none !important;
+    }
+
+    .content-column .timeline__item-body {
+        height: auto !important;
+        overflow: visible !important;
+    }
+    .content-column .timeline__item-body-content {
+        opacity: 1 !important;
+        visibility: visible !important;
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        transition: none !important;
+    }
+    .content-column .timeline__arrow-icon {
+        display: none !important;
+    }
+
+    .content-column {
+        max-width: none !important;
+        padding: 0 !important;
+    }
+    .content-column h1,
+    .content-column h2,
+    .content-column h3 {
+        color: #000 !important;
+        text-shadow: none !important;
+        page-break-after: avoid;
+        break-after: avoid-page;
+    }
+    .content-column h1 {
+        font-size: 24pt !important;
+    }
+    .content-column h2 {
+        font-size: 16pt !important;
+    }
+
+    .content-column .timeline {
+        max-width: none !important;
+        width: auto !important;
+    }
+
+    .content-column .timeline__item {
+        page-break-inside: avoid;
+        break-inside: avoid;
+        padding-bottom: 1em !important;
+    }
+
+    .content-column .timeline__date,
+    .content-column .timeline__title {
+        color: #000 !important;
+    }
+
+    .content-column .tag:not(:has(img)) {
+        background: #eaeaea !important;
+        color: #000 !important;
+        border: 1px solid #ccc !important;
+    }
+    .content-column .tag:has(img) img {
+        filter: none !important;
+    }
+
+    a {
+        color: #000 !important;
+        text-decoration: underline !important;
+    }
+    a[href^="http"]::after {
+        content: " (" attr(href) ")"; font-size: 9pt;
+    }
+    .content-column .timeline__item:not(:last-child):before {
+        background: none !important;
+        display: none;
+    }
+    .content-column .timeline__item-body {
+        margin-left: 0 !important;
+    }
+    h1 {
+        padding-top: 0 !important;
+    }
 }
