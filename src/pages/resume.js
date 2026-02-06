@@ -420,10 +420,6 @@ const Resume = () => {
                     <a href="https://weerbaar.ome.gs">Weerbaar Worden</a> a website that I made for a friend, which was
                     meant to be child friendly.
                 </li>
-                <li>
-                    <a href="https://jacuzzi.ome.gs">Jacuzzi Taxi</a> Jacuzzi rental company, unfortunately never
-                    made it past a wire frame.
-                </li>
             </ul>
             <h2>Skills</h2>
             <div className="tags">
