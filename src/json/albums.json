@@ -309,7 +309,7 @@
             },
             {
                 "title": "Dream River",
-                "local": "old/dreamriver",
+                "local": "ambient/dreamriver",
                 "playtime": 322,
                 "bpm": 0
             }
@@ -375,7 +375,8 @@
                 "bpm": 0
             },
             {
-                "title": "Sobre El Mar (feat. Alicia)",
+                "title": "Sobre El Mar",
+                "remark": "feat. Alicia",
                 "local": "collaborations/sobre_el_mar",
                 "playtime": 240,
                 "bpm": 0,
