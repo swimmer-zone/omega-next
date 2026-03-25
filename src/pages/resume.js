@@ -36,7 +36,7 @@ const Resume = () => {
                 <div className="timeline__item">
                     <div className="timeline__item-header">
                         <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'}
-                                type="button">
+                                type="button" aria-label="Expand">
                             <svg className="timeline__arrow-icon" viewBox="0 0 24 24">
                                 <use href="#arrow"/>
                             </svg>
@@ -64,7 +64,7 @@ const Resume = () => {
                 <div className="timeline__item">
                     <div className="timeline__item-header">
                         <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'}
-                                type="button">
+                                type="button" aria-label="Expand">
                             <svg className="timeline__arrow-icon" viewBox="0 0 24 24" width="24">
                                 <use href="#arrow"/>
                             </svg>
@@ -92,7 +92,7 @@ const Resume = () => {
                 <div className="timeline__item">
                     <div className="timeline__item-header">
                         <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'}
-                                type="button">
+                                type="button" aria-label="Expand">
                             <svg className="timeline__arrow-icon" viewBox="0 0 24 24">
                                 <use href="#arrow"/>
                             </svg>
@@ -120,7 +120,7 @@ const Resume = () => {
                 <div className="timeline__item">
                     <div className="timeline__item-header">
                         <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'}
-                                type="button">
+                                type="button" aria-label="Expand">
                             <svg className="timeline__arrow-icon" viewBox="0 0 24 24">
                                 <use href="#arrow"/>
                             </svg>
@@ -146,7 +146,7 @@ const Resume = () => {
                 <div className="timeline__item">
                     <div className="timeline__item-header">
                         <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'}
-                                type="button">
+                                type="button" aria-label="Expand">
                             <svg className="timeline__arrow-icon" viewBox="0 0 24 24">
                                 <use href="#arrow"/>
                             </svg>
@@ -175,7 +175,7 @@ const Resume = () => {
                 <div className="timeline__item">
                     <div className="timeline__item-header">
                         <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'}
-                                type="button">
+                                type="button" aria-label="Expand">
                             <svg className="timeline__arrow-icon" viewBox="0 0 24 24">
                                 <use href="#arrow"/>
                             </svg>
@@ -203,7 +203,7 @@ const Resume = () => {
                 <div className="timeline__item">
                     <div className="timeline__item-header">
                         <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'}
-                                type="button">
+                                type="button" aria-label="Expand">
                             <svg className="timeline__arrow-icon" viewBox="0 0 24 24">
                                 <use href="#arrow"/>
                             </svg>
@@ -231,7 +231,7 @@ const Resume = () => {
                 <div className="timeline__item">
                     <div className="timeline__item-header">
                         <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'}
-                                type="button">
+                                type="button" aria-label="Expand">
                             <svg className="timeline__arrow-icon" viewBox="0 0 24 24">
                                 <use href="#arrow"/>
                             </svg>
@@ -257,7 +257,7 @@ const Resume = () => {
                 <div className="timeline__item">
                     <div className="timeline__item-header">
                         <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'}
-                                type="button">
+                                type="button" aria-label="Expand">
                             <svg className="timeline__arrow-icon" viewBox="0 0 24 24">
                                 <use href="#arrow"/>
                             </svg>
@@ -286,7 +286,7 @@ const Resume = () => {
                 <div className="timeline__item">
                     <div className="timeline__item-header">
                         <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'}
-                                type="button">
+                                type="button" aria-label="Expand">
                             <svg className="timeline__arrow-icon" viewBox="0 0 24 24">
                                 <use href="#arrow"/>
                             </svg>
@@ -315,7 +315,7 @@ const Resume = () => {
                 <div className="timeline__item">
                     <div className="timeline__item-header">
                         <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'}
-                                type="button">
+                                type="button" aria-label="Expand">
                             <svg className="timeline__arrow-icon" viewBox="0 0 24 24">
                                 <use href="#arrow"/>
                             </svg>
@@ -341,7 +341,7 @@ const Resume = () => {
                 <div className="timeline__item">
                     <div className="timeline__item-header">
                         <button className={expanded ? 'timeline__arrow timeline__arrow--expanded' : 'timeline__arrow'}
-                                type="button">
+                                type="button" aria-label="Expand">
                             <svg className="timeline__arrow-icon" viewBox="0 0 24 24">
                                 <use href="#arrow"/>
                             </svg>
