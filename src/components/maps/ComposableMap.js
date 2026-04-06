@@ -11,6 +11,7 @@ const ComposableMap = forwardRef(
       projection = "geoEqualEarth",
       projectionConfig = {},
       className = "",
+      children,
       ...restProps
     },
     ref
@@ -27,7 +28,9 @@ const ComposableMap = forwardRef(
           viewBox={`0 0 ${width} ${height}`}
           className={`rsm-svg ${className}`}
           {...restProps}
-        />
+        >
+          {children}
+        </svg>
       </MapProvider>
     )
   }
@@ -41,6 +44,7 @@ ComposableMap.propTypes = {
   projection: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   projectionConfig: PropTypes.object,
   className: PropTypes.string,
+  children: PropTypes.node,
 }
 
 export default ComposableMap
