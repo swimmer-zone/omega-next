@@ -1,0 +1,34 @@
+@use '../../app/_scss/variables' as *;
+
+.hexagons {
+    $hexagon-size: 37px;
+    $hexagon-color: #000000;
+    $hexagon-background: #111111;
+
+    $gradient: #0000, $hexagon-color .5deg 119.5deg, #0000 120deg;
+    $cone1: conic-gradient(from 60deg at 56.25% calc(425% / 6), $gradient);
+    $cone2: conic-gradient(from 180deg at 43.75% calc(425% / 6), $gradient);
+    $cone3: conic-gradient(from -60deg at 50% calc(175% / 12), $gradient);
+
+    background: $cone1, $cone1 $hexagon-size calc(1.73 * $hexagon-size),
+        $cone2, $cone2 $hexagon-size calc(1.73 * $hexagon-size),
+        $cone3 $hexagon-size 0, $cone3 0 calc(1.73 * $hexagon-size),
+        $hexagon-background;
+    background-size: calc(2 * $hexagon-size) calc(3.46 * $hexagon-size);
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to right, transparent 0%, $hexagon-background 100%);
+        pointer-events: none;
+    }
+}

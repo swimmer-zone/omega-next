@@ -1,0 +1,156 @@
+@use '../../app/_scss/variables' as *;
+
+.music {
+	article {
+		.track-list {
+			ul {
+				display: grid;
+				grid-gap: 1rem;
+				margin-left: 0;
+				padding: 0;
+
+				li {
+					background: #6c6eec88;
+					border: 1px solid #6c6eec;
+					border-radius: 5px;
+					display: grid;
+					grid-template-areas:
+						"icon title title"
+						"icon play time"
+						"progress progress progress";
+					text-indent: 0;
+					margin: 0;
+
+					span {
+						grid-area: title;
+					}
+					.duration {
+						grid-area: time;
+					}
+					.progress {
+						width: 0;
+						height: 5px;
+						background-color: $purple;
+					}
+					&::before {
+						grid-area: icon;
+						text-align: center;
+						content: "♬";
+					}
+				}
+			}
+		}
+	}
+}
+
+.music-home {
+	article:first-of-type {
+		ul {
+			grid-template-areas:
+				"first second third fourth fifth"
+				"set set set set set"
+				"latest . . . .";
+			grid-template-columns: repeat(5, 1fr);
+		}
+	}
+	article:first-of-type .track-list li {
+		&:before {
+			font-size: 2rem;
+			font-weight: bold;
+			line-height: 2rem;
+			transform: rotate(-20deg);
+			transform-origin: 10px 10px;
+		}
+
+		&:nth-of-type(1) {
+			grid-area: first;
+			&:before {
+				content: "1";
+			}
+		}
+		&:nth-of-type(2) {
+			grid-area: second;
+			&:before {
+				content: "2";
+			}
+		}
+		&:nth-of-type(3) {
+			grid-area: third;
+			&:before {
+				content: "3";
+			}
+		}
+		&:nth-of-type(4) {
+			grid-area: fourth;
+			&:before {
+				content: "4";
+			}
+		}
+		&:nth-of-type(5) {
+			grid-area: fifth;
+			&:before {
+				content: "5";
+			}
+		}
+		&:nth-of-type(6) {
+			grid-area: set;
+			&:before {
+				content: "Set";
+			}
+		}
+		&:nth-of-type(7) {
+			grid-area: latest;
+			&:before {
+				content: "Latest";
+			}
+		}
+	}
+}
+.music-home article:first-of-type ul {
+	grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.player {
+	position: fixed;
+	bottom: 1vh;
+	left: 1vw;
+	z-index: 99;
+	border: 0;
+	outline: 0;
+}
+
+@media(max-width: $mobile-breakpoint) {
+	.music {
+		width: 96vw;
+
+		article {
+			display: flex;
+			box-sizing: border-box;
+			pointer-events: none;
+
+			.track-list {
+				width: 100%;
+				margin-top: 0;
+
+				h2 {
+					margin-top: 6vh;
+					color: $purple;
+				}
+
+				p:nth-of-type(3) {
+					display: none;
+				}
+				ul {
+					margin-top: 4vh;
+					width: 80%;
+
+					li {
+						grid-template-columns: 100px 210px 70px;
+						text-indent: 10px;
+						line-height: 30px;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+@use '../../app/_scss/variables' as *;
+
+.stars {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+
+	.star {
+		display: flex;
+		width: 18px;
+		margin-right: 2px;
+		color: $yellow;
+		fill: $yellow;
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+
+	.star-overlay {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 1;
+		background-color: $lighter;
+		opacity: 0.8;
+		height: 40px;
+
+		@supports (mix-blend-mode: color) {
+			opacity: unset;
+			mix-blend-mode: color;
+		}
+	}
+}

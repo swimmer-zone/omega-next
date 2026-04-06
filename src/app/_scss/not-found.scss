@@ -1,0 +1,57 @@
+@use 'variables' as *;
+
+body,
+button {
+    font-family: 'Afacad', sans-serif;
+    overflow-x: hidden;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+}
+html {
+    font-size: 20px;
+}
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $black;
+    background-color: $darkest;
+}
+h1 {
+    font-size: 4rem;
+    color: $light;
+    text-shadow: 2px 2px 2px #6c6eec44;
+    font-weight: 200;
+    padding: 0;
+    margin: 0;
+    line-height: 3rem;
+}
+.error {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    width: 100vw;
+
+    div {
+        width: 50vw;
+        padding-left: 40px;
+
+        &:first-of-type {
+            padding-left: 120px;
+            text-align: right;
+            padding-right: 40px;
+        }
+        &:nth-of-type(2) {
+            border-left: 1px solid $light;
+        }
+    }
+
+    #logo {
+        position: static;
+    }
+    p {
+        margin-bottom: 0;
+        color: $light;
+    }
+}

@@ -1,0 +1,60 @@
+@use '../../app/_scss/variables' as *;
+
+#logo {
+    width: 400px;
+    z-index: 999;
+    position: fixed;
+    left: 2vw;
+    bottom: 2vh;
+
+	path {
+		filter: drop-shadow(5px 5px 3px #ffffff33);
+        stroke-dasharray: 800;
+        stroke-dashoffset: 800;
+        animation: draw 8s forwards;
+	}
+    .animate {
+        stroke-dasharray: 2000;
+        stroke-dashoffset: 2000;
+        animation: draw 10s forwards;
+    }
+}
+#logo-mobile {
+    display: none;
+    path {
+        stroke: $black !important;
+    }
+}
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+#footer .copy {
+    position: fixed;
+    right: 1vw;
+    bottom: 10px;
+    font-size: .8rem;
+    z-index: 9999;
+    width: 60px;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+@media(max-width: $mobile-breakpoint) {
+    #logo {
+        display: none;
+    }
+    #logo-mobile {
+        display: block;
+        width: 80px;
+        right: 2vw;
+        top: 64px;
+        position: fixed;
+    }
+
+    #footer .copy {
+        display: none;
+    }
+}

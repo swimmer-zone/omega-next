@@ -1,0 +1,11 @@
+@use 'variables' as *;
+
+body {
+    overflow: hidden;
+}
+.rsm-svg {
+    background-color: $black;
+}
+footer {
+    background: none !important;
+}
