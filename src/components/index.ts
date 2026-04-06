@@ -1,4 +1,4 @@
-// import Code from './code';
+import Code from './code';
 import Carousel from './carousel';
 import Footer from './footer';
 import Hexagons from './hexagons';
@@ -10,7 +10,7 @@ import Portrait from './portrait';
 import Social from './social';
 
 export {
-    // Code,
+    Code,
     Carousel,
     Footer,
     Hexagons,

@@ -1,7 +1,7 @@
 import React from "react";
 import { Metadata } from 'next';
 import Image from 'next/image';
-import { Footer, Hexagons, Menu } from '../../../components';
+import { Code, Footer, Hexagons, Menu } from '../../../components';
 import '../../_scss/_page.scss';
 import '../../_scss/diy.scss';
 
@@ -130,7 +130,7 @@ const Cabinet: React.FC = () => {
                 table below:
             </p>
             <h3>The code I have so far</h3>
-            {/*<Code file={"cabinet.ino"} language="c-plus-plus" />*/}
+            <Code file={"cabinet.ino"} language="c-plus-plus" />
 
             <section className="hexagon-gallery">
                 <Image src="/images/diy/cabinet/build/01.jpeg" alt="Build" width={216} height={238}/>
