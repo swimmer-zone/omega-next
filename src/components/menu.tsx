@@ -1,5 +1,5 @@
 import React from "react";
-import './_scss/menu.scss';
+import './menu.scss';
 
 type MenuProps = { active?: 'home' | 'resume' | 'diy' | 'travels' | 'bookmarks' };
 

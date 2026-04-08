@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/effect-fade';
 import 'swiper/css/pagination';
-import './_scss/carousel.scss';
+import './carousel.scss';
 // https://swiperjs.com/react
 
 class Carousel extends React.Component<{ directory: string, num: number | string }> {

@@ -1,7 +1,7 @@
 import React from 'react';
-import './_scss/social.scss';
+import './social.scss';
 
-const Social = (props) => {
+const Social = (props: { location: string; }) => {
     const icons = {
         "header": [
             {
@@ -50,26 +50,13 @@ const Social = (props) => {
             }
         ]
     };
-    const icons2 = {
-        "header": [
-            {
-                "title": "iO",
-                "class": "io",
-                "url": "https://iodigital.com",
-                "paths": [
-                    "M12.235 20.574L0 48.257l14.129 6.34L20.07 41.15c3.477-7.869-.034-17.079-7.837-20.576zM4.39 0c-3.471 7.862.04 17.072 7.842 20.575L18.525 6.34 4.39 0zm49.194 15.75c7.34 0 13.314 6.019 13.314 13.413 0 7.395-5.974 13.415-13.314 13.415S40.27 36.558 40.27 29.163c0-7.394 5.975-13.414 13.314-13.414zm0-13.422c-14.712 0-26.635 12.013-26.635 26.835C26.95 43.986 38.872 56 53.584 56c14.712 0 26.635-12.013 26.635-26.836 0-14.815-11.923-26.835-26.635-26.835z"
-                ]
-            }
-        ]
-    };
 
     let pathKey = 0;
 
     return (
         <div className={'social ' + props.location}>
 
-            {Object.keys(icons[props.location]).map(key => {
-                const icon = icons[props.location][key];
+            {icons.header.map((icon, key) => {
 
                 return (
                     <a id={'social_' + key} key={'social_' + key} href={icon.url} title={icon.title}>

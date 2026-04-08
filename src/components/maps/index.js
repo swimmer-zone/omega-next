@@ -1,5 +1,5 @@
 import Annotation from './Annotation.js';
-import ComposableMap from './ComposableMap.js';
+import ComposableMap from './ComposableMap.tsx';
 import Geographies from './Geographies.js';
 import Geography from './Geography.js';
 import Graticule from './Graticule.js';

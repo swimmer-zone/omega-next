@@ -1,5 +1,5 @@
 import React from 'react';
-import './_scss/hexagons.scss';
+import './hexagons.scss';
 
 const Hexagons = () => {
     return (<>

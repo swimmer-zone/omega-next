@@ -1,6 +1,6 @@
 import React from 'react';
 import { Social, Logo } from './index';
-import './_scss/footer.scss';
+import './footer.scss';
 import packageJson from '../../package.json';
 
 const Footer = () => {
