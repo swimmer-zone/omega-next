@@ -1,6 +1,7 @@
-'use client'
+'use client';
 
-import React from "react"
+import React from "react";
+import Link from "next/link";
 import {
     Annotation,
     ComposableMap,
@@ -8,8 +9,10 @@ import {
     Geography,
     Graticule,
     Marker,
-    ZoomableGroup,
-} from "./maps"
+} from "@vnedyalk0v/react19-simple-maps";
+import Zoomable from "./zoomable";
+import '../app/_scss/_page.scss';
+import '../app/_scss/map.scss';
 
 import {
     citiesAssorted,
@@ -21,16 +24,16 @@ import {
     citiesThailand,
     citiesUk,
     citiesVietnam,
-} from "../json"
+} from "../json";
 
-const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json"
+const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
 type City = {
     name: string
     coordinates: [number, number]
     annotation: [number, number, number]
     link?: string
-}
+};
 
 const visited: string[] = [
     "United Kingdom",
@@ -58,7 +61,7 @@ const visited: string[] = [
     "Slovakia",
     "Czechia",
     "Taiwan",
-]
+];
 
 const citiesAll: City[] = [
     ...citiesAssorted,
@@ -84,13 +87,13 @@ export default function Map() {
                 scale: 350,
             }}
         >
-            <ZoomableGroup>
+            <Zoomable>
                 <>
                     <Graticule stroke="#111111" />
 
                     <Geographies geography={geoUrl}>
                         {({ geographies }: { geographies: any[] }) => (
-                            <>
+                            <React.Fragment>
                                 {geographies.map((geo: any) => {
                                     const highlighted = visited.includes(
                                         geo.properties.name
@@ -98,7 +101,7 @@ export default function Map() {
 
                                     return (
                                         <Geography
-                                            key={geo.rsmkey}
+                                            key={geo.rsmKey}
                                             {...geo}
                                             style={{
                                                 default: {
@@ -117,30 +120,40 @@ export default function Map() {
                                         />
                                     );
                                 })}
-                            </>
+                            </React.Fragment>
                         )}
                     </Geographies>
 
-                    {citiesAll.map(({ name, coordinates, annotation, link }) => (
-                        <React.Fragment key={name}>
-                            <Marker coordinates={coordinates} key={name}>
-                                {<circle r={2} fill="#ffc917" />}
-                            </Marker>
+                    {citiesAll.map(({ name, coordinates, annotation, link }) => {
+                        const Label = (
+                            <text fill={ link ? "#dddddd" : "#555555" } fontSize={12} style={{ cursor: link ? "pointer" : "default" }}>
+                                {name}
+                            </text>
+                        );
 
-                            <Annotation
-                                subject={coordinates}
-                                dx={annotation[0]}
-                                dy={annotation[1]}
-                                connectorProps={{
-                                    stroke: "#888888",
-                                    strokeWidth: 1,
-                                    strokeLinecap: "round",
-                                }}
-                            />
-                        </React.Fragment>
-                    ))}
+                        return(
+                            <React.Fragment key={name}>
+                                <Marker coordinates={coordinates} key={name + "Marker"}>
+                                    {<circle r={2} fill="#ffc917" />}
+                                </Marker>
+
+                                <Annotation
+                                    subject={coordinates}
+                                    dx={annotation[0]}
+                                    dy={annotation[1]}
+                                    connectorProps={{
+                                        stroke: "#888888",
+                                        strokeWidth: 1,
+                                        strokeLinecap: "round",
+                                    }}
+                                >
+                                    {link ? <a href={"travels/" + link}>{Label}</a> : Label}
+                                </Annotation>
+                            </React.Fragment>
+                        );
+                    })}
                 </>
-            </ZoomableGroup>
+            </Zoomable>
         </ComposableMap>
     )
 }
