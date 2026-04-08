@@ -3,7 +3,7 @@
 .music h2 {
 	position: relative;
 	overflow: hidden;
-		background: linear-gradient(to right, #44444488 var(--progress), transparent var(--progress));
+	background: linear-gradient(to right, #44444488 var(--progress), transparent var(--progress));
 }
 
 .music h2 button {
@@ -37,6 +37,7 @@
 
 			h2 {
 				margin-block: 0;
+				padding: 0;
 				background-color: #111111dd;
 
 				button {

@@ -1,4 +1,4 @@
-import React from "react";
+import { JSX } from 'react';
 import { Metadata } from "next";
 import { Footer, Hexagons, Menu, Music } from '../components';
 import './_scss/_page.scss';
@@ -21,7 +21,7 @@ export default function Home(): JSX.Element {
                 with Ableton. Sure there is something that you will like!
             </p>
             <p>
-                Also make sure to <span className="mobile-hidden">try out the yellow hexagon menu on the left to</span>
+                Also make sure to <span className="mobile-hidden">try out the yellow hexagon menu on the left to </span>
                 visit my blogs about travelling or DIY projects.
             </p>
             <Music/>

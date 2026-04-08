@@ -1,10 +1,12 @@
-import React from "react";
-import Link from "next/link";
+import React, { JSX } from 'react';
+import Link from 'next/link';
 import './menu.scss';
 
-type MenuProps = { active?: 'home' | 'resume' | 'diy' | 'travels' | 'bookmarks' };
+type Props = {
+	active?: 'home' | 'resume' | 'diy' | 'travels' | 'bookmarks'
+};
 
-const Menu: React.FC<MenuProps> = ({ active }) => {
+export default function Menu({ active }: Props): JSX.Element {
 	let home = '',
 		resume = '',
 		diy = '',
@@ -95,5 +97,3 @@ const Menu: React.FC<MenuProps> = ({ active }) => {
 		</div>
 	</>);
 }
-
-export default Menu;

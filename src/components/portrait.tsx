@@ -1,14 +1,13 @@
-import React from 'react';
+import { JSX } from 'react';
+import Image from 'next/image';
 import me from '../../public/images/me.png';
 import meHover from '../../public/images/me-hover.png';
 
-const Me = () => {
+export default function Me(): JSX.Element {
     return (<>
         <div className="me">
-            <img src={me.src} alt="" />
-            <img src={meHover.src} alt="" />
+            <Image width={360} height={480} src={me.src} alt="" />
+            <Image width={360} height={480} src={meHover.src} alt="" />
         </div>
     </>);
-};
-
-export default Me;
+}

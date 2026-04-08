@@ -1,11 +1,12 @@
-'use client'
+'use client';
 
+import { JSX } from 'react';
 import dynamic from "next/dynamic";
 
-const Map = dynamic(() => import("./map"), {
+const Map = dynamic(() => import('./map'), {
     ssr: false,
 });
 
-export default function MapClient() {
+export default function MapClient(): JSX.Element {
     return <Map />;
 }

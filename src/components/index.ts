@@ -20,4 +20,4 @@ export {
     Music,
     Portrait,
     Social
-};
+}

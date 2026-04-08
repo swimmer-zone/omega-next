@@ -1,9 +1,9 @@
-import React from 'react';
+import { JSX } from 'react';
 import { Social, Logo } from './index';
 import './footer.scss';
 import packageJson from '../../package.json';
 
-const Footer = () => {
+export default function Footer(): JSX.Element {
     return (<>
         <footer id="footer">
             <Logo />
@@ -14,6 +14,4 @@ const Footer = () => {
             </p>
         </footer>
 	</>);
-};
-
-export default Footer;
+}

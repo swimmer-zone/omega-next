@@ -1,10 +1,8 @@
-import React from 'react';
+import { JSX } from 'react';
 import './hexagons.scss';
 
-const Hexagons = () => {
+export default function Hexagons(): JSX.Element {
     return (<>
         <div className="hexagons"></div>
     </>);
 }
-
-export default Hexagons;

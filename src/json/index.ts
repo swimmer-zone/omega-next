@@ -11,6 +11,7 @@ import citiesScandinavia from '../app/travels/aurora/scandinavia.json';
 import citiesThailand from '../app/travels/thailand/coordinates.json';
 import citiesUk from '../app/travels/uk/coordinates.json';
 import citiesVietnam from '../app/travels/vietnam/coordinates.json';
+import social from './social.json';
 
 export {
     albums,
@@ -25,5 +26,6 @@ export {
     citiesScandinavia,
     citiesThailand,
     citiesUk,
-    citiesVietnam
+    citiesVietnam,
+    social,
 };

@@ -1,7 +1,7 @@
-import React from 'react';
+import { JSX } from 'react';
 import './logo.scss';
 
-const Logo = () => {
+export default function Logo(): JSX.Element {
     return (<>
 		<svg xmlns="http://www.w3.org/2000/svg" id="logo" viewBox="0 0 700 250">
 			<path fill="#6c6eec66" stroke="#6c6eec" strokeWidth="3" className="animate"
@@ -22,5 +22,3 @@ const Logo = () => {
 		</svg>
 	</>);
 }
-
-export default Logo;
