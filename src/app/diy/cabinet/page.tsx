@@ -6,7 +6,7 @@ import '../../_scss/_page.scss';
 import '../../_scss/diy.scss';
 
 export const metadata: Metadata = {
-    title: 'Cabinet DIY Project',
+    title: 'Ω - Cabinet DIY Project',
     description: 'Arduino hexagon cabinet DIY project',
 };
 

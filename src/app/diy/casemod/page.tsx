@@ -5,7 +5,7 @@ import '../../_scss/_page.scss';
 import '../../_scss/diy.scss';
 
 export const metadata: Metadata = {
-    title: 'Case DIY Project',
+    title: 'Ω - Case DIY Project',
     description: '',
 };
 

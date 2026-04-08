@@ -4,7 +4,7 @@ import { Footer, Hexagons, Menu } from '../../components';
 import '../_scss/_page.scss';
 
 export const metadata: Metadata = {
-    title: 'Bookmarks',
+    title: 'Ω - Bookmarks',
     description: '',
 };
 

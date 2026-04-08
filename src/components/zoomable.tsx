@@ -4,9 +4,9 @@ import { select } from 'd3-selection';
 import { zoom, zoomIdentity } from 'd3-zoom';
 
 type Props = {
-    children: React.ReactNode
-    minZoom?: number
-    maxZoom?: number
+    children: React.ReactNode,
+    minZoom?: number,
+    maxZoom?: number,
 };
 
 export default function Zoomable({ children, minZoom = 1, maxZoom = 8 }: Props) {
@@ -32,5 +32,5 @@ export default function Zoomable({ children, minZoom = 1, maxZoom = 8 }: Props) 
                 {children}
             </g>
         </g>
-    )
+    );
 }

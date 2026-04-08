@@ -6,7 +6,7 @@ import '../_scss/_page.scss';
 import '../_scss/resume.scss';
 
 export const metadata: Metadata = {
-    title: 'Resume',
+    title: 'Ω - Resume',
     description: '',
 };
 

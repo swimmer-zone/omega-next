@@ -1,70 +1,70 @@
 'use client';
-import React, { useState, useEffect, useRef } from 'react';
+
+import React, { JSX, useState, useEffect, useRef } from 'react';
 import './music.scss';
 import { albums } from '../json';
 
-function countDown(duration, time) {
-    if (!isNaN(time) && duration != null) {
+function countDown(duration: number | null, time: number | null): string {
+    if (time != null && duration != null && !isNaN(time)) {
         const timeLeft = duration - time;
         return Math.floor(timeLeft / 60) + ':' + ('0' + Math.floor(timeLeft % 60)).slice(-2);
     }
     return '';
 }
 
-const Music = () => {
-    const player = useRef(null);
-    const [state, setState] = useState({
-        currentTrack: null,
-        currentTime: null,
-        duration: null,
-        currentAlbumKey: null,
-        currentTrackIndex: null
-    });
-    const [pageTitle, setPageTitle] = useState('Ω');
+export default function Music(): JSX.Element {
+    const player = useRef<HTMLAudioElement | null>(null);
+    const [currentTrack, setCurrentTrack] = useState<string | null>(null);
+    const [currentTime, setCurrentTime] = useState<number | null>(null);
+    const [duration, setDuration] = useState<number | null>(null);
+    const [currentAlbumKey, setCurrentAlbumKey] = useState<string | null>(null);
+    const [currentTrackIndex, setCurrentTrackIndex] = useState<number | null>(null);
 
     const albumKeys = Object.keys(albums || {});
     const [openKey, setOpenKey] = useState(albumKeys[0] ?? null);
     const contentRefs = useRef({});
 
     // Update the time
-    // useEffect(() => {
-    //     const audio = player.current;
-    //     if (!audio) return;
-    //     const updateTime = (e) => {
-    //         setState(prev => ({ ...prev, currentTime: e.target.currentTime, duration: e.target.duration }));
-    //     };
-    //     audio.addEventListener('timeupdate', updateTime);
-    //     return () => audio.removeEventListener('timeupdate', updateTime);
-    // }, []);
+    useEffect(() => {
+        const audio: HTMLAudioElement = player.current;
+        if (!audio) return;
+        const updateTime = (e: Event) => {
+            const target = e.target as HTMLAudioElement;
+            setCurrentTime(target.currentTime);
+            setDuration(target.duration);
+        };
+        audio.addEventListener('timeupdate', updateTime);
+        return () => audio.removeEventListener('timeupdate', updateTime);
+    }, []);
 
     // Play track
     useEffect(() => {
         const audio = player.current;
         if (!audio) return;
-        if (state.currentTrack) {
-            audio.src = state.currentTrack;
+        if (currentTrack) {
+            audio.src = currentTrack;
             audio.play().catch(() => {});
         }
-    }, [state.currentTrack]);
+    }, [currentTrack]);
 
     useEffect(() => {
         if (typeof window === 'undefined') return;
 
-        if (!state.currentTrack) {
+        if (!currentTrack) {
             document.title = 'Ω';
             return;
         }
 
-        const album = albums[state.currentAlbumKey];
+        const album = albums[currentAlbumKey];
         if (!album) return;
 
-        const trackKey = Object.keys(album.tracks)[state.currentTrackIndex];
+        const trackKey = Object.keys(album.tracks)[currentTrackIndex];
         const track = album.tracks[trackKey];
         if (!track) return;
 
         const titleText = `Ω - ${track.title}`;
         document.title = titleText;
-    }, [state.currentTrack, state.currentAlbumKey, state.currentTrackIndex]);
+    }, [currentTrack, currentAlbumKey, currentTrackIndex]);
 
     // Automatically skip to next track
     useEffect(() => {
@@ -72,44 +72,33 @@ const Music = () => {
         if (!audio) return;
 
         const handleEnded = () => {
-            if (state.currentAlbumKey && state.currentTrackIndex != null) {
-                const currentAlbum = albums[state.currentAlbumKey];
+            if (currentAlbumKey && currentTrackIndex != null) {
+                const currentAlbum = albums[currentAlbumKey];
                 const trackKeys = Object.keys(currentAlbum.tracks);
-                const nextIndex = state.currentTrackIndex + 1;
+                const nextIndex = currentTrackIndex + 1;
 
                 if (nextIndex < trackKeys.length) {
                     const nextTrack = currentAlbum.tracks[trackKeys[nextIndex]];
                     const nextScName = '/audio/' + nextTrack.local + '.mp3';
-                    setState(prev => ({
-                        ...prev,
-                        currentTrack: nextScName,
-                        currentTrackIndex: nextIndex
-                    }));
+                    setCurrentTrack(nextScName);
+                    setCurrentTrackIndex(nextIndex);
                 }
             }
         };
 
         audio.addEventListener('ended', handleEnded);
         return () => audio.removeEventListener('ended', handleEnded);
-    }, [state.currentAlbumKey, state.currentTrackIndex]);
+    }, [currentAlbumKey, currentTrackIndex]);
 
     // Play track on click
     const handleTrackClick = (albumKey, trackIndex, scName) => {
         const audio = player.current;
-        setState(prev => {
-            if (prev.currentTrack === scName) {
-                if (audio) {
-                    if (audio.paused) audio.play().catch(() => {});
-                    else audio.pause();
-                }
-                return prev;
-            }
-            return { ...prev, currentTrack: scName, currentAlbumKey: albumKey, currentTrackIndex: trackIndex };
-        });
+        setCurrentTrack(scName);
+        setCurrentAlbumKey(albumKey);
+        setCurrentTrackIndex(trackIndex);
     };
 
-    const timeLeft = countDown(state.duration, state.currentTime);
-    const progressWidth = state.duration ? (state.currentTime / state.duration) * 100 : 0;
+    const timeLeft = countDown(duration, currentTime);
 
     // Accordion
     useEffect(() => {
@@ -134,14 +123,14 @@ const Music = () => {
 
     return (
         <section className="music music-home" id="music">
-            {albumKeys.map(key => {
+            {albumKeys.map((key: number) => {
                 const album = albums[key];
                 const isOpen = openKey === key;
 
                 // NEW:
-                const isAlbumPlaying = state.currentAlbumKey === key && state.duration;
+                const isAlbumPlaying = currentAlbumKey === key && duration;
                 const albumProgress = isAlbumPlaying
-                    ? (state.currentTime / state.duration) * 100
+                    ? (currentTime / duration) * 100
                     : 0;
 
                 return (
@@ -186,7 +175,7 @@ const Music = () => {
                                         const track = album.tracks[trackKey];
                                         const scName = '/audio/' + track.local + '.mp3';
                                         const playTime = Math.floor(track.playtime / 60) + ':' + ('0' + Math.floor(track.playtime % 60)).slice(-2);
-                                        const showingCountdown = state.currentTrack === scName && state.currentTime != null;
+                                        const showingCountdown = currentTrack === scName && currentTime != null;
                                         const buttonClass = showingCountdown ? "track-button playing" : "track-button";
                                         return (
                                             <li key={`${key}_${track.local}`}>
@@ -217,6 +206,4 @@ const Music = () => {
             <audio ref={player} />
         </section>
     );
-};
-
-export default Music;
+}

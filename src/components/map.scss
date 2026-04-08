@@ -1,8 +1,5 @@
-@use 'variables' as *;
+@use '../app/_scss/variables' as *;
 
-body {
-    overflow: hidden;
-}
 .rsm-svg {
     background-color: $black;
 }

@@ -92,7 +92,10 @@ export default function Menu({ active }: Props): JSX.Element {
 				<path d="m40,136 l 17.32,10 l0,20 l-17.32,10 l-17.32,-10 l0,-20 z"/>
 				<path d="m80,136 l 17.32,10 l0,20 l-17.32,10 l-17.32,-10 l0,-20 z"/>
 				<path d="m120,136 l 17.32,10 l0,20 l-17.32,10 l-17.32,-10 l0,-20 z"/>
-				<text x="34" y="35" fill="black" fontSize="8" transform="rotate(-30 20,40)">MENU</text>
+				<text x="31" y="18" fill="#000000" fontSize="15" letterSpacing={.1} fontWeight="bold">ME</text>
+				<text x="31" y="32" fill="#00000044" fontSize="15" letterSpacing={.1} fontWeight="bold">NU</text>
+				<text x="71" y="18" fill="#000000" fontSize="15" letterSpacing={.1} fontWeight="bold">NU</text>
+				<text x="71" y="32" fill="#00000044" fontSize="15" letterSpacing={.1} fontWeight="bold">ME</text>
 			</svg>
 		</div>
 	</>);

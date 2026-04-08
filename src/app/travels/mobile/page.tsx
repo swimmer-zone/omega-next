@@ -1,12 +1,12 @@
 import React from 'react';
-import { Metadata } from "next";
+import { Metadata } from 'next';
 import Link from "next/link";
 import { Footer, Menu, Hexagons } from '../../../components';
 import '../../_scss/_page.scss';
 import '../../_scss/diy.scss';
 
 export const metadata: Metadata = {
-    title: "Travels",
+    title: "Ω - Travels",
     description: "A list of all my travels in descending order."
 };
 

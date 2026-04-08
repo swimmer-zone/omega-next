@@ -6,8 +6,8 @@ import { atelierForestDark } from 'react-syntax-highlighter/dist/esm/styles/hljs
 import './code.scss';
 
 type Props = {
-    code: string;
-    language?: string
+    code: string,
+    language?: string,
 };
 
 export default function CodeClient({ code, language }: Props): JSX.Element {

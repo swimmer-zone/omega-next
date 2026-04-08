@@ -1,18 +1,18 @@
 'use client';
 
-import React from "react";
-import Link from "next/link";
+import React, { JSX } from 'react';
+import Link from 'next/link';
 import {
     Annotation,
     ComposableMap,
     Geographies,
     Geography,
-    Graticule,
+    Graticule, Latitude, Longitude,
     Marker,
-} from "@vnedyalk0v/react19-simple-maps";
-import Zoomable from "./zoomable";
+} from '@vnedyalk0v/react19-simple-maps';
+import Zoomable from './zoomable';
 import '../app/_scss/_page.scss';
-import '../app/_scss/map.scss';
+import './map.scss';
 
 import {
     citiesAssorted,
@@ -24,9 +24,10 @@ import {
     citiesThailand,
     citiesUk,
     citiesVietnam,
-} from "../json";
+    countries,
+} from '../json';
 
-const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
+// Direct copy from https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json
 
 type City = {
     name: string
@@ -34,6 +35,7 @@ type City = {
     annotation: [number, number, number]
     link?: string
 };
+type RotationAngles = [number, number, number] & { __brand: "rotationAngles" };
 
 const visited: string[] = [
     "United Kingdom",
@@ -79,11 +81,11 @@ const citiesAll: City[] = [
     annotation: city.annotation.slice(0, 3) as [number, number, number],
 }));
 
-export default function Map() {
+export default function Map(): JSX.Element | null {
     return (
         <ComposableMap
             projectionConfig={{
-                rotate: [-45, -35, 0],
+                rotate: [-45, -35, 0] as RotationAngles,
                 scale: 350,
             }}
         >
@@ -91,54 +93,51 @@ export default function Map() {
                 <>
                     <Graticule stroke="#111111" />
 
-                    <Geographies geography={geoUrl}>
-                        {({ geographies }: { geographies: any[] }) => (
-                            <React.Fragment>
-                                {geographies.map((geo: any) => {
-                                    const highlighted = visited.includes(
-                                        geo.properties.name
-                                    );
+                    <Geographies geography={countries}>
+                        {({ geographies }: { geographies: { rsmKey: string; properties: { name: string } }[] }) => (
+                            <>
+                                {geographies.map((geo: { rsmKey: string; properties: { name: string } }) => {
+                                    const highlighted = visited.includes(geo.properties.name)
 
                                     return (
                                         <Geography
-                                            key={geo.rsmKey}
-                                            {...geo}
+                                            geography={geo}
+                                            key={geo.properties.name}
                                             style={{
                                                 default: {
-                                                    fill: highlighted ? "#6c6eec" : "#222222",
+                                                    fill: highlighted ? "#6c6eecaa" : "#222222aa",
                                                     stroke: "#000000",
                                                 },
                                                 hover: {
-                                                    fill: "#6c6eec",
+                                                    fill: "#6c6eec44",
                                                     stroke: "#000000",
                                                 },
                                                 pressed: {
-                                                    fill: "#6c6eec",
+                                                    fill: "#6c6eec88",
                                                     stroke: "#000000",
                                                 },
-                                            }}
-                                        />
-                                    );
+                                            }}/>
+                                    )
                                 })}
-                            </React.Fragment>
+                            </>
                         )}
                     </Geographies>
 
                     {citiesAll.map(({ name, coordinates, annotation, link }) => {
                         const Label = (
-                            <text fill={ link ? "#dddddd" : "#555555" } fontSize={12} style={{ cursor: link ? "pointer" : "default" }}>
+                            <text fill={ link ? "#dddddd" : "#555555" } fontSize={10} style={{ cursor: link ? "pointer" : "default" }}>
                                 {name}
                             </text>
                         );
 
                         return(
                             <React.Fragment key={name}>
-                                <Marker coordinates={coordinates} key={name + "Marker"}>
+                                <Marker coordinates={coordinates as [Longitude, Latitude]} key={name + "Marker"}>
                                     {<circle r={2} fill="#ffc917" />}
                                 </Marker>
 
                                 <Annotation
-                                    subject={coordinates}
+                                    subject={coordinates as [Longitude, Latitude]}
                                     dx={annotation[0]}
                                     dy={annotation[1]}
                                     connectorProps={{
@@ -147,7 +146,7 @@ export default function Map() {
                                         strokeLinecap: "round",
                                     }}
                                 >
-                                    {link ? <Link href={"travels/" + link} passHref>{Label}</Link>: Label}
+                                    {link ? <Link href={'travels/' + link} passHref>{Label}</Link>: Label}
                                 </Annotation>
                             </React.Fragment>
                         );
@@ -155,5 +154,5 @@ export default function Map() {
                 </>
             </Zoomable>
         </ComposableMap>
-    )
+    );
 }

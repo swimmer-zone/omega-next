@@ -5,7 +5,7 @@ import '../../_scss/_page.scss';
 import '../../_scss/travels.scss';
 
 export const metadata: Metadata = {
-    title: 'Travel to Georgia',
+    title: 'Ω - Travel to Georgia',
     description: '',
 };
 
