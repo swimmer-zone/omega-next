@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from "next/link";
 import { Footer, Menu, Carousel, Hexagons } from '../../../components';
 import '../../_scss/_page.scss';
 import '../../_scss/travels.scss';
@@ -15,9 +16,9 @@ const Boom = () => {
         <div className="content-column">
             <h2>Table of contents</h2>
             <ul>
-                <li><a href="#boom">Boom</a></li>
-                <li><a href="#dour">Dour</a></li>
-                <li><a href="#sziget">Sziget</a></li>
+                <li><Link href="#boom">Boom</Link></li>
+                <li><Link href="#dour">Dour</Link></li>
+                <li><Link href="#sziget">Sziget</Link></li>
             </ul>
             <h1 id="boom">Boom Festival</h1>
             <p>

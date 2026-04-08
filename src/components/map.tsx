@@ -147,7 +147,7 @@ export default function Map() {
                                         strokeLinecap: "round",
                                     }}
                                 >
-                                    {link ? <a href={"travels/" + link}>{Label}</a> : Label}
+                                    {link ? <Link href={"travels/" + link} passHref>{Label}</Link>: Label}
                                 </Annotation>
                             </React.Fragment>
                         );

@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from "next/link";
 import { Footer, Menu, Carousel, Hexagons } from '../../../components';
 import '../../_scss/_page.scss';
 import '../../_scss/travels.scss';
@@ -16,8 +17,8 @@ const Iceland = () => {
             <h1>Aurora</h1>
             <h2>Table of contents</h2>
             <ul>
-                <li><a href="#introduction">Introduction</a></li>
-                <li><a href="#reykjavik">Reykjavik</a></li>
+                <li><Link href="#introduction">Introduction</Link></li>
+                <li><Link href="#reykjavik">Reykjavik</Link></li>
             </ul>
             <h2 id="introduction">Introduction</h2>
             <p><img src="/images/travels/iceland/map.png" alt="Route"/></p>

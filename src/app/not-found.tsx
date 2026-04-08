@@ -1,13 +1,14 @@
-'use client';
-import Head from 'next/head';
+import { Metadata } from "next";
 import { Logo } from '../components';
 import './_scss/not-found.scss';
 
+export const metadata: Metadata = {
+    title: "404 - Not found",
+    description: "404 - Not found",
+};
+
 export default function NotFound() {
     return (<main>
-        <Head>
-            <title>Ω - 404</title>
-        </Head>
         <div className="content-column">
             <div className="error">
                 <div>

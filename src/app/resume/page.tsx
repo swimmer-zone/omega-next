@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from "next/link";
 import Timeline from "./timeline";
 import { Footer, Portrait, Menu, Hexagons } from '../../components';
 import '../_scss/_page.scss';
@@ -28,7 +29,7 @@ const Resume = () => {
             <p>
                 About 20 years ago I wrote my first HTML and later on also CSS came by, these became HTML5 and CSS3.
                 But I wanted more than just a static website and when PHP 4.0 was released, I enrolled into creating
-                dynamic websites, some of which you can still find on my <a href="/">homepage</a>.
+                dynamic websites, some of which you can still find on my <Link href="/">homepage</Link>.
             </p>
             <p>
                 I started programming procedurally and while PHP grew up, I got more into object oriented programming

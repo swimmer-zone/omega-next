@@ -1,5 +1,5 @@
-import React from 'react';
 import { Metadata } from 'next';
+import Link from "next/link";
 import { Footer, Menu, Carousel, Hexagons } from '../../../components';
 import '../../_scss/_page.scss';
 import '../../_scss/travels.scss';
@@ -17,10 +17,10 @@ const Georgia = () => {
             <h1>Georgia</h1>
             <h2>Table of contents</h2>
             <ul>
-                <li><a href="#introduction">Introduction</a></li>
-                <li><a href="#kutaisi">Kutaisi</a></li>
-                <li><a href="#batumi">Batumi</a></li>
-                <li><a href="#tbilisi">Tbilisi</a></li>
+                <li><Link href="#introduction">Introduction</Link></li>
+                <li><Link href="#kutaisi">Kutaisi</Link></li>
+                <li><Link href="#batumi">Batumi</Link></li>
+                <li><Link href="#tbilisi">Tbilisi</Link></li>
             </ul>
             <h2 id="introduction">Introduction</h2>
             <p><img src="/images/travels/georgia/map.png" alt="Route"/></p>

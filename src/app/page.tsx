@@ -1,14 +1,17 @@
-'use client'
 import React from "react";
-import Head from "next/head";
+import { Metadata } from "next";
 import { Footer, Hexagons, Menu, Music } from '../components';
 import './_scss/_page.scss';
 
-const Home = () => {
+export const metadata: Metadata = {
+    title: "Home",
+    description: 'Ω - My music',
+    keywords: 'omega,water,phlegmatic,music,techno,ambient,minimal,lounge,blog,weblog,template,html,css,menu,responsive,travel,travels,travelblog,tutorials,diy,yupsie',
+    authors: [{ name: 'Omega' }],
+};
+
+export default function Home(): JSX.Element {
     return (<main className="home">
-        <Head>
-          <title>Ω</title>
-        </Head>
         <Menu active="home"/>
         <Hexagons />
         <div className="content-column">
@@ -26,7 +29,3 @@ const Home = () => {
         <Footer/>
     </main>);
 }
-
-Home.displayName = "Home";
-
-export default Home;

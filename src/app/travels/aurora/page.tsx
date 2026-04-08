@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from "next/link";
 import { Footer, Menu, Carousel, Hexagons } from '../../../components';
 import '../../_scss/_page.scss';
 import '../../_scss/travels.scss';
@@ -16,10 +17,10 @@ const Aurora = () => {
             <h1>Aurora</h1>
             <h2>Table of contents</h2>
             <ul>
-                <li><a href="#introduction">Introduction</a></li>
-                <li><a href="#dublin">Dublin</a></li>
-                <li><a href="#rovaniemi">Rovaniemi</a></li>
-                <li><a href="#belfast">Belfast</a></li>
+                <li><Link href="#introduction">Introduction</Link></li>
+                <li><Link href="#dublin">Dublin</Link></li>
+                <li><Link href="#rovaniemi">Rovaniemi</Link></li>
+                <li><Link href="#belfast">Belfast</Link></li>
             </ul>
             <h2 id="introduction">Introduction</h2>
             <p><img src="/images/travels/aurora/map.png" alt="Route"/></p>

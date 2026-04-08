@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from "next/link";
 import { Footer, Menu, Carousel, Hexagons } from '../../../components';
 import '../../_scss/_page.scss';
 import '../../_scss/travels.scss';
@@ -16,20 +17,20 @@ const Iceland = () => {
             <h1>Italy</h1>
             <h2>Table of contents</h2>
             <ul>
-                <li><a href="#introduction">Introduction</a></li>
-                <li><a href="#milan">Milan</a></li>
-                <li><a href="#venice">Venice</a></li>
-                <li><a href="#brindisi">Brindisi</a></li>
-                <li><a href="#lecce">Lecce</a></li>
-                <li><a href="#taranto">Taranto</a></li>
-                <li><a href="#lamezia-terme">Lamezia Terme</a></li>
-                <li><a href="#bologna">Bologna</a></li>
-                <li><a href="#san-marino">San Marino</a></li>
-                <li><a href="#rimini">Rimini</a></li>
-                <li><a href="#bologna">Bologna</a></li>
-                <li><a href="#parma">Parma</a></li>
-                <li><a href="#modena">Modena</a></li>
-                <li><a href="#oleggio">Oleggio</a></li>
+                <li><Link href="#introduction">Introduction</Link></li>
+                <li><Link href="#milan">Milan</Link></li>
+                <li><Link href="#venice">Venice</Link></li>
+                <li><Link href="#brindisi">Brindisi</Link></li>
+                <li><Link href="#lecce">Lecce</Link></li>
+                <li><Link href="#taranto">Taranto</Link></li>
+                <li><Link href="#lamezia-terme">Lamezia Terme</Link></li>
+                <li><Link href="#bologna">Bologna</Link></li>
+                <li><Link href="#san-marino">San Marino</Link></li>
+                <li><Link href="#rimini">Rimini</Link></li>
+                <li><Link href="#bologna">Bologna</Link></li>
+                <li><Link href="#parma">Parma</Link></li>
+                <li><Link href="#modena">Modena</Link></li>
+                <li><Link href="#oleggio">Oleggio</Link></li>
             </ul>
             <h2 id="introduction">Introduction</h2>
             <p><img src="/images/travels/italy/map.png" alt="Route"/></p>

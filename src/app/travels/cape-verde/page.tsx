@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from "next/link";
 import { Footer, Menu, Carousel, Hexagons } from '../../../components';
 import '../../_scss/_page.scss';
 import '../../_scss/travels.scss';
@@ -16,15 +17,15 @@ const CapeVerde = () => {
             <h1>Cape Verde</h1>
             <h2>Table of contents</h2>
             <ul>
-                <li><a href="#introduction">Introduction</a></li>
-                <li><a href="#lisbon">Lisbon</a></li>
-                <li><a href="#praia">Praia</a></li>
-                <li><a href="#cidade-velha">Cidade Velha</a></li>
-                <li><a href="#tarrafal">Tarrafal</a></li>
-                <li><a href="#assomada">Assomada</a></li>
-                <li><a href="#lisbon">Lisbon</a></li>
-                <li><a href="#sintra">Sintra</a></li>
-                <li><a href="#cascais">Cascais</a></li>
+                <li><Link href="#introduction">Introduction</Link></li>
+                <li><Link href="#lisbon">Lisbon</Link></li>
+                <li><Link href="#praia">Praia</Link></li>
+                <li><Link href="#cidade-velha">Cidade Velha</Link></li>
+                <li><Link href="#tarrafal">Tarrafal</Link></li>
+                <li><Link href="#assomada">Assomada</Link></li>
+                <li><Link href="#lisbon">Lisbon</Link></li>
+                <li><Link href="#sintra">Sintra</Link></li>
+                <li><Link href="#cascais">Cascais</Link></li>
             </ul>
             <h2 id="introduction">Introduction</h2>
             <p>

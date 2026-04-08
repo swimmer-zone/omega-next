@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from "next/link";
 import { Footer, Menu, Carousel, Hexagons } from '../../../components';
 import '../../_scss/_page.scss';
 import '../../_scss/travels.scss';
@@ -16,12 +17,12 @@ const Thailand = () => {
             <h1>Thailand</h1>
             <h2>Table of contents</h2>
             <ul>
-                <li><a href="#introduction">Introduction</a></li>
-                <li><a href="#phuket">Phuket</a></li>
-                <li><a href="#chiang-mai">Chiang Mai</a></li>
-                <li><a href="#pai">Pai</a></li>
-                <li><a href="#bangkok">Bangkok</a></li>
-                <li><a href="#pattaya">Pattaya</a></li>
+                <li><Link href="#introduction">Introduction</Link></li>
+                <li><Link href="#phuket">Phuket</Link></li>
+                <li><Link href="#chiang-mai">Chiang Mai</Link></li>
+                <li><Link href="#pai">Pai</Link></li>
+                <li><Link href="#bangkok">Bangkok</Link></li>
+                <li><Link href="#pattaya">Pattaya</Link></li>
             </ul>
             <h2 id="introduction">Introduction</h2>
             <p>

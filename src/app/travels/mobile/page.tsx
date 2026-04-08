@@ -1,5 +1,6 @@
 import React from 'react';
 import { Metadata } from "next";
+import Link from "next/link";
 import { Footer, Menu, Hexagons } from '../../../components';
 import '../../_scss/_page.scss';
 import '../../_scss/diy.scss';
@@ -107,9 +108,9 @@ const Travels: React.FC = () => {
                 <ul>
                     {travels.map((travel, index) => (
                         <li key={index}>
-                            <a href={travel.destination} title={travel.posted}>
+                            <Link href={travel.destination} title={travel.posted}>
                                 {travel.title}
-                            </a>
+                            </Link>
                             {travel.description}
                         </li>
                     ))}

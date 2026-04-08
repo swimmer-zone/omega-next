@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from "next/link";
 import { Footer, Menu, Carousel, Hexagons } from '../../../components';
 import '../../_scss/_page.scss';
 import '../../_scss/travels.scss';
@@ -16,19 +17,19 @@ const Vietnam = () => {
             <h1>Vietnam</h1>
             <h2>Table of contents</h2>
             <ul>
-                <li><a href="#introduction">Introduction</a></li>
-                <li><a href="#hanoi">Hanoi</a></li>
-                <li><a href="#ho-chi-minh">Ho Chi Minh</a></li>
-                <li><a href="#nha-trang">Nha Trang</a></li>
-                <li><a href="#da-nang-and-hoi-an">Da Nang &amp; Hoi An</a></li>
-                <li><a href="#hue">Hue</a></li>
-                <li><a href="#dong-hoi">Dong Hoi</a></li>
-                <li><a href="#phong-nha">Phong Nha</a></li>
-                <li><a href="#ninh-binh">Ninh Binh</a></li>
-                <li><a href="#ha-long-bay">Ha Long Bay</a></li>
-                <li><a href="#back-in-hanoi">Back in Hanoi</a></li>
-                <li><a href="#ha-giang">Ha Giang</a></li>
-                <li><a href="#back-in-hanoi-again">Back in Hanoi again</a></li>
+                <li><Link href="#introduction">Introduction</Link></li>
+                <li><Link href="#hanoi">Hanoi</Link></li>
+                <li><Link href="#ho-chi-minh">Ho Chi Minh</Link></li>
+                <li><Link href="#nha-trang">Nha Trang</Link></li>
+                <li><Link href="#da-nang-and-hoi-an">Da Nang &amp; Hoi An</Link></li>
+                <li><Link href="#hue">Hue</Link></li>
+                <li><Link href="#dong-hoi">Dong Hoi</Link></li>
+                <li><Link href="#phong-nha">Phong Nha</Link></li>
+                <li><Link href="#ninh-binh">Ninh Binh</Link></li>
+                <li><Link href="#ha-long-bay">Ha Long Bay</Link></li>
+                <li><Link href="#back-in-hanoi">Back in Hanoi</Link></li>
+                <li><Link href="#ha-giang">Ha Giang</Link></li>
+                <li><Link href="#back-in-hanoi-again">Back in Hanoi again</Link></li>
             </ul>
             <h2 id="introduction">Introduction</h2>
             <p><img src="/images/travels/vietnam/map.png" alt="Route"/></p>

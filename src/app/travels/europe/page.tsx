@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from "next/link";
 import { Footer, Menu, Carousel, Hexagons } from '../../../components';
 import '../../_scss/_page.scss';
 import '../../_scss/travels.scss';
@@ -28,25 +29,25 @@ const Europe = () => {
             </p>
             <h2>Table of contents</h2>
             <ul>
-                <li><a href="#the-netherlands">The Netherlands</a></li>
-                <li><a href="#belgium">Belgium</a></li>
-                <li><a href="#france">France</a></li>
-                <li><a href="#switzerland">Switzerland</a></li>
-                <li><a href="#italy">Italy</a></li>
-                <li><a href="#austria">Austria</a></li>
-                <li><a href="#yugoslavia">Yugoslavia</a></li>
-                <li><a href="#bulgaria">Bulgaria</a></li>
-                <li><a href="#greece">Greece</a></li>
-                <li><a href="#turkey">Turkey</a></li>
-                <li><a href="#romania">Romania</a></li>
-                <li><a href="#hungary">Hungary</a></li>
-                <li><a href="#slovakia">Slovakia</a></li>
-                <li><a href="#czech-republic">Czech Republic</a></li>
-                <li><a href="#germany">Germany</a></li>
-                <li><a href="#back-to-the-netherlands">Back to The Netherlands</a></li>
-                <li><a href="#luxembourg">Luxembourg</a></li>
-                <li><a href="#poland">Poland</a></li>
-                <li><a href="#tldr">TL;DR</a></li>
+                <li><Link href="#the-netherlands">The Netherlands</Link></li>
+                <li><Link href="#belgium">Belgium</Link></li>
+                <li><Link href="#france">France</Link></li>
+                <li><Link href="#switzerland">Switzerland</Link></li>
+                <li><Link href="#italy">Italy</Link></li>
+                <li><Link href="#austria">Austria</Link></li>
+                <li><Link href="#yugoslavia">Yugoslavia</Link></li>
+                <li><Link href="#bulgaria">Bulgaria</Link></li>
+                <li><Link href="#greece">Greece</Link></li>
+                <li><Link href="#turkey">Turkey</Link></li>
+                <li><Link href="#romania">Romania</Link></li>
+                <li><Link href="#hungary">Hungary</Link></li>
+                <li><Link href="#slovakia">Slovakia</Link></li>
+                <li><Link href="#czech-republic">Czech Republic</Link></li>
+                <li><Link href="#germany">Germany</Link></li>
+                <li><Link href="#back-to-the-netherlands">Back to The Netherlands</Link></li>
+                <li><Link href="#luxembourg">Luxembourg</Link></li>
+                <li><Link href="#poland">Poland</Link></li>
+                <li><Link href="#tldr">TL;DR</Link></li>
             </ul>
             <h2 id="the-netherlands">The Netherlands</h2>
             <p>

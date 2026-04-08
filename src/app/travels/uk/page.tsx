@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from "next/link";
 import { Footer, Menu, Carousel, Hexagons } from '../../../components';
 import '../../_scss/_page.scss';
 import '../../_scss/travels.scss';
@@ -16,15 +17,15 @@ const UK = () => {
             <h1>United Kingdom & Ireland</h1>
             <h2>Table of contents</h2>
             <ul>
-                <li><a href="#introduction">Introduction</a></li>
-                <li><a href="#edinburgh">Edinburgh</a></li>
-                <li><a href="#dublin">Dublin</a></li>
-                <li><a href="#belfast">Belfast</a></li>
-                <li><a href="#liverpool">Liverpool</a></li>
-                <li><a href="#manchester">Manchester</a></li>
-                <li><a href="#chester">Chester</a></li>
-                <li><a href="#llandudno">LLandudno</a></li>
-                <li><a href="#london">London</a></li>
+                <li><Link href="#introduction">Introduction</Link></li>
+                <li><Link href="#edinburgh">Edinburgh</Link></li>
+                <li><Link href="#dublin">Dublin</Link></li>
+                <li><Link href="#belfast">Belfast</Link></li>
+                <li><Link href="#liverpool">Liverpool</Link></li>
+                <li><Link href="#manchester">Manchester</Link></li>
+                <li><Link href="#chester">Chester</Link></li>
+                <li><Link href="#llandudno">LLandudno</Link></li>
+                <li><Link href="#london">London</Link></li>
             </ul>
             <h2 id="introduction">Introduction</h2>
             <p key="intro">

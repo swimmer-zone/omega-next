@@ -1,6 +1,5 @@
 'use client';
-import Head from "next/head";
-import React, { useState, useEffect, useLayoutEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './music.scss';
 import { albums } from '../json';
 
@@ -135,10 +134,6 @@ const Music = () => {
 
     return (
         <section className="music music-home" id="music">
-            <Head>
-                <title>{pageTitle}</title>
-            </Head>
-
             {albumKeys.map(key => {
                 const album = albums[key];
                 const isOpen = openKey === key;
