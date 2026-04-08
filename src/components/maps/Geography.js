@@ -58,7 +58,7 @@ const Geography = forwardRef(
         ref={ref}
         tabIndex="0"
         className={`rsm-geography ${className}`}
-        d={geography.svgPath}
+        d={restProps?.d ?? geography?.svgpath ?? restProps?.svgpath ?? geography?.d ?? ""}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         onFocus={handleFocus}
@@ -83,7 +83,9 @@ const Geography = forwardRef(
 Geography.displayName = "Geography"
 
 Geography.propTypes = {
-  geography: PropTypes.object,
+  geography: PropTypes.object, // optional; when omitted, pass svgpath or d directly
+  svgpath: PropTypes.string,
+  d: PropTypes.string,
   onMouseEnter: PropTypes.func,
   onMouseLeave: PropTypes.func,
   onMouseDown: PropTypes.func,

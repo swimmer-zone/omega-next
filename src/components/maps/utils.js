@@ -52,8 +52,8 @@ export function getMesh(geographies) {
 export function prepareMesh(outline, borders, path) {
   return outline && borders
     ? {
-        outline: { ...outline, rsmKey: "outline", svgPath: path(outline) },
-        borders: { ...borders, rsmKey: "borders", svgPath: path(borders) },
+        outline: { ...outline, rsmkey: "outline", svgpath: path(outline) },
+        borders: { ...borders, rsmkey: "borders", svgpath: path(borders) },
       }
     : {}
 }
@@ -63,8 +63,8 @@ export function prepareFeatures(geographies, path) {
     ? geographies.map((d, i) => {
         return {
           ...d,
-          rsmKey: `geo-${i}`,
-          svgPath: path(d),
+          rsmkey: `geo-${i}`,
+          svgpath: path(d),
         }
       })
     : []

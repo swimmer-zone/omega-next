@@ -85,70 +85,61 @@ export default function Map() {
             }}
         >
             <ZoomableGroup>
-                <Graticule stroke="#111111" />
+                <>
+                    <Graticule stroke="#111111" />
 
-                <Geographies geography={geoUrl}>
-                    {({ geographies }) =>
-                        geographies.map((geo: any) => {
-                            const highlighted = visited.includes(
-                                geo.properties.name
-                            )
+                    <Geographies geography={geoUrl}>
+                        {({ geographies }: { geographies: any[] }) => (
+                            <>
+                                {geographies.map((geo: any) => {
+                                    const highlighted = visited.includes(
+                                        geo.properties.name
+                                    );
 
-                            return (
-                                <Geography
-                                    key={geo.rsmKey}
-                                    geography={geo}
-                                    style={{
-                                        default: {
-                                            fill: highlighted ? "#6c6eec" : "#222222",
-                                            stroke: "#000000",
-                                        },
-                                        hover: {
-                                            fill: "#6c6eec",
-                                            stroke: "#000000",
-                                        },
-                                        pressed: {
-                                            fill: "#6c6eec",
-                                            stroke: "#000000",
-                                        },
-                                    }}
-                                />
-                            )
-                        })
-                    }
-                </Geographies>
+                                    return (
+                                        <Geography
+                                            key={geo.rsmkey}
+                                            {...geo}
+                                            style={{
+                                                default: {
+                                                    fill: highlighted ? "#6c6eec" : "#222222",
+                                                    stroke: "#000000",
+                                                },
+                                                hover: {
+                                                    fill: "#6c6eec",
+                                                    stroke: "#000000",
+                                                },
+                                                pressed: {
+                                                    fill: "#6c6eec",
+                                                    stroke: "#000000",
+                                                },
+                                            }}
+                                        />
+                                    );
+                                })}
+                            </>
+                        )}
+                    </Geographies>
 
-                {citiesAll.map(({ name, coordinates, annotation, link }) => (
-                    <React.Fragment key={name}>
-                        <Marker coordinates={coordinates}>
-                            <circle r={2} fill="#ffc917" />
-                        </Marker>
+                    {citiesAll.map(({ name, coordinates, annotation, link }) => (
+                        <React.Fragment key={name}>
+                            <Marker coordinates={coordinates} key={name}>
+                                {<circle r={2} fill="#ffc917" />}
+                            </Marker>
 
-                        <Annotation
-                            subject={coordinates}
-                            dx={annotation[0]}
-                            dy={annotation[1]}
-                            connectorProps={{
-                                stroke: "#888888",
-                                strokeWidth: 1,
-                                strokeLinecap: "round",
-                            }}
-                        >
-                            <text
-                                x={annotation[2]}
-                                textAnchor="end"
-                                alignmentBaseline="middle"
-                                style={{
-                                    fontFamily: "Afacad",
-                                    fontSize: "8px",
-                                    fill: link ? "#dddddd" : "#555555",
+                            <Annotation
+                                subject={coordinates}
+                                dx={annotation[0]}
+                                dy={annotation[1]}
+                                connectorProps={{
+                                    stroke: "#888888",
+                                    strokeWidth: 1,
+                                    strokeLinecap: "round",
                                 }}
-                            >
-                                {name}
-                            </text>
-                        </Annotation>
-                    </React.Fragment>
-                ))}
+                            />
+                        </React.Fragment>
+                    ))}
+                </>
             </ZoomableGroup>
         </ComposableMap>
     )

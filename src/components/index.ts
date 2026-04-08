@@ -5,7 +5,7 @@ import Hexagons from './hexagons';
 import Logo from './logo';
 import MapClient from './mapClient';
 import Menu from './menu';
-// import Music from './music';
+import Music from './music';
 import Portrait from './portrait';
 import Social from './social';
 
@@ -17,7 +17,7 @@ export {
     Logo,
     MapClient,
     Menu,
-    // Music,
+    Music,
     Portrait,
     Social
 };
