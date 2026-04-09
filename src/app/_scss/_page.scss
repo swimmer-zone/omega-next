@@ -6,25 +6,22 @@ button {
 	font-size: 1rem;
 	letter-spacing: 0.1rem;
 }
-
 html {
 	font-size: 20px;
 }
-
 body {
     color: $lighter;
+	background-color: $darkest;
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
 h1 {
 	font-size: 3rem;
 	color: $purple;
 	text-shadow: 2px 2px 2px #6c6eec44;
 	font-weight: 200;
 }
-
 h2 {
 	font-size: 2rem;
 	color: $white;
@@ -32,12 +29,10 @@ h2 {
 	text-shadow: 2px 2px 2px #6c6eec44;
 	font-weight: 300;
 }
-
 ul,
 ol {
 	margin-left: 2vw;
 }
-
 a,
 button {
     color: $lighter;
@@ -52,7 +47,6 @@ button {
 		transition: all 2s ease-in-out;
 	}
 }
-
 .content-column {
 	position: absolute;
 	top: 3vh;
@@ -65,7 +59,6 @@ button {
 	p {
 		margin: 40px 0;
 	}
-
 	li {
 		color: $purple;
 	}
@@ -99,7 +92,6 @@ blockquote {
 		text-shadow: 2px 2px 2px #6c6eec44;
 		font-weight: 200;
 	}
-
 	h2 {
 		font-size: 2rem;
 		color: $white;
@@ -107,12 +99,10 @@ blockquote {
 		text-shadow: 2px 2px 2px #6c6eec44;
 		font-weight: 300;
 	}
-
 	ul,
 	ol {
 		margin-left: 2vw;
 	}
-
 	.content-column {
 		position: absolute;
 		top: 12vh;
@@ -124,12 +114,10 @@ blockquote {
 		p {
 			margin: 40px 0;
 		}
-
 		li {
 			color: $purple;
 		}
 	}
-
 	blockquote {
 		border-left: 4px solid $light;
 		margin-left: 20px;

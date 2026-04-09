@@ -1,6 +1,6 @@
-import React from "react";
+import { JSX } from 'react';
 import { Metadata } from 'next';
-import Link from "next/link";
+import Link from 'next/link';
 import { Footer, Hexagons, Menu } from '../../components';
 import '../_scss/_page.scss';
 import '../_scss/diy.scss';
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description: '',
 };
 
-const DIY = () => {
+export default function DIY(): JSX.Element {
     return (<main className="diy-overview-background">
         <Menu active="diy"/>
         <Hexagons />
@@ -25,5 +25,3 @@ const DIY = () => {
         </div>
     </main>);
 }
-
-export default DIY;

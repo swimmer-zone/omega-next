@@ -1,5 +1,6 @@
 import Code from './code';
 import Carousel from './carousel';
+import EasterEgg from './easterEgg';
 import Footer from './footer';
 import Hexagons from './hexagons';
 import Logo from './logo';
@@ -12,6 +13,7 @@ import Social from './social';
 export {
     Code,
     Carousel,
+    EasterEgg,
     Footer,
     Hexagons,
     Logo,

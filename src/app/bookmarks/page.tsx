@@ -1,4 +1,4 @@
-import React from 'react';
+import { JSX } from 'react';
 import { Metadata } from 'next';
 import { Footer, Hexagons, Menu } from '../../components';
 import '../_scss/_page.scss';
@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     description: '',
 };
 
-const Bookmarks = () => {
+export default function Bookmarks(): JSX.Element {
     return (<main>
         <Menu active="bookmarks"/>
         <Hexagons />
@@ -53,12 +53,9 @@ const Bookmarks = () => {
             <p>
                 I have collected a lot more bookmarks, which you can download as a file, ready to be imported in your
                 browser. Not to worry, everything will be in a subfolder which is easily deleted. All bookmarks are
-                categorized. <a href="downloads/bookmarks.html">Right click and &#39;Save Link As...&#39; to download
-                the file</a>.
+                categorized. <a href="downloads/bookmarks.html" download>Click here to download the file</a>.
             </p>
         </div>
         <Footer/>
     </main>);
 }
-
-export default Bookmarks;

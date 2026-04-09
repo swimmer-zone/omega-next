@@ -4,7 +4,7 @@ import { Footer, Hexagons, Menu, Music } from '../components';
 import './_scss/_page.scss';
 
 export const metadata: Metadata = {
-    title: "Ω - Home",
+    title: 'Ω - Home',
     description: 'Ω - My music',
     keywords: 'omega,water,phlegmatic,music,techno,ambient,minimal,lounge,blog,weblog,template,html,css,menu,responsive,travel,travels,travelblog,tutorials,diy,yupsie',
     authors: [{ name: 'Omega' }],

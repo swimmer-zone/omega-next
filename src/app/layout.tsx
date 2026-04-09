@@ -1,8 +1,8 @@
-import React, { JSX } from "react";
+import React, { JSX } from 'react';
 import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata, Viewport } from 'next';
-import "./globals.css";
+import { EasterEgg } from '../components';
 
 export const metadata: Metadata = {
     title: 'Ω',
@@ -10,7 +10,6 @@ export const metadata: Metadata = {
     keywords: 'omega,water,phlegmatic,music,techno,ambient,minimal,lounge,blog,weblog,template,html,css,menu,responsive,travel,travels,travelblog,tutorials,diy,yupsie',
     authors: [{ name: 'Omega' }],
 };
-
 export const viewport: Viewport = {
     colorScheme: 'light',
     themeColor: '#6a6eec',
@@ -18,12 +17,9 @@ export const viewport: Viewport = {
     initialScale: 1,
 };
 
-export default function RootLayout({
-    children,
-}: Readonly<{
-    children: React.ReactNode;
-}>): JSX.Element {
+export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode }>): JSX.Element {
     return (<html lang="en">
+        <EasterEgg />
         <body>
             {children}
             <div style={{minHeight: '50px'}}>
@@ -31,5 +27,5 @@ export default function RootLayout({
                 <SpeedInsights/>
             </div>
         </body>
-    </html>)
+    </html>);
 }

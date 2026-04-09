@@ -1,4 +1,4 @@
-import React from "react";
+import { JSX } from 'react';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { Code, Footer, Hexagons, Menu } from '../../../components';
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description: 'Arduino hexagon cabinet DIY project',
 };
 
-const Cabinet: React.FC = () => {
+export default function Cabinet(): JSX.Element {
     return(<main>
         <Menu active="diy"/>
         <Hexagons/>
@@ -50,13 +50,14 @@ const Cabinet: React.FC = () => {
             <p>Below are some comments that were included in that file:</p>
             <h3>Neopixel best practices</h3>
             <ul>
-                <li>Add 1000 uF CAPACITOR between NeoPixel strip's + and - connections.</li>
+                <li>Add 1000 uF CAPACITOR between the + and - connections of the NeoPixel strip.</li>
                 <li>Minimize wiring length between microcontroller board and first pixel.</li>
-                <li>NeoPixel strip's DATA-IN should pass through a 300-500 Ω RESISTOR.</li>
+                <li>The DATA-IN of the NeoPixel strip should pass through a 300-500 Ω RESISTOR.</li>
                 <li>
                     Avoid connecting NeoPixels on a live circuit. If you must, <strong>always</strong> connect
                     GROUND (-) first, then +, then data.
-                    <Image src="/images/diy/cabinet/connect_strip.png" alt="Schema for connecting the strip" width={800} height={600}/>
+                    <Image src="/images/diy/cabinet/connect_strip.png" alt="Schema for connecting the strip"
+                           width={800} height={600}/>
                 </li>
             </ul>
             <p>
@@ -104,7 +105,7 @@ const Cabinet: React.FC = () => {
             <h3>Remote</h3>
             <p>
                 The light effects can be selected with a remote control, having a numpad and 4 arrows. However, I might
-                be using the remote of my Dolby receiver, which has an unused numpad. Maybe I'll be able to use the
+                be using the remote of my Dolby receiver, which has an unused numpad. Maybe I will be able to use the
                 arrow buttons on that too. You may find some useful instructions in this
                 <a href="https://www.youtube.com/watch?v=kZ1HZ6775Mg">Youtube video</a>.
             </p>
@@ -124,8 +125,8 @@ const Cabinet: React.FC = () => {
             <h3>Proximity sensors</h3>
             <p>
                 Each hexagon contains a proximity sensor which can be used to light up a hexagon when something is
-                grabbed from it. Because 16 of those sensors are needed, unfortunately an Arduino Uno won't be
-                sufficient, as it is impossible to connect that many things. That's why I included an Arduino Mega in
+                grabbed from it. Because 16 of those sensors are needed, unfortunately an Arduino Uno is not
+                sufficient, as it is impossible to connect that many things. That is why I included an Arduino Mega in
                 the shopping list. This also gives me some extra memory capacity. The differences are visible in the
                 table below:
             </p>
@@ -408,5 +409,3 @@ const Cabinet: React.FC = () => {
         <Footer/>
     </main>);
 }
-
-export default Cabinet;

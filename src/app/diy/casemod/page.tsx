@@ -1,4 +1,4 @@
-import React from "react";
+import { JSX } from 'react';
 import { Metadata } from 'next';
 import { Footer, Menu, Carousel, Hexagons } from '../../../components';
 import '../../_scss/_page.scss';
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: '',
 };
 
-const Casemod = () => {
+export default function Casemod(): JSX.Element {
     return(<main>
         <Menu active="diy"/>
         <Hexagons/>
@@ -24,7 +24,7 @@ const Casemod = () => {
                 will be a black acrylic. You can not see through unless the lights in the case are on.
             </p>
             <p>
-                Other materials are a 140mm fan, magnets for the side panels. An SD cardreader with an eject mechanism
+                Other materials are a 140mm fan, magnets for the side panels. An SD card reader with an eject mechanism
                 which I pulled out of an MP3 player, and feet, that came off my amplifier, for my stereo installation to
                 fit the audio cabinet.
             </p>
@@ -62,5 +62,3 @@ const Casemod = () => {
         <Footer/>
     </main>);
 }
-
-export default Casemod;

@@ -1,6 +1,7 @@
+import { JSX } from 'react';
 import { Metadata } from 'next';
-import Link from "next/link";
-import Timeline from "./timeline";
+import Link from 'next/link';
+import Timeline from './timeline';
 import { Footer, Portrait, Menu, Hexagons } from '../../components';
 import '../_scss/_page.scss';
 import '../_scss/resume.scss';
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
     description: '',
 };
 
-const Resume = () => {
+export default function Resume(): JSX.Element {
     return (<main>
         <Menu active="resume"/>
         <Hexagons />
@@ -38,9 +39,9 @@ const Resume = () => {
                 API to show off my music productions.
             </p>
             <p>
-                Currently I'm already on the 20th version of my website, this includes major design overhauls, migrating
+                Currently this is the 22nd version of my website, this includes major design overhauls, migrating
                 to other frameworks or platforms, also migrating from shared hosting to a VPS. The previous version ran
-                on React and currently it is running on Next.js on serverless hosting at Vercel.
+                on React and currently it is running on Next.js using Typescript on serverless hosting at Vercel.
             </p>
             <h2>Ambitions</h2>
             <p>
@@ -140,5 +141,3 @@ const Resume = () => {
         <Footer/>
     </main>);
 }
-
-export default Resume;
