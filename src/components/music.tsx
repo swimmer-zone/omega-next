@@ -26,7 +26,7 @@ export default function Music(): JSX.Element {
 
     // Update the time
     useEffect(() => {
-        const audio: HTMLAudioElement = player.current;
+        const audio: HTMLAudioElement | null = player.current;
         if (!audio) return;
         const updateTime = (e: Event) => {
             const target = e.target as HTMLAudioElement;
@@ -55,11 +55,14 @@ export default function Music(): JSX.Element {
             return;
         }
 
-        const album = albums[currentAlbumKey];
+        const album = currentAlbumKey ? albums[currentAlbumKey as keyof typeof albums] : undefined;
         if (!album) return;
 
-        const trackKey = Object.keys(album.tracks)[currentTrackIndex];
-        const track = album.tracks[trackKey];
+        const albumTracks = album && typeof album === 'object' && 'tracks' in album && album.tracks && typeof album.tracks === 'object'
+            ? (album.tracks as unknown) as Record<string, { title: string; local: string; [key: string]: unknown }>
+            : undefined;
+        const trackKey = currentTrackIndex !== null && albumTracks ? Object.keys(albumTracks)[currentTrackIndex] : undefined;
+        const track = trackKey && albumTracks ? albumTracks[trackKey] : undefined;
         if (!track) return;
 
         const titleText = `Ω - ${track.title}`;
@@ -73,13 +76,17 @@ export default function Music(): JSX.Element {
 
         const handleEnded = () => {
             if (currentAlbumKey && currentTrackIndex != null) {
-                const currentAlbum = albums[currentAlbumKey];
-                const trackKeys = Object.keys(currentAlbum.tracks);
+                const currentAlbum = albums[currentAlbumKey as keyof typeof albums] as unknown as { tracks: Record<string, { local: string }>; title?: string; intro?: string };
+                const trackKeys = currentAlbum && typeof currentAlbum === 'object' && 'tracks' in currentAlbum
+                    ? Object.keys(currentAlbum.tracks)
+                    : [];
                 const nextIndex = currentTrackIndex + 1;
 
                 if (nextIndex < trackKeys.length) {
-                    const nextTrack = currentAlbum.tracks[trackKeys[nextIndex]];
-                    const nextScName = '/audio/' + nextTrack.local + '.mp3';
+                    const nextTrack = currentAlbum && typeof currentAlbum === 'object' && 'tracks' in currentAlbum
+                        ? ((currentAlbum.tracks as unknown) as Record<string, { local: string }>)[trackKeys[nextIndex]]
+                        : null;
+                    const nextScName = nextTrack ? '/audio/' + nextTrack.local + '.mp3' : '';
                     setCurrentTrack(nextScName);
                     setCurrentTrackIndex(nextIndex);
                 }
@@ -91,10 +98,10 @@ export default function Music(): JSX.Element {
     }, [currentAlbumKey, currentTrackIndex]);
 
     // Play track on click
-    const handleTrackClick = (albumKey, trackIndex, scName) => {
+    const handleTrackClick = (albumKey: string | number, trackIndex: number, trackName: string) => {
         const audio = player.current;
-        setCurrentTrack(scName);
-        setCurrentAlbumKey(albumKey);
+        setCurrentTrack(trackName);
+        setCurrentAlbumKey(String(albumKey));
         setCurrentTrackIndex(trackIndex);
     };
 
@@ -103,7 +110,7 @@ export default function Music(): JSX.Element {
     // Accordion
     useEffect(() => {
         albumKeys.forEach(key => {
-            const el = contentRefs.current[key];
+            const el = (contentRefs.current as Record<string | number, HTMLElement | null>)[key];
             if (!el) return;
             el.style.maxHeight = openKey === key ? el.scrollHeight + 'px' : '0px';
         });
@@ -112,32 +119,32 @@ export default function Music(): JSX.Element {
     useEffect(() => {
         const handleResize = () => {
             if (!openKey) return;
-            const el = contentRefs.current[openKey];
+            const el = (contentRefs.current as Record<string, HTMLElement | null>)[openKey];
             if (el) el.style.maxHeight = el.scrollHeight + 'px';
         };
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, [openKey]);
 
-    const toggleAccordion = (key) => setOpenKey(prev => (prev === key ? null : key));
+    const toggleAccordion = (key: string | number) => setOpenKey(prev => (prev === key ? '' : String(key)));
 
     return (
         <section className="music music-home" id="music">
-            {albumKeys.map((key: number) => {
-                const album = albums[key];
+            {albumKeys.map((key: string) => {
+                const album = albums[key as keyof typeof albums] as unknown as { tracks: Record<string, { local: string; title: string; playtime: number; remark?: string }>; title: string; intro?: string };
                 const isOpen = openKey === key;
 
                 // NEW:
                 const isAlbumPlaying = currentAlbumKey === key && duration;
-                const albumProgress = isAlbumPlaying
+                const albumProgress = isAlbumPlaying && currentTime != null
                     ? (currentTime / duration) * 100
                     : 0;
 
                 return (
                     <article key={key} id={`album_${key}`}>
                         <div className="track-list" data-set={key}>
-                            {album.title && (<h2
-                                    style={{['--progress']: `${albumProgress}%`}}
+                            {typeof album === 'object' && album?.title && (<h2
+                                    style={{ ['--progress' as string]: `${albumProgress}%` }}
                                     className={isOpen ? 'open' : ''}
                                 >
                                     <button
@@ -160,29 +167,31 @@ export default function Music(): JSX.Element {
                                                 </svg>}
                                         </span>
                                         <span className="title-text">{album.title}</span>
-                                        <span className="title-num">{album.tracks.length} tracks</span>
+                                        <span className="title-num">{Object.keys(album.tracks).length} tracks</span>
                                     </button>
                                 </h2>
                             )}
                             <div
                                 id={`tracks_${key}`}
-                                ref={(el) => (contentRefs.current[key] = el)}
+                                ref={(el) => {
+                                    (contentRefs.current as Record<string, HTMLElement | null>)[key] = el;
+                                }}
                                 className={`collapsible ${isOpen ? 'open' : ''}`}
                             >
                                 {album.intro && <p className="album-intro">{album.intro}</p>}
                                 <ul>
-                                    {Object.keys(album.tracks).map((trackKey, idx) => {
+                                    {Object.keys(album.tracks || {}).map((trackKey, idx) => {
                                         const track = album.tracks[trackKey];
-                                        const scName = '/audio/' + track.local + '.mp3';
+                                        const trackName = '/audio/' + track.local + '.mp3';
                                         const playTime = Math.floor(track.playtime / 60) + ':' + ('0' + Math.floor(track.playtime % 60)).slice(-2);
-                                        const showingCountdown = currentTrack === scName && currentTime != null;
+                                        const showingCountdown = currentTrack === trackName && currentTime != null;
                                         const buttonClass = showingCountdown ? "track-button playing" : "track-button";
                                         return (
                                             <li key={`${key}_${track.local}`}>
                                                 <span className="a">
                                                     <button
                                                         type="button"
-                                                        onClick={() => handleTrackClick(key, idx, scName)}
+                                                        onClick={() => handleTrackClick(key, idx, trackName)}
                                                         data-permalink={track.title}
                                                         className={buttonClass}
                                                     >

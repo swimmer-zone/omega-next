@@ -31,16 +31,7 @@
     }
 }
 
-#footer .copy {
-    position: fixed;
-    right: 1vw;
-    bottom: 10px;
-    font-size: .8rem;
-    z-index: 9999;
-    width: 60px;
-    text-align: left;
-    margin-bottom: 0;
-}
+
 
 @media(max-width: $mobile-breakpoint) {
     #logo {
@@ -52,8 +43,5 @@
         right: 2vw;
         top: 64px;
         position: fixed;
-    }
-    #footer .copy {
-        display: none;
     }
 }
