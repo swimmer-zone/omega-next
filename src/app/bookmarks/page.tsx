@@ -23,7 +23,7 @@ export default function Bookmarks(): JSX.Element {
                 tracks myself again, after some issues with the SoundCloud API. You can still find my music there
                 though. The other half are blog posts, my portfolio and a couple of my favorite resources. Please use
                 the social media buttons to contact me about my music, blogs or any web-related topic. Of course you
-                could also e-mail me on <a href="mailto:info@swimmer.zone">info@swimmer.zone</a>.
+                could also e-mail me on <a href="mailto:i@ome.gs">i@ome.gs</a>.
             </p>
             <p>Some resources that I use on a daily basis: </p>
             <ul>

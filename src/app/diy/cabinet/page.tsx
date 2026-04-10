@@ -249,17 +249,17 @@ export default function Cabinet(): JSX.Element {
             </p>
 
             <section className="hexagon-gallery">
-                <Image src="/images/cabinet/build/08.jpeg" alt="Build" width={216} height={238}/>
-                <Image src="/images/cabinet/build/09.jpeg" alt="Build" width={216} height={238}/>
-                <Image src="/images/cabinet/build/10.jpeg" alt="Build" width={216} height={238}/>
-                <Image src="/images/cabinet/build/11.jpeg" alt="Build" width={216} height={238}/>
-                <Image src="/images/cabinet/build/12.jpeg" alt="Build" width={216} height={238}/>
-                <Image src="/images/cabinet/build/13.jpeg" alt="Build" width={216} height={238}/>
-                <Image src="/images/cabinet/build/14.jpeg" alt="Build" width={216} height={238}/>
-                <Image src="/images/cabinet/build/15.jpeg" alt="Build" width={216} height={238}/>
+                <Image src="/images/diy/cabinet/build/08.jpeg" alt="Build" width={216} height={238}/>
+                <Image src="/images/diy/cabinet/build/09.jpeg" alt="Build" width={216} height={238}/>
+                <Image src="/images/diy/cabinet/build/10.jpeg" alt="Build" width={216} height={238}/>
+                <Image src="/images/diy/cabinet/build/11.jpeg" alt="Build" width={216} height={238}/>
+                <Image src="/images/diy/cabinet/build/12.jpeg" alt="Build" width={216} height={238}/>
+                <Image src="/images/diy/cabinet/build/13.jpeg" alt="Build" width={216} height={238}/>
+                <Image src="/images/diy/cabinet/build/14.jpeg" alt="Build" width={216} height={238}/>
+                <Image src="/images/diy/cabinet/build/15.jpeg" alt="Build" width={216} height={238}/>
                 <div></div>
-                <Image src="/images/cabinet/build/30.jpeg" alt="Build" width={216} height={238}/>
-                <Image src="/images/cabinet/build/31.jpeg" alt="Build" width={216} height={238}/>
+                <Image src="/images/diy/cabinet/build/30.jpeg" alt="Build" width={216} height={238}/>
+                <Image src="/images/diy/cabinet/build/31.jpeg" alt="Build" width={216} height={238}/>
             </section>
 
             <h2>Shopping list</h2>

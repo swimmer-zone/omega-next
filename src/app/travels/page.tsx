@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Footer, MapClient, Menu } from "../../components";
+import { Footer, MapClient, Menu } from '../../components';
 
 export const metadata: Metadata = {
     title: 'Ω - Travel Map',

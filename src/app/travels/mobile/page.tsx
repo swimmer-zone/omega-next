@@ -1,6 +1,6 @@
-import React from 'react';
+import React,{ JSX } from 'react';
 import { Metadata } from 'next';
-import Link from "next/link";
+import Link from 'next/link';
 import { Footer, Menu, Hexagons } from '../../../components';
 import '../../_scss/_page.scss';
 import '../../_scss/diy.scss';
@@ -18,7 +18,7 @@ type Travel = {
     description: string;
 };
 
-const Travels: React.FC = () => {
+export default function Travels(): JSX.Element {
     const travels: Travel[] = [
         {
             title: 'Cape Verde',
@@ -97,14 +97,12 @@ const Travels: React.FC = () => {
             <Hexagons />
             <div className="content-column">
                 <h1>My Travels</h1>
-
                 <p>
                     This is a list of all my travels in descending order. Cutting back on
                     the amount of images was quite a challenge. Especially Georgia, where
                     we had a total of more than 2000 images. The total amount of images is
                     currently {totalImages}.
                 </p>
-
                 <ul>
                     {travels.map((travel, index) => (
                         <li key={index}>
@@ -115,11 +113,8 @@ const Travels: React.FC = () => {
                         </li>
                     ))}
                 </ul>
-
                 <Footer />
             </div>
         </main>
     );
-};
-
-export default Travels;
+}
