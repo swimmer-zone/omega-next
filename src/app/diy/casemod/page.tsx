@@ -54,10 +54,10 @@ export default function Casemod(): JSX.Element {
                 I was afraid the main board was broken, that has happened before, but after some searching it became
                 clear that it all was because of a loose memory strip.
             </p>
-            <Carousel directory="diy/casemod" num={4}/>
+            <Carousel directory="diy/casemod"/>
 
             <h2>Some other projects</h2>
-            <Carousel directory="diy/other" num={10}/>
+            <Carousel directory="diy/other"/>
         </div>
         <Footer/>
     </main>);
