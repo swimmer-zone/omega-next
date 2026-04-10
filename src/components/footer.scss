@@ -1,0 +1,45 @@
+@use '../app/_scss/variables' as *;
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 60vh;
+	z-index: 999;
+    background: linear-gradient(to bottom, #11111100, #11111144, #111111dd, $darkest);
+	pointer-events: none;
+
+	h2 {
+		font-family: 'Afacad', sans-serif;
+		color: $black;
+		margin-top: -45px;
+		text-shadow: 2px 2px 2px #6c6eecff;
+	}
+	ul {
+		position: fixed;
+		left: 36vw;
+		bottom: 4vh;
+	}
+	a {
+		line-height: 16px;
+		display: inline-block;
+		pointer-events: all;
+	}
+	.copy {
+		position: fixed;
+		right: 1vw;
+		bottom: 10px;
+		font-size: .6rem;
+		z-index: 9999;
+		width: 60px;
+		text-align: left;
+		margin-bottom: 0;
+	}
+}
+
+@media(max-width: $mobile-breakpoint) {
+	#footer .copy {
+		display: none;
+	}
+}
