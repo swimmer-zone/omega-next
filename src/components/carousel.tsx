@@ -1,6 +1,6 @@
 'use client';
 
-import { JSX } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade, Pagination, Navigation } from 'swiper/modules';
@@ -12,32 +12,46 @@ import 'swiper/css/pagination';
 
 import './carousel.scss';
 
-// https://swiperjs.com/react
-
 type Props = {
-	directory: string
-	num: number | string
+	directory: string;
 };
 
-export default function Carousel({ directory, num }: Props): JSX.Element | null {
-	const total = Number(num);
-	const max = Number.isFinite(total) && total > 0 ? total : 0;
-	const digits = max >= 100 ? 3 : 2;
+export default function Carousel({ directory }: Props) {
+	const [numImages, setNumImages] = useState(0);
 
-	const slides = Array.from({ length: max }, (_, i) => {
-		const index = i + 1
-		const s = String(index).padStart(digits, '0')
+	useEffect(() => {
+		const checkImages = async () => {
+			let count = 0;
+			while (true) {
+				const img = `/images/${directory}/${String(count + 1).padStart(2, '0')}.jpeg`;
+				try {
+					const res = await fetch(img, { method: 'HEAD' });
+					if (!res.ok) break;
+					count++;
+				} catch {
+					break;
+				}
+			}
+			setNumImages(count);
+		};
+		checkImages().then(() => {});
+	}, [directory]);
 
+	if (numImages === 0) return null;
+
+	const digits = numImages >= 100 ? 3 : 2;
+	const slides = Array.from({ length: numImages }, (_, i) => {
+		const s = String(i + 1).padStart(digits, '0');
 		return (
-			<SwiperSlide key={index}>
+			<SwiperSlide key={i}>
 				<Image
-					src={'/images/' + directory + '/' + s + '.jpeg'}
-					alt={'image-' + s}
-					className = "shade"
+					src={`/images/${directory}/${s}.jpeg`}
+					alt={`image-${s}`}
 					width={600}
 					height={440}
-					priority={index === 1}
-					loading={index === 1 ? 'eager' : 'lazy'}
+					className="shade"
+					loading={i === 0 ? 'eager' : 'lazy'}
+					priority={i === 0}
 				/>
 			</SwiperSlide>
 		);
@@ -45,23 +59,12 @@ export default function Carousel({ directory, num }: Props): JSX.Element | null 
 
 	return (
 		<Swiper
-			autoplay={{
-				delay: 2500,
-				disableOnInteraction: true,
-			}}
-			effect="fade"
-			fadeEffect={{
-				crossFade: true,
-			}}
-			mousewheel={{
-				forceToAxis: true,
-				releaseOnEdges: true
-			}}
 			slidesPerView={1}
 			spaceBetween={0}
-			pagination={{
-				type: 'fraction',
-			}}
+			effect="fade"
+			fadeEffect={{ crossFade: true }}
+			autoplay={{ delay: 2500, disableOnInteraction: true }}
+			pagination={{ type: 'fraction' }}
 			navigation
 			modules={[Autoplay, EffectFade, Pagination, Navigation]}
 			className="mySwiper"

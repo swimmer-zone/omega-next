@@ -8,6 +8,9 @@ button {
 }
 html {
 	font-size: 20px;
+	scrollbar-gutter: stable;
+	scroll-behavior: smooth;
+	scrollbar-width: thin;
 }
 body {
     color: $lighter;

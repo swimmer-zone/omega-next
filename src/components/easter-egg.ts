@@ -1,9 +1,29 @@
 'use client';
+
 import { useEffect } from 'react';
 
 export default function EasterEgg() {
     useEffect(() => {
-        (function () {
+        if (process.env.NODE_ENV !== 'production') return;
+
+        let triggered = false;
+
+        const threshold = 160; // width/height difference threshold
+
+        const detectDevTools = () => {
+            const widthDiff = window.outerWidth - window.innerWidth;
+            const heightDiff = window.outerHeight - window.innerHeight;
+
+            if (
+                !triggered &&
+                (widthDiff > threshold || heightDiff > threshold)
+            ) {
+                triggered = true;
+                runEasterEgg();
+            }
+        };
+
+        const runEasterEgg = () => {
             const final = [
                 "       █████████",
                 "     ███       ███",
@@ -48,12 +68,12 @@ export default function EasterEgg() {
                 );
 
                 progress += 0.08;
-
-                if (progress >= 1) {
-                    clearInterval(interval);
-                }
             }, 400);
-        })();
+        };
+
+        const interval = setInterval(detectDevTools, 500);
+
+        return () => clearInterval(interval);
     }, []);
 
     return null;

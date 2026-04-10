@@ -3,7 +3,7 @@
 import { JSX } from 'react';
 import { promises as fs } from 'fs';
 import path from 'path';
-import CodeClient from './codeClient';
+import CodeClient from './code-client';
 
 type Props = {
     file: string;
