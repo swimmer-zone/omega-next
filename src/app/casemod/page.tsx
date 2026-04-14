@@ -1,8 +1,8 @@
 import { JSX } from 'react';
 import { Metadata } from 'next';
-import { Footer, Menu, Carousel, Hexagons } from '../../../components';
-import '../../_scss/_page.scss';
-import '../../_scss/diy.scss';
+import { Footer, Menu, Carousel, Hexagons } from '../../components';
+import '../_scss/_page.scss';
+import '../_scss/diy.scss';
 
 export const metadata: Metadata = {
     title: 'Ω - Case DIY Project',

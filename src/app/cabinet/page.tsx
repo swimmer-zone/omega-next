@@ -1,9 +1,10 @@
 import { JSX } from 'react';
 import { Metadata } from 'next';
 import Image from 'next/image';
-import { Code, Footer, Hexagons, Menu } from '../../../components';
-import '../../_scss/_page.scss';
-import '../../_scss/diy.scss';
+import Link from 'next/link';
+import { Code, Footer, Hexagons, Menu } from '../../components';
+import '../_scss/_page.scss';
+import '../_scss/diy.scss';
 
 export const metadata: Metadata = {
     title: 'Ω - Cabinet DIY Project',
@@ -16,6 +17,7 @@ export default function Cabinet(): JSX.Element {
         <Hexagons/>
         <div className="content-column">
             <h1>Cabinet</h1>
+            <p>Take a look at my other <Link href="/casemod">DIY projects</Link> as well.</p>
             <p><strong>This is a first concept of this post, updates are pending</strong></p>
             <p>
                 I started off with this <a href="https://www.youtube.com/watch?v=EvRxQbhDxCo">basic tutorial from
