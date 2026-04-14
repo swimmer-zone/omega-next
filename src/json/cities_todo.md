@@ -1,6 +1,20 @@
 # No link
-Andorra,Rila,Copenhagen,Paris,Berlin,Reykjavik,Amsterdam,Oslo,Lisbon,Belgrade,Bratislava,Madrid,Porto,Idanha-a-Nova,
-Guimaraes,San Sebastian,Praia,Assomada,Tarrafal,Cidade Velha,Maggia,Sintra,Cascais,Malaga,Koh Racha Yai,Taipei,Randers, Billund,Cesenatico
+Andorra
+Rila
+Paris
+Berlin
+Amsterdam
+Belgrade
+Bratislava
+Madrid
+Porto
+Idanha-a-Nova
+Guimaraes
+San Sebastian
+Maggia
+Koh Racha Yai
+Taipei
+Cesenatico
 
 
 // Fiji

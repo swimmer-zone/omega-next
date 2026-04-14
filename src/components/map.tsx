@@ -25,6 +25,7 @@ import {
     citiesUk,
     citiesVietnam,
     countries,
+    visitedCountries
 } from '../json';
 
 // Direct copy from https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json
@@ -36,34 +37,6 @@ type City = {
     link?: string
 };
 type RotationAngles = [number, number, number] & { __brand: "rotationAngles" };
-
-const visited: string[] = [
-    "United Kingdom",
-    "Norway",
-    "France",
-    "Poland",
-    "Austria",
-    "Hungary",
-    "Romania",
-    "Germany",
-    "Bulgaria",
-    "Greece",
-    "Turkey",
-    "Switzerland",
-    "Luxembourg",
-    "Belgium",
-    "Netherlands",
-    "Portugal",
-    "Spain",
-    "Ireland",
-    "Italy",
-    "Denmark",
-    "Finland",
-    "Serbia",
-    "Slovakia",
-    "Czechia",
-    "Taiwan",
-];
 
 const citiesAll: City[] = [
     ...citiesAssorted,
@@ -97,7 +70,7 @@ export default function Map(): JSX.Element | null {
                         {({ geographies }: { geographies: { rsmKey: string; properties: { name: string } }[] }) => (
                             <>
                                 {geographies.map((geo: { rsmKey: string; properties: { name: string } }) => {
-                                    const highlighted = visited.includes(geo.properties.name)
+                                    const highlighted = visitedCountries.includes(geo.properties.name)
 
                                     return (
                                         <Geography
