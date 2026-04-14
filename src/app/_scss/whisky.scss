@@ -30,7 +30,7 @@
             color: $purple;
         }
     }
-    .stars {
+    .rating-wrapper {
         display: flex;
         justify-content: flex-end;
         grid-area: rating;
@@ -40,17 +40,17 @@
     .specs {
         grid-area: specs;
         padding: 0 10px 10px 20px;
+        display: grid;
+        grid-template-columns: 160px 1fr;
+        column-gap: 16px;
 
-        .spec-row {
-            display: flex;
-            justify-content: space-between;
-
-            .spec-label {
-                width: fit-content;
-            }
-            .spec-value {
-                width: fit-content;
-            }
+        .spec-label {
+            font-size: .9rem;
+            text-align: right;
+            color: $code;
+        }
+        .spec-value {
+            font-size: .9rem;
         }
     }
     .whisky-map {

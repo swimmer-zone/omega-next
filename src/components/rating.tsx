@@ -1,19 +1,45 @@
 import { JSX } from 'react';
-import { Star } from 'react-feather';
 import './rating.scss';
 
 type Props = {
-	value: number;
+	rating: number;
+	max?: number;
 };
 
-export default function Rating ({value}: Props): JSX.Element {
-	const max = 5;
-  	const percentage = Math.round((value / max) * 100);
+function StarIcon() {
+	return (<svg className="star" viewBox="0 0 24 24" aria-hidden="true">
+			<path d="M12 2.5l2.9 6 6.6 1-4.8 4.7 1.1 6.6L12 17.7 6.2 20.8l1.1-6.6L2.5 9.5l6.6-1 2.9-6z" />
+		</svg>);
+}
 
-	return (<div className="stars" title={"Rating: " + value + " / 5"}>
-		{Array.from(Array(max).keys()).map((_, i) => (
-			<Star key={String(i)} className="star" />
-		))}
-		<div className="star-overlay" style={{ width: `${100 - percentage}%` }} />
-	</div>);
+export default function Rating({ rating, max = 5 }: Props): JSX.Element {
+	const numericRating = Number(rating);
+	const safeRating = Number.isFinite(numericRating)
+		? Math.max(0, Math.min(numericRating, max))
+		: 0;
+
+	const fillPercentage = (safeRating / max) * 100;
+
+	return (
+		<div
+			className="stars"
+			aria-label={`${safeRating} out of ${max} stars`}
+			title={`${safeRating} / ${max}`}
+		>
+			<div className="stars-row stars-base">
+				{Array.from({ length: max }).map((_, index) => (
+					<StarIcon key={`base-${index}`} />
+				))}
+			</div>
+
+			<div
+				className="stars-row stars-fill"
+				style={{ width: `${fillPercentage}%` }}
+			>
+				{Array.from({ length: max }).map((_, index) => (
+					<StarIcon key={`fill-${index}`} />
+				))}
+			</div>
+		</div>
+	);
 }

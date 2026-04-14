@@ -31,10 +31,10 @@ export default function Whisky(): JSX.Element {
                 My love for whisky began quite some time ago when I went to the liquor store and let them advise me a
                 whisky that was not too peaty and I came home with the Tomatin Legacy, which was more of the spicy and
                 fruity kind (vanilla and citrus). It really took off when I went
-                to <Link href="/travels/uk#edinburgh">Edinburgh</Link> and visited the whisky museum. From that moment on I
-                have tried {whiskyTasting.length} whisky&apos;s, starting with Scotch, but after visiting the Teeling
-                distillery and the whiskey museum in <Link href="/travels/uk#dublin">Dublin</Link> my interest in Irish
-                whiskey grew as well.
+                to <Link href="/travels/uk#edinburgh">Edinburgh</Link> and visited the whisky museum. From that moment
+                on I have tried {whiskyTasting.length} whisky&apos;s, starting with Scotch, but after visiting the
+                Teeling distillery and the whiskey museum in <Link href="/travels/uk#dublin">Dublin</Link> my interest
+                in Irish whiskey grew as well.
             </p>
             <p>A couple of resources to explore whisky</p>
             <ul>
@@ -59,60 +59,51 @@ export default function Whisky(): JSX.Element {
                             <h2 key={tasting.id + '_title'}>{tasting.brand}</h2>
                             <h3 key={tasting.id + '_name'}>{tasting.name}</h3>
                         </div>
-                        <Rating value={tasting.rating}/>
-
+                        <div className="rating-wrapper">
+                            <Rating rating={tasting.rating as number}/>
+                        </div>
                         <div className="specs">
-                            <div className="spec-row">
-                                <div className="spec-label">
-                                    Origin:
-                                </div>
-                                <div className="spec-value">
-                                    {tasting.country} {tasting.region && <>&gt; {tasting.region}</>}
-                                </div>
+                            <div className="spec-label">Origin:</div>
+                            <div className="spec-value">
+                                {tasting.country} {tasting.region && <>&gt; {tasting.region}</>}
                             </div>
-                            <div className="spec-row">
-                                <div className="spec-label">
-                                    Type:
-                                </div>
-                                <div className="spec-value">
-                                    <strong>{tasting.type}</strong>
-                                </div>
-                            </div>
-                            <div className="spec-row">
-                                <div className="spec-label">
-                                    Cask Type:
-                                </div>
-                                <div className="spec-value">
-                                    <strong>{tasting.cask_type}</strong>
-                                </div>
-                            </div>
-                            <div className="spec-row">
-                                <div className="spec-label">
-                                    Strength:
-                                </div>
-                                <div className="spec-value">
-                                    <strong>{tasting.strength}% abv</strong>
-                                </div>
-                            </div>
-                            <div className="spec-row">
-                                <div className="spec-label">
-                                    Tasted at:
-                                </div>
-                                <div className="spec-value">
-                                    <strong>{tasting.location}</strong> (<strong>{tasting.date_of_tasting}</strong>)
-                                </div>
-                            </div>
-                            <div className="spec-row">
-                                <div className="spec-label">
-                                    Flavour:
-                                </div>
-                                <div className="spec-value">
-                                    <strong>{tasting.flavour}</strong> with <strong>{tasting.finish}</strong> finish
-                                </div>
-                            </div>
-                            <div className="spec-row">
-                                {tasting.notes && <><div className="spec-label">Other notes: </div><div className="spec-value"><strong>{tasting.notes}</strong></div></>}
-                            </div>
+
+                            <div className="spec-label">Type:</div>
+                            <div className="spec-value">{tasting.type}</div>
+
+                            <div className="spec-label">Cask Type:</div>
+                            <div className="spec-value">{tasting.cask_type}</div>
+
+                            {tasting.notes && <>
+                                <div className="spec-label">Age:</div>
+                                <div className="spec-value">{tasting.age}</div>
+                            </>}
+
+                            <div className="spec-label">Glance:</div>
+                            <div className="spec-value">{tasting.glance}</div>
+
+                            <div className="spec-label">Color:</div>
+                            <div className="spec-value">{tasting.color}</div>
+
+                            <div className="spec-label">Strength:</div>
+                            <div className="spec-value">{tasting.strength}% abv</div>
+
+                            <div className="spec-label">Tasted at:</div>
+                            <div className="spec-value">{tasting.location}</div>
+
+                            <div className="spec-label">Date:</div>
+                            <div className="spec-value">{tasting.date_of_tasting}</div>
+
+                            <div className="spec-label">Flavour:</div>
+                            <div className="spec-value">{tasting.flavour}</div>
+
+                            <div className="spec-label">Finish:</div>
+                            <div className="spec-value">{tasting.finish}</div>
+
+                            {tasting.notes && <>
+                                <div className="spec-label">Other notes:</div>
+                                <div className="spec-value">{tasting.notes}</div>
+                            </>}
                         </div>
                         {tasting.region && <div className="whisky-map">
                             <Image src={"/vector/whisky/" + tasting.region + ".svg"} alt="" height={200} width={200}/>
