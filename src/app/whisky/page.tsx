@@ -106,7 +106,7 @@ export default function Whisky(): JSX.Element {
                             </>}
                         </div>
                         {tasting.region && <div className="whisky-map">
-                            <Image src={"/vector/whisky/" + tasting.region + ".svg"} alt="" height={200} width={200}/>
+                            <Image src={"/vector/whisky/" + tasting.region.toLowerCase() + ".svg"} alt="" height={200} width={200}/>
                         </div>}
                         {!tasting.region && <div className="whisky-map"></div>}
                     </div>
