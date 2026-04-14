@@ -120,7 +120,7 @@
         "location": "Whisky Museum, Edinburgh",
         "flavour": "Dark Fruit, Oak",
         "finish": "Spicy",
-        "notes": "Three cask matured. Links to a different one: Smokey 10 rather than Original 10.",
+        "notes": " Smokey 10 - Three cask matured.",
         "rating": 3,
         "distillery_id": 15,
         "tasting_would_buy": false
@@ -300,7 +300,7 @@
         "location": "Home",
         "flavour": "Peaty, Citrus, Vanilla",
         "finish": "Salty",
-        "notes": "Could have mixed up with the Finlaggan below",
+        "notes": null,
         "rating": 3,
         "distillery_id": null,
         "tasting_would_buy": false

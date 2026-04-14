@@ -39,13 +39,26 @@
     }
     .specs {
         grid-area: specs;
-        padding: 0 20px;
+        padding: 0 10px 10px 20px;
+
+        .spec-row {
+            display: flex;
+            justify-content: space-between;
+
+            .spec-label {
+                width: fit-content;
+            }
+            .spec-value {
+                width: fit-content;
+            }
+        }
     }
     .whisky-map {
         grid-area: svg;
         align-self: end;
         margin-right: 20px;
         margin-bottom: -10px;
+        width: 220px;
     }
 }
 

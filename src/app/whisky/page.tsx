@@ -3,8 +3,10 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Footer, Hexagons, Menu, Rating } from '../../components';
+
 import '../_scss/_page.scss';
 import '../_scss/whisky.scss';
+
 import { whiskyTasting } from '../../json';
 
 export const metadata: Metadata = {
@@ -60,19 +62,62 @@ export default function Whisky(): JSX.Element {
                         <Rating value={tasting.rating}/>
 
                         <div className="specs">
-                            Origin: {tasting.country} {tasting.region && <>&gt; {tasting.region}</>}<br/>
-                            Type: <strong>{tasting.type}</strong><br/>
-                            Cask Type: <strong>{tasting.cask_type}</strong><br/>
-                            <strong>{tasting.strength}% abv</strong><br/>
-
-                            Tasted
-                            @ <strong>{tasting.location}</strong> (<strong>{tasting.date_of_tasting}</strong>)<br/>
-                            Flavour: <strong>{tasting.flavour}</strong> with <strong>{tasting.finish}</strong> finish<br/>
-                            {tasting.notes && <>Other notes: <strong>{tasting.notes}</strong><br/></>}<br/>
+                            <div className="spec-row">
+                                <div className="spec-label">
+                                    Origin:
+                                </div>
+                                <div className="spec-value">
+                                    {tasting.country} {tasting.region && <>&gt; {tasting.region}</>}
+                                </div>
+                            </div>
+                            <div className="spec-row">
+                                <div className="spec-label">
+                                    Type:
+                                </div>
+                                <div className="spec-value">
+                                    <strong>{tasting.type}</strong>
+                                </div>
+                            </div>
+                            <div className="spec-row">
+                                <div className="spec-label">
+                                    Cask Type:
+                                </div>
+                                <div className="spec-value">
+                                    <strong>{tasting.cask_type}</strong>
+                                </div>
+                            </div>
+                            <div className="spec-row">
+                                <div className="spec-label">
+                                    Strength:
+                                </div>
+                                <div className="spec-value">
+                                    <strong>{tasting.strength}% abv</strong>
+                                </div>
+                            </div>
+                            <div className="spec-row">
+                                <div className="spec-label">
+                                    Tasted at:
+                                </div>
+                                <div className="spec-value">
+                                    <strong>{tasting.location}</strong> (<strong>{tasting.date_of_tasting}</strong>)
+                                </div>
+                            </div>
+                            <div className="spec-row">
+                                <div className="spec-label">
+                                    Flavour:
+                                </div>
+                                <div className="spec-value">
+                                    <strong>{tasting.flavour}</strong> with <strong>{tasting.finish}</strong> finish
+                                </div>
+                            </div>
+                            <div className="spec-row">
+                                {tasting.notes && <><div className="spec-label">Other notes: </div><div className="spec-value"><strong>{tasting.notes}</strong></div></>}
+                            </div>
                         </div>
                         {tasting.region && <div className="whisky-map">
                             <Image src={"/vector/whisky/" + tasting.region + ".svg"} alt="" height={200} width={200}/>
                         </div>}
+                        {!tasting.region && <div className="whisky-map"></div>}
                     </div>
                 </React.Fragment>);
             })}

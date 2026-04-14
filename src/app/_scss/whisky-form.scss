@@ -1,8 +1,5 @@
 @import './_variables.scss';
 
-h2 {
-    margin: 32px 5vw 8px 5vw;
-}
 form > select,
 form > input,
 form > textarea {
@@ -66,8 +63,11 @@ form input[type="date"] {
     box-shadow: none;
 }
 
-
-
+@media(max-width: $mobile-breakpoint) {
+    h2 {
+        margin: 32px 5vw 8px 5vw;
+    }
+}
 
 
 .range-slider {
