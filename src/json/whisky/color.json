@@ -1,0 +1,11 @@
+[
+    { "id": "1", "value": "#ffffff", "label": "Clear"},
+    { "id": "2", "value": "#eeedc4", "label": "White Wine"},
+    { "id": "3", "value": "#ecbf7a", "label": "Straw"},
+    { "id": "4", "value": "#eba937", "label": "Honey"},
+    { "id": "5", "value": "#c09711", "label": "Golden"},
+    { "id": "6", "value": "#ffbf00", "label": "Amber"},
+    { "id": "7", "value": "#b87333", "label": "Copper"},
+    { "id": "8", "value": "#6c4324", "label": "Mahogany"},
+    { "id": "9", "value": "#8b6145", "label": "Dark Oak"}
+]

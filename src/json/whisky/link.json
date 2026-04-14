@@ -1,0 +1,12 @@
+[
+    { "id": "1", "value": "https://www.heijdenwijnimport.nl/", "label": "Van der Heijden", "link_category_id": "1"},
+    { "id": "2", "value": "https://www.topdrinks.nl/", "label": "Topdrinks", "link_category_id": "1"},
+    { "id": "3", "value": "https://www.drankgigant.nl/", "label": "Drankgigant", "link_category_id": "1"},
+    { "id": "4", "value": "https://www.gall.nl/", "label": "Gall & Gall", "link_category_id": "1"},
+    { "id": "5", "value": "https://whisky-me.com/", "label": "Whisky Me", "link_category_id": "1"},
+    { "id": "6", "value": "https://en.wikipedia.org/wiki/Whisky", "label": "Whisky (general)", "link_category_id": "2"},
+    { "id": "7", "value": "https://en.wikipedia.org/wiki/Irish_whiskey", "label": "Irish Whiskey", "link_category_id": "2"},
+    { "id": "8", "value": "https://en.wikipedia.org/wiki/Scotch_whisky", "label": "Scotch Whisky", "link_category_id": "2"},
+    { "id": "9", "value": "https://en.wikipedia.org/wiki/American_whiskey", "label": "American Whiskey", "link_category_id": "2"},
+    { "id": "10", "value": "https://grimsdyke.com/whisky-types/", "label": "See whisky types", "link_category_id": "3"}
+]

@@ -13,6 +13,21 @@ import citiesUk from './travels/uk.json';
 import citiesVietnam from './travels/vietnam.json';
 import countries from './countries.json';
 import social from './social.json';
+import travelsMobile from './travels/mobile.json';
+
+import whiskyCaskType from './whisky/cask-type.json';
+import whiskyColor from './whisky/color.json';
+import whiskyDistillery from './whisky/distillery.json';
+import whiskyFinish from './whisky/finish.json';
+import whiskyFlavour from './whisky/flavour.json';
+import whiskyLink from './whisky/link.json';
+import whiskyRegion from './whisky/region.json';
+import whiskyTasting from './whisky/tasting.json';
+import whiskyTastings from './whisky/tastings.json';
+import whiskyType from './whisky/type.json';
+import whiskyTypeGroup from './whisky/type-group.json';
+
+import visitedCountries from './travels/visited-countries.json'
 
 export {
     albums,
@@ -30,4 +45,17 @@ export {
     citiesVietnam,
     countries,
     social,
+    travelsMobile,
+    whiskyCaskType,
+    whiskyColor,
+    whiskyDistillery,
+    whiskyFinish,
+    whiskyFlavour,
+    whiskyLink,
+    whiskyRegion,
+    whiskyTasting,
+    whiskyTastings,
+    whiskyType,
+    whiskyTypeGroup,
+    visitedCountries,
 };

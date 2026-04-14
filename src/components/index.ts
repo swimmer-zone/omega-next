@@ -8,6 +8,7 @@ import MapClient from './map-client';
 import Menu from './menu';
 import Music from './music';
 import Portrait from './portrait';
+import Rating from './rating';
 import Social from './social';
 import TravelContentClient from './travel-content-client';
 
@@ -22,6 +23,7 @@ export {
     Menu,
     Music,
     Portrait,
+    Rating,
     Social,
     TravelContentClient,
 }

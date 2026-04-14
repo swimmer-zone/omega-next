@@ -115,6 +115,9 @@
     .icon-list a:nth-of-type(6) {
         transition-delay: 2.7s;
     }
+    .icon-list a:nth-of-type(7) {
+        transition-delay: 2.8s;
+    }
 }
 
 .icon-list {
@@ -123,7 +126,7 @@
     left: 50px;
     z-index: 99999;
     display: flex;
-    width: 160px;
+    width: 240px;
     flex-direction: column;
 }
 .icon-list a {
