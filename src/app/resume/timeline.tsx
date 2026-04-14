@@ -1,6 +1,6 @@
 'use client';
 
-import React, { JSX, useState } from "react";
+import React, { JSX, useState } from 'react';
 
 export default function Timeline(): JSX.Element {
     const [ expanded, setExpanded ] = useState(false);
