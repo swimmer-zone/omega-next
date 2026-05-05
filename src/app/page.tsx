@@ -2,6 +2,9 @@ import { JSX } from 'react';
 import { Metadata } from 'next';
 import { Footer, Hexagons, Menu, Music } from '../components';
 import './_scss/_page.scss';
+import { API_URL } from '@/lib/api';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 export const metadata: Metadata = {
     title: 'Ω - Home',
@@ -10,20 +13,37 @@ export const metadata: Metadata = {
     authors: [{ name: 'Omega' }],
 };
 
-export default function Home(): JSX.Element {
+type Intro = {
+    content: string;
+};
+
+async function getIntro(): Promise<Intro[] | null> {
+    const response = await fetch(`${API_URL}/home`, {
+        next: { revalidate: 300 },
+    });
+
+    if (response.status === 404) {
+        return null;
+    }
+
+    if (!response.ok) {
+        throw new Error('Failed to fetch home text');
+    }
+
+    return response.json();
+}
+
+export default async function Home(): Promise<JSX.Element> {
+    const intro = await getIntro();
+
     return (<main className="home">
         <Menu active="home"/>
         <Hexagons />
         <div className="content-column">
-            <p>
-                Welcome to my website, I am Omega. Listen to my music below, I tried my best to sort them by genre,
-                starting off with my personal top 5, my latest creation and a live set. Most of the tracks are created
-                with Ableton. Sure there is something that you will like!
-            </p>
-            <p>
-                Also make sure to <span className="mobile-hidden">try out the yellow hexagon menu on the left to </span>
-                visit my blogs about travelling or DIY projects.
-            </p>
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                {intro ? intro[0]?.content : 'No intro available'}
+            </ReactMarkdown>
+
             <Music/>
         </div>
         <Footer/>

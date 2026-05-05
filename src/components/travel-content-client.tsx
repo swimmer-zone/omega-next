@@ -1,26 +1,42 @@
 'use client';
 
-import { JSX } from 'react';
-import { MDXRemote } from 'next-mdx-remote-client/rsc';
+import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import remarkToc from 'remark-toc';
-import rehypeSlug from 'rehype-slug';
-import { Carousel } from './';
+import Carousel from './carousel';
 
-export default function TravelContentClient({ source }: { source: string }): JSX.Element {
+type Gallery = {
+    slug: string;
+    images: string[];
+};
+
+type Props = {
+    source: string;
+    galleries: Gallery[];
+};
+
+export default function TravelContentClient({ source, galleries }: Props) {
+    const parts = source.split(/(\[carousel\s+folder="[^"]+"\])/g);
+
     return (
-        <MDXRemote
-            source={source}
-            components={{ Carousel }}
-            options={{
-                mdxOptions: {
-                    remarkPlugins: [
-                        remarkGfm,
-                        [remarkToc, { heading: 'Table of contents' }],
-                    ],
-                    rehypePlugins: [rehypeSlug],
-                },
-            }}
-        />
+        <>
+            {parts.map((part, index) => {
+                const match = part.match(/\[carousel\s+folder="([^"]+)"\]/);
+
+                if (match) {
+                    const folder = match[1];
+                    const gallery = galleries.find((gallery) => gallery.slug === folder);
+
+                    return gallery ? (
+                        <Carousel key={index} images={gallery.images} />
+                    ) : null;
+                }
+
+                return (
+                    <ReactMarkdown key={index} remarkPlugins={[remarkGfm]}>
+                        {part}
+                    </ReactMarkdown>
+                );
+            })}
+        </>
     );
 }

@@ -1,23 +1,36 @@
-import fs from 'fs';
-import path from 'path';
+import { JSX } from 'react';
 import { notFound } from 'next/navigation';
 import { Footer, Menu, Hexagons, TravelContentClient } from '../../../components';
 import '../../_scss/_page.scss';
+import { API_URL } from '@/lib/api';
 
 type Props = {
     params: Promise<{ id: string }>;
 };
 
-export default async function TravelPage({ params }: Props) {
-    const { id } = await params;
+async function getTravel(id: string) {
+    const response = await fetch(`${API_URL}/travels/${id}`, {
+        next: { revalidate: 300 },
+    });
 
-    const filePath = path.join(process.cwd(), 'src', 'content', 'travels', id + '.mdx');
-
-    if (!fs.existsSync(filePath)) {
-        return notFound();
+    if (response.status === 404) {
+        return null;
     }
 
-    const source = fs.readFileSync(filePath, 'utf8');
+    if (!response.ok) {
+        throw new Error('Failed to fetch travel blog');
+    }
+
+    return response.json();
+}
+
+export default async function TravelPage({ params }: Props): Promise<JSX.Element> {
+    const { id } = await params;
+    const travel = await getTravel(id);
+
+    if (!travel) {
+        return notFound();
+    }
 
     return (
         <main>
@@ -25,7 +38,10 @@ export default async function TravelPage({ params }: Props) {
             <Hexagons />
 
             <div className="content-column">
-                <TravelContentClient source={source} />
+                <TravelContentClient
+                    source={travel.body}
+                    galleries={travel.galleries}
+                />
             </div>
 
             <Footer />

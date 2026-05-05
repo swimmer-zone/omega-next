@@ -1,26 +1,43 @@
 import { JSX } from 'react';
+import Image from 'next/image';
 import './social.scss';
-import { social } from '../json';
+import { API_URL, STORAGE_URL } from '@/lib/api';
 
 type Props = {
     location: string
 };
+type Social = {
+    url: string;
+    title: string;
+    icon: string;
+};
 
-export default function Social({ location }: Props): JSX.Element {
-    let pathKey = 0;
+async function getSocials(): Promise<Social[] | null> {
+    const response = await fetch(`${API_URL}/social`, {
+        next: { revalidate: 300 },
+    });
+
+    if (response.status === 404) {
+        return null;
+    }
+
+    if (!response.ok) {
+        throw new Error('Failed to fetch links to social media');
+    }
+
+    return response.json();
+}
+
+export default async function Social({ location }: Props): Promise<JSX.Element> {
+    const social = (await getSocials()) || [];
 
     return (
         <div className={'social ' + location}>
-            {social.header.map((icon, key) => {
+            {social.map((icon, key) => {
 
                 return (
                     <a id={'social_' + key} key={'social_' + key} href={icon.url} title={icon.title}>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" className={icon.class}>
-                            {icon.paths.map(path => {
-                                pathKey++;
-                                return (<path key={'path_' + pathKey} d={path} />)
-                            })}
-                        </svg>
+                        <Image className="svg" width={16} height={16} src={STORAGE_URL + '/' + icon.icon} alt={icon.title} />
                     </a>
                 );
             })}

@@ -27,6 +27,15 @@ const nextConfig: NextConfig = {
         },
     },
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'http',
+                hostname: 'omega-laravel.test',
+                pathname: '/storage/**',
+            },
+        ],
+    },
 };
 
 export default withMDX(nextConfig);

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Footer, Menu, Hexagons } from '../../../components';
 import '../../_scss/_page.scss';
 import '../../_scss/diy.scss';
-import { travelsMobile } from '../../../json';
+import { API_URL } from '@/lib/api';
 
 export const metadata: Metadata = {
     title: 'Ω - Travels',
@@ -13,14 +13,32 @@ export const metadata: Metadata = {
 
 type Travel = {
     title: string;
-    destination: string;
+    slug: string;
     images: number;
     posted: string;
     description: string;
 };
 
-export default function Travels(): JSX.Element {
-    const totalImages: number = travelsMobile.reduce(
+async function getTravels(): Promise<Travel[] | null> {
+    const response = await fetch(`${API_URL}/travels`, {
+        next: { revalidate: 300 },
+    });
+
+    if (response.status === 404) {
+        return null;
+    }
+
+    if (!response.ok) {
+        throw new Error('Failed to fetch travels');
+    }
+
+    return response.json();
+}
+
+export default async function Travels(): Promise<JSX.Element> {
+    const travels = (await getTravels()) || [];
+
+    const totalImages: number = travels.reduce(
         (total: number, travel: Travel) => total + travel.images,
         0
     );
@@ -37,9 +55,9 @@ export default function Travels(): JSX.Element {
                     images is currently {totalImages}.
                 </p>
                 <ul>
-                    {travelsMobile.map((travel: Travel, index: number) => (
+                    {travels.map((travel: Travel, index: number) => (
                         <li key={index}>
-                            <Link href={travel.destination} title={travel.posted}>
+                            <Link href={travel.slug} title={travel.posted}>
                                 {travel.title}
                             </Link>
                             {travel.description}

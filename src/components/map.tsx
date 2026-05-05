@@ -1,131 +1,47 @@
-'use client';
-
 import React, { JSX } from 'react';
-import Link from 'next/link';
-import {
-    Annotation,
-    ComposableMap,
-    Geographies,
-    Geography,
-    Graticule, Latitude, Longitude,
-    Marker,
-} from '@vnedyalk0v/react19-simple-maps';
-import Zoomable from './zoomable';
+import MapClient, { type City, type Country } from './map-client';
 import '../app/_scss/_page.scss';
 import './map.scss';
+import { API_URL } from "@/lib/api";
 
-import {
-    citiesAssorted,
-    citiesAurora,
-    citiesCapeVerde,
-    citiesGeorgia,
-    citiesIceland,
-    citiesScandinavia,
-    citiesThailand,
-    citiesUk,
-    citiesVietnam,
-    countries,
-    visitedCountries
-} from '../json';
+async function getCities(): Promise<City[] | null> {
+    const response = await fetch(`${API_URL}/cities`, {
+        next: { revalidate: 300 },
+    });
 
-// Direct copy from https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json
+    if (response.status === 404) {
+        return null;
+    }
 
-type City = {
-    name: string
-    coordinates: [number, number]
-    annotation: [number, number, number]
-    link?: string
-};
-type RotationAngles = [number, number, number] & { __brand: "rotationAngles" };
+    if (!response.ok) {
+        throw new Error('Failed to fetch cities');
+    }
 
-const citiesAll: City[] = [
-    ...citiesAssorted,
-    ...citiesAurora,
-    ...citiesCapeVerde,
-    ...citiesGeorgia,
-    ...citiesIceland,
-    ...citiesScandinavia,
-    ...citiesThailand,
-    ...citiesUk,
-    ...citiesVietnam,
-].map(city => ({
-    ...city,
-    coordinates: city.coordinates.slice(0, 2) as [number, number],
-    annotation: city.annotation.slice(0, 3) as [number, number, number],
-}));
+    return response.json();
+}
 
-export default function Map(): JSX.Element | null {
-    return (
-        <ComposableMap
-            projectionConfig={{
-                rotate: [-45, -35, 0] as RotationAngles,
-                scale: 350,
-            }}
-        >
-            <Zoomable>
-                <>
-                    <Graticule stroke="#111111" />
+async function getCountries(): Promise<Country[] | null> {
+    const response = await fetch(`${API_URL}/countries`, {
+        next: { revalidate: 300 },
+    });
 
-                    <Geographies geography={countries}>
-                        {({ geographies }: { geographies: { rsmKey: string; properties: { name: string } }[] }) => (
-                            <>
-                                {geographies.map((geo: { rsmKey: string; properties: { name: string } }) => {
-                                    const highlighted = visitedCountries.includes(geo.properties.name)
+    if (response.status === 404) {
+        return null;
+    }
 
-                                    return (
-                                        <Geography
-                                            geography={geo}
-                                            key={geo.properties.name}
-                                            style={{
-                                                default: {
-                                                    fill: highlighted ? "#6c6eecaa" : "#222222aa",
-                                                    stroke: "#000000",
-                                                },
-                                                hover: {
-                                                    fill: "#6c6eec44",
-                                                    stroke: "#000000",
-                                                },
-                                                pressed: {
-                                                    fill: "#6c6eec88",
-                                                    stroke: "#000000",
-                                                },
-                                            }}/>
-                                    )
-                                })}
-                            </>
-                        )}
-                    </Geographies>
+    if (!response.ok) {
+        throw new Error('Failed to fetch countries');
+    }
 
-                    {citiesAll.map(({ name, coordinates, annotation, link }) => {
-                        const Label = (
-                            <text fill={ link ? "#dddddd" : "#555555" } fontSize={10} style={{ cursor: link ? "pointer" : "default" }}>
-                                {name}
-                            </text>
-                        );
+    return response.json();
+}
 
-                        return(
-                            <React.Fragment key={name}>
-                                <Marker coordinates={coordinates as [Longitude, Latitude]} key={name + "Marker"}>
-                                    {<circle r={2} fill="#ffc917" />}
-                                </Marker>
+export default async function Map(): Promise<JSX.Element> {
+    const visitedCities = (await getCities()) || [];
+    const visitedCountries = (await getCountries()) || [];
 
-                                <Annotation
-                                    subject={coordinates as [Longitude, Latitude]}
-                                    dx={annotation[0]}
-                                    dy={annotation[1]}
-                                    connectorProps={{
-                                        stroke: "#888888",
-                                        strokeWidth: 1,
-                                        strokeLinecap: "round",
-                                    }}
-                                >
-                                    {link ? <Link href={'travels/' + link} passHref>{Label}</Link>: Label}
-                                </Annotation>
-                            </React.Fragment>
-                        );
-                    })}
-                </>
-            </Zoomable>
-        </ComposableMap>
-    );
+    return (<MapClient
+        visitedCities={visitedCities}
+        visitedCountries={visitedCountries}
+    />)
 }

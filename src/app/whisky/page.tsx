@@ -7,7 +7,7 @@ import { Footer, Hexagons, Menu, Rating } from '../../components';
 import '../_scss/_page.scss';
 import '../_scss/whisky.scss';
 
-import { API_URL } from "@/lib/api";
+import { API_URL } from '@/lib/api';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
