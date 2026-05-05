@@ -80,55 +80,55 @@ export default function Resume(): JSX.Element {
             </ul>
             <h2>Skills</h2>
             <div className="tags">
-                <span className="tag"><img src="/vector/alpine-js.svg" title="AlpineJS"/></span>
-                <span className="tag"><img src="/vector/apache.svg" title="Apache"/></span>
-                <span className="tag"><img src="/vector/composer.svg" title="Composer"/></span>
-                <span className="tag"><img src="/vector/css3.svg" title="CSS 3"/></span>
-                <span className="tag"><img src="/vector/docker.svg" title="Docker, inlcuding Lando"/></span>
-                <span className="tag"><img src="/vector/git.svg" title="Git, which also includes GitHub, GitLab, Bitbucket and CI/CD"/></span>
-                <span className="tag"><img src="/vector/jetbrains.svg" title="JetBrains PHPStorm, WebStorm etc."/></span>
-                <span className="tag"><img src="/vector/jira.svg" title="Jira and other Atlassian tools, like Confluence"/></span>
-                <span className="tag"><img src="/vector/jquery.svg" title="jQuery"/></span>
-                <span className="tag"><img src="/vector/laravel.svg" title="Laravel"/></span>
-                <span className="tag"><img src="/vector/linux.svg" title="Linux"/></span>
-                <span className="tag"><img src="/vector/magento.svg" title="Magento / Adobe Commerce"/></span>
-                <span className="tag"><img src="/vector/mysql.svg" title="MySQL"/></span>
-                <span className="tag"><img src="/vector/next-js.svg" title="Next JS"/></span>
-                <span className="tag"><img src="/vector/nginx.svg" title="Nginx"/></span>
-                <span className="tag"><img src="/vector/node-js.svg" title="Node JS & NPM"/></span>
-                <span className="tag"><img src="/vector/photoshop.svg" title="Photoshop"/></span>
-                <span className="tag"><img src="/vector/php.svg" title="PHP"/></span>
-                <span className="tag"><img src="/vector/postgressql.svg" title="PostgreSQL"/></span>
-                <span className="tag"><img src="/vector/react.svg" title="React"/></span>
-                <span className="tag"><img src="/vector/slack.svg" title="Slack"/></span>
-                <span className="tag"><img src="/vector/ssh.svg" title="SSH"/></span>
-                <span className="tag"><img src="/vector/symfony.svg" title="Symfony"/></span>
-                <span className="tag"><img src="/vector/arduino.svg" title="Arduino"/></span>
-                <span className="tag"><img src="/vector/c-plus-plus.svg" title="C++"/></span>
-                <span className="tag"><img src="/vector/c-sharp.svg" title="C#"/></span>
-                <span className="tag"><img src="/vector/codeigniter.svg" title="Codeigniter"/></span>
-                <span className="tag"><img src="/vector/cypress.svg" title="Cypress"/></span>
-                <span className="tag"><img src="/vector/debian.svg" title="Debian"/></span>
-                <span className="tag"><img src="/vector/filezilla.svg" title="Filezilla"/></span>
-                <span className="tag"><img src="/vector/html5.svg" title="HTML 5"/></span>
-                <span className="tag"><img src="/vector/javascript.svg" title="JavaScript"/></span>
-                <span className="tag"><img src="/vector/json.svg" title="JSON"/></span>
-                <span className="tag"><img src="/vector/markdown.svg" title="Markdown"/></span>
-                <span className="tag"><img src="/vector/ms-dos.svg" title="MS DOS"/></span>
-                <span className="tag"><img src="/vector/nano.svg" title="Nano"/></span>
-                <span className="tag"><img src="/vector/oh-my-zsh.svg" title="Oh My zsh"/></span>
-                <span className="tag"><img src="/vector/powershell.svg" title="PowerShell"/></span>
-                <span className="tag"><img src="/vector/putty.svg" title="Putty"/></span>
-                <span className="tag"><img src="/vector/python.svg" title="Python"/></span>
-                <span className="tag"><img src="/vector/raspberry-pi.svg" title="Raspberry PI"/></span>
-                <span className="tag"><img src="/vector/sass.svg" title="SASS"/></span>
-                <span className="tag"><img src="/vector/stack-overflow.svg" title="Stack Overflow"/></span>
-                <span className="tag"><img src="/vector/swagger.svg" title="Swagger"/></span>
-                <span className="tag"><img src="/vector/tailwind-css.svg" title="Tailwind"/></span>
-                <span className="tag"><img src="/vector/ubuntu.svg" title="Ubuntu"/></span>
-                <span className="tag"><img src="/vector/vs-code.svg" title="VS Code"/></span>
-                <span className="tag"><img src="/vector/xml.svg" title="XML"/></span>
-                <span className="tag"><img src="/vector/yaml.svg" title="YAML"/></span>
+                <span className="tag"><img src="/images/logos/alpine-js.svg" title="AlpineJS"/></span>
+                <span className="tag"><img src="/images/logos/apache.svg" title="Apache"/></span>
+                <span className="tag"><img src="/images/logos/composer.svg" title="Composer"/></span>
+                <span className="tag"><img src="/images/logos/css3.svg" title="CSS 3"/></span>
+                <span className="tag"><img src="/images/logos/docker.svg" title="Docker, inlcuding Lando"/></span>
+                <span className="tag"><img src="/images/logos/git.svg" title="Git, which also includes GitHub, GitLab, Bitbucket and CI/CD"/></span>
+                <span className="tag"><img src="/images/logos/jetbrains.svg" title="JetBrains PHPStorm, WebStorm etc."/></span>
+                <span className="tag"><img src="/images/logos/jira.svg" title="Jira and other Atlassian tools, like Confluence"/></span>
+                <span className="tag"><img src="/images/logos/jquery.svg" title="jQuery"/></span>
+                <span className="tag"><img src="/images/logos/laravel.svg" title="Laravel"/></span>
+                <span className="tag"><img src="/images/logos/linux.svg" title="Linux"/></span>
+                <span className="tag"><img src="/images/logos/magento.svg" title="Magento / Adobe Commerce"/></span>
+                <span className="tag"><img src="/images/logos/mysql.svg" title="MySQL"/></span>
+                <span className="tag"><img src="/images/logos/next-js.svg" title="Next JS"/></span>
+                <span className="tag"><img src="/images/logos/nginx.svg" title="Nginx"/></span>
+                <span className="tag"><img src="/images/logos/node-js.svg" title="Node JS & NPM"/></span>
+                <span className="tag"><img src="/images/logos/photoshop.svg" title="Photoshop"/></span>
+                <span className="tag"><img src="/images/logos/php.svg" title="PHP"/></span>
+                <span className="tag"><img src="/images/logos/postgressql.svg" title="PostgreSQL"/></span>
+                <span className="tag"><img src="/images/logos/react.svg" title="React"/></span>
+                <span className="tag"><img src="/images/logos/slack.svg" title="Slack"/></span>
+                <span className="tag"><img src="/images/logos/ssh.svg" title="SSH"/></span>
+                <span className="tag"><img src="/images/logos/symfony.svg" title="Symfony"/></span>
+                <span className="tag"><img src="/images/logos/arduino.svg" title="Arduino"/></span>
+                <span className="tag"><img src="/images/logos/c-plus-plus.svg" title="C++"/></span>
+                <span className="tag"><img src="/images/logos/c-sharp.svg" title="C#"/></span>
+                <span className="tag"><img src="/images/logos/codeigniter.svg" title="Codeigniter"/></span>
+                <span className="tag"><img src="/images/logos/cypress.svg" title="Cypress"/></span>
+                <span className="tag"><img src="/images/logos/debian.svg" title="Debian"/></span>
+                <span className="tag"><img src="/images/logos/filezilla.svg" title="Filezilla"/></span>
+                <span className="tag"><img src="/images/logos/html5.svg" title="HTML 5"/></span>
+                <span className="tag"><img src="/images/logos/javascript.svg" title="JavaScript"/></span>
+                <span className="tag"><img src="/images/logos/json.svg" title="JSON"/></span>
+                <span className="tag"><img src="/images/logos/markdown.svg" title="Markdown"/></span>
+                <span className="tag"><img src="/images/logos/ms-dos.svg" title="MS DOS"/></span>
+                <span className="tag"><img src="/images/logos/nano.svg" title="Nano"/></span>
+                <span className="tag"><img src="/images/logos/oh-my-zsh.svg" title="Oh My zsh"/></span>
+                <span className="tag"><img src="/images/logos/powershell.svg" title="PowerShell"/></span>
+                <span className="tag"><img src="/images/logos/putty.svg" title="Putty"/></span>
+                <span className="tag"><img src="/images/logos/python.svg" title="Python"/></span>
+                <span className="tag"><img src="/images/logos/raspberry-pi.svg" title="Raspberry PI"/></span>
+                <span className="tag"><img src="/images/logos/sass.svg" title="SASS"/></span>
+                <span className="tag"><img src="/images/logos/stack-overflow.svg" title="Stack Overflow"/></span>
+                <span className="tag"><img src="/images/logos/swagger.svg" title="Swagger"/></span>
+                <span className="tag"><img src="/images/logos/tailwind-css.svg" title="Tailwind"/></span>
+                <span className="tag"><img src="/images/logos/ubuntu.svg" title="Ubuntu"/></span>
+                <span className="tag"><img src="/images/logos/vs-code.svg" title="VS Code"/></span>
+                <span className="tag"><img src="/images/logos/xml.svg" title="XML"/></span>
+                <span className="tag"><img src="/images/logos/yaml.svg" title="YAML"/></span>
             </div>
             <h2>Languages</h2>
             <ul>

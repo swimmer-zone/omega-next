@@ -7,32 +7,74 @@ import { Footer, Hexagons, Menu, Rating } from '../../components';
 import '../_scss/_page.scss';
 import '../_scss/whisky.scss';
 
-import { whiskyTasting } from '../../json';
+import { API_URL } from "@/lib/api";
+import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
     title: 'Ω - Whisky',
     description: 'My whisky tastings.',
 };
 
-export default function Whisky(): JSX.Element {
+type Tasting = {
+    id: number;
+    brand: string;
+    name: string;
+    country: string;
+    region: string | null;
+    type: string;
+    cask_type: string;
+    age: string | null;
+    glance: string;
+    color: {
+        name: string;
+        color: string;
+    } | null;
+    strength: string;
+    location: string;
+    date_of_tasting: string;
+    rating: number;
+    notes: string | null;
+    flavours: string[];
+    finish: string;
+};
+
+async function getTastings(): Promise<Tasting[] | null> {
+    const response = await fetch(`${API_URL}/whisky`, {
+        next: { revalidate: 300 },
+    });
+
+    if (response.status === 404) {
+        return null;
+    }
+
+    if (!response.ok) {
+        throw new Error('Failed to fetch tastings');
+    }
+
+    const json = await response.json();
+
+    return json.data; // 👈 THIS is the fix
+}
+
+export default async function Whisky(): Promise<JSX.Element> {
+    const tastings = await getTastings();
+
+    if (!tastings) {
+        return notFound();
+    }
+
     return (<main>
         <Menu active="whisky"/>
         <Hexagons />
 
         <div className="content-column">
             <h1>Whisky</h1>
-            <h2>Table of contents</h2>
-            <ul>
-                <li><a href="#introduction">Introduction</a></li>
-                <li><a href="#whiskys">Whisky&apos;s</a></li>
-            </ul>
-            <h2 id="introduction">Introduction</h2>
             <p key="intro">
                 My love for whisky began quite some time ago when I went to the liquor store and let them advise me a
                 whisky that was not too peaty and I came home with the Tomatin Legacy, which was more of the spicy and
                 fruity kind (vanilla and citrus). It really took off when I went
                 to <Link href="/travels/uk#edinburgh">Edinburgh</Link> and visited the whisky museum. From that moment
-                on I have tried {whiskyTasting.length} whisky&apos;s, starting with Scotch, but after visiting the
+                on I have tried {tastings.length} whisky&apos;s, starting with Scotch, but after visiting the
                 Teeling distillery and the whiskey museum in <Link href="/travels/uk#dublin">Dublin</Link> my interest
                 in Irish whiskey grew as well.
             </p>
@@ -50,9 +92,9 @@ export default function Whisky(): JSX.Element {
                 </li>
             </ul>
 
-            <h2 id="whiskys">Whisky&apos;s</h2>
+            <h2 id="whiskys">My Tastings</h2>
 
-            {whiskyTasting.map(tasting => {
+            {tastings.map(tasting => {
                 return (<React.Fragment key={tasting.id + '_fragment'}>
                     <div className="whisky-wrapper" key={tasting.id + '_wrapper'}>
                         <div className="whisky-header" key={tasting.id + '_header'}>
@@ -83,7 +125,10 @@ export default function Whisky(): JSX.Element {
                             <div className="spec-value">{tasting.glance}</div>
 
                             <div className="spec-label">Color:</div>
-                            <div className="spec-value">{tasting.color}</div>
+                            <div className="spec-value">
+                                <div className="color-swatch" style={{backgroundColor: tasting.color?.color}}/>
+                                {tasting.color?.name}
+                            </div>
 
                             <div className="spec-label">Strength:</div>
                             <div className="spec-value">{tasting.strength}% abv</div>
@@ -95,7 +140,7 @@ export default function Whisky(): JSX.Element {
                             <div className="spec-value">{tasting.date_of_tasting}</div>
 
                             <div className="spec-label">Flavour:</div>
-                            <div className="spec-value">{tasting.flavour}</div>
+                            <div className="spec-value">{tasting.flavours}</div>
 
                             <div className="spec-label">Finish:</div>
                             <div className="spec-value">{tasting.finish}</div>
@@ -106,7 +151,7 @@ export default function Whisky(): JSX.Element {
                             </>}
                         </div>
                         {tasting.region && <div className="whisky-map">
-                            <Image src={"/vector/whisky/" + tasting.region.toLowerCase() + ".svg"} alt="" height={200} width={200}/>
+                            <Image src={"/images/whisky/" + tasting.region.toLowerCase() + ".svg"} alt="" height={200} width={200}/>
                         </div>}
                         {!tasting.region && <div className="whisky-map"></div>}
                     </div>
