@@ -1,16 +1,16 @@
 import { JSX } from 'react';
 import { notFound } from 'next/navigation';
-import { BlogClient, Diving, Footer, Hexagons, Menu, Water } from '@/components';
+import { BlogClient, Footer, Hexagons, Menu } from '@/components';
 import '../../_scss/_page.scss';
 import { API_URL } from '@/lib/api';
-import type { Blog } from '@/types/all';
+import type { Blog, Gallery } from '@/types/all';
 
 type Props = {
     params: Promise<{ id: string }>;
 };
 
-async function getTravel(id: string): Promise<Blog | null> {
-    const response = await fetch(`${API_URL}/travels/${id}`, {
+async function getTutorial(id: string): Promise<Blog | null> {
+    const response = await fetch(`${API_URL}/tutorials/${id}`, {
         next: { revalidate: 300 },
     });
 
@@ -19,17 +19,17 @@ async function getTravel(id: string): Promise<Blog | null> {
     }
 
     if (!response.ok) {
-        throw new Error('Failed to fetch travel blog');
+        throw new Error('Failed to fetch tutorial');
     }
 
     return response.json();
 }
 
-export default async function TravelPage({ params }: Props): Promise<JSX.Element> {
+export default async function BlogPage({ params }: Props): Promise<JSX.Element> {
     const { id } = await params;
-    const travel = await getTravel(id);
+    const blog = await getTutorial(id);
 
-    if (!travel) {
+    if (!blog) {
         return notFound();
     }
 
@@ -39,20 +39,19 @@ export default async function TravelPage({ params }: Props): Promise<JSX.Element
             <Hexagons />
 
             <div className="content-column">
-                <h1>{travel.title}</h1>
+                <h1>{blog.title}</h1>
                 <em>Published at: {new Intl.DateTimeFormat('en-GB', {
                     day: 'numeric',
                     month: 'long',
                     year: 'numeric',
-                }).format(new Date(travel.published_at))}
+                }).format(new Date(blog.published_at))}
                 </em>
                 <BlogClient
-                    source={travel.body}
-                    galleries={travel.galleries}
+                    source={blog.body}
+                    galleries={blog.galleries as Gallery[]}
                 />
             </div>
-            {travel.title === 'Thailand' && <Diving />}
-            {travel.title === 'Thailand' && <Water />}
+
             <Footer />
         </main>
     );

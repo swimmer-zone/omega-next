@@ -2,7 +2,8 @@ import React, { JSX } from 'react';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Footer, Hexagons, Menu, Rating } from '../../components';
+import { Footer, Hexagons, Menu, Rating } from '@/components';
+import type { Tasting } from '@/types/all';
 
 import '../_scss/_page.scss';
 import '../_scss/whisky.scss';
@@ -13,29 +14,6 @@ import { notFound } from 'next/navigation';
 export const metadata: Metadata = {
     title: 'Ω - Whisky',
     description: 'My whisky tastings.',
-};
-
-type Tasting = {
-    id: number;
-    brand: string;
-    name: string;
-    country: string;
-    region: string | null;
-    type: string;
-    cask_type: string;
-    age: string | null;
-    glance: string;
-    color: {
-        name: string;
-        color: string;
-    } | null;
-    strength: string;
-    location: string;
-    date_of_tasting: string;
-    rating: number;
-    notes: string | null;
-    flavours: string[];
-    finish: string;
 };
 
 async function getTastings(): Promise<Tasting[] | null> {
@@ -53,7 +31,7 @@ async function getTastings(): Promise<Tasting[] | null> {
 
     const json = await response.json();
 
-    return json.data; // 👈 THIS is the fix
+    return json.data;
 }
 
 export default async function Whisky(): Promise<JSX.Element> {

@@ -1,25 +1,17 @@
-import React,{ JSX } from 'react';
+import React, { JSX } from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Footer, Menu, Hexagons } from '../../../components';
-import '../../_scss/_page.scss';
-import '../../_scss/diy.scss';
+import { Footer, Menu, Hexagons } from '@/components';
+import type { Blog } from '@/types/all';
 import { API_URL } from '@/lib/api';
+import '../../_scss/_page.scss';
 
 export const metadata: Metadata = {
     title: 'Ω - Travels',
     description: 'A list of all my travels in descending order.',
 };
 
-type Travel = {
-    title: string;
-    slug: string;
-    images: number;
-    posted: string;
-    description: string;
-};
-
-async function getTravels(): Promise<Travel[] | null> {
+async function getTravels(): Promise<Blog[] | null> {
     const response = await fetch(`${API_URL}/travels`, {
         next: { revalidate: 300 },
     });
@@ -39,7 +31,7 @@ export default async function Travels(): Promise<JSX.Element> {
     const travels = (await getTravels()) || [];
 
     const totalImages: number = travels.reduce(
-        (total: number, travel: Travel) => total + travel.images,
+        (total: number, travel: Blog) => total + (travel.image_count || 0),
         0
     );
 
@@ -55,7 +47,7 @@ export default async function Travels(): Promise<JSX.Element> {
                     images is currently {totalImages}.
                 </p>
                 <ul>
-                    {travels.map((travel: Travel, index: number) => (
+                    {travels.map((travel: Blog, index: number) => (
                         <li key={index}>
                             <Link href={travel.slug} title={travel.posted}>
                                 {travel.title}

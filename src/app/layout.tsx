@@ -2,7 +2,7 @@ import React, { JSX } from 'react';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata, Viewport } from 'next';
-import { EasterEgg } from '../components';
+import { EasterEgg } from '@/components';
 
 export const metadata: Metadata = {
     title: 'Ω',

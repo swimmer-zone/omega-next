@@ -2,8 +2,8 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import './music.scss';
-import type { Section } from './music';
-import { STORAGE_URL } from '@/lib/api';
+import { API_URL, STORAGE_URL } from '@/lib/api';
+import type { Section, Track } from '@/types/all';
 
 function formatTime(seconds: number | null): string {
     if (seconds == null || Number.isNaN(seconds)) return '';
@@ -45,14 +45,6 @@ export default function MusicClient({ sections }: Props) {
 
         return () => audio.removeEventListener('timeupdate', updateTime);
     }, []);
-
-    useEffect(() => {
-        const audio = player.current;
-        if (!audio || !currentTrack) return;
-
-        audio.src = currentTrack;
-        audio.play().catch(() => {});
-    }, [currentTrack]);
 
     useEffect(() => {
         if (!currentTrack || currentSectionId === null || currentTrackIndex === null) {
@@ -116,10 +108,28 @@ export default function MusicClient({ sections }: Props) {
         return () => window.removeEventListener('resize', handleResize);
     }, [openSectionId]);
 
-    const handleTrackClick = (sectionId: number, trackIndex: number, fileUrl: string) => {
-        setCurrentTrack(fileUrl);
+    const handleTrackClick = async (sectionId: number, trackIndex: number, track: Track) => {
+        const audio = player.current;
+        if (!audio) return;
+
+        setCurrentTrack(STORAGE_URL + '/' + track.file);
         setCurrentSectionId(sectionId);
         setCurrentTrackIndex(trackIndex);
+
+        if (audio.src !== STORAGE_URL + '/' + track.file) {
+            audio.src = STORAGE_URL + '/' + track.file;
+            audio.load();
+        }
+
+        try {
+            await audio.play();
+        } catch (error) {
+            console.error('Could not play track:', error);
+        }
+
+        fetch(`${API_URL}/tracks/${track.id}/play`, {
+            method: 'POST',
+        }).catch(console.error);
     };
 
     const toggleAccordion = (sectionId: number) => {
@@ -127,6 +137,33 @@ export default function MusicClient({ sections }: Props) {
     };
 
     const timeLeft = countDown(duration, currentTime);
+
+    const handleEnded = () => {
+        const currentSection = sections.find(
+            section => section.id === currentSectionId
+        );
+
+        if (!currentSection) return;
+
+        const nextIndex = (currentTrackIndex ?? -1) + 1;
+        const nextTrack = currentSection.tracks[nextIndex];
+
+        const audio = player.current;
+
+        if (nextTrack && audio) {
+            setCurrentTrack(STORAGE_URL + '/' + nextTrack.file);
+            setCurrentTrackIndex(nextIndex);
+
+            audio.src = STORAGE_URL + '/' + nextTrack.file;
+            audio.load();
+
+            audio.play().catch(console.error);
+
+            fetch(`${API_URL}/tracks/${nextTrack.id}/play`, {
+                method: 'POST',
+            }).catch(console.error);
+        }
+    };
 
     return (
         <section className="music music-home" id="music">
@@ -184,7 +221,7 @@ export default function MusicClient({ sections }: Props) {
                                                 <span className="a">
                                                     <button
                                                         type="button"
-                                                        onClick={() => handleTrackClick(section.id, index, STORAGE_URL + '/' + track.file)}
+                                                        onClick={() => handleTrackClick(section.id, index, track)}
                                                         data-permalink={track.slug}
                                                         className={isPlaying ? 'track-button playing' : 'track-button'}
                                                     >
@@ -211,7 +248,7 @@ export default function MusicClient({ sections }: Props) {
                 );
             })}
 
-            <audio ref={player} />
+            <audio ref={player} onEnded={handleEnded} />
         </section>
     );
 }

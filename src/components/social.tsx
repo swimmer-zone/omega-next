@@ -2,14 +2,10 @@ import { JSX } from 'react';
 import Image from 'next/image';
 import './social.scss';
 import { API_URL, STORAGE_URL } from '@/lib/api';
+import type { Social } from '@/types/all';
 
 type Props = {
     location: string
-};
-type Social = {
-    url: string;
-    title: string;
-    icon: string;
 };
 
 async function getSocials(): Promise<Social[] | null> {

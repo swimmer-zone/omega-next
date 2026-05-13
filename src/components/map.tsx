@@ -1,8 +1,9 @@
 import React, { JSX } from 'react';
-import MapClient, { type City, type Country } from './map-client';
+import MapClientOnly from './map-client-only';
 import '../app/_scss/_page.scss';
 import './map.scss';
-import { API_URL } from "@/lib/api";
+import { API_URL } from '@/lib/api';
+import type { City, Country } from '@/types/all';
 
 async function getCities(): Promise<City[] | null> {
     const response = await fetch(`${API_URL}/cities`, {
@@ -40,8 +41,10 @@ export default async function Map(): Promise<JSX.Element> {
     const visitedCities = (await getCities()) || [];
     const visitedCountries = (await getCountries()) || [];
 
-    return (<MapClient
-        visitedCities={visitedCities}
-        visitedCountries={visitedCountries}
-    />)
+    return (
+        <MapClientOnly
+            visitedCities={visitedCities}
+            visitedCountries={visitedCountries}
+        />
+    );
 }

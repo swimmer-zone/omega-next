@@ -1,20 +1,17 @@
 import { JSX } from 'react';
 import { Metadata } from 'next';
-import { Footer, Hexagons, Menu, Music } from '../components';
+import { Footer, Hexagons, Menu, Music } from '@/components';
 import './_scss/_page.scss';
 import { API_URL } from '@/lib/api';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import type { Intro } from '@/types/all';
 
 export const metadata: Metadata = {
     title: 'Ω - Home',
     description: 'Ω - My music',
     keywords: 'omega,water,phlegmatic,music,techno,ambient,minimal,lounge,blog,weblog,template,html,css,menu,responsive,travel,travels,travelblog,tutorials,diy,yupsie',
     authors: [{ name: 'Omega' }],
-};
-
-type Intro = {
-    content: string;
 };
 
 async function getIntro(): Promise<Intro[] | null> {

@@ -1,5 +1,7 @@
-import Code from './code';
+import BlogClient from './blog-client';
 import Carousel from './carousel';
+import Dialog from './dialog';
+import Diving from './diving';
 import EasterEgg from './easter-egg';
 import Footer from './footer';
 import Hexagons from './hexagons';
@@ -12,11 +14,13 @@ import MusicClient from './music-client';
 import Portrait from './portrait';
 import Rating from './rating';
 import Social from './social';
-import TravelContentClient from './travel-content-client';
+import Water from './water';
 
 export {
-    Code,
+    BlogClient,
     Carousel,
+    Dialog,
+    Diving,
     EasterEgg,
     Footer,
     Hexagons,
@@ -29,5 +33,5 @@ export {
     Portrait,
     Rating,
     Social,
-    TravelContentClient,
+    Water,
 }

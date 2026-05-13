@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { Footer, Map, Menu } from '../../components';
+import { Dialog, Footer, Map, Menu } from '@/components';
 
 export const metadata: Metadata = {
     title: 'Ω - Travel Map',
@@ -12,6 +12,7 @@ export default async function Travels() {
             <Menu active="travels" />
             <Map />
             <Footer />
+            <Dialog />
         </main>
     );
 }

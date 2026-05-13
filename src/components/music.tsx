@@ -1,21 +1,6 @@
 import { MusicClient } from '../components';
 import { API_URL } from '@/lib/api';
-
-export type Track = {
-    id: number;
-    title: string;
-    slug: string;
-    file: string;
-    duration: number;
-    remark?: string | null;
-};
-
-export type Section = {
-    id: number;
-    title: string;
-    intro?: string | null;
-    tracks: Track[];
-};
+import type { Section } from '@/types/all';
 
 async function getMusic(): Promise<Section[]> {
     const response = await fetch(`${API_URL}/music`, {

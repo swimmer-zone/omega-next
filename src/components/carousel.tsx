@@ -12,11 +12,12 @@ import 'swiper/css/pagination';
 import './carousel.scss';
 
 type Props = {
-	images: string[];
+	images?: string[];
 };
 
 export default function Carousel({ images }: Props) {
-	if (!images.length) return null;
+	const list = Array.isArray(images) ? images : [];
+	if (list.length === 0) return null;
 
 	return (
 		<Swiper
@@ -27,10 +28,11 @@ export default function Carousel({ images }: Props) {
 			autoplay={{ delay: 2500, disableOnInteraction: true }}
 			pagination={{ type: 'fraction' }}
 			navigation
+			speed={8000}
 			modules={[Autoplay, EffectFade, Pagination, Navigation]}
 			className="mySwiper"
 		>
-			{images.map((src, index) => (
+			{list.map((src, index) => (
 				<SwiperSlide key={src}>
 					<Image
 						src={src}
