@@ -28,3 +28,20 @@
         }
     }
 }
+.toc {
+    margin: 2rem 0;
+    padding: 1rem;
+    border: 1px solid $darkest;
+    border-radius: 8px;
+
+    ul {
+        margin: 0.5rem 0 0;
+        padding-left: 1.25rem;
+    }
+    .toc-depth-3 {
+        margin-left: 1rem;
+    }
+    .toc-depth-4 {
+        margin-left: 2rem;
+    }
+}

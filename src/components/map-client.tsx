@@ -12,6 +12,7 @@ import {
     Longitude,
     Marker,
 } from '@vnedyalk0v/react19-simple-maps';
+import type { City, Country, RotationAngles } from '@/types/all';
 
 import Zoomable from './zoomable';
 import countries from '../json/countries.json';
@@ -19,31 +20,17 @@ import countries from '../json/countries.json';
 import '../app/_scss/_page.scss';
 import './map.scss';
 
-export type City = {
-    name: string;
-    latitude: number;
-    longitude: number;
-    annotation: [number, number, number];
-    link?: string | null;
-};
-
-export type Country = {
-    name: string;
-};
-
 type Props = {
     visitedCities: City[];
     visitedCountries: Country[];
-};
-
-type RotationAngles = [number, number, number] & {
-    __brand: 'rotationAngles';
 };
 
 export default function MapClient({ visitedCities, visitedCountries }: Props) {
     const visitedCountryNames = new Set(
         visitedCountries.map((country) => country.name)
     );
+
+    let i: number = 0;
 
     return (
         <ComposableMap
@@ -64,9 +51,11 @@ export default function MapClient({ visitedCities, visitedCountries }: Props) {
                                         geo.properties.name
                                     );
 
+                                    i++;
+
                                     return (
                                         <Geography
-                                            key={geo.rsmKey}
+                                            key={i}
                                             geography={geo}
                                             style={{
                                                 default: {

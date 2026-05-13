@@ -18,22 +18,23 @@
 		background: none;
 
 		.svg {
-			width: 30px;
-			height: 16px;
-			margin: 20px 10px;
+			width: 16px;
+			height: auto;
+			padding: 4px 4px 0 0;
+			margin: 12px 4px;
 			fill: $purple;
 		}
 		&::after,
 		&::before {
 			content: "";
 			position: absolute;
-			border: 2px solid $purple;
+			border: 3px solid $purple;
 			z-index: 1020;
 			top: 50%;
 			left: 50%;
-			margin: -30px 0 0 -30px;
-			width: 56px;
-			height: 56px;
+			margin: -20px 0 0 -36px;
+			width: 40px;
+			height: 40px;
 			border-radius: 50%;
 			opacity: 0;
 			pointer-events: none;
@@ -56,19 +57,19 @@
 }
 @keyframes anim-1 {
 	0% {
-		transform: perspective(600px) rotate3d(1, 1, 1, 0deg);
+		transform: perspective(60px) rotate3d(1, 1, 1, 0deg);
 	}
 	100% {
-		transform: perspective(600px) rotate3d(1, 1, 1, 360deg);
+		transform: perspective(60px) rotate3d(1, 1, 1, 360deg);
 	}
 }
 
 @keyframes anim-2 {
 	0% {
-		transform: perspective(600px) rotate3d(1, -1, 1, 0deg);
+		transform: perspective(60px) rotate3d(1, -1, 1, 0deg);
 	}
 	100% {
-		transform: perspective(600px) rotate3d(1, -1, 1, 360deg);
+		transform: perspective(60px) rotate3d(1, -1, 1, 360deg);
 	}
 }
 

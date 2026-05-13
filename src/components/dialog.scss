@@ -1,0 +1,30 @@
+@use '../app/_scss/variables' as *;
+
+dialog {
+    background-color: $purple;
+    color: $darkest;
+    width: 40vw;
+    outline: none;
+    box-shadow: 0 0 10px $purple;
+
+    button {
+        background-color: $darkest;
+        color: $purple;
+        border-radius: 4px;
+        padding: 0.5rem 1rem;
+        margin: 0.5rem;
+        text-decoration: none;
+        outline: none;
+        cursor: pointer;
+
+        &.secondary {
+            background-color: transparent;
+            color: $darkest;
+            border: 1px solid $darkest;
+        }
+        &:hover {
+            background-color: $yellow;
+            color: $darkest;
+        }
+    }
+}

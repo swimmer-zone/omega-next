@@ -2,7 +2,7 @@ import { JSX } from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 import Timeline from './timeline';
-import { Footer, Portrait, Menu, Hexagons } from '../../components';
+import { Footer, Portrait, Menu, Hexagons } from '@/components';
 import '../_scss/_page.scss';
 import '../_scss/resume.scss';
 

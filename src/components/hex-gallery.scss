@@ -1,4 +1,4 @@
-@use 'variables' as *;
+@use '../app/_scss/variables' as *;
 
 .hexagon-gallery {
     display: grid;
@@ -18,7 +18,7 @@
         width: 216px;
         height: 238px;
         clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    
+
         &:first-child {
             grid-row-start: 1;
             grid-column: 2 / span 2;
