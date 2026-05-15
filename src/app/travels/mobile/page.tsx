@@ -5,7 +5,6 @@ import { Footer, Menu, Hexagons } from '@/components';
 import type { Blog } from '@/types/all';
 import { API_URL } from '@/lib/api';
 import '../../_scss/_page.scss';
-import '../../_scss/diy.scss';
 
 export const metadata: Metadata = {
     title: 'Ω - Travels',
