@@ -2,8 +2,8 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import './music.scss';
-import { API_URL, STORAGE_URL } from '@/lib/api';
-import type { Section, Track } from '@/types/all';
+import { STORAGE_URL } from '@/lib/api';
+import type { Section } from '@/types/all';
 
 function formatTime(seconds: number | null): string {
     if (seconds == null || Number.isNaN(seconds)) return '';
