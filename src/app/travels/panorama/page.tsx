@@ -42,7 +42,7 @@ export default async function Travels(): Promise<JSX.Element> {
         <div className="content-column">
         <h1>Travels</h1>
         <p>
-            This is a list of all my travels in descending order. I'm still trying to cut back on the amount of images,
+            This is a list of all my travels in descending order. I&#39;m still trying to cut back on the amount of images,
             but that is quite a challenge. Especially Georgia, where we had a total of more than images. So for now
             those are still a work in progress. The total amount of images is currently {totalImages}.
         </p>

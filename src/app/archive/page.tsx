@@ -54,7 +54,7 @@ export default async function Archive(): Promise<JSX.Element> {
             <h1>Archive</h1>
             <h2>Tutorials</h2>
             <p>
-                I've written a couple of tutorials, mostly for documentation purposes. Currently this website is running
+                I&#39;ve written a couple of tutorials, mostly for documentation purposes. Currently this website is running
                 on Next.js, which is getting the data through an API. This way I can use Laravel with Filament to make
                 my website more dynamic. A tutorial on that might follow soon. Contact me on <a href="mailto:i@ome.gs">i@ome.gs</a>.
             </p>
@@ -101,7 +101,7 @@ export default async function Archive(): Promise<JSX.Element> {
             </ul>
             <h2>Old Blogs</h2>
             <p>
-                In the past I've written a couple of blogs, because this section is not really active anymore I decided
+                In the past I&#39;ve written a couple of blogs, because this section is not really active anymore I decided
                 to group them onto one page, so that I can focus more on <Link href="/travels">travel blogs</Link>.
             </p>
             <ul>

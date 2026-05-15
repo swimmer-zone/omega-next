@@ -61,7 +61,7 @@ export default function BlogClient({ source, galleries }: Props) {
     const headings = extractHeadings(source);
 
     const parts = source.split(
-        /(\[toc\]|\[(?:carousel|hex)\s+folder="[^"]+"[^\]]*\])/gi
+        /(\[toc]|\[(?:carousel|hex)\s+folder="[^"]+"[^\]]*])/gi
     );
 
     return (
@@ -88,7 +88,7 @@ export default function BlogClient({ source, galleries }: Props) {
                 }
 
                 const shortcode = part.match(
-                    /\[(carousel|hex)\s+folder="([^"]+)"[^\]]*\]/
+                    /\[(carousel|hex)\s+folder="([^"]+)"[^\]]*]/
                 );
 
                 if (shortcode) {
