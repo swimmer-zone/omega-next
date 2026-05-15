@@ -159,7 +159,7 @@ export default function MusicClient({ sections }: Props) {
                                     <span className="title-text">{section.title}</span>
 
                                     <span className="title-num">
-                                        {section.tracks.length} tracks
+                                        {(section.tracks?.length ?? 0)} tracks
                                     </span>
                                 </button>
                             </h2>
@@ -176,7 +176,7 @@ export default function MusicClient({ sections }: Props) {
                                 )}
 
                                 <ul>
-                                    {section.tracks.map((track, index) => {
+                                    {(section.tracks ?? []).map((track, index) => {
                                         const isPlaying = currentTrack === STORAGE_URL + '/' + track.file && currentTime != null;
 
                                         return (
