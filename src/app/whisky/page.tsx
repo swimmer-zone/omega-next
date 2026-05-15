@@ -31,7 +31,7 @@ async function getTastings(): Promise<Tasting[] | null> {
 
     const json = await response.json();
 
-    return json.data; // 👈 THIS is the fix
+    return json.data;
 }
 
 export default async function Whisky(): Promise<JSX.Element> {

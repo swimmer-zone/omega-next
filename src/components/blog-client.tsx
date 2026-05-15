@@ -15,7 +15,7 @@ import './blog-client.scss';
 
 type Props = {
     source: string;
-    galleries: Gallery[];
+    galleries?: Gallery[];
 };
 
 function slugify(text: string) {
@@ -94,7 +94,7 @@ export default function BlogClient({ source, galleries }: Props) {
                 if (shortcode) {
                     const type = shortcode[1];
                     const folder = shortcode[2];
-                    const gallery = galleries.find(
+                    const gallery = (galleries ?? []).find(
                         (gallery) => gallery.slug === folder
                     );
                     if (!gallery) {

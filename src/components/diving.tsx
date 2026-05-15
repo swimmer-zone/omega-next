@@ -1,4 +1,4 @@
-import React, {JSX} from 'react';
+import React, { JSX } from 'react';
 import Image from 'next/image';
 import './diving.scss';
 import diving from '../../public/images/diving.png';

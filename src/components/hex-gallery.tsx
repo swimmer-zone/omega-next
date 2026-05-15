@@ -5,15 +5,16 @@ import Image from 'next/image';
 import './hex-gallery.scss';
 
 type Props = {
-    images: string[];
+    images?: string[];
 };
 
 export default function HexGallery({ images }: Props) {
-    if (!images.length) return null;
+    const list = Array.isArray(images) ? images : [];
+    if (list.length === 0) return null;
 
     return (
         <section className="hexagon-gallery">
-            {images.map((src, index) => (
+            {list.map((src, index) => (
                 <Image
                     key={src}
                     src={src}
