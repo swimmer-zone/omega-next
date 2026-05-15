@@ -53,7 +53,7 @@ export default function MusicClient({ sections }: Props) {
         }
 
         const section = sections.find((item) => item.id === currentSectionId);
-        const track = section?.tracks[currentTrackIndex];
+        const track = section?.tracks?.[currentTrackIndex];
 
         if (track) {
             document.title = `Ω - ${track.title}`;
@@ -71,7 +71,7 @@ export default function MusicClient({ sections }: Props) {
             if (!section) return;
 
             const nextIndex = currentTrackIndex + 1;
-            const nextTrack = section.tracks[nextIndex];
+            const nextTrack = section.tracks?.[nextIndex];
 
             if (nextTrack) {
                 setCurrentTrack(STORAGE_URL + '/' + nextTrack.file);
@@ -146,7 +146,7 @@ export default function MusicClient({ sections }: Props) {
         if (!currentSection) return;
 
         const nextIndex = (currentTrackIndex ?? -1) + 1;
-        const nextTrack = currentSection.tracks[nextIndex];
+        const nextTrack = currentSection.tracks?.[nextIndex];
 
         const audio = player.current;
 
@@ -196,7 +196,7 @@ export default function MusicClient({ sections }: Props) {
                                     <span className="title-text">{section.title}</span>
 
                                     <span className="title-num">
-                                        {section.tracks.length} tracks
+                                        {(section.tracks?.length ?? 0)} tracks
                                     </span>
                                 </button>
                             </h2>
@@ -213,7 +213,7 @@ export default function MusicClient({ sections }: Props) {
                                 )}
 
                                 <ul>
-                                    {section.tracks.map((track, index) => {
+                                    {(section.tracks ?? []).map((track, index) => {
                                         const isPlaying = currentTrack === STORAGE_URL + '/' + track.file && currentTime != null;
 
                                         return (
