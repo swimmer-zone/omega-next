@@ -40,6 +40,17 @@ export default async function Whisky(): Promise<JSX.Element> {
     if (!tastings) {
         return notFound();
     }
+    if (tastings.length === 0) {
+        return (<main>
+            <Menu active="whisky"/>
+            <Hexagons />
+            <div className="content-column">
+                <h1>Whisky</h1>
+                <p>No tastings available</p>
+            </div>
+            <Footer/>
+        </main>);
+    }
 
     return (<main>
         <Menu active="whisky"/>
