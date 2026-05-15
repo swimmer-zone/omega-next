@@ -47,13 +47,21 @@ export default function MusicClient({ sections }: Props) {
     }, []);
 
     useEffect(() => {
+        const audio = player.current;
+        if (!audio || !currentTrack) return;
+
+        audio.src = currentTrack;
+        audio.play().catch(() => {});
+    }, [currentTrack]);
+
+    useEffect(() => {
         if (!currentTrack || currentSectionId === null || currentTrackIndex === null) {
             document.title = 'Ω';
             return;
         }
 
         const section = sections.find((item) => item.id === currentSectionId);
-        const track = section?.tracks?.[currentTrackIndex];
+        const track = section?.tracks[currentTrackIndex];
 
         if (track) {
             document.title = `Ω - ${track.title}`;
@@ -71,7 +79,7 @@ export default function MusicClient({ sections }: Props) {
             if (!section) return;
 
             const nextIndex = currentTrackIndex + 1;
-            const nextTrack = section.tracks?.[nextIndex];
+            const nextTrack = section.tracks[nextIndex];
 
             if (nextTrack) {
                 setCurrentTrack(STORAGE_URL + '/' + nextTrack.file);
@@ -108,28 +116,10 @@ export default function MusicClient({ sections }: Props) {
         return () => window.removeEventListener('resize', handleResize);
     }, [openSectionId]);
 
-    const handleTrackClick = async (sectionId: number, trackIndex: number, track: Track) => {
-        const audio = player.current;
-        if (!audio) return;
-
-        setCurrentTrack(STORAGE_URL + '/' + track.file);
+    const handleTrackClick = (sectionId: number, trackIndex: number, fileUrl: string) => {
+        setCurrentTrack(fileUrl);
         setCurrentSectionId(sectionId);
         setCurrentTrackIndex(trackIndex);
-
-        if (audio.src !== STORAGE_URL + '/' + track.file) {
-            audio.src = STORAGE_URL + '/' + track.file;
-            audio.load();
-        }
-
-        try {
-            await audio.play();
-        } catch (error) {
-            console.error('Could not play track:', error);
-        }
-
-        fetch(`${API_URL}/tracks/${track.id}/play`, {
-            method: 'POST',
-        }).catch(console.error);
     };
 
     const toggleAccordion = (sectionId: number) => {
@@ -137,33 +127,6 @@ export default function MusicClient({ sections }: Props) {
     };
 
     const timeLeft = countDown(duration, currentTime);
-
-    const handleEnded = () => {
-        const currentSection = sections.find(
-            section => section.id === currentSectionId
-        );
-
-        if (!currentSection) return;
-
-        const nextIndex = (currentTrackIndex ?? -1) + 1;
-        const nextTrack = currentSection.tracks?.[nextIndex];
-
-        const audio = player.current;
-
-        if (nextTrack && audio) {
-            setCurrentTrack(STORAGE_URL + '/' + nextTrack.file);
-            setCurrentTrackIndex(nextIndex);
-
-            audio.src = STORAGE_URL + '/' + nextTrack.file;
-            audio.load();
-
-            audio.play().catch(console.error);
-
-            fetch(`${API_URL}/tracks/${nextTrack.id}/play`, {
-                method: 'POST',
-            }).catch(console.error);
-        }
-    };
 
     return (
         <section className="music music-home" id="music">
@@ -196,7 +159,7 @@ export default function MusicClient({ sections }: Props) {
                                     <span className="title-text">{section.title}</span>
 
                                     <span className="title-num">
-                                        {(section.tracks?.length ?? 0)} tracks
+                                        {section.tracks.length} tracks
                                     </span>
                                 </button>
                             </h2>
@@ -213,7 +176,7 @@ export default function MusicClient({ sections }: Props) {
                                 )}
 
                                 <ul>
-                                    {(section.tracks ?? []).map((track, index) => {
+                                    {section.tracks.map((track, index) => {
                                         const isPlaying = currentTrack === STORAGE_URL + '/' + track.file && currentTime != null;
 
                                         return (
@@ -221,7 +184,7 @@ export default function MusicClient({ sections }: Props) {
                                                 <span className="a">
                                                     <button
                                                         type="button"
-                                                        onClick={() => handleTrackClick(section.id, index, track)}
+                                                        onClick={() => handleTrackClick(section.id, index, STORAGE_URL + '/' + track.file)}
                                                         data-permalink={track.slug}
                                                         className={isPlaying ? 'track-button playing' : 'track-button'}
                                                     >
@@ -248,7 +211,7 @@ export default function MusicClient({ sections }: Props) {
                 );
             })}
 
-            <audio ref={player} onEnded={handleEnded} />
+            <audio ref={player} />
         </section>
     );
 }
