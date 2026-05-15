@@ -7,11 +7,11 @@ import {
     Graticule,
     Marker,
     ZoomableGroup
-} from '../../Components/Maps';
+} from '../../components/Maps';
 import { whisky_distillery } from '../../json';
 import Head from 'next/head';
 import '../_scss/whisky-distilleries.scss';
-import { Footer, Menu } from '../../Components';
+import { Footer, Menu } from '../../components';
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
