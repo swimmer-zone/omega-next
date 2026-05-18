@@ -5,6 +5,8 @@ import './music.scss';
 import { STORAGE_URL } from '@/lib/api';
 import type { Section } from '@/types/all';
 
+const PLAY_COUNT_AFTER_SECONDS = 10;
+
 function formatTime(seconds: number | null): string {
     if (seconds == null || Number.isNaN(seconds)) return '';
 
@@ -24,13 +26,31 @@ type Props = {
 export default function MusicClient({ sections }: Props) {
     const player = useRef<HTMLAudioElement | null>(null);
     const contentRefs = useRef<Record<number, HTMLElement | null>>({});
+    const countedTracksRef = useRef<Set<number>>(new Set());
 
     const [currentTrack, setCurrentTrack] = useState<string | null>(null);
+    const [currentTrackId, setCurrentTrackId] = useState<number | null>(null);
     const [currentTime, setCurrentTime] = useState<number | null>(null);
     const [duration, setDuration] = useState<number | null>(null);
     const [currentSectionId, setCurrentSectionId] = useState<number | null>(null);
     const [currentTrackIndex, setCurrentTrackIndex] = useState<number | null>(null);
     const [openSectionId, setOpenSectionId] = useState<number | null>(sections[0]?.id ?? null);
+
+    const registerPlay = async (trackId: number) => {
+        if (countedTracksRef.current.has(trackId)) {
+            return;
+        }
+
+        countedTracksRef.current.add(trackId);
+
+        try {
+            await fetch(`${process.env.NEXT_PUBLIC_API_URL}/tracks/${trackId}/play`, {
+                method: 'POST',
+            });
+        } catch {
+            countedTracksRef.current.delete(trackId);
+        }
+    };
 
     useEffect(() => {
         const audio = player.current;
@@ -39,12 +59,19 @@ export default function MusicClient({ sections }: Props) {
         const updateTime = () => {
             setCurrentTime(audio.currentTime);
             setDuration(audio.duration);
+
+            if (
+                currentTrackId !== null &&
+                audio.currentTime >= PLAY_COUNT_AFTER_SECONDS
+            ) {
+                registerPlay(currentTrackId);
+            }
         };
 
         audio.addEventListener('timeupdate', updateTime);
 
         return () => audio.removeEventListener('timeupdate', updateTime);
-    }, []);
+    }, [currentTrackId]);
 
     useEffect(() => {
         const audio = player.current;
@@ -83,6 +110,7 @@ export default function MusicClient({ sections }: Props) {
 
             if (nextTrack) {
                 setCurrentTrack(STORAGE_URL + '/' + nextTrack.file);
+                setCurrentTrackId(nextTrack.id);
                 setCurrentTrackIndex(nextIndex);
             }
         };
@@ -116,10 +144,18 @@ export default function MusicClient({ sections }: Props) {
         return () => window.removeEventListener('resize', handleResize);
     }, [openSectionId]);
 
-    const handleTrackClick = (sectionId: number, trackIndex: number, fileUrl: string) => {
+    const handleTrackClick = (
+        sectionId: number,
+        trackIndex: number,
+        fileUrl: string,
+        trackId: number
+    ) => {
         setCurrentTrack(fileUrl);
+        setCurrentTrackId(trackId);
         setCurrentSectionId(sectionId);
         setCurrentTrackIndex(trackIndex);
+        setCurrentTime(null);
+        setDuration(null);
     };
 
     const toggleAccordion = (sectionId: number) => {
@@ -177,14 +213,22 @@ export default function MusicClient({ sections }: Props) {
 
                                 <ul>
                                     {(section.tracks ?? []).map((track, index) => {
-                                        const isPlaying = currentTrack === STORAGE_URL + '/' + track.file && currentTime != null;
+                                        const fileUrl = STORAGE_URL + '/' + track.file;
+                                        const isPlaying = currentTrack === fileUrl && currentTime != null;
 
                                         return (
                                             <li key={track.id}>
                                                 <span className="a">
                                                     <button
                                                         type="button"
-                                                        onClick={() => handleTrackClick(section.id, index, STORAGE_URL + '/' + track.file)}
+                                                        onClick={() =>
+                                                            handleTrackClick(
+                                                                section.id,
+                                                                index,
+                                                                fileUrl,
+                                                                track.id
+                                                            )
+                                                        }
                                                         data-permalink={track.slug}
                                                         className={isPlaying ? 'track-button playing' : 'track-button'}
                                                     >
