@@ -1,7 +1,7 @@
-import React from 'react';
+import { JSX } from 'react';
 import './water.scss';
 
-export default function Water() {
+export default function Water(): JSX.Element {
     return (<>
 		<svg viewBox="0 0 1920 220" id="waves" preserveAspectRatio="none">
 			<path fill="#6c6eec44" stroke="#6c6eec" strokeWidth="2px" d="M0.734,156.972C0.734,156.972 344.859,277.038 765.505,167.982C1161.84,65.229 1459.39,-0 1918.53,10C2377.67,216.422 1923.36,220.826 1923.36,220.826L0.426,220.092L0.734,156.972Z"/>
