@@ -5,8 +5,6 @@ import './music.scss';
 import { STORAGE_URL } from '@/lib/api';
 import type { Section } from '@/types/all';
 
-const PLAY_COUNT_AFTER_SECONDS = 10;
-
 function formatTime(seconds: number | null): string {
     if (seconds == null || Number.isNaN(seconds)) return '';
 
@@ -19,6 +17,19 @@ function countDown(duration: number | null, time: number | null): string {
     return formatTime(duration - time);
 }
 
+function getVisitorId(): string {
+    const key = 'omega_visitor_id';
+
+    let visitorId = localStorage.getItem(key);
+
+    if (!visitorId) {
+        visitorId = crypto.randomUUID();
+        localStorage.setItem(key, visitorId);
+    }
+
+    return visitorId;
+}
+
 type Props = {
     sections: Section[];
 };
@@ -26,7 +37,8 @@ type Props = {
 export default function MusicClient({ sections }: Props) {
     const player = useRef<HTMLAudioElement | null>(null);
     const contentRefs = useRef<Record<number, HTMLElement | null>>({});
-    const countedTracksRef = useRef<Set<number>>(new Set());
+    const currentPlayIdRef = useRef<number | null>(null);
+    const lastProgressSentRef = useRef<number>(0);
 
     const [currentTrack, setCurrentTrack] = useState<string | null>(null);
     const [currentTrackId, setCurrentTrackId] = useState<number | null>(null);
@@ -36,19 +48,46 @@ export default function MusicClient({ sections }: Props) {
     const [currentTrackIndex, setCurrentTrackIndex] = useState<number | null>(null);
     const [openSectionId, setOpenSectionId] = useState<number | null>(sections[0]?.id ?? null);
 
-    const registerPlay = async (trackId: number) => {
-        if (countedTracksRef.current.has(trackId)) {
-            return;
-        }
+    const updatePlaySession = (
+        playId: number,
+        playedSeconds: number,
+        durationSeconds: number | null,
+        completed = false
+    ) => {
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/track-plays/${playId}`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                played_seconds: playedSeconds,
+                duration_seconds: durationSeconds,
+                completed,
+            }),
+        }).catch(() => {});
+    };
 
-        countedTracksRef.current.add(trackId);
+    const startPlaySession = async (trackId: number) => {
+        currentPlayIdRef.current = null;
+        lastProgressSentRef.current = 0;
 
         try {
-            await fetch(`${process.env.NEXT_PUBLIC_API_URL}/tracks/${trackId}/play`, {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/tracks/${trackId}/play/start`, {
                 method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    visitor_id: getVisitorId(),
+                    duration_seconds: null,
+                }),
             });
+
+            const data = await response.json();
+
+            currentPlayIdRef.current = data.id;
         } catch {
-            countedTracksRef.current.delete(trackId);
+            currentPlayIdRef.current = null;
         }
     };
 
@@ -57,21 +96,39 @@ export default function MusicClient({ sections }: Props) {
         if (!audio) return;
 
         const updateTime = () => {
+            const currentSeconds = Math.floor(audio.currentTime);
+            const durationSeconds = Number.isFinite(audio.duration)
+                ? Math.floor(audio.duration)
+                : null;
+
             setCurrentTime(audio.currentTime);
             setDuration(audio.duration);
 
+            const playId = currentPlayIdRef.current;
+
+            if (!playId) {
+                return;
+            }
+
             if (
-                currentTrackId !== null &&
-                audio.currentTime >= PLAY_COUNT_AFTER_SECONDS
+                currentSeconds >= 10 &&
+                currentSeconds - lastProgressSentRef.current >= 5
             ) {
-                registerPlay(currentTrackId);
+                lastProgressSentRef.current = currentSeconds;
+
+                updatePlaySession(
+                    playId,
+                    currentSeconds,
+                    durationSeconds,
+                    false
+                );
             }
         };
 
         audio.addEventListener('timeupdate', updateTime);
 
         return () => audio.removeEventListener('timeupdate', updateTime);
-    }, [currentTrackId]);
+    }, []);
 
     useEffect(() => {
         const audio = player.current;
@@ -100,6 +157,20 @@ export default function MusicClient({ sections }: Props) {
         if (!audio) return;
 
         const handleEnded = () => {
+            const playId = currentPlayIdRef.current;
+
+            if (playId) {
+                const playedSeconds = Number.isFinite(audio.duration)
+                    ? Math.floor(audio.duration)
+                    : Math.floor(audio.currentTime);
+
+                const durationSeconds = Number.isFinite(audio.duration)
+                    ? Math.floor(audio.duration)
+                    : null;
+
+                updatePlaySession(playId, playedSeconds, durationSeconds, true);
+            }
+
             if (currentSectionId === null || currentTrackIndex === null) return;
 
             const section = sections.find((item) => item.id === currentSectionId);
@@ -109,9 +180,15 @@ export default function MusicClient({ sections }: Props) {
             const nextTrack = section.tracks[nextIndex];
 
             if (nextTrack) {
-                setCurrentTrack(STORAGE_URL + '/' + nextTrack.file);
+                const nextFileUrl = STORAGE_URL + '/' + nextTrack.file;
+
+                setCurrentTrack(nextFileUrl);
                 setCurrentTrackId(nextTrack.id);
                 setCurrentTrackIndex(nextIndex);
+                setCurrentTime(null);
+                setDuration(null);
+
+                startPlaySession(nextTrack.id);
             }
         };
 
@@ -156,6 +233,8 @@ export default function MusicClient({ sections }: Props) {
         setCurrentTrackIndex(trackIndex);
         setCurrentTime(null);
         setDuration(null);
+
+        startPlaySession(trackId);
     };
 
     const toggleAccordion = (sectionId: number) => {
